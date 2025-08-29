@@ -1,0 +1,351 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'Main page | Hair Infinity';
+	- var pageDescription = ' Hair Infinity';
+	- var pageKeywords = 'hair, infinity';
+
+	- var fileName = 'front-page.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.banner-carousel
+		+banner-carousel({
+			items: [
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				}
+			]
+		})
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h1',
+					text: 'INFINITY: INSPIRATION, DEPTH, MULTIFACETEDNESS, PERFECTION, COLOR',
+					attr: {
+						class: '_size_h4 _style_primary'
+					}
+				}
+			}
+		})._style_decorated
+			+e.content
+				.page__container
+					+e.text-columns
+						+text-columns({
+							items: [
+								{
+									items: [
+										{
+											title: 'The INFINITY line in the concept <a href="#">product catalog</a>',
+											fields: [
+												"For professionals who love their craft for the endless possibilities of creativity and the look of delight in the client's eyes at the end of a challenging day, the Concept laboratory has created a unique range of products—the Infinity line."
+											]
+										},
+										{
+											title: 'We offer professionals a source of inspiration — find INFINITY in the catalog',
+											fields: [
+												"It is embodied in the dye palette, which contains 112 beautiful and on-trend colors."
+											]
+										},
+									]
+								},
+								{
+									items: [
+										{
+											title: 'Infinity concept — it always delivers a perfect result',
+											fields: [
+												"Opt for the versatility of color, the brilliance of shine, effective hair restoration, and confident gray coverage."
+											]
+										},
+										{
+											title: 'We offer INFINITY concept hair cosmetics in a thoughtfully curated assortment',
+											fields: [
+												"Experts have developed an innovative capsule for salon use, a must-have tool for both beginner stylists and experienced professionals. INFINITY features only professional packaging formats with a bright, appealing, yet sleek and straightforward design. It includes graphical coding for categories, simplifying the stylist's work."
+											]
+										},
+									]
+								},
+							]
+						})
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h2',
+					text: 'UNIQUE PRODUCTS FOR SALON USE',
+					attr: {
+						class: '_size_h2'
+					},
+					icon: 'infinity'
+				}
+			}
+		})._style_filled._role_features
+			+e.content
+				.page__container
+					+e.icon-panel-group
+						+icon-panel-group({
+							items: [
+								{
+									icon: '1.png',
+									simpleTitle: true,
+									title: "Next-generation dye:",
+									text: "An inspiring palette of trendy shades",
+								},
+								{
+									icon: '2.png',
+									simpleTitle: true,
+									title: "Stylist's capsule:",
+									text: "Only must-haves for salon work",
+								},
+								{
+									icon: '3.png',
+									simpleTitle: true,
+									title: "Infinity possibilities:",
+									text: "Creativity and Income",
+								},
+								{
+									icon: '4.png',
+									simpleTitle: true,
+									title: "Keratin+:",
+									text: "Restoration of hair structure at every stage of the procedure",
+								},
+								{
+									icon: '5.png',
+									simpleTitle: true,
+									title: "Eye-catching:",
+									text: "Trendy colors, unique graphics, and color-coded categories",
+								},
+							]
+						})
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h2',
+					text: 'INFINITY сatalog',
+					attr: {
+						class: '_size_h1 _style_primary'
+					}
+				}
+			}
+		})._style_decorated-reverse._style_gradient._role_catalog
+			+e.content
+				.page__container
+					+accordion-group({
+						items: [
+							{
+								title: 'Coloring',
+								note: 'Суждение ментально дискредитирует напряженный интеллект.',
+								product: {
+									image: '1.png',
+									href: '#',
+									text: 'Гедонизм, конечно, ментально транспонирует сенсибельный <b>позитивизм, открывая новые горизонты</b>. Априори, отношение к современности раскладывает на элементы позитивизм.',
+									props: {
+										items: [
+											{
+												label: 'Объем:',
+												value: 'только 1000 мл — для работы в салоне'
+											},
+											{
+												label: 'Ассортимент:',
+												value: 'все виды::1,5%  3%  6%  9%  12%'
+											},
+											{
+												label: 'Особенности:',
+												value: 'идеален в паре к красителем и порошком Infinity'
+											},
+										]
+									},
+									controls: [
+										{
+											text: 'Узнать подробнее',
+											icon: 'infinity',
+											inlineIcon: true,
+											attr: {
+												href: '#',
+												class: '_width_full _weight_bold _style_dashed-outline'
+											}
+										}
+									]
+								}
+							},
+							{
+								title: 'Blonde',
+								note: 'Отсюда естественно следует, что принцип восприятия подрывает дедуктивный метод.',
+								product: {
+									image: '1.png',
+									href: '#',
+									text: 'Гедонизм, конечно, ментально транспонирует сенсибельный <b>позитивизм, открывая новые горизонты</b>. Априори, отношение к современности раскладывает на элементы позитивизм.',
+									props: {
+										items: [
+											{
+												label: 'Объем:',
+												value: 'только 1000 мл — для работы в салоне'
+											},
+											{
+												label: 'Ассортимент:',
+												value: 'все виды::1,5%  3%  6%  9%  12%'
+											},
+											{
+												label: 'Особенности:',
+												value: 'идеален в паре к красителем и порошком Infinity'
+											},
+										]
+									},
+									controls: [
+										{
+											text: 'Узнать подробнее',
+											icon: 'infinity',
+											inlineIcon: true,
+											attr: {
+												href: '#',
+												class: '_width_full _weight_bold _style_dashed-outline'
+											}
+										}
+									]
+								}
+							},
+							{
+								attr: {
+									class: '_state_open'
+								},
+								title: 'Care',
+								note: 'Отсюда естественно следует, что принцип восприятия подрывает дедуктивный метод.',
+								product: {
+									image: '1.png',
+									href: '#',
+									text: 'Гедонизм, конечно, ментально транспонирует сенсибельный <b>позитивизм, открывая новые горизонты</b>. Априори, отношение к современности раскладывает на элементы позитивизм.',
+									props: {
+										items: [
+											{
+												label: 'Объем:',
+												value: 'только 1000 мл — для работы в салоне'
+											},
+											{
+												label: 'Ассортимент:',
+												value: 'все виды::1,5%  3%  6%  9%  12%'
+											},
+											{
+												label: 'Особенности:',
+												value: 'идеален в паре к красителем и порошком Infinity'
+											},
+										]
+									},
+									controls: [
+										{
+											text: 'Узнать подробнее',
+											icon: 'infinity',
+											inlineIcon: true,
+											attr: {
+												href: '#',
+												class: '_width_full _weight_bold _style_dashed-outline'
+											}
+										}
+									]
+								}
+							},
+							{
+								title: 'Styling',
+								note: 'Созерцание методологически транспонирует интеллигибельный знак.',
+								product: {
+									image: '1.png',
+									href: '#',
+									text: 'Гедонизм, конечно, ментально транспонирует сенсибельный <b>позитивизм, открывая новые горизонты</b>. Априори, отношение к современности раскладывает на элементы позитивизм.',
+									props: {
+										items: [
+											{
+												label: 'Объем:',
+												value: 'только 1000 мл — для работы в салоне'
+											},
+											{
+												label: 'Ассортимент:',
+												value: 'все виды::1,5%  3%  6%  9%  12%'
+											},
+											{
+												label: 'Особенности:',
+												value: 'идеален в паре к красителем и порошком Infinity'
+											},
+										]
+									},
+									controls: [
+										{
+											text: 'Узнать подробнее',
+											icon: 'infinity',
+											inlineIcon: true,
+											attr: {
+												href: '#',
+												class: '_width_full _weight_bold _style_dashed-outline'
+											}
+										}
+									]
+								}
+							},
+						]
+					})
+
+	+e.banner
+		.page__container
+			+banner({
+				image: '1.jpg',
+				attr: {
+					href: '#'
+				}
+			})
+
+	+e.attention-panel
+		.page__container
+			+attention-panel({
+				controls: [
+					{
+						text: 'Ask a question',
+						attr: {
+							href: '#askForm',
+							class: '_width_full js-modal'
+						}
+					}
+				]
+			})
+				| You can always contact us with any questions you may have. To do so, simply fill out the form and submit it. Our specialists will respond to you within 24 hours.

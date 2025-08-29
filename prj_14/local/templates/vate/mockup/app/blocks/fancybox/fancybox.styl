@@ -1,0 +1,22 @@
+DIR = '../blocks/fancybox/'
+IMG_DIR = DIR + 'images/'
+
+.fancybox
+	&__container
+		&:focus
+			outline none
+
+		.fancybox
+			&__slide
+
+
+
+			&__content
+				& > .carousel__button.is-close
+					top 24px
+					right 20px
+					width 20px
+					height 20px
+					color var(--color-back)
+					background none
+					opacity 1

@@ -1,0 +1,19 @@
+mixin result-panel(data = {})
+	- var DIR = 'assets/blocks/result-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .result-panel
+	+b.result-panel&attributes(attributes)
+		+e.content
+			if data.title
+				+e.title
+					+title('h3')._size_h4._style_primary
+						!=data.title
+
+			if data.text
+				+e.text
+					!=data.text
+
+			if data.controls
+				+control-group(data.controls)
+		block
+	// end .result-panel

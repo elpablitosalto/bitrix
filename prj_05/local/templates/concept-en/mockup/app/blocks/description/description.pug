@@ -1,0 +1,20 @@
+mixin description(data = {})
+	- var DIR = 'assets/blocks/description/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .description
+	+b.description&attributes(attributes)
+		+e.content
+			block
+
+		+control-group([
+			{
+				text: 'Read more',
+				attr: {
+					type: 'button',
+					class: '_width_full _size_l _text_size-m _text_tall _style_outline-dark js-toggle',
+					'data-toggle-scope': '.description',
+					'data-toggle-class': 'description_state_closed'
+				}
+			}
+		])
+	// end .description

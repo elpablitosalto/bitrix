@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О компании", 
+		"/about/", 
+		Array(), 
+		Array("COLUMN"=>"1"), 
+		"" 
+	),
+	Array(
+		"Личный кабинет", 
+		"/personal/", 
+		Array(), 
+		Array("COLUMN"=>"1"), 
+		"" 
+	),
+	Array(
+		"Продукция", 
+		"/catalog/", 
+		Array(), 
+		Array("COLUMN"=>"1"), 
+		"" 
+	),
+	Array(
+		"Скачать материалы", 
+		"/downloads/", 
+		Array(), 
+		Array("COLUMN"=>"1"), 
+		"" 
+	),
+	Array(
+		"Мероприятия", 
+		"/press-center/events/", 
+		Array(), 
+		Array("COLUMN"=>"2"), 
+		"" 
+	),
+	Array(
+		"Обучающее видео",
+		"/press-center/videos/",
+		Array(), 
+		Array("COLUMN"=>"2"), 
+		"" 
+	),
+	Array(
+		"Блог", 
+		"/press-center/blog/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array("COLUMN"=>"2"), 
+		"" 
+	)
+);
+?>

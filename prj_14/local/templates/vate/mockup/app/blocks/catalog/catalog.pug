@@ -1,0 +1,458 @@
+mixin catalog(data)
+	- var DIR = 'assets/blocks/catalog/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .catalog
+	+b.catalog&attributes(attributes)
+		if data
+
+
+			+e.content
+				+e.aside
+					+catalog-filters('form').__filters
+						+e.wrapper
+
+							+e('ul').list
+								+e('li').item
+									+catalog-filter({
+										title: 'Цена',
+										type: 'slider',
+										min: '980',
+										max: '7000',
+										curMin: '980',
+										curMax: '3496'
+									})._state_open
+								+e('li').item
+									+catalog-filter({
+										title: 'Категории',
+										type: 'checkbox',
+										scroll: true,
+										items: [
+											{
+												label: 'Грузовые шины',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: true
+												}
+											},
+											{
+												label: 'Крупногабаритные шины',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													disabled: true
+												}
+											},
+											{
+												label: 'Индустриальные шины',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: true
+												}
+											},
+											{
+												label: 'Лесные шины',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: true,
+													disabled: true,
+												}
+											},
+											{
+												label: 'Жестокорамные самосвалы',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Сочлененные самосвалы',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Шахтная спецтехника',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Внедорожные самосвалы',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Фронтальные погрузчики',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Мобильные автокраны',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Грейдеры и скреперы',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Асфальтоукладчики и катки',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Грейдеры и скреперы',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Мобильные автокраны',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Фронтальные погрузчики',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Индустриальные шины',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: true
+												}
+											},
+											{
+												label: 'Лесные шины',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: true,
+													disabled: true,
+												}
+											},
+											{
+												label: 'Жестокорамные самосвалы',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Сочлененные самосвалы',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Шахтная спецтехника',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Внедорожные самосвалы',
+												count: 33,
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+										]
+									})._state_open
+								+e('li').item
+									+catalog-filter({
+										title: 'Производители',
+										type: 'checkbox',
+										items: [
+											{
+												label: 'Goodyear',
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Michelin',
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Yokohama',
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Bridgestone',
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false,
+												}
+											},
+											{
+												label: 'Bridgestone',
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											},
+											{
+												label: 'Bridgestone',
+												attr: {
+													type: 'checkbox',
+													class:'check-elem_style_primary check-elem_size_full',
+													name: 'checkgroup-1',
+													checked: false
+												}
+											}
+										]
+									})._state_open
+
+							+e.controls
+								+e.control
+									+button({
+										tag: 'button'
+									})._width_full._style_outline(type='submit')
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13.0498 22.0008V19.9508C13.6165 19.8674 14.1706 19.7174 14.7123 19.5008C15.254 19.2841 15.7665 19.0008 16.2498 18.6508L17.6498 20.1008C16.9498 20.6341 16.2165 21.0633 15.4498 21.3883C14.6831 21.7133 13.8831 21.9174 13.0498 22.0008ZM11.0498 22.0008C8.7498 21.7008 6.84147 20.7049 5.3248 19.0133C3.80814 17.3216 3.0498 15.3341 3.0498 13.0508C3.0498 11.8008 3.2873 10.6299 3.7623 9.53828C4.2373 8.44661 4.87897 7.49661 5.6873 6.68828C6.49564 5.87995 7.44564 5.23828 8.5373 4.76328C9.62897 4.28828 10.7998 4.05078 12.0498 4.05078H12.1998L10.6498 2.50078L12.0498 1.05078L16.0498 5.05078L12.0498 9.05078L10.6498 7.65078L12.2498 6.05078H12.0498C10.0998 6.05078 8.44564 6.72995 7.0873 8.08828C5.72897 9.44661 5.0498 11.1008 5.0498 13.0508C5.0498 14.7841 5.61647 16.3049 6.7498 17.6133C7.88314 18.9216 9.31647 19.7008 11.0498 19.9508V22.0008ZM19.0998 18.6508L17.6498 17.2508C17.9998 16.7674 18.2831 16.2549 18.4998 15.7133C18.7165 15.1716 18.8665 14.6174 18.9498 14.0508H20.9998C20.9165 14.8841 20.7123 15.6841 20.3873 16.4508C20.0623 17.2174 19.6331 17.9508 19.0998 18.6508ZM20.9998 12.0508H18.9498C18.8665 11.4841 18.7165 10.9299 18.4998 10.3883C18.2831 9.84661 17.9998 9.33412 17.6498 8.85078L19.0998 7.45078C19.6331 8.10078 20.0581 8.81745 20.3748 9.60078C20.6915 10.3841 20.8998 11.2008 20.9998 12.0508Z" fill="currentColor"/>
+										</svg>
+										| Сбросить фильтры
+
+
+				+e.main
+					+e.header
+						+e.title
+							+title('h1')._size_h2._style_bold
+								| Товары
+						+e.layout-group._hidden_m
+								+layout-group({
+									items: [
+										{
+											icon: '<svg class="layout-group__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="14.0625" height="14.0625" rx="2" fill="currentColor"/><rect x="15.9375" width="14.0625" height="14.0625" rx="2" fill="currentColor"/><rect y="15.9375" width="14.0625" height="14.0625" rx="2" fill="currentColor"/><rect x="15.9375" y="15.9375" width="14.0625" height="14.0625" rx="2" fill="currentColor"/></svg>',
+											attr: {
+												'aria-label': 'Вид сетки',
+												href: '#',
+												class: '_state_active js-layout-group-trigger'
+											}
+										},
+										{
+											icon: '<svg class="layout-group__icon" width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="14.0625" height="14.0625" rx="2" fill="currentColor"/><path d="M17 3H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 7H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 11H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect y="15.9375" width="14.0625" height="14.0625" rx="2" fill="currentColor"/><path d="M17 19H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 23H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 27H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+											attr: {
+												'aria-label': 'Вид списка',
+												href: '#',
+												class: 'js-layout-group-trigger'
+											}
+										}
+									]
+								})
+						+e.filter-trigger
+							+filter-trigger({
+								text: 'Фильтры',
+								count: '99'
+							}).js-modal(href="#modalFilters")
+
+
+					+e.filter-panel
+
+						+e.filter-group
+							+e.sorting
+								+filter-group({
+									items: [
+										{
+											type: 'option-filter',
+											label: ' алфавиту',
+											items: [
+												{
+													text: ' алфавиту',
+													tag: 'a',
+													attr: {
+														href: '#',
+														class: '_state_active'
+													}
+												},
+												{
+													text: ' цене (сначала дешевле)',
+													tag: 'a',
+													icon: '<svg class="option-filter__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.66667 4C8.85556 4 9.01378 4.064 9.14133 4.192C9.26933 4.31955 9.33333 4.47778 9.33333 4.66667C9.33333 4.85556 9.26933 5.01378 9.14133 5.14133C9.01378 5.26933 8.85556 5.33333 8.66667 5.33333L7.33333 5.33333C7.14444 5.33333 6.986 5.26933 6.858 5.14133C6.73045 5.01378 6.66667 4.85555 6.66667 4.66667C6.66667 4.47778 6.73045 4.31955 6.858 4.192C6.986 4.064 7.14444 4 7.33333 4L8.66667 4ZM13.3333 10.6667C13.5222 10.6667 13.6804 10.7304 13.808 10.858C13.936 10.986 14 11.1444 14 11.3333C14 11.5222 13.936 11.6807 13.808 11.8087C13.6804 11.9362 13.5222 12 13.3333 12L2.66667 12C2.47778 12 2.31956 11.9362 2.192 11.8087C2.064 11.6807 2 11.5222 2 11.3333C2 11.1444 2.064 10.986 2.192 10.858C2.31956 10.7304 2.47778 10.6667 2.66667 10.6667L13.3333 10.6667ZM11.3333 7.33333C11.5222 7.33333 11.6807 7.39733 11.8087 7.52533C11.9362 7.65289 12 7.81111 12 8C12 8.18889 11.9362 8.34733 11.8087 8.47533C11.6807 8.60289 11.5222 8.66667 11.3333 8.66667L4.66667 8.66667C4.47778 8.66667 4.31956 8.60289 4.192 8.47533C4.064 8.34733 4 8.18889 4 8C4 7.81111 4.064 7.65289 4.192 7.52533C4.31956 7.39733 4.47778 7.33333 4.66667 7.33333L11.3333 7.33333Z"/></svg>',
+													attr: {
+														href: '#'
+													}
+												},
+												{
+													text: ' цене (сначала дороже)',
+													tag: 'a',
+													icon: '<svg class="option-filter__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.66667 12C8.85555 12 9.01378 11.936 9.14133 11.808C9.26933 11.6804 9.33333 11.5222 9.33333 11.3333C9.33333 11.1444 9.26933 10.9862 9.14133 10.8587C9.01378 10.7307 8.85555 10.6667 8.66667 10.6667L7.33333 10.6667C7.14444 10.6667 6.986 10.7307 6.858 10.8587C6.73044 10.9862 6.66667 11.1444 6.66667 11.3333C6.66667 11.5222 6.73044 11.6804 6.858 11.808C6.986 11.936 7.14444 12 7.33333 12L8.66667 12ZM13.3333 5.33333C13.5222 5.33333 13.6804 5.26956 13.808 5.142C13.936 5.014 14 4.85556 14 4.66667C14 4.47778 13.936 4.31933 13.808 4.19133C13.6804 4.06378 13.5222 4 13.3333 4L2.66667 4C2.47778 4 2.31956 4.06378 2.192 4.19133C2.064 4.31933 2 4.47778 2 4.66667C2 4.85555 2.064 5.014 2.192 5.142C2.31956 5.26955 2.47778 5.33333 2.66667 5.33333L13.3333 5.33333ZM11.3333 8.66667C11.5222 8.66667 11.6807 8.60267 11.8087 8.47467C11.9362 8.34711 12 8.18889 12 8C12 7.81111 11.9362 7.65267 11.8087 7.52467C11.6807 7.39711 11.5222 7.33333 11.3333 7.33333L4.66667 7.33333C4.47778 7.33333 4.31955 7.39711 4.192 7.52467C4.064 7.65267 4 7.81111 4 8C4 8.18889 4.064 8.34711 4.192 8.47467C4.31955 8.60267 4.47778 8.66667 4.66667 8.66667L11.3333 8.66667Z"/></svg>',
+													attr: {
+														href: '#'
+													}
+												},
+												{
+													text: ' популярности (сначала менее популярные)',
+													tag: 'a',
+													icon: '<svg class="option-filter__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.66667 4C8.85556 4 9.01378 4.064 9.14133 4.192C9.26933 4.31955 9.33333 4.47778 9.33333 4.66667C9.33333 4.85556 9.26933 5.01378 9.14133 5.14133C9.01378 5.26933 8.85556 5.33333 8.66667 5.33333L7.33333 5.33333C7.14444 5.33333 6.986 5.26933 6.858 5.14133C6.73045 5.01378 6.66667 4.85555 6.66667 4.66667C6.66667 4.47778 6.73045 4.31955 6.858 4.192C6.986 4.064 7.14444 4 7.33333 4L8.66667 4ZM13.3333 10.6667C13.5222 10.6667 13.6804 10.7304 13.808 10.858C13.936 10.986 14 11.1444 14 11.3333C14 11.5222 13.936 11.6807 13.808 11.8087C13.6804 11.9362 13.5222 12 13.3333 12L2.66667 12C2.47778 12 2.31956 11.9362 2.192 11.8087C2.064 11.6807 2 11.5222 2 11.3333C2 11.1444 2.064 10.986 2.192 10.858C2.31956 10.7304 2.47778 10.6667 2.66667 10.6667L13.3333 10.6667ZM11.3333 7.33333C11.5222 7.33333 11.6807 7.39733 11.8087 7.52533C11.9362 7.65289 12 7.81111 12 8C12 8.18889 11.9362 8.34733 11.8087 8.47533C11.6807 8.60289 11.5222 8.66667 11.3333 8.66667L4.66667 8.66667C4.47778 8.66667 4.31956 8.60289 4.192 8.47533C4.064 8.34733 4 8.18889 4 8C4 7.81111 4.064 7.65289 4.192 7.52533C4.31956 7.39733 4.47778 7.33333 4.66667 7.33333L11.3333 7.33333Z"/></svg>',
+													attr: {
+														href: '#'
+													}
+												},
+												{
+													text: ' популярности (сначала более популярные)',
+													tag: 'a',
+													icon: '<svg class="option-filter__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.66667 12C8.85555 12 9.01378 11.936 9.14133 11.808C9.26933 11.6804 9.33333 11.5222 9.33333 11.3333C9.33333 11.1444 9.26933 10.9862 9.14133 10.8587C9.01378 10.7307 8.85555 10.6667 8.66667 10.6667L7.33333 10.6667C7.14444 10.6667 6.986 10.7307 6.858 10.8587C6.73044 10.9862 6.66667 11.1444 6.66667 11.3333C6.66667 11.5222 6.73044 11.6804 6.858 11.808C6.986 11.936 7.14444 12 7.33333 12L8.66667 12ZM13.3333 5.33333C13.5222 5.33333 13.6804 5.26956 13.808 5.142C13.936 5.014 14 4.85556 14 4.66667C14 4.47778 13.936 4.31933 13.808 4.19133C13.6804 4.06378 13.5222 4 13.3333 4L2.66667 4C2.47778 4 2.31956 4.06378 2.192 4.19133C2.064 4.31933 2 4.47778 2 4.66667C2 4.85555 2.064 5.014 2.192 5.142C2.31956 5.26955 2.47778 5.33333 2.66667 5.33333L13.3333 5.33333ZM11.3333 8.66667C11.5222 8.66667 11.6807 8.60267 11.8087 8.47467C11.9362 8.34711 12 8.18889 12 8C12 7.81111 11.9362 7.65267 11.8087 7.52467C11.6807 7.39711 11.5222 7.33333 11.3333 7.33333L4.66667 7.33333C4.47778 7.33333 4.31955 7.39711 4.192 7.52467C4.064 7.65267 4 7.81111 4 8C4 8.18889 4.064 8.34711 4.192 8.47467C4.31955 8.60267 4.47778 8.66667 4.66667 8.66667L11.3333 8.66667Z"/></svg>',
+													attr: {
+														href: '#'
+													}
+												},
+											]
+										}
+									]
+								})
+							if data.quantityFilter
+								+e.quantity-filter
+									+link-filter(data.quantityFilter)
+
+							+e.layout-group
+								+layout-group({
+									items: [
+										{
+											icon: '<svg class="layout-group__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="14.0625" height="14.0625" rx="2" fill="currentColor"/><rect x="15.9375" width="14.0625" height="14.0625" rx="2" fill="currentColor"/><rect y="15.9375" width="14.0625" height="14.0625" rx="2" fill="currentColor"/><rect x="15.9375" y="15.9375" width="14.0625" height="14.0625" rx="2" fill="currentColor"/></svg>',
+											attr: {
+												'aria-label': 'Вид сетки',
+												href: '#',
+												class: '_state_active js-layout-group-trigger'
+											}
+										},
+										{
+											icon: '<svg class="layout-group__icon" width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="14.0625" height="14.0625" rx="2" fill="currentColor"/><path d="M17 3H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 7H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 11H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect y="15.9375" width="14.0625" height="14.0625" rx="2" fill="currentColor"/><path d="M17 19H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 23H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 27H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+											attr: {
+												'aria-label': 'Вид списка',
+												href: '#',
+												class: 'js-layout-group-trigger'
+											}
+										}
+									]
+								})
+
+						if data.fastFilter
+							+e.fast-filter
+								+link-filter(data.fastFilter)
+
+						+e.cart-panel
+							+e.check
+								+check-elem({
+									attr: {
+										type: 'checkbox',
+										class: 'js-catalog-add-all'
+									}
+								})._style_primary
+									| Выбрать все
+
+							+e.control
+								+button()._width_full._size_l._text-size_m(href='#')
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7 22C6.45 22 5.97917 21.8042 5.5875 21.4125C5.19583 21.0208 5 20.55 5 20C5 19.45 5.19583 18.9792 5.5875 18.5875C5.97917 18.1958 6.45 18 7 18C7.55 18 8.02083 18.1958 8.4125 18.5875C8.80417 18.9792 9 19.45 9 20C9 20.55 8.80417 21.0208 8.4125 21.4125C8.02083 21.8042 7.55 22 7 22ZM17 22C16.45 22 15.9792 21.8042 15.5875 21.4125C15.1958 21.0208 15 20.55 15 20C15 19.45 15.1958 18.9792 15.5875 18.5875C15.9792 18.1958 16.45 18 17 18C17.55 18 18.0208 18.1958 18.4125 18.5875C18.8042 18.9792 19 19.45 19 20C19 20.55 18.8042 21.0208 18.4125 21.4125C18.0208 21.8042 17.55 22 17 22ZM6.15 6L8.55 11H15.55L18.3 6H6.15ZM5.2 4H19.95C20.3333 4 20.625 4.17083 20.825 4.5125C21.025 4.85417 21.0333 5.2 20.85 5.55L17.3 11.95C17.1167 12.2833 16.8708 12.5417 16.5625 12.725C16.2542 12.9083 15.9167 13 15.55 13H8.1L7 15H19V17H7C6.25 17 5.68333 16.6708 5.3 16.0125C4.91667 15.3542 4.9 14.7 5.25 14.05L6.6 11.6L3 4H1V2H4.25L5.2 4Z" fill="black"/>
+									</svg>
+									!='В корзину (7)'
+					+e.products
+						if data.items
+							+product-grid({ items: data.items })._cols_3
+
+					if data.pagination
+						+e.pagination
+							+pagination()
+		block
+	// end .catalog

@@ -1,0 +1,17 @@
+mixin map-panel(data)
+	- var DIR = 'assets/blocks/map-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .map-panel
+	+b.map-panel&attributes(attributes)
+		if data
+			+e.container
+				if data.storages
+					+e.storages
+						+storage-list(data.storages)._style_light._m_row
+
+				if data.map
+					+e.map
+						+map(data.map)
+
+		block
+	// end .map-panel

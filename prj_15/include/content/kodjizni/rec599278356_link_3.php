@@ -1,0 +1,1 @@
+<a class='tn-atom' href="#peptids">о пептидах</a>

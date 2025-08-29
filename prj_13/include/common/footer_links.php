@@ -1,0 +1,1 @@
+<a href="<?= $GLOBALS["arSiteConfig"]["PRIVACY_LINK"]; ?>">Политика конфиденциальности</a>

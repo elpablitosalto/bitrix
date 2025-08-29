@@ -1,0 +1,1 @@
+<a class="footer__link footer__link_style_muted footer__link_size_xs disabled-element" href="#">Design by Ponomarenko A. A.</a>

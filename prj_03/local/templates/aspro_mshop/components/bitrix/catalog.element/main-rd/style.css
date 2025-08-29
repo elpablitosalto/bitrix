@@ -1,0 +1,27 @@
+.catalog_detail .sku_props .bx_item_detail_size ul li:hover .color_link{
+	color: white;
+}
+.catalog_detail .prices_block{
+    margin-top: 10px;
+}
+.catalog_detail .prices_block .prices_block_prefix{
+    padding: 5px 0px;
+}
+.catalog_detail .prices_block .item-stock{
+    display: block !important;
+}
+
+@media (max-width: 768px) {
+    .tabs_content .row {
+        flex-direction: column;
+    }
+}
+
+.min_pack{
+    margin-top: 10px;
+    text-align: right;
+}
+.min_pack .min_pack_message{
+    margin-top: 10px;
+    color: red;
+}

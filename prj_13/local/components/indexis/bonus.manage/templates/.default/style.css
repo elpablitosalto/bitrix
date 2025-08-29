@@ -1,0 +1,4 @@
+.c-panel .btn-default[disabled] {
+    background-color: #ccc!important;
+    cursor: default;
+}

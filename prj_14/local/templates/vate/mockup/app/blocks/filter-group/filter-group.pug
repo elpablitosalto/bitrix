@@ -1,0 +1,25 @@
+mixin filter-group(data)
+	- var DIR = 'assets/blocks/filter-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .filter-group
+	+b.filter-group&attributes(attributes)
+		if data
+			+e.wrapper
+				if data.label
+					+e.item.__label
+						!=data.label
+
+				if data.items
+					each item in data.items
+						+e.item
+							- var itemAttr = item.attr || {};
+
+							if item.type === 'option-filter'
+								+e.option-filter
+									+option-filter(item)&attributes(itemAttr)
+							else
+								//- filter-group__link_state_active
+								+e('a').link&attributes(itemAttr)
+									!=item.label
+		block
+	// end .filter-group

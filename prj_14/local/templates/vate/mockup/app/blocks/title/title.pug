@@ -1,0 +1,14 @@
+mixin title(data)
+	- var DIR = 'assets/blocks/title/';
+	- var IMG_DIR = DIR + 'images/';
+	- data = typeof data === 'string' ? {tag: data} : data;
+	- var tag = data.tag || 'h2';
+	- var attr = data.attr || {};
+	- attr.class = typeof attr.class === 'string' ? attr.class : typeof attributes.class === 'string' ? '' : '_size_h2';
+
+	// begin .title
+	+b(tag).title&attributes(attr)&attributes(attributes)
+		if data.text
+			!=data.text
+		block
+	// end .title

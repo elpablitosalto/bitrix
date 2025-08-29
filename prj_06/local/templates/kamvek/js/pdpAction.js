@@ -1,0 +1,1 @@
+$("#MusterBest .buttonInput ").click(function(){$("#MusterBlock").slideToggle()});$(document).on("click","#HaendlerPageLinks .getup",function(){$("#NeueHaendler").slideToggle()});

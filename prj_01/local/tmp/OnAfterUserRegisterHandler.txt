@@ -1,0 +1,51 @@
+Array
+(
+<<<<<<< HEAD
+    [LOGIN] => compotic006@gmail.com
+    [EMAIL] => compotic006@gmail.com
+    [PASSWORD] => fakxXMGV6$
+    [CONFIRM_PASSWORD] => fakxXMGV6$
+    [NAME] => Ник
+    [LAST_NAME] => Ник
+    [WORK_COMPANY] => ГУ "СЦГМБ" ЛНР РФ
+    [WORK_POSITION] => Медицинский лабораторный техник
+    [PERSONAL_MOBILE] => +7-959-567-38-80
+=======
+    [LOGIN] => email@email.cfddf
+    [EMAIL] => email@email.cfddf
+    [PASSWORD] => mrfdORMY4%
+    [CONFIRM_PASSWORD] => mrfdORMY4%
+    [NAME] => Василий
+    [LAST_NAME] => Иванов
+    [WORK_COMPANY] => Организация
+    [WORK_POSITION] => Должность
+    [PERSONAL_MOBILE] => +7-121-212-12-12
+>>>>>>> 593035acb0504d42eefe92bcdca29bd0d5fafea2
+    [UF_PARTNER] => Y
+    [GROUP_ID] => Array
+        (
+            [0] => 5
+        )
+
+<<<<<<< HEAD
+    [CHECKWORD] => 4s8unpbr50cuifxtcq8lvz94dqb792io
+    [~CHECKWORD_TIME] => now()
+    [ACTIVE] => N
+    [CONFIRM_CODE] => ax39wlp4
+    [LID] => s1
+    [LANGUAGE_ID] => ru
+    [USER_IP] => 91.224.254.241
+    [USER_HOST] => nat1.241.mediatele.net
+=======
+    [CHECKWORD] => 58u8ei7tgr70c879t5o8l2axf83uddbg
+    [~CHECKWORD_TIME] => now()
+    [ACTIVE] => N
+    [CONFIRM_CODE] => t0cur132
+    [LID] => s1
+    [LANGUAGE_ID] => ru
+    [USER_IP] => 127.0.0.1
+    [USER_HOST] => dentalstom
+>>>>>>> 593035acb0504d42eefe92bcdca29bd0d5fafea2
+    [AUTO_TIME_ZONE] => 
+    [USER_ID] => 37
+)

@@ -1,0 +1,21 @@
+mixin advantage-card(data)
+	- var DIR = 'assets/blocks/advantage-card/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .advantage-card
+	+b.advantage-card&attributes(attributes)
+		if data
+			+e.wrapper
+				+e.top
+					if data.image
+						+e.illustration
+							+image(data.image, IMG_DIR)
+
+					if data.title
+						+e('span').title
+							!=data.title
+				if data.text
+					+e('p').text
+						!=data.text
+
+		block
+	// end .advantage-card

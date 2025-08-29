@@ -1,0 +1,11 @@
+mixin control-group(controls, wrapperClassName = 'controls')
+	if controls
+		+e(class=wrapperClassName)&attributes(attributes)
+			each control in controls
+				- var wrapperClass = control.wrapperClass || '';
+
+				+e.control(class=wrapperClass)
+					- var attr = control.attr || {};
+
+					+button(control)&attributes(attr)
+	block

@@ -1,0 +1,52 @@
++modal({
+	title: 'Ask a question',
+	text: 'Fill the form below, and our specialists will respond within 24 hours',
+	form: {
+		attr: {
+			class: 'js-demo-validated-form'
+		},
+		fields: [
+			{
+				type: 'text',
+				label: 'Name*',
+				name: 'NAME',
+				attr: {
+					required: true
+				}
+			},
+			{
+				type: 'email',
+				label: 'E-mail*',
+				name: 'EMAIL',
+				attr: {
+					required: true
+				}
+			},
+			{
+				type: 'textarea',
+				label: 'Question*',
+				name: 'QUESTION',
+				attr: {
+					required: true
+				}
+			},
+		],
+		checkbox: {
+			text: 'By pressing the button, you agree to the terms of personal data processing.',
+			inputAttr: {
+				type: 'checkbox',
+				name: 'confirm',
+				class: 'js-disabling-checkbox'
+			},
+		},
+		controls: [
+			{
+				text: 'Send',
+				attr: {
+					type: 'submit',
+					class: '_width_full'
+				}
+			}
+		]
+	}
+})#askForm

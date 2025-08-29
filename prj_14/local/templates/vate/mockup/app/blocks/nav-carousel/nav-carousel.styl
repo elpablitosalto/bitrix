@@ -1,0 +1,55 @@
+DIR = '../blocks/nav-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.nav-carousel
+	position relative
+	display block
+	background var(--color-black)
+
+	&::after
+		content ''
+		position absolute
+		top 0
+		right 0
+		z-index 10
+		width 20%
+		height 100%
+		background linear-gradient(270deg, #000 0%, rgba(165, 165, 165, 0) 100%)
+		transform rotate(0deg) translate(0, 0%)
+
+		+above(size-m)
+			display none
+
+
+
+	&__container.page__container
+		margin -10px
+		padding 10px 20px
+
+
+		+above(size-m)
+			overflow visible
+			margin 0 auto
+			padding 10px
+
+
+
+	&__slide
+		max-width 30%
+		font-size 12px
+
+		+above(size-m)
+			font-size 14px
+
+
+
+	&__navigation
+		display block
+
+		+above(size-m)
+			display none
+
+
+
+	&__arrows
+		z-index 10

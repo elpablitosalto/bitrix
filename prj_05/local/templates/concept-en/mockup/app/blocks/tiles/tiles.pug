@@ -1,0 +1,31 @@
+mixin tiles(data = {})
+	- var DIR = 'assets/blocks/tiles/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .tiles
+	+b.tiles&attributes(attributes)
+		if data.items
+			+e.UL.list
+				each item in data.items
+					- var attr = item.attr || {};
+					+e.LI.item&attributes(attr)
+						+e.panel
+							if item.image
+								+e.background
+									+image(item.image, IMG_DIR)
+
+							+e.content
+								if item.title
+									+e.title
+										+e.link(href=item.href)
+											!=item.title
+
+								if item.links
+									+e.UL.links
+										each link in item.links
+											+e.LI.link-item
+												- var attr = link.attr || {};
+
+												+e.link&attributes(attr)
+													!=link.text
+		block
+	// end .tiles

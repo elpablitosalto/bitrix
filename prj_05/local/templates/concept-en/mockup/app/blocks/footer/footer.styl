@@ -1,0 +1,284 @@
+DIR = '../blocks/footer/'
+IMG_DIR = DIR + 'images/'
+
+.footer
+	position relative
+	display block
+	overflow hidden
+	padding 41px 0 33px
+	color var(--color-white)
+	background var(--color-primary)
+
+	+above(size-l)
+		padding 68px 0 20px
+
+
+	&__main
+		display block
+		margin 0 0 49px
+
+		+above(size-l)
+			margin 0 0 54px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__bottom
+		display block
+		margin 0 0 20px
+
+		&:last-child
+			margin-bottom 0
+
+		& > .footer
+			&__container
+				flex-direction row
+				flex-wrap wrap
+
+				+above(size-m)
+					flex-wrap nowrap
+
+				+above(size-l)
+					align-items flex-end
+
+
+
+	&__container
+		display flex
+		flex-direction column
+		flex-wrap nowrap
+		align-items center
+
+		+above(size-l)
+			flex-direction row
+			align-items flex-start
+
+
+
+	&__info
+		display flex
+		flex-direction column
+		flex-wrap nowrap
+		align-items center
+		margin 0 0 36px
+
+		+above(size-l)
+			display block
+			flex 0 1 31%
+			margin 0 36px 0 0
+
+		&:last-child
+			margin 0
+
+
+
+	&__nav
+		display block
+		flex 0 0 auto
+		width auto
+		min-width 117px
+		margin 0 0 34px
+		padding 26px 0
+		text-align center
+		border-top 1px solid currentColor
+		border-bottom 1px solid currentColor
+
+		+above(size-l)
+			flex 0 1 auto
+			margin 0 40px 0 0
+			padding 0 0 0 15px
+			text-align left
+			border none
+			border-left 1px solid currentColor
+
+		&:last-child
+			margin 0
+
+
+
+	&__contacts
+		display flex
+		flex 0 1 auto
+		flex-direction column
+		flex-wrap nowrap
+		align-items center
+		width auto
+
+		+above(size-l)
+			align-items flex-end
+			margin 0 0 0 auto
+
+
+
+	&__lang-link
+		display block
+		flex 0 0 auto
+		width auto
+		margin 0 0 14px
+
+		+above(size-l)
+			margin 0 0 21px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__icon-link
+		display block
+		flex 0 0 auto
+		width auto
+		margin 0 0 21px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__nav-trigger
+		display block
+
+		+above(size-l)
+			display none
+
+
+
+	&__nav-wrapper
+		display none
+
+		+above(size-l)
+			display block
+
+
+
+	&__title
+		display block
+		margin 0 0 10px
+		font-size 14px
+		font-weight 300
+		line-height 1.214
+
+		+above(size-l)
+			margin 0 0 16px
+			font-size 20px
+			line-height 1.2
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__links
+		display block
+		margin 0 0 18px
+
+		+above(size-l)
+			margin 0 0 24px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__link
+		display block
+		margin 0 0 12px
+
+		+above(size-l)
+			margin 0 0 16px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__social-nav
+		display block
+		margin 0 0 18px
+
+		+above(size-l)
+			margin 0 0 24px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__credit
+		display block
+		flex 0 1 50%
+		width 50%
+		max-width 50%
+
+		+above(size-l)
+			flex-basis 20%
+			width 20%
+			max-width 20%
+
+
+
+	&__dev-credit
+		width 80px
+
+		+above(size-m)
+			width 101px
+
+
+
+	&__logo
+		display block
+		flex 1 1 100%
+		order -1
+		width 100%
+		margin 0 auto
+		padding 0 0 26px
+
+		+above(size-m)
+			flex 0 1 auto
+			order 0
+			width auto
+			padding 0 0 8px
+
+
+
+	&__logo-wrapper
+		width 140px
+		margin 0 auto
+
+		+above(size-m)
+			width 255px
+
+
+	&__copyright
+		display block
+		flex 0 1 50%
+		width 50%
+		max-width 50%
+		padding 0 15px 0 0
+		font-size 10px
+		line-height 1.2
+		text-align right
+
+		+above(size-m)
+			padding 0
+			font-size 14px
+			line-height 1.214
+
+		+above(size-l)
+			flex-basis 20%
+			width 20%
+			max-width 20%
+
+
+
+	// Modifiers
+	&_nav
+		&_open
+			.footer
+				&__nav-trigger
+					display none
+
+				&__nav-wrapper
+					display block

@@ -1,0 +1,2 @@
+/****** FILE: themes/metten/javascript/ansprech.js *****/
+$("area").click(function(e){e.preventDefault();var number=$(this).attr("data-number");$(".regionVcard").removeClass("active");var $activeElements=$(".regionVcard .regionNumber[data-number='"+number+"']").parents(".regionVcard");$activeElements.addClass("active");$([document.documentElement,document.body]).animate({scrollTop:$(".regionVcard .regionNumber[data-number='"+number+"']:first").parents(".regionVcard").offset().top-100},600)});

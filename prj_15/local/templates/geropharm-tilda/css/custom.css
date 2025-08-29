@@ -1,0 +1,23 @@
+@media (min-width: 1360px) and (max-width: 1440px) {
+
+	.dp-header:not(.dp-header_auth) .dp-header-menu__item:nth-child(4),
+	.dp-header:not(.dp-header_auth) .dp-header-menu__item:nth-child(5) {
+		display: list-item;
+	}
+
+	.dp-header-menu-tablet {
+		display: none;
+	}
+}
+
+.ajax-form .main_error {
+	color: red;
+	text-align: center;
+	width: 100%;
+}
+
+.ajax-form .msg {
+	color: green;
+	text-align: center;
+	width: 100%;
+}

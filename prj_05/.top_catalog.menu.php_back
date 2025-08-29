@@ -1,0 +1,67 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Окрашивание", 
+		"/catalog/okrashivanie/", 
+		Array("/catalog/okrashivanie/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"1", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	),
+	Array(
+		"БИОзавивка", 
+		"/catalog/struktura-volos/", 
+		Array("/catalog/struktura-volos/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	),
+	Array(
+		"Блонд", 
+		"/en/catalog/blond/", 
+		Array("/catalog/blond/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"1", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	),
+	Array(
+		"Уход", 
+		"/catalog/ukhod/", 
+		Array("/catalog/ukhod/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	),
+	Array(
+		"Терапия", 
+		"/catalog/terapiya/", 
+		Array("/catalog/terapiya/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	),
+	Array(
+		"COLORING BALMS", 
+		"/catalog/coloring_balms/", 
+		Array("/catalog/coloring_balms/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	),
+	Array(
+		"Стайлинг", 
+		"/catalog/stayling/", 
+		Array("/catalog/stayling/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	),
+	Array(
+		"Коллекции", 
+		"/catalog/kollektsii/", 
+		Array("/catalog/kollektsii/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"1", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	),
+	Array(
+		"Для мужчин", 
+		"/catalog/dlya-muzhchin/", 
+		Array("/catalog/dlya-muzhchin/"), 
+		Array("FROM_IBLOCK"=>"1", "IS_PARENT"=>"", "DEPTH_LEVEL"=>"1"), 
+		"" 
+	)
+);
+?>

@@ -1,0 +1,1 @@
+<a rel="nofollow" href="mailto:store@firstltd.ru">store@firstltd.ru</a>

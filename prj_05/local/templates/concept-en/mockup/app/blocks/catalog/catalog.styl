@@ -1,0 +1,156 @@
+DIR = '../blocks/catalog/'
+IMG_DIR = DIR + 'images/'
+
+.catalog
+	display block
+	padding 18px 0 109px
+
+	+above(size-m)
+		padding 45px 0 60px
+
+
+
+	&__header
+		display block
+		margin 0 0 28px
+
+		+above(size-l)
+			margin 0 0 27px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__title
+		display none
+		margin 0 0 27px
+
+		+above(size-m)
+			display block
+			margin 0
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__control-group
+		display flex
+		flex-wrap nowrap
+		align-items center
+		justify-content space-between
+
+		+above(size-m)
+			display none
+
+
+
+	&__tabs
+		display block
+		flex 0 1 auto
+		width auto
+
+
+
+	&__filter-trigger
+		position relative
+		display block
+		visibility hidden
+		flex 0 0 auto
+		margin 0 0 0 16px
+		color var(--color-dark)
+		text-decoration none
+		pointer-events none
+		background transparent
+		border none
+		outline none
+		opacity 0
+
+		&:first-child
+			margin 0 0 0 auto
+
+
+
+	&__icon
+		display block
+		width 24px
+		height 24px
+		fill currentColor
+
+
+
+	&__categories
+		display block
+		padding 18px 0 0
+
+		+above(size-m)
+			margin 0 0 50px
+			padding 0
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__main
+		display none
+
+		+above(size-m)
+			display block
+
+
+
+	&__text
+		display block
+		margin 0 0 22px
+		color var(--color-black)
+		font-size 18px
+		font-weight 400
+		line-height 1.22
+
+		+above(size-l)
+			margin 0 0 93px
+			font-size 24px
+			line-height 1.208
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__filters
+		display none
+
+		+above(size-m)
+			display block !important
+			margin 0 0 45px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	// Modifiers
+	&_tab
+		&_products
+			.catalog
+				&__filter-trigger
+					visibility visible
+					pointer-events auto
+					opacity 1
+
+				&__categories
+					display none
+
+					+above(size-l)
+						display block
+
+				&__main
+					display block
+
+.fancybox__container
+	.catalog
+		&__filters
+			display flex
+			width calc(100% - 20px)

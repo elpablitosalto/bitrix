@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Услуги", 
+		"/services/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О компании", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Кейсы", 
+		"/gazeta/cases", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Газета НФ", 
+		"/gazeta/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Партнерам", 
+		"/partnership/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мероприятия", 
+		"https://leads.noboring-finance.ru/events", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

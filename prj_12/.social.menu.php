@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"ВКонтакте", 
+		"https://vk.com/rabbitstom", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Telegram", 
+		"https://t.me/rabbitstom", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"WhatsApp", 
+		"https://wa.me/message/2VCKGWDB2PV6F1", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

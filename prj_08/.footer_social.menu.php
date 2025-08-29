@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"ВКонтакте", 
+		"https://vk.com/mafmarketru", 
+		Array(), 
+		Array("PARAM_1"=>"VALUE_1"), 
+		"" 
+	),
+	Array(
+		"Telegram", 
+		"https://t.me/mafmarket_tg", 
+		Array(), 
+		Array("PARAM_1"=>"VALUE_1"), 
+		"" 
+	),
+	Array(
+		"Дзен", 
+		"https://dzen.ru/mafmarket", 
+		Array(), 
+		Array("PARAM_1"=>"VALUE_1"), 
+		"" 
+	),
+);
+?>

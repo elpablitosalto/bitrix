@@ -1,0 +1,46 @@
+DIR = '../blocks/map/'
+IMG_DIR = DIR + 'images/'
+
+.map
+	display block
+
+
+
+	&__container
+		position relative
+
+
+
+	&__item
+		position absolute
+		transform translate(-20%, -40%)
+
+		+above(size-m)
+			transform none
+
+		&_type
+			&_active
+				transform scale(1.5) translate(0, -20%)
+
+		&_size
+			&_m
+				.map
+					&__point
+						width 10px
+
+						+above(size-m)
+							width 19px
+
+						+above(size-l)
+							width 22px
+
+
+
+	&__icon
+		display block
+
+
+
+	&__point
+		display block
+

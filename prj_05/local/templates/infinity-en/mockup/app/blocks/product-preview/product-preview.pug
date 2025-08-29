@@ -1,0 +1,28 @@
+mixin product-preview(data)
+	- var DIR = 'assets/blocks/product-preview/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .product-preview
+	+b.product-preview&attributes(attributes)
+		if data
+			+e.wrapper
+				if data.image
+					+e.showcase
+						+e.illustration
+							+image({
+								lazyClass: '',
+								image: data.image
+							}, IMG_DIR)
+
+				+e.info
+					if data.text
+						+e.description
+							!=data.text
+
+					if data.props
+						+e.properties
+							+properties(data.props)
+
+					if data.controls
+						+control-group(data.controls)
+		block
+	// end .product-preview

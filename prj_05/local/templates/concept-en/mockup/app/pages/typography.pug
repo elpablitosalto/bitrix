@@ -1,0 +1,51 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'Типографика | Базовый проект';
+	- var pageDescription = 'Базовый проект для быстрого старта верстки проектов';
+	- var pageKeywords = 'hair, concept';
+
+	- var fileName = 'typography.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h2',
+					text: 'Типографика',
+					attr: {
+						class: '_size_h2'
+					}
+				}
+			}
+		})
+			+e.content
+				.page__container
+					h1 Заголовок H1
+					h2 Заголовок H2
+					h3 Заголовок H3
+					h4 Заголовок H4
+					h5 Заголовок H5
+					h6 Заголовок H6
+					p Lorem ipsum dolor <a href='#'>sit amet consectetur</a> adipisicing elit. Ad facere autem facilis perferendis magni sint animi officiis perspiciatis dolore ex accusamus <b>laborum, nam minus</b> consectetur?
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere autem facilis perferendis magni sint animi officiis perspiciatis dolore ex accusamus laborum, nam minus consectetur?
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere autem facilis perferendis magni sint animi officiis perspiciatis dolore ex accusamus laborum, nam minus consectetur?
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere autem facilis perferendis magni sint animi officiis perspiciatis dolore ex accusamus laborum, nam minus consectetur?
+					ul
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet consectetur.
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere autem facilis perferendis magni sint animi officiis perspiciatis dolore ex accusamus laborum, nam minus consectetur?
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad facere autem facilis perferendis magni sint animi officiis perspiciatis dolore ex accusamus laborum, nam minus consectetur?
+					ol
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet consectetur.
+						li Lorem ipsum dolor sit amet consectetur.

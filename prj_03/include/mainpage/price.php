@@ -1,0 +1,1 @@
+<a class="button big" href="/upload/price/list.xls">Скачать полный прайс</a>

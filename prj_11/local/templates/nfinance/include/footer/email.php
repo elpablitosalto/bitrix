@@ -1,0 +1,1 @@
+<a class="link-item" href="hello@noboring-finance.ru"><span class="link-item__label">hello@noboring-finance.ru</span></a>

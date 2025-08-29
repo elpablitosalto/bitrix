@@ -1,0 +1,40 @@
+.salon-info {
+    display:flex;
+    align-items: center;
+}
+
+.salon-info img {
+    width:82px;
+}
+
+.salon-info p {
+    margin:0 0 0 20px;
+}
+
+.salon-info .salon-info__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.salon-info .salon-info__text p {
+    font-size:18px;
+    text-transform: uppercase;
+}
+
+.salon-info .salon-info__text a {
+    margin-left:20px;
+}
+
+.salon-photos {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.salon-photos a {
+    display:block;
+    max-width:285px;
+    width:100%;
+    margin-bottom:30px;
+}

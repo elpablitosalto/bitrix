@@ -1,0 +1,125 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'Hair Concept Professional';
+	- var pageDescription = 'Hair Concept Professional';
+	- var pageKeywords = 'hair, concept';
+
+	- var fileName = 'index.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.section
+		+section({
+			header: {
+				title: {
+					text: 'Страницы',
+					attr: {
+						class: '_size_h3'
+					}
+				}
+			}
+		})
+			+e.content
+				.page__container
+					+work-list({
+						items: [
+							{
+								text: 'Главная страница',
+								class: '',
+								attr: {
+									href: 'front-page.html'
+								}
+							},
+							{
+								text: 'Каталог',
+								class: '',
+								attr: {
+									href: 'catalog.html'
+								}
+							},
+							{
+								text: 'Коллекция с одним товаров',
+								class: '',
+								attr: {
+									href: 'detail-single.html'
+								}
+							},
+							{
+								text: 'Коллекция с одним товаров с галереей',
+								class: '',
+								attr: {
+									href: 'detail-gallery.html'
+								}
+							},
+							{
+								text: 'Коллекция с несколькими товарами',
+								class: '',
+								attr: {
+									href: 'detail.html'
+								}
+							},
+							{
+								text: 'О компании',
+								class: '',
+								attr: {
+									href: 'about.html'
+								}
+							},
+							{
+								text: 'Контакты',
+								class: '',
+								attr: {
+									href: 'contacts.html'
+								}
+							},
+							{
+								text: 'Учитесь у нас',
+								class: '',
+								attr: {
+									href: 'study.html'
+								}
+							},
+							{
+								text: 'Сотрудничество',
+								class: '',
+								attr: {
+									href: 'partnership.html'
+								}
+							},
+						]
+					})
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					text: 'Dev Страницы',
+					attr: {
+						class: '_size_h3'
+					}
+				}
+			}
+		})
+			+e.content
+				.page__container
+					+work-list({
+						items: [
+							{
+								text: 'UI',
+								class: '',
+								attr: {
+									href: 'ui.html'
+								}
+							},
+							{
+								text: 'Типографика',
+								class: '',
+								attr: {
+									href: 'typography.html'
+								}
+							},
+						]
+					})

@@ -1,0 +1,101 @@
+DIR = '../blocks/radio-group/'
+IMG_DIR = DIR + 'images/'
+
+.radio-group
+	display flex
+	flex-wrap nowrap
+	align-items flex-start
+
+
+
+	&__label
+		display block
+		flex 0 0 auto
+		margin 0 18px 0 0
+		font-size 14px
+		line-height 1.428
+
+		&:last-child
+			margin-right 0
+
+
+
+	&__list
+		display flex
+		flex 1 1 100%
+		flex-wrap nowrap
+		margin 0
+		padding 0
+
+
+
+	&__item
+		display block
+		flex 0 1 auto
+		width auto
+
+
+
+	&__label
+		position relative
+		display block
+		overflow hidden
+
+		&_state
+			&_active
+				.radio-group
+					&__panel
+						color var(--color-white)
+						background var(--color-primary)
+
+
+
+	&__input
+		position absolute
+		overflow hidden
+		clip rect(0 0 0 0)
+		width 1px
+		height 1px
+		margin -1px
+		padding 0
+		border none
+		opacity .01
+		transform scale(.001)
+
+		& ~ .radio-group
+			&__panel
+				cursor pointer
+
+				&:hover
+					color var(--color-primary)
+
+		&:checked
+			& ~ .radio-group
+				&__panel
+					color var(--color-white)
+					background var(--color-primary)
+
+					&:hover
+						color var(--color-primary)
+						background var(--color-white)
+
+
+
+	&__panel
+		position relative
+		z-index 1
+		display block
+		width 100%
+		padding 0 7px
+		color var(--colo-dark)
+		font-size 14px
+		font-weight 300
+		line-height 24px
+		text-align center
+		text-decoration none
+		user-select none
+		background transparent
+		border none
+		border-radius 20px
+		outline none
+		def-trn(color, background-color, border-color)

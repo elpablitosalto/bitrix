@@ -1,0 +1,72 @@
+DIR = '../blocks/burger/'
+IMG_DIR = DIR + 'images/'
+
+.burger
+	position relative
+	z-index 10
+	display block
+	width 24px
+	height 24px
+	margin 0
+	padding 0
+	color inherit
+	font-size 0
+	font-weight 400
+	line-height 0
+	text-decoration none
+	cursor pointer
+	background transparent
+	border none
+	outline none
+	def-trn(color)
+
+	&:hover
+		text-decoration none
+
+	&:focus
+		outline none
+
+
+
+	&__bars
+		position absolute
+		top 50%
+		left 0
+		z-index 1
+		display block
+		width 22px
+		height 14px
+		border-top 1px solid currentColor
+		border-bottom 1px solid currentColor
+		transform translate(0, -50%)
+		def-trn(border-color)
+
+		&:before
+		&:after
+			content ''
+			position absolute
+			top 50%
+			left 50%
+			display block
+			width inherit
+			height 1px
+			background currentColor
+			transform translate(-50%, 0)
+
+			def-trn(transform)
+
+
+
+	// Modifiers
+	&_state
+		&_closed
+			.burger
+				&__bars
+					border-color transparent
+
+					&:before
+						transform translate(-50%, -50%) rotate(-45deg)
+
+					&:after
+						transform translate(-50%, -50%) rotate(45deg)
+

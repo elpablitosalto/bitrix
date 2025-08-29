@@ -1,0 +1,1 @@
+<a class='tn-atom' href="#about">о проекте</a>

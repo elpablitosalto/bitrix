@@ -1,0 +1,37 @@
+DIR = '../blocks/logo-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.logo-carousel
+	position relative
+	padding 0 26px
+
+
+
+	&__wrapper
+		align-items center
+
+
+
+
+	&__image
+		position relative
+		z-index 101
+		max-width 100%
+		transform scale(1)
+		filter grayscale(100)
+		def-trn(filter, transform)
+
+		&:hover
+			transform scale(1.05)
+			filter grayscale(0)
+
+
+
+	&__slide
+		display flex
+		justify-content center
+
+
+	&__arrows
+		color var(--color-white)
+

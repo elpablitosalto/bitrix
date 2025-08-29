@@ -1,0 +1,81 @@
+DIR = '../blocks/breadcrumbs/'
+IMG_DIR = DIR + 'images/'
+
+.breadcrumbs
+	position relative
+	z-index 100
+	display block
+	padding 20px 0 30px
+	background var(--color-black)
+
+	+above(size-xxl)
+		padding 60px 0
+
+
+
+	&__list
+		display block
+		margin 0
+		padding 0
+		list-style none
+		font-size 0
+		line-height 16px
+
+
+
+	&__item
+		position relative
+		display inline-block
+		vertical-align middle
+		overflow hidden
+		max-width 295px
+		margin 0
+		padding 8px 21px 0 0
+		color #eedc7a
+		font-size 12px
+		font-weight 500
+		font-style italic
+		line-height 16px
+		white-space nowrap
+		text-overflow ellipsis
+		word-break break-word
+
+		&:last-child
+			margin-right 0
+			padding-right 0
+
+			&::before
+
+			&::after
+				display none
+
+		&::before
+			content '/'
+			position absolute
+			// top 16px
+			right 6px
+			z-index 1
+			display block
+			box-sizing border-box
+
+
+
+	&__link
+		color var(--color-white)
+		font-weight 400
+		text-decoration underline
+		outline none
+		def-trn color
+
+		&:hover
+			color #eedc7a
+			text-decoration none
+
+		&:focus
+		&:active
+			color #eedc7a
+
+
+	&_style
+		&_transparent
+			background transparent

@@ -1,0 +1,18 @@
+mixin layout-group(data)
+	- var DIR = 'assets/blocks/layout-group/';
+	- var IMG_DIR = DIR + 'images/';
+	- attributes.class = attributes.class || '';
+	- attributes.class += ' js-layout-group';
+	- attributes.class = attributes.class.trim();
+	// begin .layout-group
+	+b.layout-group&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list
+					each item in data.items
+						+e('li').item
+							- var attr = item.attr || {};
+							+e.trigger&attributes(attr)
+								!=item.icon
+		block
+	// end .layout-group

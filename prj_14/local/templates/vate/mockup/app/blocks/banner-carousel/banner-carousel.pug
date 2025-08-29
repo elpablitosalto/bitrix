@@ -1,0 +1,23 @@
+mixin banner-carousel(data)
+	- var DIR = 'assets/blocks/banner-carousel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .banner-carousel
+	+b.banner-carousel&attributes(attributes)
+		if data
+			+e.container(class='swiper js-banner-carousel')
+				+e.wrapper(class='swiper-wrapper')
+					if data.items
+						each item in data.items
+							+e.slide(class='swiper-slide')
+								- var attr = item.attr || {};
+
+								+banner(item)&attributes(attr)
+
+
+			+e.navigation
+				+e.pagination
+						+bullet-pagination()._role_banner
+
+
+		block
+	// end .banner-carousel

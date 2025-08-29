@@ -1,0 +1,12 @@
+.basket-items-list-header {
+    display: none;
+}
+.basket__total-order strong {
+    font-weight: normal;
+}
+.bx-sbb-empty-cart-container {
+    text-align: center;
+}
+.bx-sbb-empty-cart-desc a {
+    display: inline-block;
+}

@@ -1,0 +1,106 @@
+DIR = '../blocks/menu/'
+IMG_DIR = DIR + 'images/'
+
+.menu
+	display flex
+	flex-direction column
+	height 100%
+	padding 40px 20px
+	background rgba(0,0,0, .7)
+	backdrop-filter blur(5px)
+
+	+above(size-xs)
+		padding 30px
+
+	+above(size-m)
+		padding 40px
+
+
+
+	&__close
+		position absolute
+		top 24px
+		right 24px
+		z-index 1
+		display block
+		width 24px
+		height 24px
+		color var(--color-white)
+		font-size 0
+		text-decoration none
+		cursor pointer
+		background transparent
+		border none
+		outline none
+
+		&::before
+
+		&::after
+			content ''
+			position absolute
+			top 50%
+			left 50%
+			z-index 1
+			display block
+			width 20px
+			height 2px
+			background currentColor
+			transform translate(-50%, -50%) rotate(45deg)
+
+		&::after
+			transform translate(-50%, -50%) rotate(-45deg)
+
+
+
+	&__contact-group
+		margin 20px 0 0
+
+		&:first-child
+			margin-top 0
+
+
+
+	&__links
+		display flex
+		flex-wrap wrap
+		gap 10px
+
+
+
+	&__contact-group
+		display flex
+		gap 20px
+
+	&__link
+		color var(--color-white)
+		text-decoration none
+
+
+
+	&__nav
+		flex 1 1 auto
+		padding 35px 0 0
+
+
+
+	&__extra
+		margin 20px 0 0
+
+		+above(size-m)
+			margin 30px 0 0
+
+		&:first-child
+			margin-top 0
+
+
+
+	&__copyright
+		margin-top 20px
+		color var(--color-muted)
+		font-size 12px
+		line-height 133%
+
+		+above(size-m)
+			font-size 14px
+			line-height 143%
+

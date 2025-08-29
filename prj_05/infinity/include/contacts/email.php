@@ -1,0 +1,1 @@
+<a class="contacts__link" href="mailto:concept@bigcom.ru"><span class="contacts__link-text">concept@bigcom.ru</span></a>

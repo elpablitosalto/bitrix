@@ -1,0 +1,36 @@
+mixin price-group(data)
+	- var DIR = 'assets/blocks/price-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .price-group
+	+b.price-group&attributes(attributes)
+		if data
+			if data.old
+				+e.extra
+					+e.price._type_old
+						+e('span').value
+							!=data.old
+						+e('span').unit
+							|  ₽
+
+					if data.discount
+						+e.label
+							+label()._style_secondary
+								!=data.discount
+
+					if data.savings
+						+e.label
+							+label()._style_secondary
+								!=data.savings
+
+			if data.price
+				+e.main
+					+e.price
+						+e('span').value
+							!=data.price
+						+e('span').unit
+							if data.unit
+								!=data.unit
+							else
+								|  ₽
+		block
+	// end .price-group

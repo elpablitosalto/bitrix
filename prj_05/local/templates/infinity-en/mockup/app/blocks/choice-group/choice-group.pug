@@ -1,0 +1,30 @@
+mixin choice-group(data)
+	- var DIR = 'assets/blocks/choice-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .choice-group
+	+b.choice-group&attributes(attributes)
+		if data
+			if data.label
+				+e.caption
+					!=data.label
+
+			if data.items
+				+e.UL.list
+					each item in data.items
+						+e.LI.item
+							- var labelClass = data.interactive === false && item.attr.checked ? '_state_active' : '';
+							+e.LABEL.label(class=labelClass)
+								if data.tooltip
+									+e.tooltip
+										!=data.tooltip
+
+								if data.interactive !== false
+									- var attr = item.attr || {};
+									- attr.type = attr.type || 'radio';
+
+									+e.INPUT.input&attributes(attr)
+
+								+e.panel
+									!=item.text
+		block
+	// end .choice-group

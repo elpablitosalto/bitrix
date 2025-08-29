@@ -1,0 +1,11 @@
+.profiles-wrapper .address-option__form{
+    display: block;
+    border-top: none;
+}
+.profiles-wrapper .profile-panel__heading{
+    padding-left: 0px;
+    padding-top: 0px;
+}
+.profiles-wrapper .profile-panel__address-item{
+    border-top: none;
+}

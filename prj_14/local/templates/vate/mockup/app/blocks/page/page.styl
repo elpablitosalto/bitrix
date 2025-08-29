@@ -1,0 +1,209 @@
+DIR = '../blocks/page/'
+IMG_DIR = DIR + 'images/'
+
+.page
+	position relative
+	display block
+	margin 0
+	padding 0
+	background var(--color-white)
+
+
+
+	&__body
+		display flex
+		flex-flow column nowrap
+		min-height 100vh
+
+		// Modifiers
+
+		&_nav
+			&_open
+				overflow hidden
+
+				+above(size-l)
+					overflow visible
+
+				.page
+					&__slide-nav
+						transform translate(0, 0)
+
+
+
+	&__header
+		position relative
+		top 0
+		left 0
+		z-index 500
+		display block
+		flex 0 0 auto
+		width 100%
+
+		&_position
+			&_absolute
+				position absolute
+				pointer-events none
+
+			&_fixed
+				pointer-events auto
+
+				.page
+					&__header-wrapper
+						position fixed
+
+
+
+	&__header-wrapper
+		position relative
+		top 0
+		left 0
+		z-index inherit
+		display block
+		width 100%
+
+
+
+	&__scroll-top
+		position fixed
+		right 10px
+		bottom 70px
+		z-index 490
+		display block
+		visibility visible
+		opacity 1
+		transform translate(0, 0)
+		will-change transform
+
+
+		+above(size-m)
+			right 24px
+			bottom 52px
+
+		+above(size-l)
+			right 28px
+			bottom 56px
+
+		+above(size-xxl)
+			right 40px
+			bottom 68px
+
+
+		&_state
+			&_hidden
+				visibility hidden
+				opacity 0
+				transform translate(0, 50%)
+
+
+
+	&__content
+		display block
+		flex 1 1 100%
+		width 100%
+
+		+above(size-xxl)
+			background repeating-linear-gradient(-70deg, rgba(215, 215, 215, .2), rgba(126, 126, 126, .2) 1px, #000 1px, #000 20px)
+
+
+	&__container
+		width 100%
+		max-width containers.default.maxWidth
+		margin 0 auto
+		padding '0 %s' % containers.default.gutter
+
+		+above(340px)
+			padding 0 20px
+
+		+above(size-m)
+			padding '0 %s' % containers.default.gutter
+
+		// Modifiers
+
+		&_width
+			&_full
+				max-width 100%
+
+
+	&__section
+		&_type
+			&_intro
+				position relative
+
+				&::after
+					content ''
+					position absolute
+					left 0
+					bottom 0
+					z-index 10
+					width 100%
+					height 35%
+					background linear-gradient(0deg, #000 0%, rgba(165, 165, 165, 0) 100%)
+					transform rotate(180deg) translate(0, -100%)
+
+		&_top
+			&_gradient
+				position relative
+
+				&::after
+					content ''
+					position absolute
+					top 0
+					left 0
+					z-index 10
+					width 100%
+					height 35%
+					background linear-gradient(0deg, #000 0%, rgba(165, 165, 165, 0) 100%)
+					transform rotate(180deg) translate(0, 0%)
+
+
+
+	&__footer
+		position relative
+		display block
+		flex 0 0 auto
+		width 100%
+		padding 0 0 60px
+
+		&::after
+			content ''
+			position absolute
+			top 0
+			left 0
+			z-index 10
+			width 100%
+			height 35%
+			background linear-gradient(0deg, #000 0%, rgba(165, 165, 165, 0) 100%)
+			transform rotate(0deg) translate(0, -100%)
+
+		+above(size-m)
+			padding 0
+
+
+
+	&__slide-nav
+		position fixed
+		top 0
+		left 0
+		bottom 0
+		z-index 700
+		width 100%
+		height auto
+		transform translate(-110%, 0)
+		def-trn(transform)
+
+		+above(size-m)
+			width 50%
+
+
+
+	&__tab-bar-panel
+		position fixed
+		left 0
+		bottom 0
+		z-index 100
+		width 100%
+		padding 10px 20px
+		background var(--color-black)
+
+		+above(size-m)
+			display none

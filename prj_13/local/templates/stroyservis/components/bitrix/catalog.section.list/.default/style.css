@@ -1,0 +1,14 @@
+.bx_catalog_text_ul a,
+.bx_catalog_text_ul a:hover {
+    display: inline-block;
+    color: inherit;
+}
+.bx_catalog_text_ul a:hover {
+    text-decoration: underline;
+}
+.bx_catalog_text_ul li {
+    margin: .6em 0;
+}
+.bx_catalog_text_ul span {
+    color: #F35E19;
+}

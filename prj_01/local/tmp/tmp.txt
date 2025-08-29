@@ -1,0 +1,26 @@
+Array
+(
+    [LOGIN] => email@email.cfddf
+    [EMAIL] => email@email.cfddf
+    [NAME] => Василий
+    [LAST_NAME] => Иванов
+    [WORK_COMPANY] => Организация
+    [WORK_POSITION] => Должность
+    [PERSONAL_MOBILE] => +7-121-212-12-12
+    [UF_PARTNER] => Y
+    [GROUP_ID] => Array
+        (
+            [0] => 5
+        )
+
+    [CHECKWORD] => 58u8ei7tgr70c879t5o8l2axf83uddbg
+    [~CHECKWORD_TIME] => now()
+    [ACTIVE] => N
+    [CONFIRM_CODE] => t0cur132
+    [LID] => s1
+    [LANGUAGE_ID] => ru
+    [USER_IP] => 127.0.0.1
+    [USER_HOST] => dentalstom
+    [AUTO_TIME_ZONE] => 
+    [USER_ID] => 37
+)

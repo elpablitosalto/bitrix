@@ -1,0 +1,102 @@
+DIR = '../blocks/link-filter/'
+IMG_DIR = DIR + 'images/'
+
+.link-filter
+	position relative
+	display flex
+	gap 7px
+	font-size 16px
+	line-height 1.25
+
+
+
+	&__list
+		display flex
+		flex-wrap wrap
+		margin -4px -6px
+		padding 0
+		list-style none
+
+
+
+	&__item
+		display block
+		flex 0 0 auto
+		margin 0
+		padding 4px 6px
+		border none
+
+
+
+	&__label
+		color var(--color-muted)
+		font-size 12px
+		font-weight 600
+
+		+above(size-m)
+			font-size 14px
+
+		+above(size-xxl)
+			font-size 16px
+
+
+
+	&__link
+		display block
+		width 100%
+		color var(--color-muted)
+		font-size 12px
+		font-weight 600
+		text-align left
+		text-decoration none
+		cursor pointer
+		background transparent
+		border-bottom 1px solid var(--color-muted)
+		border-radius 2px
+		outline none
+		def-trn color, border-color
+
+		+above(size-m)
+			font-size 14px
+
+		+above(size-xxl)
+			font-size 16px
+
+		&:hover
+		&:focus
+			text-decoration none
+			outline none
+			opacity .8
+
+		// Modifiers
+
+		&_state
+			&_active
+				color var(--color-yellow)
+				border-color var(--color-yellow)
+
+		&_decor
+			&_dashed
+				border-bottom 1px dashed var(--color-muted)
+
+	&_style
+		&_dark
+			.link-filter
+				&__label
+					color var(--color-gray)
+
+				&__link
+					color var(--color-gray)
+					border-bottom 1px solid var(--color-gray)
+
+
+					// Modifiers
+
+					&_state
+						&_active
+							color var(--color-black)
+							border-color var(--color-black)
+
+					&_decor
+						&_dashed
+							border-bottom 1px dashed var(--color-gray)

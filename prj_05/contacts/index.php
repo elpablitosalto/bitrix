@@ -1,0 +1,196 @@
+<?
+define('SHOW_TEMPLATE_BOTTOM_BANNER', 'N');
+define('SHOW_TEMPLATE_BOTTOM_ASK', 'N');
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Contacts");
+?>
+
+<div class="page__contacts">
+    <div class="page__container">
+        <!-- begin .contacts-->
+        <div class="contacts">
+            <div class="contacts__wrapper">
+                <div class="contacts__main">
+                    <div class="contacts__section">
+                        <h1 class="contacts__title">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "PATH" => SITE_DIR . "/include/contacts/h1.php",
+                                    "AREA_FILE_RECURSIVE" => "N",
+                                    "EDIT_MODE" => "html",
+                                ),
+                                false,
+                                array('HIDE_ICONS' => 'N')
+                            );
+                            ?>
+                        </h1>
+                        <div class="contacts__text">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "PATH" => SITE_DIR . "/include/contacts/text_1.php",
+                                    "AREA_FILE_RECURSIVE" => "N",
+                                    "EDIT_MODE" => "html",
+                                ),
+                                false,
+                                array('HIDE_ICONS' => 'N')
+                            ); ?>
+                        </div>
+                        <div class="contacts__note">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "PATH" => SITE_DIR . "/include/contacts/text_2.php",
+                                    "AREA_FILE_RECURSIVE" => "N",
+                                    "EDIT_MODE" => "html",
+                                ),
+                                false,
+                                array('HIDE_ICONS' => 'N')
+                            ); ?>
+                        </div>
+                    </div>
+                    <div class="contacts__section">
+                        <div class="contacts__subtitle">
+                            <!-- begin .title-->
+                            <h2 class="title title_size_h4 title_font_secondary">
+                                <?
+                                $APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "PATH" => SITE_DIR . "/include/contacts/h2.php",
+                                        "AREA_FILE_RECURSIVE" => "N",
+                                        "EDIT_MODE" => "html",
+                                    ),
+                                    false,
+                                    array('HIDE_ICONS' => 'N')
+                                );
+                                ?>
+                            </h2>
+                            <!-- end .title-->
+                        </div>
+                        <div class="contacts__group">
+                            <div class="contacts__icon-wrapper"><svg class="contacts__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.3333 5.33335L8 8.66669L2.66667 5.33335V4.00002L8 7.33335L13.3333 4.00002V5.33335ZM13.3333 2.66669H2.66667C1.92667 2.66669 1.33334 3.26002 1.33334 4.00002V12C1.33334 12.3536 1.47381 12.6928 1.72386 12.9428C1.97391 13.1929 2.31305 13.3334 2.66667 13.3334H13.3333C13.687 13.3334 14.0261 13.1929 14.2761 12.9428C14.5262 12.6928 14.6667 12.3536 14.6667 12V4.00002C14.6667 3.6464 14.5262 3.30726 14.2761 3.05721C14.0261 2.80716 13.687 2.66669 13.3333 2.66669Z" />
+                                </svg>
+                            </div>
+                            <ul class="contacts__list">
+                                <li class="contacts__item">
+                                    <?
+                                    $APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "PATH" => SITE_DIR . "/include/contacts/email.php",
+                                            "AREA_FILE_RECURSIVE" => "N",
+                                            "EDIT_MODE" => "html",
+                                        ),
+                                        false,
+                                        array('HIDE_ICONS' => 'N')
+                                    );
+                                    ?>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contacts__group">
+                            <div class="contacts__icon-wrapper"><svg class="contacts__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.658 11.4267L10.948 8.96266C10.8199 8.84623 10.6516 8.78414 10.4785 8.78948C10.3055 8.79483 10.1413 8.86721 10.0207 8.99133L8.42534 10.632C8.04134 10.5587 7.26934 10.318 6.47467 9.52533C5.68 8.73 5.43934 7.956 5.368 7.57466L7.00734 5.97866C7.13161 5.85808 7.2041 5.69388 7.20945 5.5208C7.2148 5.34772 7.15259 5.17936 7.036 5.05133L4.57267 2.342C4.45603 2.21357 4.29392 2.13567 4.12077 2.12484C3.94762 2.11401 3.77707 2.1711 3.64534 2.284L2.19867 3.52466C2.08341 3.64034 2.01462 3.7943 2.00534 3.95733C1.99534 4.124 1.80467 8.072 4.866 11.1347C7.53667 13.8047 10.882 14 11.8033 14C11.938 14 12.0207 13.996 12.0427 13.9947C12.2057 13.9855 12.3596 13.9164 12.4747 13.8007L13.7147 12.3533C13.828 12.222 13.8855 12.0516 13.8749 11.8785C13.8644 11.7053 13.7865 11.5432 13.658 11.4267Z" />
+                                </svg>
+                            </div>
+                            <ul class="contacts__list">
+                                <li class="contacts__item">
+                                    <?
+                                    $APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        "",
+                                        array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "PATH" => SITE_DIR . "/include/contacts/phone.php",
+                                            "AREA_FILE_RECURSIVE" => "N",
+                                            "EDIT_MODE" => "html",
+                                        ),
+                                        false,
+                                        array('HIDE_ICONS' => 'N')
+                                    );
+                                    ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contacts__section">
+                        <div class="contacts__label">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "PATH" => SITE_DIR . "/include/contacts/text_3.php",
+                                    "AREA_FILE_RECURSIVE" => "N",
+                                    "EDIT_MODE" => "html",
+                                ),
+                                false,
+                                array('HIDE_ICONS' => 'N')
+                            );
+                            ?>
+                        </div>
+                        <div class="contacts__social-nav">
+                            <!-- begin .social-nav-->
+                            <div class="social-nav">
+                                <?
+                                $APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "PATH" => SITE_DIR . "/include/contacts/social_links.php",
+                                        "AREA_FILE_RECURSIVE" => "N",
+                                        "EDIT_MODE" => "html",
+                                    ),
+                                    false,
+                                    array('HIDE_ICONS' => 'N')
+                                );
+                                ?>
+                            </div>
+                            <!-- end .social-nav-->
+                        </div>
+                    </div>
+                </div>
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:form.result.new",
+                    "contact_us",
+                    array(
+                        "SEF_MODE" => "N",
+                        "WEB_FORM_ID" => 2,
+                        "LIST_URL" => "",
+                        "EDIT_URL" => "",
+                        "SUCCESS_URL" => "",
+                        "CHAIN_ITEM_TEXT" => "",
+                        "CHAIN_ITEM_LINK" => "",
+                        "IGNORE_CUSTOM_TEMPLATE" => "Y",
+                        "USE_EXTENDED_ERRORS" => "Y",
+                        "CACHE_TYPE" => "A",
+                        "CACHE_TIME" => "3600",
+                        "SEF_FOLDER" => "/",
+                        "VARIABLE_ALIASES" => array(),
+                    )
+                ); ?>                
+            </div>
+        </div>
+        <!-- end .contacts-->
+    </div>
+</div>
+
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

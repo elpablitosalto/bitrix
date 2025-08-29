@@ -1,0 +1,150 @@
+DIR = '../blocks/nav/'
+IMG_DIR = DIR + 'images/'
+
+.nav
+	display block
+
+
+
+	&__list
+		display flex
+		flex-direction column
+		gap 12.5px
+		padding 0
+		list-style none
+
+
+
+	&__item
+		position relative
+		display block
+		color var(--color-primary)
+		cursor pointer
+		def-trn(background, box-shadow)
+
+
+		&:last-child
+			margin-bottom 0
+
+		&:hover
+			color var(--color-white)
+
+
+			.nav
+				&__text
+					opacity .7
+
+	&__item-icon
+		margin-bottom 3px
+
+
+		// Modifiers
+
+		&_state
+			&_active
+				& .nav
+					&__link
+						color var(--color-white)
+
+
+	&__link
+		display flex
+		flex-direction column
+		align-items center
+		color var(--color-white)
+		text-decoration none
+
+	&__text
+		width auto
+		color var(--color-muted)
+		font-size inherit
+		font-size 16px
+		line-height inherit
+		white-space nowrap
+		text-decoration none
+		background transparent
+		border none
+		outline none
+		def-trn opacity
+
+		&:hover
+			text-decoration none
+			opacity .7
+
+
+
+	// Modifiers
+
+	&_align
+		&_left
+			.nav
+				&__list
+					align-items flex-start
+
+
+
+	&_size-s
+		&_s
+			.nav
+				&__list
+					flex-wrap wrap
+					gap 12.2px
+
+					+above(size-xs)
+						flex-wrap nowrap
+						gap 25px
+
+					+above(size-xxl)
+						gap 24px
+
+				&__text
+					font-size 12px
+
+					+above(size-xxl)
+						font-size 16px
+
+
+
+	&_layout
+		&_horizontal
+			.nav
+				&__list
+					flex-direction row
+					justify-content space-around
+
+		&_inline-to-col
+			.nav
+				&__list
+					flex 1
+					flex-direction row
+					justify-content space-between
+
+					+above(size-m)
+						justify-content initial
+
+
+					+above(size-xxl)
+						flex-direction column
+						justify-content space-between
+
+
+
+	&_style
+		&_primary
+			.nav
+				&__list
+					gap 20px
+					align-items flex-start
+
+
+				&__text
+					font-size 18px
+
+					+above(size-m)
+						font-size 24px
+
+	&_size
+		&_s
+			.nav
+				&__text
+					font-size 14px

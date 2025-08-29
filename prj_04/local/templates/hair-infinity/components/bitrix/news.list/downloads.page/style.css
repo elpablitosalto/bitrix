@@ -1,0 +1,135 @@
+.downloads-item__icon {
+    position: absolute;
+    top: 42px;
+    left: 10px;
+    z-index: 100;
+}
+
+.downloads-item__image {
+    height: 100%;
+    width: 100%;
+    max-height: 240px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.downloads-item__image img {
+    height: 100%;
+    width: 100%;
+    max-width: 196px;
+    max-height: 240px;
+    object-fit: cover;
+}
+
+.downloads-item__title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #282323;
+    margin-bottom: 6px;
+}
+
+.downloads-item__subtitle {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: #959595;
+    margin-bottom: 0;
+}
+
+.downloads-item .form-wrapper__item-checkbox {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 10;
+}
+
+.downloads-item .form-wrapper__item-checkbox input {
+    width: 24px;
+    height: 24px;
+}
+
+.downloads-item .form-wrapper__item-checkbox label {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+}
+
+.downloads-item .form-wrapper__item-checkbox label::before,
+.downloads-item .form-wrapper__item-checkbox label::after {
+    width: 24px;
+    height: 24px;
+}
+
+.downloads-item:hover .form-wrapper__item-checkbox label::before {
+    border-color: #fff;
+}
+
+
+.form-wrapper__item-file__default label {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    color: #959595;
+}
+
+.form-wrapper__item-checkbox input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.form-wrapper__item-checkbox label {
+    padding-left: 28px;
+    cursor: pointer;
+    color: #959595;
+}
+
+.form-wrapper__item-checkbox label::before {
+    content: "";
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #959595;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .3s all;
+}
+
+.form-wrapper__item-checkbox._active label::before {
+    background: #8e0e59;
+    border: none;
+}
+
+.downloads-item:hover .form-wrapper__item-checkbox._active label::before {
+    background-color: #fff;
+}
+
+.form-wrapper__item-checkbox._active label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    color: #f7faf7;
+    left: 0;
+    top: 0px;
+    font-size: 11px;
+    background-image: url(/local/templates/hair-infinity/mockup/dist/assets/images/icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+.choices__list--dropdown{
+    z-index: 1000 !important;
+}
+.downloads-cnt i{
+    font-style:normal !important;
+}
+.entity-grid__select-group {
+    align-items: center;
+}

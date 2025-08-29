@@ -1,0 +1,44 @@
+mixin form(data = 'form')
+	- var DIR = 'assets/blocks/form/';
+	- var IMG_DIR = DIR + 'images/';
+	- data = typeof data === 'string' ? {tag: data} : data;
+	- var tag = data.tag || 'form';
+	- var attr = data.attr || {};
+	// begin .form
+	// Modifiers
+	// form_messages_shown - display the messages element. this will automatically display all the .form__message elements
+	+b(tag).form&attributes(attr)&attributes(attributes)
+		// messages can be placed before or after the form
+		+e.messages
+			// Modifiers
+			// form__message_style_error - red color
+			+e.message
+
+		+e.main
+			if data.fields
+				+e.inputs
+					each item in data.fields
+						+e.line
+							+form-control(item)
+
+			if data.checkbox
+				+e.confirmation-check
+					+check-elem(data.checkbox)
+
+			if data.controls
+				+control-group(data.controls)
+
+		+e.final
+			+result-panel(data.final || {
+				title: 'Form successfully sent!',
+				text: 'Our managers will respond within 24 hours',
+				controls: [
+					{
+						text: 'Main page',
+						attr: {
+							href: 'front-page.html'
+						}
+					}
+				]
+			})
+	// end .form

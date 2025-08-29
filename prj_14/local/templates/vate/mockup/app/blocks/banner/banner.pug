@@ -1,0 +1,41 @@
+mixin banner(data)
+	- var DIR = 'assets/blocks/banner/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .banner
+	+b.banner&attributes(attributes)
+		if data
+			+e.container
+				if data.image
+					+image(data.image, IMG_DIR)
+
+
+				+e.main
+
+					if data.title
+						- var attr = data.title.attr || {}
+						+e.title
+							+title(data.title)&attributes(attr)
+					+e.content
+						if data.controls
+							+e.arrows
+								+carousel-nav({
+									arrows: true,
+									buttonAttr:{
+										class: 'button_width_fit button_style_transparent'
+									}
+								})._position_sides(
+									data-nav-scope='.banner-carousel'
+									data-nav-target='.swiper'
+								)
+						if data.text
+							+e('p').text
+								!=data.text
+						if data.button
+							+e.controls
+								+e.control
+									- var attr = data.button.attr || {}
+									+button()&attributes(attr)
+										!=data.button.text
+
+		block
+	// end .banner

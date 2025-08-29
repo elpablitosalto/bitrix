@@ -1,0 +1,21 @@
+mixin photo-carousel(data)
+	- var DIR = 'assets/blocks/photo-carousel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .photo-carousel
+	+b.photo-carousel&attributes(attributes)
+		if data
+			+e.container(class='swiper js-photo-carousel')
+				+e.wrapper(class='swiper-wrapper')
+					if data.items
+						each item in data.items
+							+e.slide(class='swiper-slide' )
+								- var attr = item.attr || {};
+
+								+e.illustration&attributes(attr)
+									+image(item.image, IMG_DIR)
+			+e.navigation
+				+e.pagination
+					+bullet-pagination()._role_photo
+
+		block
+	// end .photo-carousel

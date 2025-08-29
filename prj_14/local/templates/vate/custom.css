@@ -1,0 +1,82 @@
+.bx-authform {
+	margin: 0 auto 25px;
+	max-width: 500px;
+	padding: 40px 0;
+	color: #fff;
+}
+
+.bx-authform-link-container,
+.bx-authform-description-container,
+.bx-authform a {
+	color: #f4f4f4;
+}
+
+.bx-authform input[type='text']:not([class]),
+.bx-authform input[type='password']:not([class]) {
+	display: block;
+	width: 100%;
+	color: #343434 !important;
+}
+
+.bx-authform-social {
+	display: none;
+}
+
+.bx-authform .bx-title {
+	font-size: 25px;
+	font-weight: 400;
+
+}
+
+.bx-authform .btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: auto;
+	padding: 10px 30px;
+	border: none;
+	outline: none;
+	background: #fff;
+	border-radius: 3px;
+}
+
+.form__final {
+	display: none;
+}
+
+.form_state_sent .form__final {
+	display: block;
+}
+
+.form_state_sent .form__main {
+	display: none;
+}
+
+.form__title {
+	margin: 0 0 15px;
+}
+
+
+.modal_state_sent .modal__title,
+.modal_state_sent .modal__text,
+.modal_state_sent .modal__extra {
+	display: none !important;
+}
+
+
+.notetext {
+    color: green;
+    font-weight: bold;
+}
+
+.form_has_errors .form__message {
+	display: block;
+}
+
+.form_is_loading {
+	opacity: .3;
+	pointer-events: none;
+}
+
+.form__description {
+	margin: 0 0 30px;
+}

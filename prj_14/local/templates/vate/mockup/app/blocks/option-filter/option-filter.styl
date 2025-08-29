@@ -1,0 +1,148 @@
+DIR = '../blocks/option-filter/'
+IMG_DIR = DIR + 'images/'
+
+.option-filter
+	position relative
+	z-index 50
+	display block
+	padding 3px 10px
+	border 2px solid var(--color-white)
+	border-radius 8px
+
+
+	&__header
+		position relative
+		display flex
+		align-items center
+		height 24px
+
+
+
+	&__trigger
+		position relative
+		display block
+		width auto
+		padding 0 20px 0 0
+		color var(--color-white)
+		font-size 12px
+		font-weight 600
+		line-height inherit
+		text-decoration none
+		letter-spacing inherit
+		background transparent
+		border none
+		outline none
+		def-trn opacity
+
+		&:hover
+		&:focus
+			text-decoration none
+			opacity .7
+
+			.option-filter
+				&__label
+					border-color currentColor
+
+	&__icon
+		position absolute
+		top 50%
+		right 8px
+		z-index 1
+		display block
+		transform translate(50%, -50%)
+		def-trn transform
+
+
+
+
+	&__body
+		position absolute
+		top 100%
+		left 0
+		z-index 10
+		display none
+		overflow hidden auto
+		width 250px
+		max-height 530px
+		background var(--color-black)
+		border 1px solid var(--color-white)
+		border-radius 10px
+		transform translate(0, 8px)
+
+
+
+	&__list
+		display block
+		margin 0
+		padding 0
+		list-style none
+
+
+
+	&__item
+		display block
+		margin 0
+		padding 0
+
+		&:last-child
+			border-bottom none
+
+
+
+	&__link
+		display flex
+		flex-wrap nowrap
+		align-items center
+		width 100%
+		padding 12px 20px
+		color var(--color-white)
+		font-size 12px
+		text-align left
+		text-decoration none
+		background transparent
+		border none
+		outline none
+		def-trn color, background-color
+
+		&:hover
+		&:focus
+			color var(--color-muted)
+			text-decoration none
+
+			.option-filter
+				&__icon
+					color inherit
+
+		+above(size-m)
+			font-size 14px
+		// Modifiers
+
+		&_state
+			&_active
+				color var(--color-yellow)
+				text-decoration none
+
+				.option-filter
+					&__icon
+						color inherit
+
+				&:hover
+				&:focus
+					color var(--color-muted)
+					text-decoration none
+
+
+
+	// Modifiers
+
+	&_state
+		&_open
+			.option-filter
+				&__icon
+					transform translate(50%, -50%) rotate(180deg)
+
+				&__label
+					border-color currentColor
+
+				&__body
+					display block

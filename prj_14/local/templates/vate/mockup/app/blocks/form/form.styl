@@ -1,0 +1,122 @@
+DIR = '../blocks/form/'
+IMG_DIR = DIR + 'images/'
+
+.form
+	display block
+
+
+	&__inputs
+		margin 0 0 19px
+
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__line
+		position relative
+		display block
+		flex 1
+		margin 0 0 21px
+
+		&:last-child
+			margin-bottom 0
+
+	&__message
+		display none
+
+
+
+	&__lines
+		flex 1
+		margin 0 0 19px
+
+		+above(size-m)
+			display flex
+			gap 10px
+			margin 0
+
+
+	&__controls
+		margin-top 16px
+
+		&_style
+			&_primary
+				display flex
+				justify-content center
+
+				.form
+					&__control
+						width 100%
+						max-width 355px
+
+
+
+	&__confirmation-check
+		+above(size-m)
+			text-align center
+
+
+
+	&__title
+		&_align
+			&_center
+				margin-bottom 14.28px
+				text-align center
+	// Modifiers
+
+	&_type
+		&_modal
+			.form
+				&__controls
+					display flex
+					justify-content center
+					margin-top 25px
+
+				&__control
+					width 100%
+					max-width 355px
+
+	&_style
+		&_outline
+			padding 20px
+			border-radius 30px
+			box-shadow var(--shadow-primary)
+
+			.form
+				&__controls
+					display flex
+					justify-content center
+					margin-top 20.8px
+
+
+
+	&_width
+		&_full
+			width 100%
+
+
+
+	&_size
+		&_s
+			.form
+				&__line
+					margin-bottom 11px
+
+				&__inputs
+					margin-bottom 0
+
+				&__controls
+					margin-top 12px
+
+				&__control
+					width 151px
+
+
+
+	&_space
+		&_s
+			.form
+				&__inputs
+					margin-bottom 10px

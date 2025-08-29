@@ -1,0 +1,40 @@
+mixin pagination(data)
+	- var DIR = 'assets/blocks/pagination/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .pagination
+	+b.pagination&attributes(attributes)
+		+e('ul').list
+			+e('li').item._type_prev
+				+e.link(href='#')
+					| Предыдущая страница
+			+e('li').item._type_next
+				+e('a').link(href='#')
+					| Следующая страница
+			+e('li').item
+				+e.label._state_active
+					| 1
+			+e('li').item
+				+e('a').link(href='#')
+					+e.label
+						| 2
+			+e('li').item
+				+e('a').link(href='#')
+					+e.label
+						| 3
+			+e('li').item
+				+e('a').link(href='#')
+					+e.label
+						| 4
+			+e('li').item
+				+e('a').link(href='#')
+					+e.label
+						| 5
+			+e('li').item
+				+e.label
+					| ...
+			+e('li').item
+				+e('a').link(href='#')
+					+e.label
+						| 16
+		block
+	// end .pagination

@@ -1,0 +1,45 @@
+mixin card-detail(data)
+	- var DIR = 'assets/blocks/card-detail/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .card-detail
+	+b.card-detail&attributes(attributes)
+		if data
+			+e.main
+				+e.info
+					if data.title
+						+e.title
+							+title('h1')._size_h1._weight_medium._case_normal._style_primary
+								!=data.title
+
+					if data.label
+						+e.label
+							!=data.label
+
+					if data.choices
+						+e.choice-group
+							+choice-group(data.choices)
+
+					if data.controls
+						+control-group(data.controls)
+
+				if data.images
+					+e.carousel
+						+card-detail-carousel(data.images)
+
+			+e.details
+				+e.link-group
+					+e.H2.subtitle
+						| Downloads
+
+					if data.links
+						+e.UL.link-list
+							each item in data.links
+								+e.LI.link-item
+									+icon-link(item)._gap_l._text-size_s(href='#' target='_blank')
+
+				if data.iconPanelGroup
+					+e.icon-panel-group
+						+icon-panel-group(data.iconPanelGroup)._size_s._style_decorated
+
+		block
+	// end .card-detail

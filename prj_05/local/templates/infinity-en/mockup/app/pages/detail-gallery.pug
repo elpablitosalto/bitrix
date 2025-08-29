@@ -1,0 +1,431 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'Detail | Hair Infinity';
+	- var pageDescription = ' Hair Infinity';
+	- var pageKeywords = 'hair, infinity';
+
+	- var fileName = 'detail-single.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '_style_shadowed __header-wrapper';
+
+block content
+	+e.banner-carousel
+		+banner-carousel({
+			pagination: true,
+			items: [
+				{
+					image: '3.jpg',
+					sources: [
+						{
+							src: '3-m.jpg',
+							media: '(max-width: 479px)',
+							type: 'image/jpg'
+						}
+					],
+					attr: {
+						class: '_height_auto'
+					}
+				},
+				{
+					image: '3.jpg',
+					sources: [
+						{
+							src: '3-m.jpg',
+							media: '(max-width: 479px)',
+							type: 'image/jpg'
+						}
+					],
+					attr: {
+						class: '_height_auto'
+					}
+				},
+				{
+					image: '3.jpg',
+					sources: [
+						{
+							src: '3-m.jpg',
+							media: '(max-width: 479px)',
+							type: 'image/jpg'
+						}
+					],
+					attr: {
+						class: '_height_auto'
+					}
+				},
+			]
+		})
+
+	+e.section
+		+section()._style_filled._role_features
+			+e.content
+				.page__container
+					+e.icon-panel-group
+						+icon-panel-group({
+							items: [
+								{
+									icon: 'd5.png',
+									simpleTitle: true,
+									title: "Содержат необходимый для работы % перекиси водорода:",
+									text: "<p>В капсуле Активаторы: 1,5%, 3%, 6%, 9%, 12%</p>",
+								},
+								{
+									icon: 'd6.png',
+									simpleTitle: true,
+									title: "Комфортен в работе:",
+									text: "<p>Активирует рождение цвета, создавая смесь идеальной кремовой консистенции</p>",
+								},
+								{
+									icon: 'd7.png',
+									simpleTitle: true,
+									title: "Одна линия активаторов для всех процедур изменения цвета:",
+									text: "<p>Раскрывает все возможности красителя, гарантирует 100% попадание в палитру</p>",
+								},
+							]
+						})._size_m
+
+	+e.breadcrumbs
+		+e.container
+			+breadcrumbs({
+				items: [
+					{
+						text: 'Home',
+						href: '/',
+					},
+					{
+						text: 'Infinity',
+						href: '/',
+					},
+					{
+						text: 'Catalog',
+						href: 'catalog.html',
+					},
+					{
+						text: 'Активатор Infinity Excellence Activator',
+					},
+				]
+			})
+
+	+e.detail-group
+		+e.detail
+			+e.section
+				+section()._role_card-detail
+					+e.content
+						.page__container
+							+e.card-detail
+								+card-detail({
+									title: 'Активатор <br>Infinity Excellence Activator',
+									label: 'Excellence Activator',
+									images: {
+										items: [
+											{
+												image: '2.png'
+											},
+											{
+												image: '1.png'
+											},
+											{
+												image: '3.png'
+											},
+											{
+												image: '4.png'
+											},
+										]
+									},
+									choices: {
+										tooltip: 'Объем упаковки',
+										label: 'Объем упаковки:',
+										interactive: false,
+										items: [
+											{
+												text: '1000 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter',
+													checked: false
+												}
+											},
+										]
+									},
+									iconPanelGroup: {
+										items: [
+											{
+												title: 'Тип',
+												text: 'Активаторы',
+												icon: '<svg class="icon-panel__icon" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.8312 21.9635C20.8322 21.934 20.8333 21.9045 20.8333 21.875C20.8333 21.4325 20.6898 21.0063 20.4304 20.6533C20.6929 20.2397 20.8333 19.7626 20.8333 19.2708C20.8333 17.835 19.6654 16.6667 18.2291 16.6667C17.7632 16.6667 17.3125 16.7913 16.9158 17.0242C16.2312 16.1494 15.1824 15.625 14.0624 15.625C13.0838 15.625 12.1571 16.0228 11.4705 16.7267C9.81538 16.361 8.33325 17.6605 8.33325 19.2708C8.33325 20.5287 9.22944 21.5811 10.4176 21.8226C10.4166 21.8404 10.4166 21.8577 10.4166 21.875C10.4166 22.9416 11.2223 23.8235 12.2568 23.9441C12.622 24.588 13.3076 25 14.0624 25C14.8162 25 15.5039 24.5824 15.867 23.942C16.0521 23.9629 16.2332 23.9654 16.4224 23.9405C16.7856 24.5819 17.4732 25 18.2291 25C18.6329 25 19.0246 24.8805 19.3582 24.6618C19.6278 24.8774 19.9625 25 20.3124 25C21.174 25 21.8749 24.2991 21.8749 23.4375C21.8749 22.758 21.4385 22.1781 20.8312 21.9635Z"/><path d="M9.51846 22.8139C9.47676 22.6822 9.38521 22.5723 9.26211 22.5083C8.04648 21.8765 7.2917 20.636 7.2917 19.2708C7.2917 17.2607 8.92744 15.625 10.9548 15.625C11.0678 15.625 11.1786 15.5879 11.2682 15.5197C11.8063 15.1138 12.4319 14.8351 13.1267 14.6917C13.3678 14.6414 13.5417 14.4288 13.5417 14.1815V7.8125C13.5417 6.36367 12.6856 5.11987 11.4584 4.53237V0.52085C11.4584 0.232959 11.2254 0 10.9375 0H5.72915C5.44126 0 5.2083 0.232959 5.2083 0.52085V4.53237C3.9811 5.11987 3.125 6.36367 3.125 7.8125V22.9167C3.125 24.0657 4.05986 25 5.20835 25H9.96299C10.1746 25 10.3658 24.8718 10.4452 24.6755C10.5255 24.4792 10.4788 24.2543 10.3261 24.1063C9.94873 23.7376 9.66899 23.2905 9.51846 22.8139Z"/></svg>',
+												inlineIcon: true,
+												simpleTitle: false,
+												attr: {
+													class: '_type_compact'
+												}
+											},
+										]
+									},
+									links: [
+										{
+											icon: '<svg class="icon-link__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.3125 4.53125H1.6875C0.912094 4.53125 0.28125 5.16209 0.28125 5.9375V11.5625C0.28125 12.3379 0.912094 12.9688 1.6875 12.9688H14.3125C15.0879 12.9688 15.7188 12.3379 15.7188 11.5625V5.9375C15.7188 5.16209 15.0879 4.53125 14.3125 4.53125ZM3.99191 9.47931C3.87206 9.47931 3.66731 9.48016 3.47566 9.48112V10.5623C3.47566 10.8212 3.26578 11.031 3.00691 11.031C2.74803 11.031 2.53816 10.8212 2.53816 10.5623L2.53125 7.0015C2.53084 6.87694 2.58006 6.75731 2.668 6.66906C2.75594 6.58081 2.87544 6.53125 3 6.53125H3.99191C4.81553 6.53125 5.48562 7.1925 5.48562 8.00528C5.48562 8.81806 4.81553 9.47931 3.99191 9.47931ZM8.01591 10.918C7.73672 10.9229 7.03838 10.9255 7.00878 10.9257C7.00819 10.9257 7.00759 10.9257 7.007 10.9257C6.88331 10.9257 6.76459 10.8768 6.67678 10.7896C6.58853 10.702 6.53872 10.5829 6.53825 10.4586C6.53822 10.4461 6.53125 7.00091 6.53125 7.00091C6.53103 6.87644 6.58028 6.75697 6.66822 6.66888C6.75616 6.58078 6.87553 6.53125 7 6.53125H7.97906C9.09444 6.53125 9.84381 7.41425 9.84381 8.72847C9.84381 9.97866 9.07506 10.8995 8.01591 10.918ZM12.8194 8.22969C13.0782 8.22969 13.2881 8.43956 13.2881 8.69844C13.2881 8.95731 13.0782 9.16719 12.8194 9.16719H11.9688V10.5C11.9688 10.7589 11.7589 10.9688 11.5 10.9688C11.2411 10.9688 11.0312 10.7589 11.0312 10.5V6.96381C11.0312 6.70494 11.2411 6.49506 11.5 6.49506H12.9332C13.1921 6.49506 13.402 6.70494 13.402 6.96381C13.402 7.22269 13.1921 7.43256 12.9332 7.43256H11.9688V8.22969H12.8194Z"/><path d="M7.97895 7.46875H7.46948C7.4702 7.89187 7.47276 9.57856 7.47408 9.98572C7.66914 9.98447 7.87801 9.98275 7.99942 9.98063C8.62582 9.96969 8.90622 9.34384 8.90622 8.72847C8.90619 8.43294 8.83935 7.46875 7.97895 7.46875Z"/><path d="M3.99196 7.46875H3.47021C3.47078 7.67734 3.47131 7.89925 3.47131 8.00528C3.47131 8.12919 3.47218 8.34409 3.47318 8.54366C3.66556 8.54269 3.87106 8.54181 3.992 8.54181C4.2935 8.54181 4.54822 8.29613 4.54822 8.00528C4.54822 7.71444 4.29347 7.46875 3.99196 7.46875Z"/><path d="M13.8267 3.59375C13.7181 3.29594 13.5493 3.02069 13.3259 2.785L11.3788 0.731219C10.9383 0.266531 10.3183 0 9.67797 0H3.4375C2.66209 0 2.03125 0.630844 2.03125 1.40625V3.59375H13.8267Z"/><path d="M2.03125 13.9062V14.5938C2.03125 15.3692 2.66209 16 3.4375 16H12.5625C13.3379 16 13.9688 15.3692 13.9688 14.5938V13.9062H2.03125Z"/></svg>',
+											text: 'Каталог Infinity'
+										},
+										{
+											icon: '<svg class="icon-link__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.3125 4.53125H1.6875C0.912094 4.53125 0.28125 5.16209 0.28125 5.9375V11.5625C0.28125 12.3379 0.912094 12.9688 1.6875 12.9688H14.3125C15.0879 12.9688 15.7188 12.3379 15.7188 11.5625V5.9375C15.7188 5.16209 15.0879 4.53125 14.3125 4.53125ZM3.99191 9.47931C3.87206 9.47931 3.66731 9.48016 3.47566 9.48112V10.5623C3.47566 10.8212 3.26578 11.031 3.00691 11.031C2.74803 11.031 2.53816 10.8212 2.53816 10.5623L2.53125 7.0015C2.53084 6.87694 2.58006 6.75731 2.668 6.66906C2.75594 6.58081 2.87544 6.53125 3 6.53125H3.99191C4.81553 6.53125 5.48562 7.1925 5.48562 8.00528C5.48562 8.81806 4.81553 9.47931 3.99191 9.47931ZM8.01591 10.918C7.73672 10.9229 7.03838 10.9255 7.00878 10.9257C7.00819 10.9257 7.00759 10.9257 7.007 10.9257C6.88331 10.9257 6.76459 10.8768 6.67678 10.7896C6.58853 10.702 6.53872 10.5829 6.53825 10.4586C6.53822 10.4461 6.53125 7.00091 6.53125 7.00091C6.53103 6.87644 6.58028 6.75697 6.66822 6.66888C6.75616 6.58078 6.87553 6.53125 7 6.53125H7.97906C9.09444 6.53125 9.84381 7.41425 9.84381 8.72847C9.84381 9.97866 9.07506 10.8995 8.01591 10.918ZM12.8194 8.22969C13.0782 8.22969 13.2881 8.43956 13.2881 8.69844C13.2881 8.95731 13.0782 9.16719 12.8194 9.16719H11.9688V10.5C11.9688 10.7589 11.7589 10.9688 11.5 10.9688C11.2411 10.9688 11.0312 10.7589 11.0312 10.5V6.96381C11.0312 6.70494 11.2411 6.49506 11.5 6.49506H12.9332C13.1921 6.49506 13.402 6.70494 13.402 6.96381C13.402 7.22269 13.1921 7.43256 12.9332 7.43256H11.9688V8.22969H12.8194Z"/><path d="M7.97895 7.46875H7.46948C7.4702 7.89187 7.47276 9.57856 7.47408 9.98572C7.66914 9.98447 7.87801 9.98275 7.99942 9.98063C8.62582 9.96969 8.90622 9.34384 8.90622 8.72847C8.90619 8.43294 8.83935 7.46875 7.97895 7.46875Z"/><path d="M3.99196 7.46875H3.47021C3.47078 7.67734 3.47131 7.89925 3.47131 8.00528C3.47131 8.12919 3.47218 8.34409 3.47318 8.54366C3.66556 8.54269 3.87106 8.54181 3.992 8.54181C4.2935 8.54181 4.54822 8.29613 4.54822 8.00528C4.54822 7.71444 4.29347 7.46875 3.99196 7.46875Z"/><path d="M13.8267 3.59375C13.7181 3.29594 13.5493 3.02069 13.3259 2.785L11.3788 0.731219C10.9383 0.266531 10.3183 0 9.67797 0H3.4375C2.66209 0 2.03125 0.630844 2.03125 1.40625V3.59375H13.8267Z"/><path d="M2.03125 13.9062V14.5938C2.03125 15.3692 2.66209 16 3.4375 16H12.5625C13.3379 16 13.9688 15.3692 13.9688 14.5938V13.9062H2.03125Z"/></svg>',
+											text: 'Инструкция по использованию Активатора Infinity'
+										}
+									]
+								})
+
+			+e.section
+				+section({
+					header: {
+						title: {
+							tag: 'h2',
+							text: 'Активатор Infinity Excellence Activator product options',
+							attr: {
+								class: '_size_h3-s _case_upper _style_primary'
+							}
+						},
+						text: ''
+					}
+				})._role_gallery
+					+e.content
+						.page__container
+							+e.entry-grid
+								+entry-grid({
+									items: [
+										{
+											label: 'Excellence Activator 1,5%',
+											title: 'Активатор <br>Infinity Excellence Activator 1,5%',
+											image: 'a1.png',
+											href: '#',
+											noBackground: true,
+											attr: {
+												class: ''
+											},
+											linkAttr: {
+												href: 'assets/blocks/entry-snippet/images/a1.png',
+												class: 'js-modal'
+											}
+										},
+										{
+											label: 'Excellence Activator 3%',
+											title: 'Активатор <br>Infinity Excellence Activator 3%',
+											image: 'a2.png',
+											href: '#',
+											noBackground: true,
+											attr: {
+												class: ''
+											},
+											linkAttr: {
+												href: 'assets/blocks/entry-snippet/images/a2.png',
+												class: 'js-modal'
+											}
+										},
+										{
+											label: 'Excellence Activator 6%',
+											title: 'Активатор <br>Infinity Excellence Activator 6%',
+											image: 'a3.png',
+											href: '#',
+											noBackground: true,
+											attr: {
+												class: ''
+											},
+											linkAttr: {
+												href: 'assets/blocks/entry-snippet/images/a3.png',
+												class: 'js-modal'
+											}
+										},
+										{
+											label: 'Excellence Activator 9%',
+											title: 'Активатор <br>Infinity Excellence Activator 9%',
+											image: 'a4.png',
+											href: '#',
+											noBackground: true,
+											attr: {
+												class: ''
+											},
+											linkAttr: {
+												href: 'assets/blocks/entry-snippet/images/a4.png',
+												class: 'js-modal'
+											}
+										},
+										{
+											label: 'Excellence Activator 12%',
+											title: 'Активатор <br>Infinity Excellence Activator 12%',
+											image: 'a5.png',
+											href: '#',
+											noBackground: true,
+											attr: {
+												class: ''
+											},
+											linkAttr: {
+												href: 'assets/blocks/entry-snippet/images/a5.png',
+												class: 'js-modal'
+											}
+										},
+									]
+								})._size_mobile-s
+
+			+e.section
+				+section()
+					+e.content
+						.page__container
+							+e.text-columns
+								+text-columns({
+									items: [
+										{
+											items: [
+												{
+													title: 'АКТИВАТОРЫ INFINITY',
+													fields: [
+														"Используют в процедурах: окрашивания, тонирования и осветления."
+													]
+												},
+												{
+													title: 'АКТИВАТОРЫ INFINITY CONCEPT',
+													fields: [
+														"Рекомендуем выбрать проф. косметику для волос в интернете – это партнеры красителя и обесцвечивающего порошка в создании образа. Активируют рождение цвета, создавая смесь идеальной кремовой консистенции."
+													]
+												},
+											]
+										},
+										{
+											items: [
+												{
+													title: 'КОСМЕТИКА ДЛЯ ВОЛОС INFINITY CONCEPT',
+													fields: [
+														"Информация о необходимой концентрации активатора и пропорциях смешивания находится в инструкции к красителю и осветляющему средству."
+													]
+												},
+											]
+										},
+									]
+								})._size_mobile-s
+
+			+e.section
+				+section({
+					header: {
+						title: {
+							tag: 'h2',
+							text: 'See Also',
+							attr: {
+								class: '_size_h3-s _case_upper _style_primary'
+							}
+						},
+						text: ''
+					}
+				})._role_products
+					+e.content
+						.page__container
+							+e.entry-grid
+								+entry-grid({
+									items: [
+										{
+											label: 'Excellence Acivators',
+											title: 'Активатор Infinity Exellence Activator',
+											image: '1.png',
+											href: '#',
+											attr: {
+												class: ''
+											},
+											linkAttr: {
+												href: 'assets/blocks/entry-snippet/images/a1.png',
+												class: 'js-modal'
+											}
+										},
+										{
+											label: 'Shampoo Deep Cleaning',
+											title: 'Шампунь глубокой очистки Infinity Service Pro Shampoo Deep Cleaning',
+											image: '2.png',
+											href: '#',
+											attr: {
+												class: ''
+											},
+											linkAttr: {
+												href: 'assets/blocks/entry-snippet/images/a1.png',
+												class: 'js-modal'
+											}
+										},
+										{
+											label: 'Plasma Stabilizer Color',
+											title: 'Плазма стабилизатор Infinity Service Pro Plasma Stabilizer Color',
+											image: '3.png',
+											href: '#',
+											attr: {
+												class: ''
+											},
+											linkAttr: {
+												href: 'assets/blocks/entry-snippet/images/a1.png',
+												class: 'js-modal'
+											}
+										},
+									]
+								})
+
+			+e.section
+				+section({
+					header: {
+						title: {
+							tag: 'h2',
+							text: 'Video materials',
+							attr: {
+								class: '_size_h3-s _case_upper _style_primary'
+							}
+						}
+					}
+				})
+					+e.content
+						.page__container
+							+e.video-group
+								+video-group({
+									items: [
+										{
+											image: 'd-1.jpg',
+											link: {
+												attr: {
+													class: 'js-modal',
+													'data-type': 'iframe',
+													href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+												}
+											},
+											text: 'CONCEPT профессиональная косметика для волос',
+										},
+										{
+											image: 'd-2.jpg',
+											link: {
+												attr: {
+													class: 'js-modal',
+													'data-type': 'iframe',
+													href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+												}
+											},
+											text: 'CONCEPT Master Beauty Day 2017',
+										},
+										{
+											image: 'd-3.jpg',
+											link: {
+												attr: {
+													class: 'js-modal',
+													'data-type': 'iframe',
+													href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+												}
+											},
+											text: 'Прямой эфир с Натальей Яворской',
+										},
+									]
+								})
+
+
+	+e.attention-panel
+		.page__container
+			+attention-panel({
+				controls: [
+					{
+						text: 'Ask a question',
+						attr: {
+							href: '#askForm',
+							class: '_width_full js-modal'
+						}
+					}
+				]
+			})
+				| You can always contact us with any questions you may have. To do so, simply fill out the form and submit it. Our specialists will respond to you within 24 hours.

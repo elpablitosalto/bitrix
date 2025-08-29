@@ -1,0 +1,98 @@
+DIR = '../blocks/banner-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.banner-carousel
+	position relative
+	display block
+
+
+
+	&__slide
+		position relative
+
+
+
+	&__picture
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+
+
+
+	&__image
+		display block
+		width 100%
+		height 100%
+		object-fit cover
+
+
+
+	&__arrow
+		display none
+
+		+above(size-m)
+			position absolute
+			top 50%
+			z-index 100
+			display block
+			padding 5px
+			background transparent
+			border none
+			outline none
+			opacity 1
+			transform translate(0, -50%)
+			def-trn(opacity)
+
+		&:hover
+			opacity .5
+
+		// Modifiers
+		&_position
+			&_left
+				left 50px
+
+			&_right
+				right 50px
+
+
+
+	&__icon
+		display block
+		width 9px
+		height 18px
+		fill var(--color-milk)
+
+
+
+	&__pagination
+		position absolute
+		left 50%
+		bottom 16px
+		z-index 10
+		display block
+		font-size 0
+		transform translate(-50%, 0)
+
+		+above(size-m)
+			bottom 36px
+
+
+
+	&__carousel-nav
+		position absolute
+		top 18px
+		right 18px
+		z-index 10
+
+
+
+
+	// Modifiers
+	&_state
+		&_inactive
+			.banner-carousel
+				&__pagination
+				&__arrow
+					display none

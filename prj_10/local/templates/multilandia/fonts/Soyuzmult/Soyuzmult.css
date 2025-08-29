@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Soyuzmult';
+    src: url('../fonts/Soyuzmult/Soyuzmult.eot');
+    src: url('../fonts/Soyuzmult/Soyuzmult.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Soyuzmult/Soyuzmult.woff2') format('woff2'),
+        url('../fonts/Soyuzmult/Soyuzmult.woff') format('woff'),
+        url('../fonts/Soyuzmult/Soyuzmult.svg#Soyuzmult') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

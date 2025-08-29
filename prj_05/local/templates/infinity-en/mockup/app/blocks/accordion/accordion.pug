@@ -1,0 +1,20 @@
+mixin accordion(data)
+	- var DIR = 'assets/blocks/accordion/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .accordion
+	+b.accordion&attributes(attributes)
+		if data
+			+e.header
+				+e('button').trigger.js-accordion-trigger(type='button')
+					!=data.title
+
+				if data.note
+					+e.note
+						!=data.note
+
+			+e.body
+				if data.product
+					+e.product-preview
+						+product-preview(data.product)
+		block
+	// end .accordion

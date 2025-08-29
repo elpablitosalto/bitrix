@@ -1,0 +1,1 @@
+<a href="/" style="color: inherit">КОД ЖИЗНИ</a>

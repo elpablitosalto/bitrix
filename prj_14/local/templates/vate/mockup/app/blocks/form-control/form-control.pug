@@ -1,0 +1,142 @@
+mixin form-control(data)
+	- var DIR = 'assets/blocks/form-control/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .form-control
+	+b.form-control&attributes(attributes)
+		if data
+			- var holderTag = data.type === 'checkbox' || data.type === 'radio' ? '' : data.holderTag || 'label';
+			+e(holderTag).holder
+				if data.label
+					+e.label
+						!=data.label
+
+				- var attr = data.attr || {};
+				if data.type === 'checkbox' || data.type === 'radio'
+					- var wrapperClass = data.wrapperClass || '';
+					+e.check-group(class=wrapperClass)
+						if data.items
+							each item in data.items
+								+e.check-item
+									- item.attr = item.attr || {};
+									- item.attr.type = item.attr.type || data.type;
+									- var itemClass = item.class || '';
+									+check-elem(item)(class=itemClass)
+										!=item.label
+
+				else if data.type === 'switch'
+					+e.switch-group
+						if data.items
+							each item in data.items
+								+e.switch-item
+									- var itemClass = item.class || '';
+
+									+switch(item)(class=itemClass)
+
+				else if data.type === 'radio-panels'
+					+e.radio-panels
+						+radio-panels({items: data.items})&attributes(attr)
+
+				else if data.type === 'quantity'
+					+e.quantity-input
+						+quantity-input(data.content)&attributes(attr)
+
+				else if data.type === 'file-panel'
+					+e.field
+						- var wrapperClass = data.wrapperClass || '';
+						+e.file(class=wrapperClass)
+							+file-input(data.content)
+
+				else if data.type === 'select'
+					+e.field
+						+e('select').select&attributes(attr)
+							if data.items
+								if data.placeholder
+									+e('option').option(value='' selected disabled hidden)
+										!=data.placeholder
+
+								each item in data.items
+									+e('option').option(value=item.value)
+										!=item.text
+
+				else if data.type === 'choices-select'
+						+e.field
+							- data.label = '';
+							+choices-select(data).__choices-select
+
+				else if data.type === 'textarea'
+					+e.field
+						if data.iconPrev
+							+e.decoration
+								+icon(data.iconPrev).icon
+
+						- var value = attr.value || '';
+						- attr.value = false;
+
+						// Modifiers
+						// form-control__textarea_state_invalid - red border, one of the two options to show invalid field
+						+e('textarea').textarea&attributes(attr)
+							!=value
+
+				else
+					- var type = data.type || 'text';
+					+e.field
+						if data.iconPrev
+							+e.decoration
+								+icon(data.iconPrev).icon
+
+						// Modifiers
+						// form-control__input_state_invalid - red border, one of the two options to show invalid field
+						+e('input').input(type=type)&attributes(attr)
+
+
+						// Иконка показывается, когда поле прошло валидацию и инпут имеет класс form-control__input_state_success
+						+e('svg').icon_success(width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M1.91284 3.30769L5.72237 7L11.9128 1" stroke="black" stroke-width="2" stroke-linecap="round")
+
+
+						// Иконка показывается, когда поле не прошло валидацию и инпут имеет класс form-control__input_state_error
+						+e('svg').icon_error(width="9" height="8" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M1.91284 1L7.91284 7" stroke="#FF0000" stroke-width="2" stroke-linecap="round")
+							path(d="M7.91284 1L1.91284 7" stroke="#FF0000" stroke-width="2" stroke-linecap="round")
+
+
+						if data.showPasswordTrigger
+							+e('button').trigger._type_password._password-state_hidden.js-show-password(type='button')
+								<svg class="form-control__icon-password form-control__icon-password_state_hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M16.1 13.2998L14.65 11.8498C14.8 11.0665 14.575 10.3331 13.975 9.64981C13.375 8.96647 12.6 8.69981 11.65 8.84981L10.2 7.39981C10.4833 7.26647 10.7708 7.16647 11.0625 7.0998C11.3542 7.03314 11.6667 6.9998 12 6.9998C13.25 6.9998 14.3125 7.4373 15.1875 8.3123C16.0625 9.18731 16.5 10.2498 16.5 11.4998C16.5 11.8331 16.4667 12.1456 16.4 12.4373C16.3333 12.729 16.2333 13.0165 16.1 13.2998ZM19.3 16.4498L17.85 15.0498C18.4833 14.5665 19.0458 14.0373 19.5375 13.4623C20.0292 12.8873 20.45 12.2331 20.8 11.4998C19.9667 9.81647 18.7708 8.47897 17.2125 7.48731C15.6542 6.49564 13.9167 5.9998 12 5.9998C11.5167 5.9998 11.0417 6.03314 10.575 6.0998C10.1083 6.16647 9.65 6.26647 9.2 6.39981L7.65 4.8498C8.33333 4.56647 9.03333 4.35397 9.75 4.2123C10.4667 4.07064 11.2167 3.9998 12 3.9998C14.5167 3.9998 16.7583 4.69564 18.725 6.08731C20.6917 7.47897 22.1167 9.28314 23 11.4998C22.6167 12.4831 22.1125 13.3956 21.4875 14.2373C20.8625 15.079 20.1333 15.8165 19.3 16.4498ZM19.8 22.5998L15.6 18.4498C15.0167 18.6331 14.4292 18.7706 13.8375 18.8623C13.2458 18.954 12.6333 18.9998 12 18.9998C9.48333 18.9998 7.24167 18.304 5.275 16.9123C3.30833 15.5206 1.88333 13.7165 1 11.4998C1.35 10.6165 1.79167 9.79564 2.325 9.03731C2.85833 8.27897 3.46667 7.5998 4.15 6.9998L1.4 4.1998L2.8 2.7998L21.2 21.1998L19.8 22.5998ZM5.55 8.39981C5.06667 8.83314 4.625 9.30814 4.225 9.82481C3.825 10.3415 3.48333 10.8998 3.2 11.4998C4.03333 13.1831 5.22917 14.5206 6.7875 15.5123C8.34583 16.504 10.0833 16.9998 12 16.9998C12.3333 16.9998 12.6583 16.979 12.975 16.9373C13.2917 16.8956 13.6167 16.8498 13.95 16.7998L13.05 15.8498C12.8667 15.8998 12.6917 15.9373 12.525 15.9623C12.3583 15.9873 12.1833 15.9998 12 15.9998C10.75 15.9998 9.6875 15.5623 8.8125 14.6873C7.9375 13.8123 7.5 12.7498 7.5 11.4998C7.5 11.3165 7.5125 11.1415 7.5375 10.9748C7.5625 10.8081 7.6 10.6331 7.65 10.4498L5.55 8.39981Z" fill="currentColor"/>
+								</svg>
+								<svg  class="form-control__icon-password form-control__icon-password_state_visible" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 12.5859C12.25 12.5859 13.3125 12.1484 14.1875 11.2734C15.0625 10.3984 15.5 9.33594 15.5 8.08594C15.5 6.83594 15.0625 5.77344 14.1875 4.89844C13.3125 4.02344 12.25 3.58594 11 3.58594C9.75 3.58594 8.6875 4.02344 7.8125 4.89844C6.9375 5.77344 6.5 6.83594 6.5 8.08594C6.5 9.33594 6.9375 10.3984 7.8125 11.2734C8.6875 12.1484 9.75 12.5859 11 12.5859ZM11 10.7859C10.25 10.7859 9.6125 10.5234 9.0875 9.99844C8.5625 9.47344 8.3 8.83594 8.3 8.08594C8.3 7.33594 8.5625 6.69844 9.0875 6.17344C9.6125 5.64844 10.25 5.38594 11 5.38594C11.75 5.38594 12.3875 5.64844 12.9125 6.17344C13.4375 6.69844 13.7 7.33594 13.7 8.08594C13.7 8.83594 13.4375 9.47344 12.9125 9.99844C12.3875 10.5234 11.75 10.7859 11 10.7859ZM11 15.5859C8.56667 15.5859 6.35 14.9068 4.35 13.5484C2.35 12.1901 0.9 10.3693 0 8.08594C0.9 5.8026 2.35 3.98177 4.35 2.62344C6.35 1.2651 8.56667 0.585938 11 0.585938C13.4333 0.585938 15.65 1.2651 17.65 2.62344C19.65 3.98177 21.1 5.8026 22 8.08594C21.1 10.3693 19.65 12.1901 17.65 13.5484C15.65 14.9068 13.4333 15.5859 11 15.5859ZM11 13.5859C12.8833 13.5859 14.6125 13.0901 16.1875 12.0984C17.7625 11.1068 18.9667 9.76927 19.8 8.08594C18.9667 6.4026 17.7625 5.0651 16.1875 4.07344C14.6125 3.08177 12.8833 2.58594 11 2.58594C9.11667 2.58594 7.3875 3.08177 5.8125 4.07344C4.2375 5.0651 3.03333 6.4026 2.2 8.08594C3.03333 9.76927 4.2375 11.1068 5.8125 12.0984C7.3875 13.0901 9.11667 13.5859 11 13.5859Z" fill="currentColor"/>
+								</svg>
+
+
+
+						if data.searchResult
+							// form-control__result - is hidden
+							// form-control__result_state_shown to show
+							// form-control__result_state_hidden to hide, priority over _state_show
+							+e.result._state_shown
+								// search-results - no matches message shown
+								// search-results_state_filled - search results shown
+								// search-results_state_no-results - no matches message shown, priority over _state_filled
+								+search-results(data.searchResult)._state_filled
+
+				if data.link
+					+e.links
+						- var linkAttr = data.link.attr || {};
+						+link()&attributes(linkAttr)
+							!=data.link.text
+
+				+e.messages
+					if data.code
+						+e.message
+							| Запросить код повторно можно через 30 сек.
+					else
+						+e.message._style_error(style="display: none;")
+							if data.message
+								!=data.message
+							else
+								| Ошибка поля
+
+				block
+	// end .form-control

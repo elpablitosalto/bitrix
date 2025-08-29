@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"About", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Catalog", 
+		"/infinity/catalog/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Training Videos", 
+		"/video/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Contacts", 
+		"/infinity/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

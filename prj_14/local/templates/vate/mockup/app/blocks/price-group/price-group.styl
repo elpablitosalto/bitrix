@@ -1,0 +1,28 @@
+DIR = '../blocks/price-group/'
+IMG_DIR = DIR + 'images/'
+
+.price-group
+	display block
+
+
+
+	&__price
+		color inherit
+		font-family Raleway
+		font-size 14px
+		font-weight 800
+		font-style normal
+		line-height 130%
+		font-variant-numeric lining-nums
+
+		+above(size-m)
+			font-size 20px
+
+		&_type
+			&_old
+				color var(--color-red)
+				font-size 11px
+				text-decoration line-through
+
+				+above(size-m)
+					font-size 14px

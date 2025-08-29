@@ -1,0 +1,19 @@
+mixin social-nav(data = {})
+	- var DIR = 'assets/blocks/social-nav/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .social-nav
+	+b.social-nav&attributes(attributes)
+		if data.caption
+			+e.caption
+				!=data.caption
+
+		if data.items
+			+e.UL.list
+				each item in data.items
+					+e.LI.item
+						- var attr = item.attr || {};
+						+e.link&attributes(attr)
+							if item.icon
+								!=item.icon
+		block
+	// end .social-nav

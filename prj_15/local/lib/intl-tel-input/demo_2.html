@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>International Telephone Input</title>
+  <link rel="stylesheet" href="build/css/intlTelInput.css" />
+  <link rel="stylesheet" href="build/css/demo.css" />
+
+</head>
+
+<body>
+  <h1>International Telephone Input</h1>
+  <form>
+    <input id="phone" name="phone" type="tel" value="" class="js_phone_country" />
+    <button type="submit">Submit</button>
+  </form>
+
+  <script type="text/javascript"
+    src="/local/templates/geropharm-main/libs/jquery/jquery-3.6.0.min.js?170349641089503"></script>
+  <script type="text/javascript"
+    src="/local/templates/geropharm-main/libs/inputmask/jquery.inputmask.min.js?170349641099918"></script>
+  <script type="text/javascript"
+    src="/local/lib/intl-tel-input-master/build/js/intlTelInput.js?1710898568126331"></script>
+
+  <script>
+    $(document).ready(function () {
+      initPhoneMaskCountry();
+    });
+    function initPhoneMaskCountry() {
+      var phoneInputID = ".js_phone_country";
+      var input = document.querySelector(phoneInputID);
+      var iti = window.intlTelInput(input, {
+        // allowDropdown: false,
+        // autoPlaceholder: "off",
+        // containerClass: "test",
+        // countrySearch: false,
+        // customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+        //   return "e.g. " + selectedCountryPlaceholder;
+        // },
+        // dropdownContainer: document.querySelector('#custom-container'),
+        // excludeCountries: ["us"],
+        // fixDropdownWidth: false,
+        // formatAsYouType: false,
+        // formatOnDisplay: false,
+        // geoIpLookup: function(callback) {
+        //   fetch("https://ipapi.co/json")
+        //     .then(function(res) { return res.json(); })
+        //     .then(function(data) { callback(data.country_code); })
+        //     .catch(function() { callback(); });
+        // },
+        // hiddenInput: () => "phone_full",
+        i18n: { 'de': 'Deutschland', 'ru': 'Россия' },
+        //initialCountry: "us",
+        initialCountry: "ru",
+        //nationalMode: false,
+        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        // placeholderNumberType: "MOBILE",
+        // preferredCountries: ['cn', 'jp'],
+        // showFlags: false,
+        // showSelectedDialCode: true,
+        // useFullscreenPopup: true,
+        utilsScript: "/local/lib/intl-tel-input-master/build/js/utils.js",
+        formatOnDisplay: true,
+        //hiddenInput: "full_number",
+        //useFullscreenPopup: true,
+      });
+
+
+      $(phoneInputID).on("countrychange", function (event) {
+
+        // Get the selected country data to know which country is selected.
+        var selectedCountryData = iti.getSelectedCountryData();
+        console.log(selectedCountryData);
+
+        // Get an example number for the selected country to use as placeholder.
+        newPlaceholder = intlTelInputUtils.getExampleNumber(
+          selectedCountryData.iso2,
+          //true, 
+          false,
+          intlTelInputUtils.numberFormat.INTERNATIONAL
+        ),
+
+          // Reset the phone number input.
+          iti.setNumber("");
+
+        // Convert placeholder as exploitable mask by replacing all 1-9 numbers with 0s
+        var second_part = newPlaceholder.replace('+' + selectedCountryData.dialCode, '');
+        second_part = second_part.replace(/[0-9]/g, "x");
+        //second_part.replace('0', '9');
+        mask = '+' + selectedCountryData.dialCode + second_part;
+
+        // Apply the new mask for the input
+        var phoneMask = new Inputmask(mask);
+        phoneMask.definitions['9'] = '';
+        phoneMask.definitions['x'] = '[0-9]';
+        phoneMask.mask($(this));
+      });
+
+
+      // When the plugin loads for the first time, we have to trigger the "countrychange" event manually, 
+      // but after making sure that the plugin is fully loaded by associating handler to the promise of the 
+      // plugin instance.
+
+      iti.promise.then(function () {
+        $(phoneInputID).trigger("countrychange");
+      });
+
+      /*
+      var phoneInput = document.querySelector(".js_phone_country");
+      window.intlTelInput(phoneInput, {
+          // allowDropdown: false,
+          // autoPlaceholder: "off",
+          // containerClass: "test",
+          // countrySearch: false,
+          // customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
+          //   return "e.g. " + selectedCountryPlaceholder;
+          // },
+          // dropdownContainer: document.querySelector('#custom-container'),
+          // excludeCountries: ["us"],
+          // fixDropdownWidth: false,
+          // formatAsYouType: false,
+          // formatOnDisplay: false,
+          // geoIpLookup: function(callback) {
+          //   fetch("https://ipapi.co/json")
+          //     .then(function(res) { return res.json(); })
+          //     .then(function(data) { callback(data.country_code); })
+          //     .catch(function() { callback(); });
+          // },
+          // hiddenInput: () => "phone_full",
+          // i18n: { 'de': 'Deutschland' },
+          //initialCountry: "us",
+          initialCountry: "ru",
+          //nationalMode: false,
+          // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+          // placeholderNumberType: "MOBILE",
+          // preferredCountries: ['cn', 'jp'],
+          // showFlags: false,
+          // showSelectedDialCode: true,
+          // useFullscreenPopup: true,
+          utilsScript: "/local/lib/intl-tel-input-master/build/js/utils.js",
+      });
+      */
+    }
+  </script>
+
+</body>
+
+</html>

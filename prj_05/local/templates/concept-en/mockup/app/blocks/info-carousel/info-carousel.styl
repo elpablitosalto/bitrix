@@ -1,0 +1,46 @@
+DIR = '../blocks/info-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.info-carousel
+	position relative
+	display block
+
+
+
+	&__slide
+		+above(size-xl)
+			padding 0 82px
+
+
+
+	&__arrow
+		display none
+
+		+above(size-m)
+			position absolute
+			top 40%
+			z-index 100
+			display block
+			padding 5px
+			background transparent
+			border none
+			outline none
+			opacity 1
+			transform translate(0, -50%)
+			def-trn opacity
+
+		&:hover
+			opacity .5
+
+		// Modifiers
+		&_position
+			&_left
+				left 0
+
+			&_right
+				right 0
+
+
+
+	&__icon
+		fill var(--color-dark )

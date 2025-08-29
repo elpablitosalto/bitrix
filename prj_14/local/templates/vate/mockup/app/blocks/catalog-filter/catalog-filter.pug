@@ -1,0 +1,35 @@
+mixin catalog-filter(item)
+	- var DIR = 'assets/blocks/catalog-filter/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .catalog-filter
+	+b.catalog-filter&attributes(attributes)
+		if item
+			+e.header
+				+e('button').trigger.js-toggle(
+					type='button'
+					data-toggle-scope='.catalog-filter'
+					data-toggle-class='catalog-filter_state_open'
+				)
+					!=item.title
+			- var overflow = item.scroll ? '_type_scroll' : ''
+			+e.body
+				if item.type === 'slider'
+					+e.range
+						- var curMin = item.curMin || item.min;
+						- var curMax = item.curMax || item.max;
+						+range(curMin, curMax)(data-start=curMin data-stop=curMax data-min=item.min data-max=item.max)
+
+				else
+					+e.check-group(class=overflow)
+						each checkbox in item.items
+							- var attr = checkbox.attr || '';
+							+e.check-item
+								+check-elem(checkbox)&attributes(attr)
+									!=checkbox.label
+
+					if !item.scroll
+						+e('a').link(href="#")
+							| Показать еще (10)
+
+		block
+	// end .catalog-filter

@@ -1,0 +1,10 @@
+.c-error-form__text{
+    color:red;
+    margin-top:5px;
+    display: block;
+}
+.result{
+    color:green;
+    margin-top:5px;
+    display: block;
+}

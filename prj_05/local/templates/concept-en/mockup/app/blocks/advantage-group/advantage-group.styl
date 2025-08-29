@@ -1,0 +1,40 @@
+DIR = '../blocks/advantage-group/'
+IMG_DIR = DIR + 'images/'
+
+.advantage-group
+	display block
+
+
+
+	&__header
+		display block
+		margin 0 0 40px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__title
+		display block
+		margin 0 0 40px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__list
+		display grid
+		grid-template-columns repeat(auto-fill, minmax(40%, 1fr))
+		grid-gap 20px
+		margin 0
+
+		+above(size-m)
+			grid-template-columns repeat(auto-fill, minmax(21%, 1fr))
+
+
+
+	&__item
+		display block
+		margin 0

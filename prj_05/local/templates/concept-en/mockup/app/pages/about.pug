@@ -1,0 +1,123 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'About | Hair Concept Professional';
+	- var pageDescription = ' Hair Concept Professional';
+	- var pageKeywords = 'hair, concept';
+
+	- var fileName = 'about.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.banner-carousel
+		+banner-carousel({
+			items: [
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				}
+			]
+		})
+
+	+e.section
+		+section()
+			+e.content
+				.page__container
+					+e.text._size_s._width_l
+						h1 About company
+						p Сoncept – это российский бренд средств профессиональной косметики для волос, основанный в 2007 году.  Мы работаем как для российских мастеров, так и для наших ближайших соседей за рубежом.
+						p Concept – это собственное производство и расположенный в Москве логистический комплекс. Мы контролируем качество на всех участках: от поступления сырья до этапа производства готовой продукции. Это дает нам возможность предлагать необходимую для работы мастера продукцию по доступной цене, что позволяет мастеру успешно работать и зарабатывать.
+						p Разработка каждого продукта начинается с исследований в собственной научной лаборатории. У нас работают специалисты с более чем 20-ти летним опытом в области разработки красителей и уходовой косметики. Каждый продукт перед запуском в производство проходит несколько этапов тестирования.
+						p Ассортимент Concept понятен мастеру и всегда востребован клиентом, от полного спектра продукции для окрашивания и сопровождающих продуктов и до продуктов для создания и поддержки блонда, а также уходовыми стредствами и стайлингом.
+						p Мы обеспечиваем эффективный сервис и поддержку. Технологи Concept регулярно консультируют мастеров, а также проводят обучающие семинары и мастер-классы по всей стране.
+						p Для мастера работа с Concept – это широкие возможности для творчества. Это рост в профессии. Это безусловная возможность не только творить, но и зарабатывать. 
+
+					+e.advantage-group
+						+advantage-group({
+							title: {
+								tag: 'h2',
+								text: 'Что такое «БИГ»?',
+								attr: {
+									class: '_size_h4 _weight_medium'
+								}
+							},
+							items: [
+								{
+									image: '1.png',
+									text: 'Компания, входящая в 5-ку самых круп&shy;ных производителей косметики в&nbsp;России',
+								},
+								{
+									image: '2.png',
+									text: 'Несколько производственных и научно-исследовательских подразделений общей площадью более 8.000 м<sup>2</sup>',
+								},
+								{
+									image: '3.png',
+									text: 'Логистический и транспортный центр площадью более 15.000&nbsp;м<sup>2</sup> и собственным парком с более 70 авто',
+								},
+								{
+									image: '4.png',
+									text: 'Продажи во всех городах России, в&nbsp;странах СНГ, Европы и Ближнего Востока',
+								}
+							]
+						})
+
+
+
+	+e.banner
+		.page__container.page__container_gutter_none
+			+banner({
+				image: '3.jpg'
+			})._height_auto
+
+
+
+	+e.attention-panel
+		.page__container
+			+attention-panel({
+				control: {
+					text: 'Ask a question',
+					attr: {
+						href: '#askForm',
+						class: 'js-modal'
+					}
+				}
+			})
+				| You can always contact us with any questions you may have. To do so, simply fill out the form and submit it. Our specialists will respond to you within 24 hours.

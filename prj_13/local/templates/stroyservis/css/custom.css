@@ -1,0 +1,212 @@
+textarea.form__error {
+    border: 2px solid #FD0006 !important;
+}
+
+.order__input_file {
+    display: none;
+}
+
+.popup.review-popup input {
+    width: 100%;
+    /*margin-bottom: 20px;*/
+    outline: none;
+}
+
+.popup.review-popup textarea {
+    outline: none;
+    width: 100%;
+    /*margin-bottom: 20px;*/
+}
+
+.popup.faq-popup input,
+.popup.faq-popup textarea {
+    width: 100%;
+    /*margin-bottom: 20px;*/
+    outline: none;
+}
+
+.product-card__btn-line .related__add_control_minus {
+    margin-top: -5.5px;
+}
+
+.popup.review-popup .form-error-message,
+.popup.faq-popup .form-error-message {
+    color: red;
+}
+
+.popup.review-popup .form-content,
+.popup.faq-popup .form-content {
+    margin-bottom: 20px;
+}
+
+/*Лоадер -->*/
+.total-message {
+    color: #fff;
+    text-align: center;
+}
+
+.total-message .notetext {
+    display: block;
+    margin-bottom: 1em;
+}
+
+.btn--loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn--loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.btn--loading .btn-text {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/*<-- Лоадер */
+
+.alert {
+    margin-bottom: 1em;
+}
+
+.alert-danger {
+    color: #df4700;
+}
+
+.popup-authorization-static {
+    height: auto;
+    width: auto;
+    padding: 2em 0;
+}
+
+.search__wrapper [id^="bx_incl_area_"],
+.header__dropdown-list [id^="bx_incl_area_"] {
+    display: flex;
+}
+
+.search__wrapper [id^="bx_incl_area_"] {
+    width: 100%;
+}
+
+.review-popup__star-input {
+    flex-wrap: wrap;
+}
+
+.review-popup__star-input .form__error {
+    width: 100%;
+}
+
+/* 26.12.2023, задача №20433 */
+.catalog_wrapper,
+.catalog_wrapper_brand_detail {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop
+    {
+        display: none;
+    }
+}
+@media screen and (min-width: 769px) {
+    .mobile
+    {
+        display: none !important;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .filter__controls {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .pagination__list .pagination__dots .pagination__item{
+        width: auto;
+    }
+    .pagination__list li .pagination__item {
+        width: 39px;
+        height: 39px;
+    }
+    .pagination__list {
+        column-gap: 3px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .form__input label.form__error {
+        position: static;
+    }
+}
+.form__input label.form__error {
+    white-space: nowrap;
+}
+.btn-lazy {
+    display: inline-block;
+}
+.btn-lazy {
+    margin-top: 40px;
+}
+.btn-lazy + .products-grouts__pagination {
+    margin-top: 20px;
+}
+.card-title__weight + .card-title__weight {
+    margin-top: 30px;
+}
+/* 02.05.2024, задача №72682 - ORWO */
+@media (max-width: 991px){
+    .footer-seo-catalog-menu{
+        grid-column-end: 3;
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer-seo-catalog-menu{
+        grid-column-end: 1;
+        grid-column: 1;
+    }
+}
+@media screen and (min-width: 769px) {
+    .footer-seo-catalog-menu{
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .footer-seo-catalog-menu .footer-main__title{
+        display: none;
+    }
+    .footer-seo-catalog-menu .footer-main__list{
+        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+    }
+}
+@media screen and (min-width: 992px) {
+    .footer-seo-catalog-menu{
+        grid-column-end: 5;
+    }
+}
+@media screen and (min-width: 1201px) {
+    .footer-seo-catalog-menu .footer-main__list{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

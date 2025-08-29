@@ -1,0 +1,17 @@
+/* SCROLLING FOR iOS */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) {
+	@media {
+		.fancybox-slide {
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+}
+@media not all and (min-resolution:.001dpcm) {
+	@media {
+		.fancybox-slide {
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+	}
+}

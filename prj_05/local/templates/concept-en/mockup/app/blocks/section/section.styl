@@ -1,0 +1,79 @@
+DIR = '../blocks/section/'
+IMG_DIR = DIR + 'images/'
+
+.section
+	position relative
+	display block
+	overflow hidden
+	padding 50px 0
+
+
+	&__header
+		display block
+
+		+above(size-l)
+			margin 0 0 32px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__content
+		display block
+
+
+
+	&__entry-carousel
+		margin 0 -20px
+
+
+
+	&__text
+		margin 0 0 36px
+
+		+above(size-l)
+			margin 0 0 77px
+
+		&:last-child
+			margin-bottom 0
+
+		// Modifiers
+		&_width
+			&_l
+				max-width 895px
+
+		&_size
+			&_s
+				font-size 12px
+				line-height 1.667
+
+				+above(size-l)
+					font-size 14px
+					line-height 1.4
+
+			&_m
+				margin 0 0 55px
+				font-size 14px
+				line-height 1.4
+
+				+above(size-l)
+					margin 0 0 44px
+
+				&:last-child
+					margin-bottom 0
+
+
+
+	// Modifiers
+	&_spacing
+		&_none
+			padding 0
+
+		&_top
+			&-none
+				padding-top 0
+
+		&_bottom
+			&-none
+				padding-bottom 0

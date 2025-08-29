@@ -1,0 +1,78 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+  php_value display_errors 1
+  php_value mbstring.internal_encoding UTF-8
+  php_value opcache.revalidate_freq 0
+  php_value mbstring.func_overload 2
+  php_value max_input_vars 10000
+  php_value default_socket_timeout 60
+  php_flag register_globals off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+  ## Redirect firstltd.ru to first-ltd.ru
+    RewriteCond %{HTTP_HOST} ^firstltd.ru$
+    RewriteRule (.*)$ http://first-ltd.ru/$1 [R=301,L]
+
+  ## Redirect without www - timeweb
+  #RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+  #RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+  ## Redirect without / to /
+  #RewriteCond %{REQUEST_URI} !\?
+  #RewriteCond %{REQUEST_URI} !\&
+  #RewriteCond %{REQUEST_URI} !\=
+  #RewriteCond %{REQUEST_URI} !\.
+  #RewriteCond %{REQUEST_URI} !\/$
+  #RewriteRule ^(.*[^\/])$ /$1/ [R=301,L]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+
+
+<IfModule mod_php7.c>
+php_flag session.use_trans_sid on
+php_value mbstring.func_overload 2
+php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+php_value max_input_vars 10000
+php_value pcre.jit 0
+
+Redirect 301 /katalog/speczodezhda/ /katalog/spetsodezhda/
+Redirect 301 /katalog/speczodezhda/rabochaya-letnyaya/ /katalog/spetsodezhda/spetsodezhda_letnyaya/
+Redirect 301 /katalog/spetsodezhda/rabochaya-zimnyaya/ /katalog/spetsodezhda/spetsodezhda_zimnyaya/
+Redirect 301 /katalog/spetsodezhda/signalnaya/zhiletyi-signalnyie/ /katalog/spetsodezhda/spetsodezhda_zashchitnaya/odezhda_signalnaya/
+Redirect 301 /katalog/speczodezhda/mediczinskaya/dlya-sferyi-uslug/xalatyi/ /katalog/spetsodezhda/odezhda_dlya_meditsiny_i_sfera_uslug/
+Redirect 301 /poleznaya-informacziya/tablicza-razmerov.html /poleznaya-informacziya/tablicza-razmerov/
+Redirect 301 /kontakt.html /contacts/
+Redirect 301 /katalog/sredstva-zashhityi-ruk/kremyi-zashhitnyie-i-vosstanavlivayushhie/krem-regeneriruyushhij-geco-100ml.html /katalog/siz/krem_geco_regeneriruyushchiy_tuba_100_ml_
+Redirect 301 /katalog/speczodezhda/rabochaya-letnyaya/rabochie-kostyumyi/impuls-kurtka,-bryuki.html /katalog/spetsodezhda/kostyum_impuls_kurtka_bryuki_temno_siniy_s_krasnym_
+
+Redirect 301 /help/payment/ /help/payment-and-delivery/
+Redirect 301 /help/delivery/ /help/payment-and-delivery/

@@ -1,0 +1,44 @@
+/*Стили акций*/
+.label.sale_label.novelty{
+    color: #fff;
+    background-color: #0078cf;
+}
+.label.sale_label.hit{
+    color: #fff;
+    background-color: #058829;
+}
+.label.sale_label.discount{
+    color: #fff;
+    background-color: #de7902;
+}
+/*Стили избранного*/
+
+.page__product-card .favorite-wrapper .button__holder.is-favorite{
+    color: #CF006F;
+}
+.page__product-card .favorite-wrapper .button__icon{
+    display: none;
+}
+.page__product-card .favorite-wrapper .button__holder:not(.is-favorite) .button__icon.not-favorite{
+    display: block;
+}
+.page__product-card .favorite-wrapper .button__holder.is-favorite .button__icon.favorite{
+    display: block;
+}
+
+.product-snippet .product-snippet__favorite .button__holder.is-favorite{
+    color: #CF006F;
+}
+.product-snippet .product-snippet__favorite .button__icon{
+    display: none;
+}
+.product-snippet .product-snippet__favorite .button__holder:not(.is-favorite) .button__icon.not-favorite{
+    display: block;
+}
+.product-snippet .product-snippet__favorite .button__holder.is-favorite .button__icon.favorite{
+    display: block;
+}
+
+.search-results__item_selected {
+    background: #cecece;
+}

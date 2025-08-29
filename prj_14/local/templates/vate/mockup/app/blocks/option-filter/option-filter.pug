@@ -1,0 +1,34 @@
+mixin option-filter(data)
+	- var DIR = 'assets/blocks/option-filter/';
+	- var IMG_DIR = DIR + 'images/';
+	- attributes.class = attributes.class || '';
+	- attributes.class += ' js-option-filter';
+	- attributes.class = attributes.class.trim();
+	// begin .option-filter
+	+b.option-filter&attributes(attributes)
+		+e.header
+			+e('button').trigger.js-option-filter-trigger
+				| Сортировать по
+				+e('span').label
+					!=data.label
+				<svg class="option-filter__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12 15.4L6 9.4L7.4 8L12 12.6L16.6 8L18 9.4L12 15.4Z" fill="#E4E4E4"/>
+				</svg>
+
+		+e.body
+			if data.items
+				+e('ul').list
+					each item in data.items
+						+e('li').item
+							- var itemAttr = item.attr || {};
+							- var itemTag = item.tag || 'button';
+							- itemAttr.class = itemAttr.class || '';
+							//- - itemAttr.class += ' js-option-filter-item';
+							- itemAttr.class += '';
+							- itemAttr.class = itemAttr.class.trim();
+							+e(itemTag).link&attributes(itemAttr)
+								+e.text
+									!=item.text
+
+		block
+	// end .option-filter

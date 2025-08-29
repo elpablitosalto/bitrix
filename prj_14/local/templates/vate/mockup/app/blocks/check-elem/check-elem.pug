@@ -1,0 +1,20 @@
+mixin check-elem(settings)
+	- var DIR = 'assets/blocks/check-elem/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .check-elem
+	+b('label').check-elem&attributes(attributes)
+		- var data = settings || {};
+		- var attr = data.attr || {};
+		- attr.type = attr.type || 'checkbox';
+
+		+e('input').input&attributes(attr)
+
+		+e.label
+
+			block
+
+			if data.count
+				+e('span').count
+					!=data.count
+
+	// end .check-elem

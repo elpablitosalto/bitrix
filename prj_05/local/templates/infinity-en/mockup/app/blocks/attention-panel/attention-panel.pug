@@ -1,0 +1,13 @@
+mixin attention-panel(data = {})
+	- var DIR = 'assets/blocks/attention-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .attention-panel
+	+b.attention-panel&attributes(attributes)
+		+e.holder
+			+e.text
+				block
+
+			if data.controls
+				+control-group(data.controls)
+
+	// end .attention-panel

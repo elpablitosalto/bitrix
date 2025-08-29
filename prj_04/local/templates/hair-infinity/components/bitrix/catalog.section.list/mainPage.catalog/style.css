@@ -1,0 +1,9 @@
+.product-preview__description-wrapper{
+    padding: 10px 0px;
+}
+.product-preview__description-wrapper .product-preview__description_title{
+    color: #8d0e57;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 20px 0px;
+}

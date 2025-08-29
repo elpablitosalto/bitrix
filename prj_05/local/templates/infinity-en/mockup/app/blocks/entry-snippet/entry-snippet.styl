@@ -1,0 +1,225 @@
+DIR = '../blocks/entry-snippet/'
+IMG_DIR = DIR + 'images/'
+
+.entry-snippet
+	position relative
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	padding 20px
+	background var(--color-milk)
+
+	+above(size-s)
+		background transparent
+
+	&:hover
+		.entry-snippet
+			&__background
+				+above(size-l)
+					opacity 1
+
+				& ~ .entry-snippet
+					&__illustration
+						+above(size-l)
+							opacity 0
+
+
+
+	&__background
+		position absolute
+		top 0
+		left 0
+		z-index -0
+		display block
+		width 100%
+		height 100%
+		opacity 0
+		def-trn opacity
+
+		.entry-snippet
+			&__image
+				width 100%
+				height 100%
+				object-fit cover
+				mix-blend-mode none
+
+
+
+	&__label
+		position relative
+		z-index 1
+		display block
+		flex 0 0 auto
+		width 100%
+		margin 0 0 20px
+		color var(--color-grey)
+		font-size 16px
+		font-weight 300
+		line-height 1.223
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__title
+		position relative
+		z-index 1
+		display block
+		flex 0 0 auto
+		width 100%
+		min-height 3.669em
+		margin 0 0 20px
+		font-size 18px
+		font-weight 500
+		line-height 1.223
+
+		+above(size-l)
+			min-height 2.446em
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__link
+		color var(--color-primary)
+		text-decoration none
+		def-trn opacity
+
+		&:hover
+			color var(--color-primary)
+			text-decoration none
+			opacity .8
+
+		&:focus
+			color var(--color-primary)
+			text-decoration none
+			outline none
+			opacity .7
+
+
+
+	&__illustration
+		position relative
+		z-index 1
+		display flex
+		flex 0 0 auto
+		flex-direction column
+		flex-wrap nowrap
+		align-items center
+		justify-content center
+		width 100%
+		min-height 300px
+		margin auto 0
+		padding 0 0 20px
+		def-trn opacity
+
+		+above(size-l)
+			min-height 260px
+
+		&:last-child
+			padding-bottom 0
+
+			+above(size-l)
+				padding 0 0 41px
+
+		.entry-snippet
+			&__image
+				height 160px
+				object-fit contain
+
+				+above(size-s)
+					height auto
+					max-height 280px
+
+				+above(size-l)
+					max-height 346px
+
+
+
+	&__image
+		display block
+		flex 0 1 auto
+		width auto
+		max-width 100%
+		height auto
+		margin 0
+		padding 0
+		mix-blend-mode multiply
+
+
+
+	&__choice-group
+		position relative
+		z-index 1
+		display block
+		flex 0 0 auto
+		width 100%
+		margin 0 0 20px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+.entry-grid
+	&_size
+		&_s
+		&_mobile-s
+			.entry-snippet
+				+below(size-m - 1)
+					padding 5px
+					background transparent
+
+				&__label
+					+below(size-m - 1)
+						margin 0 0 5px
+						font-size 10px
+
+					&:last-child
+						+below(size-m - 1)
+							margin-bottom 0
+
+				&__title
+					+below(size-m - 1)
+						display box // @stylint ignore
+						display -webkit-box // @stylint ignore
+						overflow hidden
+						min-height 3.75em
+						margin 0 0 5px
+						font-size 12px
+						line-height 1.25
+						-webkit-line-clamp 3 // @stylint ignore
+						line-clamp 3 // @stylint ignore
+						-webkit-box-orient vertical // @stylint ignore
+
+					&:last-child
+						+below(size-m - 1)
+							margin-bottom 0
+
+				&__illustration
+					+below(size-m - 1)
+						min-height 160px
+						padding 0 0 8px
+
+					&:last-child
+						+below(size-m - 1)
+							padding-bottom 0
+
+				.choice-group
+					+below(size-m - 1)
+						font-size 10px
+
+					&__item
+						+below(size-m - 1)
+							margin 10px 0 0 -10px
+
+						&:last-child
+							+below(size-m - 1)
+								margin-right 0
+
+					&__panel
+						+below(size-m - 1)
+							clip-path polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%)
+							padding 0 7px

@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Infinity";
+$arDirProperties = Array(
+
+);
+?>

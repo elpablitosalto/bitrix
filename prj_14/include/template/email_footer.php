@@ -1,0 +1,1 @@
+<a class="menu__link menu__link_size_s" href="mailto:info@vate-tire.ru">info@vate-tire.ru</a>

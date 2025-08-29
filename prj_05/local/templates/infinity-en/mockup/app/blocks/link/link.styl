@@ -1,0 +1,28 @@
+DIR = '../blocks/link/'
+IMG_DIR = DIR + 'images/'
+
+.link
+	position relative
+	display inline
+	vertical-align middle
+	color var(--color-primary)
+	font inherit
+	font-weight 300
+	text-decoration none
+	background transparent
+	border none
+	border-bottom 1px solid currentColor
+	outline none
+	def-trn(color, opacity)
+
+
+
+	// Modifiers
+	&_style
+		&_ninja
+			color inherit
+			border-color transparent
+
+			&:hover
+				color inherit
+				opacity $hover-opacity

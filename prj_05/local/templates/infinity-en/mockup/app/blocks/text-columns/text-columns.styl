@@ -1,0 +1,64 @@
+DIR = '../blocks/text-columns/'
+IMG_DIR = DIR + 'images/'
+
+.text-columns
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	gap 50px
+
+	+above(size-m)
+		flex-direction row
+
+	h2:not(class)
+		margin 0 0 6px
+		color var(--color-primary)
+		font-size 16px
+		line-height 1.5
+		text-transform uppercase
+
+		&:last-child
+			margin-bottom 0
+
+	p:not(class)
+		margin 0 0 50px
+
+		+above(size-m)
+			margin 0 0 34px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__col
+		flex 0 0 auto
+		width 100%
+
+		+above(size-m)
+			flex 1 1 50%
+			width 50%
+			max-width 50%
+
+
+
+	// Modifiers
+	&_size
+		&_mobile
+			&-s
+				+below(size-m - 1)
+					gap 33px
+					font-size 12px
+
+				h2:not(class)
+					+below(size-m - 1)
+						margin 0 0 6px
+						font-size 12px
+						line-height 2
+
+				p:not(class)
+					+below(size-m - 1)
+						margin 0 0 33px
+
+						&:last-child
+							margin-bottom 0

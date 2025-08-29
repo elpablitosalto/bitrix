@@ -1,0 +1,31 @@
+DIR = '../blocks/advantages-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.advantages-carousel
+	display block
+
+
+
+	&__container
+		overflow visible
+		padding 0 10px
+
+
+
+	&__item
+		height 100%
+
+
+
+	&__slide
+		height initial
+		min-height 100%
+
+
+	&__navigation
+		display flex
+		justify-content center
+		margin-top 20px
+
+		+above(size-xxl)
+			display none

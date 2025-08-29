@@ -1,0 +1,20 @@
+mixin text-columns(data = {})
+	- var DIR = 'assets/blocks/text-columns/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .text-columns
+	+b.text-columns&attributes(attributes)
+		if data.items
+			each column in data.items
+				+e.col
+					if column.items
+						each item in column.items
+							if item.title
+								h2
+									!=item.title
+
+							if item.fields
+								each field in item.fields
+									p
+										!=field
+		block
+	// end .text-columns

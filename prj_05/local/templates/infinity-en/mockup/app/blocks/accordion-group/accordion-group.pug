@@ -1,0 +1,18 @@
+mixin accordion-group(data)
+	- var DIR = 'assets/blocks/accordion-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .accordion-group
+	+b.accordion-group&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list.js-accordion-list
+					each item in data.items
+						- var attr = item.attr || {};
+						- attr.class = attr.class || '';
+						- attr.class += ' js-accordion';
+						- attr.class = attr.class.trim();
+						+e('li').item
+							+accordion(item)&attributes(attr)
+
+		block
+	// end .accordion-group

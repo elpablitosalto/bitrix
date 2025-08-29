@@ -1,0 +1,14 @@
+mixin video-group(data = {})
+	- var DIR = 'assets/blocks/video-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .video-group
+	+b.video-group&attributes(attributes)
+
+		if data.items
+			+e.main
+				+e.UL.list
+					each item in data.items
+						+e.LI.item
+							+video-snippet(item)
+		block
+	// end .video-group

@@ -1,0 +1,85 @@
+DIR = '../blocks/rating/'
+IMG_DIR = DIR + 'images/'
+
+.rating
+	display inline-block
+
+
+
+	&__items
+		display flex
+		flex-wrap nowrap
+		align-self center
+
+
+
+	&__item
+		position relative
+		display block
+		margin 0
+		padding 2px 1px
+		color var(--color-yellow)
+		background transparent
+		border none
+		outline none
+		def-trn color, opacity
+
+		&:first-child
+			padding-left 2px
+
+		&:last-child
+			padding-right 2px
+
+		// Modifiers
+
+		&_type
+			&_current
+				& ~ .rating
+					&__item
+						color #000
+						opacity .7
+
+
+
+	&__mark
+		display block
+		width 19px
+		height 19px
+		margin 0
+		padding 0
+		fill currentColor
+		color inherit
+
+		+above(size-m)
+			width 20px
+			height 20px
+
+
+
+	// Modifiers
+
+
+	&_marks
+		for i in (0..5)
+			&_{i}
+				.rating
+					&__item
+						color var(--color-yellow)
+
+						&:nth-child(n+{i+1})
+							color #000
+							opacity .7
+
+
+	&_type
+		&_interactable
+			&:hover
+				.rating
+					&__item
+						color var(--color-yellow)
+
+						&:hover
+							& ~ .rating
+								&__item
+									color #000
+									opacity .7

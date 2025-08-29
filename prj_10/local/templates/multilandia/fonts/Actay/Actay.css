@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Actay';
+    src: url('../fonts/Actay/ActayRegular.eot');
+    src: url('../fonts/Actay/ActayRegular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Actay/ActayRegular.woff2') format('woff2'),
+        url('../fonts/Actay/ActayRegular.woff') format('woff'),
+        url('../fonts/Actay/ActayRegular.svg#Actay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Actay';
+    src: url('../fonts/Actay/ActayRegularItalic.eot');
+    src: url('../fonts/Actay/ActayRegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Actay/ActayRegularItalic.woff2') format('woff2'),
+        url('../fonts/Actay/ActayRegularItalic.woff') format('woff'),
+        url('../fonts/Actay/ActayRegularItalic.svg#Actay-RegularItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Actay';
+    src: url('../fonts/Actay/ActayWideBold.eot');
+    src: url('../fonts/Actay/ActayWideBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Actay/ActayWideBold.woff2') format('woff2'),
+        url('../fonts/Actay/ActayWideBold.woff') format('woff'),
+        url('../fonts/Actay/ActayWideBold.svg#ActayWideBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Actay';
+    src: url('../fonts/Actay/ActayWideBoldItalic.eot');
+    src: url('../fonts/Actay/ActayWideBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Actay/ActayWideBoldItalic.woff2') format('woff2'),
+        url('../fonts/Actay/ActayWideBoldItalic.woff') format('woff'),
+        url('../fonts/Actay/ActayWideBoldItalic.svg#ActayWideBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}

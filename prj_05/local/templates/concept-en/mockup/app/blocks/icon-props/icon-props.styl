@@ -1,0 +1,83 @@
+DIR = '../blocks/icon-props/'
+IMG_DIR = DIR + 'images/'
+
+.icon-props
+	display block
+
+
+
+	&__list
+		display block
+		margin 0
+		padding 0
+
+		+above(size-m)
+			columns 2
+			column-gap 60px
+
+
+
+	&__item
+		display block
+		margin 0 0 16px
+
+		+above(size-m)
+			break-inside avoid-column
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__panel
+		display flex
+		flex-wrap nowrap
+
+
+
+	&__icon
+		display block
+		flex 0 0 24px
+		width 24px
+		height 24px
+		margin 0 10px 0 0
+		fill currentColor
+		color var(--color-primary)
+
+		&:last-child
+			margin-right 0
+
+
+
+	&__main
+		display block
+		flex 1 1 100%
+		width 100%
+
+
+
+	&__title
+		display block
+		margin 0 0 4px
+		font-size 16px
+		font-weight 400
+		line-height 1.25
+		text-transform uppercase
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__text
+		display block
+		font-size 12px
+		font-weight 300
+		line-height 1.25
+
+		+above(size-l)
+			font-size 14px
+			line-height 1.214
+
+		p:not([class])
+			margin 0

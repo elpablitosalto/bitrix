@@ -1,0 +1,762 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle("Купить спецодежду в интернет магазине Ростова-на-Дону - ООО ГК ФИРСТ");
+$APPLICATION->SetPageProperty("description", "Предлагаем купить спецодежду в Ростове на Дону - халаты, жилеты, костюмы, средства защиты глаз и лица, спецобувь, берцы в интернет магазине с доставкой по России.");
+$APPLICATION->SetPageProperty("keywords", "купить спецодежду, в интернет магазине, в ростове на дону, халаты, костюмы, средства защиты глаз, лица, доставка по России, Новочеркасск, берцы, пошив спецодежды, фирст официальный сайт");
+?>
+    <!--<div class="grey_bg">
+        <div class="wrapper_inner">
+            <?/* $APPLICATION->IncludeComponent("bitrix:main.include", "front", Array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR . "include/mainpage/dop_menu.php", "EDIT_TEMPLATE" => "")); */?>
+        </div>
+    </div>-->
+
+<? global $SITE_THEME, $TEMPLATE_OPTIONS; ?>
+<? $APPLICATION->IncludeComponent(
+	"aspro:com.banners.mshop", 
+	"top_slider_banners", 
+	array(
+		"IBLOCK_TYPE" => "aspro_mshop_adv",
+		"IBLOCK_ID" => "2",
+		"TYPE_BANNERS_IBLOCK_ID" => "1",
+		"SET_BANNER_TYPE_FROM_THEME" => "N",
+		"NEWS_COUNT" => "5",
+		"SORT_BY1" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_BY2" => "ID",
+		"SORT_ORDER2" => "DESC",
+		"PROPERTY_CODE" => array(
+			0 => "TEXT_POSITION",
+			1 => "TARGETS",
+			2 => "TEXTCOLOR",
+			3 => "URL_STRING",
+			4 => "BUTTON1TEXT",
+			5 => "BUTTON1LINK",
+			6 => "BUTTON2TEXT",
+			7 => "BUTTON2LINK",
+			8 => "",
+		),
+		"CHECK_DATES" => "Y",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"SITE_THEME" => $SITE_THEME,
+		"BANNER_TYPE_THEME" => "TOP",
+		"COMPONENT_TEMPLATE" => "top_slider_banners",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
+	),
+	false
+); ?>
+
+    <div class="wrapper_inner py-3">
+
+        <h1>Спецодежда и СИЗ - Ростов-на-Дону (ФИРСТ)</h1>
+
+        <div class="row row_category_main">
+
+            <div class="wall__pl col-12 col-md-6 px-0">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="/katalog/spetsodezhda/" class="wall__item" title="Спецодежда" style="background-image: url(&quot;/upload/categories_main/specodezhda.jpg&quot;);">
+                            <span class="wall__label wall__label_big">Спецодежда</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wall__pr col-12 col-md-6 px-0">
+                <div class="row">
+                    <div class="col-12 col-md-6 ">
+                        <a href="/katalog/siz/" class="wall__item" title="СИЗ" style="background-image: url(&quot;/upload/categories_main/siz.jpg&quot;);">
+                            <span class="wall__label">СИЗ</span>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <a href="/katalog/zashchita_ruk/" class="wall__item" title="Защита рук" style="background-image: url(&quot;/upload/categories_main/sredstva-zashchity-ruk.jpg&quot;);">
+                            <span class="wall__label">Защита рук</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row row_category_main mt-4">
+
+            <div class="wall__pl col-12 col-md-3 px-0">
+                <div class="row">
+                    <div class="col">
+                        <a href="/katalog/obuv/" class="wall__item" title="Обувь" style="background-image: url(&quot;/upload/categories_main/obuv.jpg&quot;);">
+                            <span class="wall__label wall__label_big">Обувь</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wall__pr col-12 col-md-6 px-0">
+                <div class="row">
+                    <div class="col">
+                        <a href="/katalog/soputstvuyushchie_tovary/" class="wall__item" title="Сопутствующие товары" style="background-image: url(&quot;/upload/categories_main/soputstvtovary.jpg&quot;);">
+                            <span class="wall__label wall__label_big">Сопутствующие товары</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wall__pl col-12 col-md-3 px-0">
+                <div class="row">
+                    <div class="col">
+                        <a href="/poleznaya-informacziya/logotipyi-odezhdyi/" class="wall__item" title="" style="background-image: url(&quot;/upload/categories_main/specodezhda.jpg&quot;);">
+                            <span class="wall__label wall__label_big">Нанесение логотипов</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <?/* $APPLICATION->IncludeComponent("bitrix:news.list", "categories_main", Array(
+            "IBLOCK_TYPE" => "aspro_mshop_content",    // Тип информационного блока (используется только для проверки)
+            "IBLOCK_ID" => "3",    // Код информационного блока
+            "NEWS_COUNT" => "5",    // Количество новостей на странице
+            "SORT_BY1" => "SORT",    // Поле для первой сортировки новостей
+            "SORT_ORDER1" => "ASC",    // Направление для первой сортировки новостей
+            "SORT_BY2" => "ID",    // Поле для второй сортировки новостей
+            "SORT_ORDER2" => "DESC",    // Направление для второй сортировки новостей
+            "FILTER_NAME" => "",    // Фильтр
+            "FIELD_CODE" => array(    // Поля
+                0 => "",
+                1 => "",
+            ),
+            "PROPERTY_CODE" => array(    // Свойства
+                0 => "LINK",
+                1 => "HOVERIMG",
+                2 => "",
+            ),
+            "CHECK_DATES" => "Y",    // Показывать только активные на данный момент элементы
+            "DETAIL_URL" => "",    // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+            "AJAX_MODE" => "N",    // Включить режим AJAX
+            "AJAX_OPTION_JUMP" => "N",    // Включить прокрутку к началу компонента
+            "AJAX_OPTION_STYLE" => "Y",    // Включить подгрузку стилей
+            "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
+            "CACHE_TYPE" => "A",    // Тип кеширования
+            "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+            "CACHE_FILTER" => "Y",    // Кешировать при установленном фильтре
+            "CACHE_GROUPS" => "N",    // Учитывать права доступа
+            "PREVIEW_TRUNCATE_LEN" => "",    // Максимальная длина анонса для вывода (только для типа текст)
+            "ACTIVE_DATE_FORMAT" => "j F Y",    // Формат показа даты
+            "SET_TITLE" => "N",    // Устанавливать заголовок страницы
+            "SET_STATUS_404" => "N",    // Устанавливать статус 404
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
+            "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
+            "PARENT_SECTION" => "",    // ID раздела
+            "PARENT_SECTION_CODE" => "",    // Код раздела
+            "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
+            "PAGER_TEMPLATE" => "",    // Шаблон постраничной навигации
+            "DISPLAY_TOP_PAGER" => "N",    // Выводить над списком
+            "DISPLAY_BOTTOM_PAGER" => "N",    // Выводить под списком
+            "PAGER_TITLE" => "",    // Название категорий
+            "PAGER_SHOW_ALWAYS" => "N",    // Выводить всегда
+            "PAGER_DESC_NUMBERING" => "N",    // Использовать обратную навигацию
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",    // Время кеширования страниц для обратной навигации
+            "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+            "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
+            "COMPONENT_TEMPLATE" => "mshop",
+            "SET_BROWSER_TITLE" => "Y",    // Устанавливать заголовок окна браузера
+            "SET_META_KEYWORDS" => "Y",    // Устанавливать ключевые слова страницы
+            "SET_META_DESCRIPTION" => "Y",    // Устанавливать описание страницы
+            "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
+            "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
+            "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+            "SHOW_404" => "N",    // Показ специальной страницы
+            "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+            "DISPLAY_DATE" => "Y",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "Y",
+            "DISPLAY_PREVIEW_TEXT" => "Y",
+            "TITLE_BLOCK" => "Наши магазины;"
+        ),
+            false
+        ); */?>
+    </div>
+
+    <div class="tm-main-tabs">
+        <div class="wrapper_inner">
+            <? $APPLICATION->IncludeComponent(
+	"aspro:tabs.mshop", 
+	"main", 
+	array(
+		"IBLOCK_TYPE" => "aspro_mshop_catalog",
+		"IBLOCK_ID" => "34",
+		"SECTION_ID" => "",
+		"SECTION_CODE" => "",
+		"TABS_CODE" => "HIT",
+		"SECTION_USER_FIELDS" => array(
+			0 => "UF_OFFERS_TYPE",
+			1 => "",
+		),
+		"ELEMENT_SORT_FIELD" => "sort",
+		"ELEMENT_SORT_ORDER" => "asc",
+		"ELEMENT_SORT_FIELD2" => "shows",
+		"ELEMENT_SORT_ORDER2" => "desc",
+		"FILTER_NAME" => "arrFilterProp",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"SHOW_ALL_WO_SECTION" => "Y",
+		"HIDE_NOT_AVAILABLE" => "Y",
+		"PAGE_ELEMENT_COUNT" => "20",
+		"LINE_ELEMENT_COUNT" => "4",
+		"PROPERTY_CODE" => array(
+			0 => "HIT",
+			1 => "",
+		),
+		"OFFERS_LIMIT" => "20",
+		"SECTION_URL" => "",
+		"DETAIL_URL" => "",
+		"BASKET_URL" => "/basket/",
+		"ACTION_VARIABLE" => "action",
+		"PRODUCT_ID_VARIABLE" => "id",
+		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
+		"PRODUCT_PROPS_VARIABLE" => "prop",
+		"SECTION_ID_VARIABLE" => "SECTION_ID",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "250000",
+		"CACHE_GROUPS" => "N",
+		"META_KEYWORDS" => "-",
+		"META_DESCRIPTION" => "-",
+		"BROWSER_TITLE" => "-",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"DISPLAY_COMPARE" => "N",
+		"SET_TITLE" => "N",
+		"SET_STATUS_404" => "N",
+		"CACHE_FILTER" => "Y",
+		"PRICE_CODE" => array(
+			0 => "ИМ БИТРИКС",
+		),
+		"USE_PRICE_COUNT" => "N",
+		"SHOW_PRICE_COUNT" => "1",
+		"PRICE_VAT_INCLUDE" => "Y",
+		"PRODUCT_PROPERTIES" => array(
+		),
+		"USE_PRODUCT_QUANTITY" => "Y",
+		"CONVERT_CURRENCY" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"PAGER_TITLE" => "Товары",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"DISCOUNT_PRICE_CODE" => "",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"SHOW_ADD_FAVORITES" => "Y",
+		"SECTION_NAME_FILTER" => "",
+		"SECTION_SLIDER_FILTER" => "21",
+		"COMPONENT_TEMPLATE" => "main",
+		"OFFERS_FIELD_CODE" => array(
+			0 => "ID",
+			1 => "",
+		),
+		"OFFERS_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"OFFERS_SORT_FIELD" => "sort",
+		"OFFERS_SORT_ORDER" => "asc",
+		"OFFERS_SORT_FIELD2" => "shows",
+		"OFFERS_SORT_ORDER2" => "desc",
+		"SHOW_MEASURE" => "Y",
+		"OFFERS_CART_PROPERTIES" => array(
+		),
+		"DISPLAY_WISH_BUTTONS" => "N",
+		"SHOW_DISCOUNT_PERCENT" => "Y",
+		"SHOW_OLD_PRICE" => "Y",
+		"SALE_STIKER" => "SALE_TEXT",
+		"SHOW_DISCOUNT_TIME" => "N",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"QUANTITY_FLOAT" => "N"
+	),
+	false,
+	array(
+		"ACTIVE_COMPONENT" => "Y"
+	)
+); ?>
+        </div>
+    </div>
+
+<? /*<div class="wrapper_inner talign-center">
+	<?$APPLICATION->IncludeComponent("bitrix:main.include", "front", Array("AREA_FILE_SHOW" => "file","PATH" => SITE_DIR."include/mainpage/price.php","EDIT_TEMPLATE" => ""));?>
+</div>*/ ?>
+
+    <div class="wrapper_inner">
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:news.list",
+            "offer_on_main",
+            array(
+                "ACTIVE_DATE_FORMAT" => "d.m.Y",
+                "ADD_SECTIONS_CHAIN" => "N",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "AJAX_OPTION_HISTORY" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "CHECK_DATES" => "Y",
+                "COMPOSITE_FRAME_MODE" => "A",
+                "COMPOSITE_FRAME_TYPE" => "AUTO",
+                "DETAIL_URL" => "",
+                "DISPLAY_BOTTOM_PAGER" => "N",
+                "DISPLAY_DATE" => "N",
+                "DISPLAY_NAME" => "Y",
+                "DISPLAY_PICTURE" => "Y",
+                "DISPLAY_PREVIEW_TEXT" => "Y",
+                "DISPLAY_TOP_PAGER" => "N",
+                "FIELD_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "FILTER_NAME" => "",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "Y",
+                "IBLOCK_ID" => "36",
+                "IBLOCK_TYPE" => "aspro_mshop_content",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                "INCLUDE_SUBSECTIONS" => "N",
+                "MESSAGE_404" => "",
+                "NEWS_COUNT" => "3",
+                "PAGER_BASE_LINK_ENABLE" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_TEMPLATE" => ".default",
+                "PAGER_TITLE" => "Новости",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "PREVIEW_TRUNCATE_LEN" => "",
+                "PROPERTY_CODE" => array(
+                    0 => "LINK",
+                    1 => "",
+                ),
+                "SET_BROWSER_TITLE" => "N",
+                "SET_LAST_MODIFIED" => "N",
+                "SET_META_DESCRIPTION" => "N",
+                "SET_META_KEYWORDS" => "N",
+                "SET_STATUS_404" => "N",
+                "SET_TITLE" => "N",
+                "SHOW_404" => "N",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER1" => "DESC",
+                "SORT_ORDER2" => "ASC",
+                "STRICT_SECTION_CHECK" => "N",
+                "COMPONENT_TEMPLATE" => "offer_on_main"
+            ),
+            false
+        ); ?>
+    </div>
+
+    <!--<div class="wrapper_inner talign-center">
+        <?/* $APPLICATION->IncludeComponent("bitrix:main.include", "front", Array("AREA_FILE_SHOW" => "file", "PATH" => SITE_DIR . "include/mainpage/order_specialist.php", "EDIT_TEMPLATE" => "")); */?>
+    </div>-->
+
+    <!--<div class="wrapper_inner wides">
+        <?/* $APPLICATION->IncludeComponent(
+            "aspro:com.banners.mshop",
+            "mshop",
+            array(
+                "IBLOCK_TYPE" => "aspro_mshop_adv",
+                "IBLOCK_ID" => "2",
+                "TYPE_BANNERS_IBLOCK_ID" => "1",
+                "SET_BANNER_TYPE_FROM_THEME" => "N",
+                "NEWS_COUNT" => "6",
+                "SORT_BY1" => "SORT",
+                "SORT_ORDER1" => "ASC",
+                "SORT_BY2" => "ID",
+                "SORT_ORDER2" => "DESC",
+                "PROPERTY_CODE" => array(
+                    0 => "TEXT_POSITION",
+                    1 => "TARGETS",
+                    2 => "TEXTCOLOR",
+                    3 => "URL_STRING",
+                    4 => "BUTTON1TEXT",
+                    5 => "BUTTON1LINK",
+                    6 => "BUTTON2TEXT",
+                    7 => "BUTTON2LINK",
+                    8 => "",
+                ),
+                "CHECK_DATES" => "Y",
+                "CACHE_TYPE" => "A",
+                "CACHE_TIME" => "36000000",
+                "SITE_THEME" => $SITE_THEME,
+                "BANNER_TYPE_THEME" => "FLOAT"
+            ),
+            false
+        ); */?>
+    </div>-->
+
+    <!--<div class="wrapper_inner">
+        <?/* $APPLICATION->IncludeComponent("bitrix:news.list", "brands_slider", array(
+            "IBLOCK_TYPE" => "aspro_mshop_content",
+            "IBLOCK_ID" => "8",
+            "NEWS_COUNT" => "9999",
+            "SORT_BY1" => "SORT",
+            "SORT_ORDER1" => "DESC",
+            "SORT_BY2" => "SORT",
+            "SORT_ORDER2" => "ASC",
+            "FILTER_NAME" => "",
+            "FIELD_CODE" => array(
+                0 => "PREVIEW_PICTURE",
+                1 => "",
+            ),
+            "PROPERTY_CODE" => array(
+                0 => "",
+                1 => "",
+            ),
+            "CHECK_DATES" => "Y",
+            "DETAIL_URL" => "",
+            "AJAX_MODE" => "N",
+            "AJAX_OPTION_JUMP" => "N",
+            "AJAX_OPTION_STYLE" => "Y",
+            "AJAX_OPTION_HISTORY" => "N",
+            "CACHE_TYPE" => "A",
+            "CACHE_TIME" => "36000000",
+            "CACHE_FILTER" => "Y",
+            "CACHE_GROUPS" => "N",
+            "PREVIEW_TRUNCATE_LEN" => "",
+            "ACTIVE_DATE_FORMAT" => "d.m.Y",
+            "SET_TITLE" => "N",
+            "SET_STATUS_404" => "N",
+            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+            "ADD_SECTIONS_CHAIN" => "N",
+            "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+            "PARENT_SECTION" => "",
+            "PARENT_SECTION_CODE" => "",
+            "DISPLAY_TOP_PAGER" => "N",
+            "DISPLAY_BOTTOM_PAGER" => "N",
+            "PAGER_TITLE" => "",
+            "PAGER_SHOW_ALWAYS" => "N",
+            "PAGER_TEMPLATE" => "",
+            "PAGER_DESC_NUMBERING" => "N",
+            "PAGER_DESC_NUMBERING_CACHE_TIME" => "3600",
+            "PAGER_SHOW_ALL" => "N",
+            "DISPLAY_DATE" => "Y",
+            "DISPLAY_NAME" => "Y",
+            "DISPLAY_PICTURE" => "N",
+            "DISPLAY_PREVIEW_TEXT" => "N",
+            "AJAX_OPTION_ADDITIONAL" => ""
+        ),
+            false,
+            array(
+                "ACTIVE_COMPONENT" => "N"
+            )
+        ); */?>
+        <hr class="grey"/>
+        <div class="wrap_md">
+            <div class="news_wrap">
+                <?/* $APPLICATION->IncludeComponent("bitrix:news.list", "news_front", array(
+                    "IBLOCK_TYPE" => "aspro_mshop_content",
+                    "IBLOCK_ID" => "10",
+                    "NEWS_COUNT" => "2",
+                    "SORT_BY1" => "ACTIVE_FROM",
+                    "SORT_ORDER1" => "DESC",
+                    "SORT_BY2" => "SORT",
+                    "SORT_ORDER2" => "ASC",
+                    "FILTER_NAME" => "",
+                    "FIELD_CODE" => array(
+                        0 => "",
+                        1 => "",
+                    ),
+                    "PROPERTY_CODE" => array(
+                        0 => "",
+                        1 => "",
+                    ),
+                    "CHECK_DATES" => "Y",
+                    "DETAIL_URL" => "",
+                    "AJAX_MODE" => "N",
+                    "AJAX_OPTION_JUMP" => "N",
+                    "AJAX_OPTION_STYLE" => "Y",
+                    "AJAX_OPTION_HISTORY" => "N",
+                    "CACHE_TYPE" => "A",
+                    "CACHE_TIME" => "36000000",
+                    "CACHE_FILTER" => "Y",
+                    "CACHE_GROUPS" => "N",
+                    "PREVIEW_TRUNCATE_LEN" => "140",
+                    "ACTIVE_DATE_FORMAT" => "j F Y",
+                    "SET_TITLE" => "N",
+                    "SET_STATUS_404" => "N",
+                    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                    "ADD_SECTIONS_CHAIN" => "N",
+                    "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                    "PARENT_SECTION" => "",
+                    "PARENT_SECTION_CODE" => "",
+                    "INCLUDE_SUBSECTIONS" => "Y",
+                    "PAGER_TEMPLATE" => "",
+                    "DISPLAY_TOP_PAGER" => "N",
+                    "DISPLAY_BOTTOM_PAGER" => "N",
+                    "PAGER_TITLE" => "",
+                    "PAGER_SHOW_ALWAYS" => "N",
+                    "PAGER_DESC_NUMBERING" => "N",
+                    "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                    "PAGER_SHOW_ALL" => "N",
+                    "AJAX_OPTION_ADDITIONAL" => "",
+                    "COMPONENT_TEMPLATE" => "news_front",
+                    "SET_BROWSER_TITLE" => "N",
+                    "SET_META_KEYWORDS" => "N",
+                    "SET_META_DESCRIPTION" => "N",
+                    "TITLE_BLOCK" => "Новости",
+                    "ALL_URL" => "company/news/"
+                ),
+                    false,
+                    array(
+                        "ACTIVE_COMPONENT" => "N"
+                    )
+                ); */?>
+            </div>
+            <div class="subscribe_wrap">
+                <?/* $APPLICATION->IncludeComponent("bitrix:subscribe.form", "main", array(
+                    "AJAX_MODE" => "N",
+                    "SHOW_HIDDEN" => "N",
+                    "ALLOW_ANONYMOUS" => "Y",
+                    "SHOW_AUTH_LINKS" => "N",
+                    "CACHE_TYPE" => "A",
+                    "CACHE_TIME" => "86400",
+                    "CACHE_NOTES" => "",
+                    "SET_TITLE" => "N",
+                    "AJAX_OPTION_JUMP" => "N",
+                    "AJAX_OPTION_STYLE" => "Y",
+                    "AJAX_OPTION_HISTORY" => "N",
+                    "AJAX_OPTION_ADDITIONAL" => "",
+                    "LK" => "Y",
+                    "COMPONENT_TEMPLATE" => "main",
+                    "USE_PERSONALIZATION" => "Y",
+                    "PAGE" => SITE_DIR . "personal/subscribe/",
+                    "URL_SUBSCRIBE" => SITE_DIR . "subscribe/"
+                ),
+                    false,
+                    array(
+                        "ACTIVE_COMPONENT" => "N"
+                    )
+                ); */?>
+            </div>
+        </div>
+    </div>-->
+    <!--<div class="grey_bg">
+        <div class="wrapper_inner">
+            <?/* $APPLICATION->IncludeComponent("bitrix:news.list", "news_akc_slider", array(
+                "IBLOCK_TYPE" => "aspro_mshop_content",
+                "IBLOCK_ID" => "11",
+                "NEWS_COUNT" => "20",
+                "SORT_BY1" => "ACTIVE_FROM",
+                "SORT_ORDER1" => "DESC",
+                "SORT_BY2" => "SORT",
+                "SORT_ORDER2" => "ASC",
+                "FILTER_NAME" => "",
+                "FIELD_CODE" => array(
+                    0 => "DETAIL_PICTURE",
+                    1 => "",
+                ),
+                "PROPERTY_CODE" => array(
+                    0 => "",
+                    1 => "",
+                ),
+                "CHECK_DATES" => "Y",
+                "DETAIL_URL" => "",
+                "AJAX_MODE" => "N",
+                "AJAX_OPTION_JUMP" => "N",
+                "AJAX_OPTION_STYLE" => "Y",
+                "AJAX_OPTION_HISTORY" => "N",
+                "CACHE_TYPE" => "A",
+                "CACHE_TIME" => "36000000",
+                "CACHE_FILTER" => "Y",
+                "CACHE_GROUPS" => "N",
+                "PREVIEW_TRUNCATE_LEN" => "140",
+                "ACTIVE_DATE_FORMAT" => "j F Y",
+                "SET_TITLE" => "N",
+                "SET_STATUS_404" => "N",
+                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                "ADD_SECTIONS_CHAIN" => "N",
+                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                "PARENT_SECTION" => "",
+                "PARENT_SECTION_CODE" => "",
+                "INCLUDE_SUBSECTIONS" => "Y",
+                "PAGER_TEMPLATE" => "",
+                "DISPLAY_TOP_PAGER" => "N",
+                "DISPLAY_BOTTOM_PAGER" => "N",
+                "PAGER_TITLE" => "",
+                "PAGER_SHOW_ALWAYS" => "N",
+                "PAGER_DESC_NUMBERING" => "N",
+                "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+                "PAGER_SHOW_ALL" => "N",
+                "AJAX_OPTION_ADDITIONAL" => "",
+                "COMPONENT_TEMPLATE" => "news_akc_slider",
+                "SET_BROWSER_TITLE" => "N",
+                "SET_META_KEYWORDS" => "N",
+                "SET_META_DESCRIPTION" => "N",
+                "TITLE_BLOCK" => "Действующие акции"
+            ),
+                false,
+                array(
+                    "ACTIVE_COMPONENT" => "N"
+                )
+            ); */?>
+        </div>
+    </div>-->
+<? if ($TEMPLATE_OPTIONS["STORES"]["CURRENT_VALUE"] != 'NO'): ?>
+    <? if ($TEMPLATE_OPTIONS["STORES_SOURCE"]["CURRENT_VALUE"] != 'IBLOCK'): ?>
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:catalog.store.list",
+            "mshop",
+            array(
+                "SEF_MODE" => "N",
+                "SEF_FOLDER" => "/contacts/stores/",
+                "CACHE_TYPE" => "A",
+                "CACHE_TIME" => "86400",
+                "PHONE" => "Y",
+                "SCHEDULE" => "Y",
+                "SET_TITLE" => "N",
+                "TITLE" => "",
+                "MAP_TYPE" => "1",
+                "COMPONENT_TEMPLATE" => "mshop",
+                "PATH_TO_ELEMENT" => "contacts/stores/#store_id#/",
+                "TITLE_BLOCK" => "Наши магазины",
+                "TYPE" => "LIGHT",
+                "ALL_URL" => "contacts/stores/",
+                "SITE_THEME" => $SITE_THEME,
+            ),
+            false
+        ); ?>
+    <? else: ?>
+        <? $APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"shops_front", 
+	array(
+		"IBLOCK_TYPE" => "aspro_mshop_content",
+		"IBLOCK_ID" => "4",
+		"NEWS_COUNT" => "100",
+		"SORT_BY1" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_BY2" => "NAME",
+		"SORT_ORDER2" => "ASC",
+		"FILTER_NAME" => "",
+		"FIELD_CODE" => array(
+			0 => "NAME",
+			1 => "",
+		),
+		"PROPERTY_CODE" => array(
+			0 => "INDEX",
+			1 => "REGION",
+			2 => "GOROD",
+			3 => "ADDRESS",
+			4 => "PLACE",
+			5 => "PHONE",
+			6 => "DOB",
+			7 => "EMAIL",
+			8 => "",
+		),
+		"CHECK_DATES" => "Y",
+		"DETAIL_URL" => "",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_FILTER" => "Y",
+		"CACHE_GROUPS" => "Y",
+		"PREVIEW_TRUNCATE_LEN" => "140",
+		"ACTIVE_DATE_FORMAT" => "j F Y",
+		"SET_TITLE" => "N",
+		"SET_STATUS_404" => "N",
+		"TITLE_BLOCK" => "Наши офисы и склад",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"PAGER_TEMPLATE" => "",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"PAGER_TITLE" => "",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"COMPONENT_TEMPLATE" => "shops_front",
+		"SET_BROWSER_TITLE" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => "",
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO"
+	),
+	false
+); ?>
+    <? endif; ?>
+<? endif; ?>
+
+    <!--<div class="wrapper_inner">
+        <?/* $APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+            array(
+                "COMPONENT_TEMPLATE" => ".default",
+                "PATH" => SITE_DIR . "include/mainpage/comp_instagram.php",
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "",
+                "AREA_FILE_RECURSIVE" => "Y",
+                "EDIT_TEMPLATE" => "standard.php"
+            ),
+            false
+        ); */?>
+    </div>-->
+
+    <!--<div class="grey_bg main_info">
+        <div class="wrapper_inner">
+            <div class="wrap_md">
+                <div class="md-50 img">
+				<?/*$APPLICATION->IncludeFile(SITE_DIR."include/front_img.php", Array(), Array( "MODE" => "html", "NAME" => GetMessage("FRONT_IMG"), )); */?>
+			</div>
+                <div class="md-100 big">
+                    <?/* $APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "front",
+                        array(
+                            "AREA_FILE_SHOW" => "file",
+                            "PATH" => SITE_DIR . "include/front_info1.php",
+                            "EDIT_TEMPLATE" => "",
+                            "COMPONENT_TEMPLATE" => "front"
+                        ),
+                        false
+                    ); */?>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper_inner">
+        <?/* $APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+            array(
+                "COMPONENT_TEMPLATE" => ".default",
+                "PATH" => SITE_DIR . "include/front_comp_viewed.php",
+                "AREA_FILE_SHOW" => "file",
+                "AREA_FILE_SUFFIX" => "",
+                "AREA_FILE_RECURSIVE" => "Y",
+                "EDIT_TEMPLATE" => "standard.php"
+            ),
+            false
+        ); */?>
+    </div>-->
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

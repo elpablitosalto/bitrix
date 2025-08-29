@@ -1,0 +1,733 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'Contacts | Hair Concept Professional';
+	- var pageDescription = ' Hair Concept Professional';
+	- var pageKeywords = 'hair, concept';
+
+	- var fileName = 'contacts.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.breadcrumbs
+		+e.container
+			+breadcrumbs({
+				items: [
+					{
+						text: 'Home',
+						href: '/',
+					},
+					{
+						text: 'Catalog',
+					},
+				]
+			})
+
+	+e.catalog
+		.page__container
+			+catalog({
+				tabs: {
+					items: [
+						{
+							text: 'Product lines',
+							attr: {
+								type: 'button',
+								class: '_state_active js-toggle',
+								'data-toggle-scope': '.page__catalog, .tabs',
+								'data-toggle-target': '.catalog, .tabs__label',
+								'data-toggle-class': 'catalog_tab_products, tabs__label_state_active'
+							}
+						},
+						{
+							text: 'Products',
+							attr: {
+								type: 'button',
+								class: 'js-toggle',
+								'data-toggle-scope': '.page__catalog, .tabs',
+								'data-toggle-target': '.catalog, .tabs__label',
+								'data-toggle-class': 'catalog_tab_products, tabs__label_state_active'
+							}
+						},
+					],
+				},
+				title: {
+					tag: 'h1',
+					text: 'Concept product catalog',
+					attr: {
+						class: '_size_h1 _weight_medium _case_normal'
+					}
+				},
+				text: 'The entire range of products from the Russian professional haircare brand.',
+				tiles: {
+					items: [
+						{
+							title: 'Окрашивание',
+							href: '#',
+							links: [
+								{
+									text: 'Стойкий краситель Profy Touch для волос',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Безаммиачный краситель Soft Touch для волос',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Краситель для бровей и ресниц',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Окисляющая эмульсия и крем-оксидант',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Технические шампуни',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Сервисные продукты',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Пигменты прямого действия',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Оттеночные бальзамы',
+									attr: {
+										href: '#'
+									}
+								},
+							],
+							image: '1.jpg',
+						},
+						{
+							title: 'Блонд',
+							href: '#',
+							links: [
+								{
+									text: 'BONDING SYSTEM',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'NEXT LEVEL BLOND',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'ANTI-YELLOW',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Осветление',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Уход',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Plex',
+									attr: {
+										href: '#'
+									}
+								},
+							],
+							image: '2.jpg',
+						},
+						{
+							attr: {
+								class: '_size_tall'
+							},
+							title: 'Уход',
+							href: '#',
+							image: '3.jpg',
+						},
+						{
+							title: 'завивка',
+							href: '#',
+							links: [
+								{
+									text: 'Составы для завивки',
+									attr: {
+										href: '#'
+									}
+								},
+							],
+							image: '4.jpg',
+						},
+						{
+							title: 'Стайлинг',
+							href: '#',
+							links: [
+								{
+									text: 'Фиксация',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Объем',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Моделирование',
+									attr: {
+										href: '#'
+									}
+								},
+							],
+							image: '5.jpg',
+						},
+						{
+							title: 'Терапия',
+							href: '#',
+							links: [
+								{
+									text: 'Активация роста',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Жирная кожа',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Перхоть и проблемная кожа',
+									attr: {
+										href: '#'
+									}
+								},
+							],
+							image: '6.jpg',
+						},
+						{
+							title: 'Коллекции',
+							href: '#',
+							links: [
+								{
+									text: 'DETOX POWER',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Biotin Secrets',
+									attr: {
+										href: '#'
+									}
+								},
+								{
+									text: 'Ламинирование Top Secret',
+									attr: {
+										href: '#'
+									}
+								},
+							],
+							image: '7.jpg',
+						},
+						{
+							title: 'Для мужчин',
+							href: '#',
+							links: [
+								{
+									text: 'Шампуни',
+									attr: {
+										href: '#'
+									}
+								},
+							],
+							image: '8.jpg',
+						},
+					]
+				},
+				filters: {
+					items: [
+						{
+							label: 'Product Type',
+							items: [
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-1',
+										checked: false
+									},
+									text: 'Option 1'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-2',
+										checked: false
+									},
+									text: 'Option 2'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-3',
+										checked: false
+									},
+									text: 'Option 3'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-4',
+										checked: false
+									},
+									text: 'Option 4'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-5',
+										checked: false
+									},
+									text: 'Option 5'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-6',
+										checked: false
+									},
+									text: 'Option 6'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-7',
+										checked: false
+									},
+									text: 'Option 7'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-8',
+										checked: false
+									},
+									text: 'Option 8'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-9',
+										checked: false
+									},
+									text: 'Option 9'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-10',
+										checked: false
+									},
+									text: 'Option 10'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-11',
+										checked: false
+									},
+									text: 'Option 11'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-12',
+										checked: false
+									},
+									text: 'Option 12'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-13',
+										checked: false
+									},
+									text: 'Option 13'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-14',
+										checked: false
+									},
+									text: 'Option 14'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-15',
+										checked: false
+									},
+									text: 'Option 15'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-16',
+										checked: false
+									},
+									text: 'Option 16'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-17',
+										checked: false
+									},
+									text: 'Option 17'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-18',
+										checked: false
+									},
+									text: 'Option 18'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-19',
+										checked: false
+									},
+									text: 'Option 19'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-20',
+										checked: false
+									},
+									text: 'Option 20'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-21',
+										checked: false
+									},
+									text: 'Option 21'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-22',
+										checked: false
+									},
+									text: 'Option 22'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-23',
+										checked: false
+									},
+									text: 'Option 23'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-24',
+										checked: false
+									},
+									text: 'Option 24'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-25',
+										checked: false
+									},
+									text: 'Option 25'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-26',
+										checked: false
+									},
+									text: 'Option 26'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-27',
+										checked: false
+									},
+									text: 'Option 27'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-28',
+										checked: false
+									},
+									text: 'Option 28'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-29',
+										checked: false
+									},
+									text: 'Option 29'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-1-30',
+										checked: false
+									},
+									text: 'Option 30'
+								},
+							]
+						},
+						{
+							label: 'Product Line',
+							items: [
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-2-1',
+										checked: false
+									},
+									text: 'Option 1'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-2-2',
+										checked: false
+									},
+									text: 'Option 2'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-2-3',
+										checked: false
+									},
+									text: 'Option 3'
+								},
+								{
+									attr: {
+										class: '_color_neutral'
+									},
+									inputAttr: {
+										type: 'checkbox',
+										name: 'catalog-filter-2-4',
+										checked: false
+									},
+									text: 'Option 4'
+								},
+							]
+						},
+					]
+				},
+				products: {
+					items: [
+						{
+							image: '1.jpg',
+							title: 'Сыворотка-питание для секущихся кончиков',
+							text: 'Nutri Keratin Serum',
+							href: '#',
+						},
+						{
+							image: '2.jpg',
+							title: 'Профессиональная стойкая крем-краска для волос',
+							text: 'Profy Touch Permanent Color Cream',
+							href: '#',
+						},
+						{
+							image: '3.jpg',
+							title: 'Маска мега-уход для слабых и поврежденных волос',
+							text: 'Mega-Mask',
+							href: '#',
+						},
+						{
+							image: '4.jpg',
+							title: 'Лосьон для химической завивки',
+							text: 'Perm Agent',
+							href: '#',
+						},
+						{
+							image: '5.png',
+							title: 'Пигменты прямого действия для волос fashion look лимонный',
+							text: 'Fashion Look Lemon',
+							href: '#',
+						},
+						{
+							image: '6.png',
+							title: 'Пигменты прямого действия для волос fashion look шампань',
+							text: 'Fashion Look Champagne',
+							href: '#',
+						},
+						{
+							image: '7.png',
+							title: 'Пигменты прямого действия для волос fashion look стальной',
+							text: 'Fashion Look Steel',
+							href: '#',
+						},
+						{
+							image: '8.png',
+							title: 'Пигменты прямого действия для волос fashion look синий',
+							text: 'Fashion Look Blue',
+							href: '#',
+						},
+					]
+				}
+			})
+
+	+e.banner
+		.page__container
+			+banner({
+				image: '5.jpg'
+			})._height_auto
+
+	+e.attention-panel
+		.page__container
+			+attention-panel({
+				control: {
+					text: 'Ask a question',
+					attr: {
+						href: '#askForm',
+						class: 'js-modal'
+					}
+				}
+			})
+				| You can always contact us with any questions you may have. To do so, simply fill out the form and submit it. Our specialists will respond to you within 24 hours.

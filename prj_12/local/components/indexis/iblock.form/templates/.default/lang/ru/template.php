@@ -1,0 +1,16 @@
+<?
+$MESS['FS_FIELD_ERROR_REQUIRED'] = 'Заполните поле';
+$MESS['FS_FIELD_ERROR_REQUIRED_PHONE'] = 'Укажите Ваш номер';
+$MESS['FS_NAME_ERROR_MINLEN'] = 'Имя должно быть более 1 символа';
+$MESS['FS_EMAIL_ERROR_INCORRECT'] = 'Укажите верный e-mail';
+$MESS['FS_PHONE_ERROR_INCORRECT'] = 'Укажите верный номер телефона';
+$MESS['FS_URL_ERROR_INCORRECT'] = 'Укажите верную ссылку';
+$MESS['FS_SUBMIT'] = 'Оставить заявку';
+
+$MESS['FS_AGREE_TEXT'] = 'Нажимая на кнопку , я соглашаюсь на обработку персональных данных в соответствии с условиями политики конфиденциальности';
+$MESS['FS_BTN_SUBMIT'] = 'Записаться';
+$MESS['FS_BTN_PROCESSING'] = 'Отправляется';
+$MESS['FS_BTN_SUBMIT_SUCCESS'] = 'Отправлено успешно';
+$MESS['FS_AGREE_INCORRECT'] = 'Подтвердите, что вы согласны';
+$MESS['FS_ATTACH_FILE'] = 'Прикрепить файл';
+?>

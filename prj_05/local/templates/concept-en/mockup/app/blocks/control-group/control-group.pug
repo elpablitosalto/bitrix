@@ -1,0 +1,18 @@
+mixin control-group(controls = [], isBlock = false, wrapperClassName = '')
+	if isBlock
+		- wrapperClassName = wrapperClassName || 'control-group';
+		+b(class=wrapperClassName)&attributes(attributes)
+			+control-group-content(controls)
+	else
+		- wrapperClassName = wrapperClassName || 'controls';
+		+e(class=wrapperClassName)&attributes(attributes)
+			+control-group-content(controls)
+	block
+
+mixin control-group-content(controls)
+	if controls
+		each control in controls
+			- var wrapperClass = control.wrapperClass || '';
+
+			+e.control(class=wrapperClass)
+				+button(control)

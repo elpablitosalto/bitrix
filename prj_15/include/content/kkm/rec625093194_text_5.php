@@ -1,0 +1,1 @@
+<span style="color: rgb(0, 0, 0);">Пройдите </span><span style="color: rgb(255, 186, 0);">первый урок бесплатно</span>

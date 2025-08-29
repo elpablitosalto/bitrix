@@ -1,0 +1,5 @@
+.errortext,
+.notetext {
+    display: inline-block;
+    margin-bottom: 1em;
+}

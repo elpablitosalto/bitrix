@@ -1,0 +1,32 @@
+DIR = '../blocks/map-panel/'
+IMG_DIR = DIR + 'images/'
+
+.map-panel
+	display block
+
+
+
+	&__container
+		display flex
+		flex-direction column-reverse
+		width 100%
+
+		+above(size-l)
+			flex-direction row
+
+
+
+	&__storages
+		flex 0 1 335px
+
+
+
+	&__map
+		flex 1 1 auto
+		margin-top -25px
+
+		+above(size-m)
+			margin-top -50px
+
+		+above(size-l)
+			margin-top 0

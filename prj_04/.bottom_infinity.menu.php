@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О компании", 
+		"/about/", 
+		Array(), 
+		Array("COLUMN"=>"1"), 
+		"" 
+	),
+	Array(
+		"Личный кабинет", 
+		"/personal/", 
+		Array(), 
+		Array("COLUMN"=>"1"), 
+		"" 
+	),
+	Array(
+		"Продукция",
+        INFINITY_ROOT."/catalog/",
+		Array(), 
+		Array("COLUMN"=>"1"), 
+		"" 
+	),
+	Array(
+		"Профессионалам",
+		"",
+		Array(), 
+		Array("COLUMN"=>"1"), 
+		"" 
+	),
+	Array(
+		"Новости",
+		"/press-center/news/",
+		Array(), 
+		Array("COLUMN"=>"2"), 
+		"" 
+	),
+	Array(
+		"Учитесь у нас",
+		"/press-center/videos/",
+		Array(), 
+		Array("COLUMN"=>"2"), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array("COLUMN"=>"2"), 
+		"" 
+	)
+);
+?>

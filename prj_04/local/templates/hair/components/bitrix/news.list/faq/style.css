@@ -1,0 +1,419 @@
+.faq-section {
+    display: block;
+    padding: 32px 0 0;
+    line-height: 1.223;
+}
+
+.faq-section * {
+    color: #282323;
+    line-height: inherit;
+}
+
+.faq-section__wrapper {
+    display: block;
+}
+
+.faq-section__aside {
+    display: block;
+}
+
+.faq-section__main {
+    display: block;
+    margin: 0 0 60px;
+}
+
+.faq-section__main:last-child {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-section__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    }
+
+    .faq-section__aside {
+        flex: 0 0 360px;
+        order: -1;
+        width: 360px;
+        max-width: 360px;
+        margin: 0 47px 0 0;
+    }
+
+    .faq-section__main {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+.faq-section__sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+}
+
+.faq-section__controls {
+    display: none;
+    margin: 0 0 40px;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-section__controls {
+        display: block;
+    }
+}
+
+.faq-section__controls:last-child {
+    margin-bottom: 0;
+}
+
+.faq-group {
+    display: block;
+}
+
+.faq-group__list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.faq-group__item {
+    display: block;
+    margin: 0 0 12px;
+    padding: 0;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-group__item {
+        margin: 0 0 59px;
+    }
+}
+
+.faq-group__item:last-child {
+    margin-bottom: 0;
+}
+
+.faq-item {
+    display: block;
+}
+
+.faq-item__header {
+    position: relative;
+    display: block;
+}
+
+.faq-item__title {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: none;
+    padding: 20px 0 24px;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-item__title {
+        padding: 0 0 20px;
+        font-size: 20px;
+    }
+}
+
+.faq-item__trigger {
+    display: block;
+    height: 50px;
+    padding: 0 16px;
+    text-align: center;
+    color: #282323;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #f7faf7;
+    border: 1px solid #959595;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-item__trigger {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .faq-item__title,
+    .faq-item__body {
+        display: none;
+    }
+}
+
+.faq-item__body {
+    padding: 0 0 27px;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-item__body {
+        padding: 0;
+    }
+}
+
+.faq-item__list {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.faq-item__accordeon {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.faq-item__accordeon:first-child {
+    border-top: 1px solid #c4c4c4;
+}
+
+.faq-item_state_open .faq-item__title,
+.faq-item_state_open .faq-item__body {
+    display: block;
+}
+
+.faq-item_state_open .faq-item__trigger {
+    color: #fff;
+    background-color: #33c;
+    border-color: #33c;
+}
+
+.faq-accordeon {
+    display: block;
+}
+
+.faq-accordeon__header {
+    display: block;
+}
+
+.faq-accordeon__trigger {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 17px 0;
+    color: #282323;
+    font-size: 14px;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-accordeon__trigger {
+        padding: 16px 0 15px;
+        font-size: 16px;
+    }
+}
+
+.faq-accordeon__trigger:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 54px;
+    z-index: 1;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: translate(50px, -85%) rotate(45deg) skew(-3deg, -3deg);
+}
+
+.faq-accordeon__body {
+    display: none;
+    padding: 0 0 16px;
+}
+
+.faq-accordeon__fields {
+    max-width: 690px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.43;
+}
+
+@media only screen and (min-width: 992px) {
+    .faq-accordeon__body {
+        padding: 0 0 17px;
+    }
+}
+
+.faq-accordeon__fields p:not([class]) {
+    font-size: inherit;
+}
+
+.faq-accordeon__fields p:not([class]):last-child {
+    margin-bottom: 0;
+}
+
+.faq-accordeon_state_open .faq-accordeon__body {
+    display: block;
+}
+
+.control-group {
+    display: block;
+}
+
+.control-group__item {
+    display: block;
+    margin: 0 0 12px;
+}
+
+.control-group__item:last-child {
+    margin-bottom: 0;
+}
+
+.control-group__button {
+    display: block;
+    height: 64px;
+    padding: 0 16px;
+    text-align: center;
+    color: #282323;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 64px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #f7faf7;
+    border: 1px solid #959595;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    transition: color .3s ease, background-color .3s ease, border-color .3s ease;
+}
+
+.control-group__button:hover {
+    color: #33c;
+    background-color: #f7faf7;
+    border-color: #959595;
+}
+
+.control-group__button:focus {
+    color: #fff;
+    background-color: #33c;
+    border-color: #33c;
+}
+
+.control-group__button_state_active {
+    color: #fff;
+    background-color: #33c;
+    border-color: #33c;
+}
+
+.control-group__button_state_active:hover {
+    color: #fff;
+    background-color: #22b;
+    border-color: #22b;
+}
+
+.sidebar-form {
+    display: block;
+    padding: 28px 24px 31px;
+    text-align: center;
+    border: 1px solid #c4c4c4;
+}
+
+.sidebar-form__fields {
+    display: block;
+    margin: 0 0 35px;
+    font-size: 16px;
+}
+
+
+@media only screen and (min-width: 992px) {
+    .sidebar-form__fields {
+        display: block;
+        margin: 0 0 26px;
+        font-size: 20px;
+    }
+}
+
+.sidebar-form__fields:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-form__contacts {
+    display: block;
+    margin: 0 0 32px;
+}
+
+.sidebar-form__contacts:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-form__contact {
+    display: block;
+    margin: 0 0 32px;
+}
+
+.sidebar-form__contact:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-form__phone {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 992px) {
+    .sidebar-form__phone {
+        font-size: 24px;
+    }
+}
+
+.sidebar-form__icon {
+    display: inline-block;
+    vertical-align: top;
+    width: 1.2em;
+    height: 1.4676em;
+    fill: currentColor;
+}
+
+@media only screen and (min-width: 992px) {
+    .sidebar-form__icon {
+        width: 1em;
+        height: 1.223em;
+    }
+}
+
+.sidebar-form__controls {
+    display: block;
+    margin: 0 0 32px;
+}
+
+.sidebar-form__controls:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-form__control {
+    display: block;
+    max-width: 254px;
+    margin: 0 auto 16px;
+}
+
+.sidebar-form__control:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-form__control .button {
+    padding: 13px 16px;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: none;
+}

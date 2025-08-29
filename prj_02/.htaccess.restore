@@ -1,0 +1,48 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+  php_flag allow_call_time_pass_reference 1
+  php_flag session.use_trans_sid off
+
+  #php_value display_errors 1
+
+  #php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+
+  #RewriteRule ^redirects.txt$ - [F]
+
+  #RewriteRule ^/need-help/$ /how_to_help/need-help/ [R=301,L]
+  RewriteRule ^/need-help/$ /how_to_help/need-help/ [R=301,L]
+
+  #Redirect 301 /need-help/ /how_to_help/need-help/
+  Redirect 301 /articles/ /media/?set_filter=y&newsFilter_29_945058907=Y
+  Redirect 301 /events/ /news/
+  Redirect 301 /materials/ /media/
+  Redirect 301 /articles/mama-vejp-eto-ne-vredno/ /media/parents/mama-vejp-eto-ne-vredno/
+  Redirect 301 /articles/nosit-grudnichka-na-rukah-polezno-ili-vredno-v-pomoshh-mame/ /news/nosit-grudnichka-na-rukah-polezno-ili-vredno-v-pomoshh-mame/
+  Redirect 301 /need-family/ /how_to_adopt/
+  Redirect 301 /need-help/?term=---autotargeting /how_to_help/need-help/?term=---autotargeting
+  Redirect 301 /articles/kak-pomoch-podrostku-s-zanizhennoj-samooczenkoj/ /media/parents/kak-pomoch-podrostku-s-zanizhennoj-samooczenkoj/
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+</IfModule>

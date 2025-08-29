@@ -1,0 +1,1 @@
+<a class="footer__email" href="mailto:info@dirui.com.ru">info@dirui.com.ru</a>

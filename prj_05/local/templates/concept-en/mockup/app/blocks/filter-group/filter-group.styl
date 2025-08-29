@@ -1,0 +1,26 @@
+DIR = '../blocks/filter-group/'
+IMG_DIR = DIR + 'images/'
+
+.filter-group
+	display block
+
+
+
+	&__list
+		display grid
+		grid-template-columns repeat(auto-fill, minmax(100%, 1fr))
+		grid-gap 20px
+		margin 0
+
+		+above(size-m)
+			grid-template-columns repeat(auto-fill, minmax(28%, 1fr))
+			grid-gap 20px
+
+		+above(size-l)
+			grid-template-columns repeat(auto-fill, minmax(21%, 1fr))
+
+
+
+	&__item
+		display block
+		margin 0

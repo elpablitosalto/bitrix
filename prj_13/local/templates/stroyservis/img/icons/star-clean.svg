@@ -1,0 +1,42 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   fill="none">
+  <g
+     clip-path="url(#clip0_23028_41069)"
+  >
+    <path
+       d="M 10.248,5.57474 16,6.09684 11.64,10.08 12.944,16 8,12.8589 3.056,16 4.368,10.08 0,6.09684 5.752,5.58316 8,0 Z m -4.45626,4.01733 -0.8,3.60423 3.008,-1.9116 3.01596,1.92 -0.8,-3.60421 2.656,-2.42526 -3.50396,-0.32 -1.368,-3.40211 -1.36,3.39369 -3.504,0.32 z"
+       id="path2"
+       style="clip-rule:evenodd;fill:#F35E19;fill-rule:evenodd" />
+    <mask
+       id="mask0_23028_41069"
+       maskUnits="userSpaceOnUse"
+       x="0"
+       y="0"
+       width="16"
+       height="16">
+      <path
+         d="M 8,12.8589 12.944,16 11.632,10.08 16,6.09684 10.248,5.58316 8,0 5.752,5.58316 0,6.09684 4.368,10.08 3.056,16 Z"
+         id="path4"
+         style="fill:#ffffff" />
+    </mask>
+    <g
+       mask="url(#mask0_23028_41069)"
+       id="g9" />
+  </g>
+  <defs
+     id="defs16">
+    <clipPath
+       id="clip0_23028_41069">
+      <rect
+         width="16"
+         height="16"
+         fill="white"
+         id="rect13" />
+    </clipPath>
+  </defs>
+</svg>

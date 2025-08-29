@@ -1,0 +1,46 @@
+DIR = '../blocks/filter-trigger/'
+IMG_DIR = DIR + 'images/'
+
+.filter-trigger
+	display flex
+	flex-wrap nowrap
+	gap 5px
+	align-items center
+	width auto
+	color var(--color-yellow)
+	font-size 16px
+	line-height 1.25
+	text-align left
+	text-decoration none
+	background transparent
+	border none
+	outline none
+
+	&:hover
+		color var(--color-muted)
+		text-decoration none
+
+	&:focus
+		color var(--color-muted)
+		text-decoration none
+		outline none
+
+
+
+	&__text
+		color inherit
+		font-weight 600
+
+	&__count
+		display flex
+		align-items center
+		justify-content center
+		padding 1.5px
+		color var(--color-black)
+		font-size 12px
+		line-height 1
+		text-align center
+		background var(--color-yellow)
+		border 2px solid var(--color-black)
+		border-radius 50%
+		def-trn opacity

@@ -1,0 +1,59 @@
+DIR = '../blocks/social-nav/'
+IMG_DIR = DIR + 'images/'
+
+.social-nav
+	display flex
+
+
+
+	&__list
+		display flex
+		flex-wrap nowrap
+		align-items center
+
+
+
+	&__item
+		display block
+		flex 0 1 auto
+		width auto
+		margin 0 12px 0 0
+
+		&:last-child
+			margin-right 0
+
+
+
+	&__link
+		display block
+		color var(--color-primary)
+		text-decoration none
+		background transparent
+		border none
+		outline none
+		def-trn(color, opacity)
+
+		&:hover
+			color var(--color-primary)
+			text-decoration none
+			opacity $hover-opacity
+
+
+
+	&__icon
+		display block
+		width 24px
+		height 24px
+		fill currentColor
+
+
+
+	// Modifiers
+	&_style
+		&_light
+			.social-nav
+				&__link
+					color var(--color-white)
+
+					&:hover
+						color var(--color-white)

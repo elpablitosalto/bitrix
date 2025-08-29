@@ -1,0 +1,19 @@
+mixin icon-control(data)
+	- var DIR = 'assets/blocks/icon-control/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .icon-control
+	+b.icon-control&attributes(attributes)
+		if data
+			if data.icon
+				+e.illustration
+					!=data.icon
+
+					if data.badge
+						+e.badge
+							!=data.badge
+
+			if data.text
+				+e.label
+					!=data.text
+		block
+	// end .icon-control

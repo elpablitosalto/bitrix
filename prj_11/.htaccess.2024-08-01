@@ -1,0 +1,50 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  #Redirect 301 /gazeta/shtraf-v-60-mln-₽-i-blokirovka-schetov-kak-kompanii-vsyo-zhe-udalos-vyzhit /gazeta/shtraf-v-60-mln-%25e2%2582%25bd-i-blokirovka-schetov-kak-kompanii-vsyo-zhe-udalos-vyzhit
+  Redirect 301	/news/novosti/	/
+  Redirect 301	/events/vebinar-poryadok-v-finansakh-/	/
+  Redirect 301	/events/finrazbor-2023/	/
+  Redirect 301	/news/nazvanie-novosti/	/
+  Redirect 301	/events/stratsessiya-nf/	/
+  Redirect 301	/events/milliard/	/
+  Redirect 301	/partners/	/
+  Redirect 301	/news/slet-kompanii-2023/	/
+  Redirect 301	/events/	/
+  Redirect 301	/news/novosti1/	/
+  Redirect 301	/news/slet-kompanii-20231/	/
+  Redirect 301	/news/slet-kompanii-20232/	/
+  Redirect 301	/gazeta/kejsy	/gazeta/cases/
+  Redirect 301	/pnl	https://leads.noboring-finance.ru/dos_opium_balance
+  Redirect 301	/minibook-3otcheta	https://leads.noboring-finance.ru/dos_opium_balance
+  Redirect 301	/barsetka	https://leads.noboring-finance.ru/barsetka2
+
+
+
+
+  #редирект с www на без-www
+  RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>

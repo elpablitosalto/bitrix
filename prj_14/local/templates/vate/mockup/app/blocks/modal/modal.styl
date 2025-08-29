@@ -1,0 +1,142 @@
+DIR = '../blocks/modal/'
+IMG_DIR = DIR + 'images/'
+
+.modal
+	display none
+
+.fancybox__content.modal .modal__header
+.fancybox__content
+	&.modal
+		width 335px
+		max-width 100%
+		padding 0
+		background var(--color-primary)
+		border-radius 15px
+
+		+above(size-m)
+			width 600px
+
+
+		&_size
+			&_l
+				+above(size-l)
+					width 1115px
+
+
+		.modal
+			&__header
+				padding 20px 20px 0
+				color var(--color-black)
+
+				+above(size-m)
+					padding 60px 60px 0
+
+
+
+			&__content
+				padding 20px
+
+				+above(size-m)
+					padding 36px 60px 60px
+
+
+				&_layout
+					&_horizontal
+						.modal
+							&__main
+								display flex
+								gap 40px
+
+
+
+			&__controls
+				display flex
+				justify-content center
+				margin-top 20px
+
+				+above(size-xxl)
+					margin-top 49.25px
+
+
+
+			&__control
+				width 100%
+				max-width 355px
+
+
+
+			&__fast-filter
+				padding 25px 0
+				border-block 1px solid var(--color-gray)
+
+
+
+			&__title
+				margin 0 0 20px
+
+				+above(size-m)
+					margin 0 0 40px
+
+				&:last-child
+					margin-bottom 0
+
+				& + .modal
+					&__text
+						&:last-child
+							margin-bottom 0
+
+
+
+			&__text
+				margin 0 0 20px
+				font-size 16px
+				line-height 1.25
+				letter-spacing -.01em
+
+				&:last-child
+					margin-bottom 0
+
+				// Modifiers
+
+				&_size
+					&_s
+						font-size 14px
+						line-height 1.286
+
+				&_align
+					&_center
+						text-align center
+
+
+			&__map
+				display none
+				background var(--color-white)
+
+
+				+above(size-xxl)
+					display block
+					width 100%
+					max-width 560px
+					padding 73px 20px
+					border-radius 30px
+
+			&__extra
+				display flex
+				flex-direction column
+				gap 1px
+				align-items center
+				margin-top 15.41px
+
+			&__link
+				color var(--color-black)
+				font-family Raleway
+				font-size 30px
+				font-weight 800
+				font-style normal
+				line-height 35px
+				text-align center
+				text-decoration none
+
+
+
+		// Modifiers

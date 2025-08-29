@@ -1,0 +1,102 @@
+DIR = '../blocks/icon-control/'
+IMG_DIR = DIR + 'images/'
+
+.icon-control
+	position relative
+	display flex
+	flex-direction column
+	gap 3px
+	align-items center
+	color inherit
+	color var(--color-primary)
+	font-size 10px
+	line-height 1.25
+	text-align center
+	text-decoration none
+	background transparent
+	border none
+	border-radius 10px
+	outline none
+
+	+above(size-xxl)
+		width 80px
+		padding 5px 22px
+
+	&[href]
+	&[type]
+		&:hover
+			+above(size-m)
+				color var(--color-black)
+				background var(--color-yellow)
+				box-shadow var(--shadow-primary)
+
+				.icon-control
+					&__label
+						color var(--color-black)
+
+					&__icon
+						path
+							fill var(--color-black) //TODO как иначе сделать
+
+		&:focus
+			.icon-control
+				&__label
+					color var(--color-black)
+
+
+
+	&__illustration
+		position relative
+		display block
+		margin 0 auto
+
+
+
+	&__icon
+		display block
+
+
+
+	&__label
+		display none
+		color var(--color-muted)
+		def-trn color
+
+		+above(size-xxl)
+			display block
+
+
+
+	&__badge
+		position absolute
+		top -10px
+		right -8px
+		z-index 1
+		display flex
+		align-items center
+		justify-content center
+		padding 1.5px
+		color var(--color-black)
+		font-size 8px
+		line-height 1
+		text-align center
+		background var(--color-yellow)
+		border 2px solid var(--color-black)
+		border-radius 50%
+		def-trn opacity
+
+
+
+	// Modifiers
+
+	&_badge
+		&_hidden
+			.icon-control
+				&__badge
+					opacity 0
+
+	&_style
+		&_primary
+			.icon-control
+				&__label
+					display block

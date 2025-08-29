@@ -1,0 +1,23 @@
+mixin entry-grid(data = {})
+	- var DIR = 'assets/blocks/entry-grid/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .entry-grid
+	+b.entry-grid&attributes(attributes)
+		if data.items
+			+e.main
+				+e.UL.list
+					each item in data.items
+						+e.LI.item
+							- var attr = item.attr || {};
+							- attr.class = [attr.class, '__snippet'].filter(Boolean).join(' ');
+							+entry-snippet(item)&attributes(attr)
+
+				+e.load-trigger-line.js-entry-grid-trigger-line
+					+e.load-trigger-dot
+						| &nbsp;
+					+e.load-trigger-dot
+						| &nbsp;
+					+e.load-trigger-dot
+						| &nbsp;
+		block
+	// end .entry-grid

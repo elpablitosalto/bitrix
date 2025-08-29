@@ -1,0 +1,304 @@
+DIR = '../blocks/footer/'
+IMG_DIR = DIR + 'images/'
+
+.footer
+	position relative
+	display block
+	margin-top 79px
+	padding-bottom 20px
+	color var(--color-white)
+	font-size 14px
+	line-height 1.286
+	text-align center
+	background var(--color-black)
+
+	&::before
+		content ''
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 3px
+		background var(--color-yellow)
+
+	+above(size-m)
+		padding-bottom 0
+		text-align left
+
+
+
+	&__main
+		display flex
+		flex-direction column
+
+		+above(size-m)
+			display flex
+			flex-wrap wrap
+			justify-content space-between
+
+		+above(size-xxl)
+			flex-direction row
+			margin-top -53px
+			padding 0 0 53px
+
+
+
+	&__social-nav
+		+above(size-xxl)
+			margin-top 56.5px
+
+
+
+	&__sub
+		position relative
+		display flex
+		flex-direction column
+		align-items center
+		padding 12px 0 15px
+		font-size 12px
+		line-height 1.3333
+
+
+		+above(size-m)
+			flex-flow row nowrap
+
+
+
+	&__col
+		display block
+
+		+above(size-m)
+			flex 0 1 auto
+			margin 0
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__info-col
+		order 1
+		width 100%
+
+		+above(size-xxl)
+			order 0
+			width fit-content
+			margin-top 16px
+
+
+
+	&__logo
+		width fit-content
+		margin 0 auto
+		padding 0 22px
+		background var(--color-black)
+		transform translate(0, -50%)
+
+
+
+	&__title
+		display block
+		margin 0 0 16px
+
+		+above(size-m)
+			margin 0 0 12px
+
+		&:last-child
+			margin-bottom 0
+
+		// Modifiers
+
+		&_type
+			&_mobile-hidden
+				display none
+
+				+above(size-m)
+					display block
+
+
+
+	&__sub-group
+		display flex
+		flex-direction column
+		gap 14px
+		padding 20px 0
+		border-block 1px solid var(--color-gray)
+
+		+above(size-m)
+			flex-flow row wrap
+			gap 24.5px
+			border-width 2px
+
+		+above(size-xxl)
+			gap 43px
+			padding 0
+			border none
+
+
+
+	&__sub-col
+		display flex
+		flex 1
+		gap 43px
+
+
+
+	&__contact
+		text-align center
+
+
+
+	&__contact-group
+		display flex
+		flex-wrap wrap
+		align-items center
+		justify-content space-between
+		padding 0 0 42px
+
+		+above(size-m)
+			flex-wrap nowrap
+			padding 0 0 32px
+
+		+above(size-xxl)
+			flex-direction column
+			gap 20px
+
+	&_type
+		&_control
+			width 100%
+			min-width 165px
+			margin-top 9px
+
+
+
+	&__link
+		color #fff
+		font-family Raleway
+		font-size 18px
+		font-weight 900
+		font-style normal
+		line-height 21px
+		text-align center
+		text-decoration none
+		font-variant-numeric lining-nums
+
+		+above(size-m)
+			font-size 14px
+
+		+above(size-xxl)
+			font-size 18px
+
+		&_size
+			&_s
+				font-size 14px
+				line-height 14.09px
+
+			&_xs
+				font-size 12px
+				font-weight 300
+
+				+above(size-m)
+					font-size 14px
+
+		&_style
+			&_muted
+				color var(--color-muted)
+
+
+
+	&__nav
+		display block
+
+		+above(size-m)
+			flex 1
+
+
+
+	&__contact-col
+		flex 1 1 auto
+
+
+		+above(size-xxl)
+			margin-top 20px
+
+		.footer
+			&__social-nav
+				display block
+
+				+above(size-xxl)
+					display none
+
+			&__contact
+				&_type_control
+					display block
+
+					+above(size-xxl)
+						display none
+
+
+
+	&__contacts
+		display block
+		margin 0 0 11px
+
+		+above(size-m)
+			flex 1 1 auto
+			margin 0 0 24px
+
+		&:last-child
+			margin-bottom 0
+
+		.link-item
+			&__icon
+				margin-top 1px
+
+
+
+	&__copyright
+		display block
+		flex 0 1 auto
+		width auto
+		font-size 14px
+		opacity .7
+
+		+above(size-m)
+			order -1
+
+
+
+	&__credit
+		display block
+		flex 0 1 auto
+		width auto
+		margin 0 0 3px
+
+		+above(size-m)
+			display block
+			flex-basis auto
+			border none
+
+
+
+	&__links
+		display flex
+		flex-wrap wrap
+		gap 10px
+		justify-content space-between
+		width 100%
+
+
+
+	&__form-col
+		display none
+		max-width 380px
+
+		+above(size-xxl)
+			display block
+
+
+
+	.footer__info-col .footer__social-nav
+		display none
+
+		+above(size-xxl)
+			display block

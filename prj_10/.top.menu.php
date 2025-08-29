@@ -1,0 +1,55 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Программа", 
+		"/guide/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мультфильмы", 
+		"/movies/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Конкурсы", 
+		"/contests/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	/*
+	Array(
+		"Оркестр Еноток",
+		"/enotiki/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	*/
+	Array(
+		"О канале", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"b2b", 
+		"/b2b/", 
+		Array(), 
+		Array('user_group' => 5), 
+		"" 
+	)
+);
+?>

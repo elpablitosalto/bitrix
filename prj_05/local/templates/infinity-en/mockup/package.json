@@ -1,0 +1,65 @@
+{
+  "name": "base_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "gulp build -U",
+    "deploy:min": "gulp build -R -I -U",
+    "make-block": "node make-block.js",
+    "prepare": "husky"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/plugin-transform-runtime": "^7.24.3",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/runtime": "^7.24.1",
+    "@stylistic/stylelint-plugin": "^2.1.2",
+    "autoprefixer-stylus": "^1.0.0",
+    "browser-sync": "^3.0.2",
+    "del": "^6.1.1",
+    "dotenv": "^16.4.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-plumber-error-handler": "^1.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sftp-up4": "^0.1.8",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-stylus": "^3.0.1",
+    "gulp-svg-symbols": "^3.2.3",
+    "gulp-webp": "^4.0.1",
+    "gulp-zip": "^5.1.0",
+    "husky": "^9.0.11",
+    "imagemin-jpeg-recompress": "^7.1.0",
+    "imagemin-pngquant": "^9.0.2",
+    "path": "^0.12.7",
+    "postcss": "^8.4.38",
+    "rupture": "^0.7.1",
+    "stylelint": "^16.6.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-formatter-pretty": "^3.2.1",
+    "stylelint-order": "^6.0.4",
+    "stylelint-stylus": "^1.0.0",
+    "stylus": "^0.62.0",
+    "stylus-import-if-exist": "^1.1.0"
+  },
+  "overrides": {
+    "gulp-stylelint": {
+      "stylelint": "$stylelint"
+    }
+  },
+  "engines": {
+    "node": ">=20.11"
+  }
+}

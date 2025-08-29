@@ -1,0 +1,45 @@
+mixin catalog(data = {})
+	- var DIR = 'assets/blocks/catalog/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .catalog
+	+b.catalog&attributes(attributes)
+		+e.header
+			if data.title
+				+e.title
+					+title(data.title)
+
+			if data.tabs || data.filterse
+				+e.control-group
+					if data.tabs
+						+e.tabs
+							+tabs(data.tabs)
+
+					if data.filters
+						+e.filter-trigger.js-modal(href='#catalogFilters')
+							!='<svg class="catalog__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.39998 5C2.1878 5 1.98432 5.08429 1.83429 5.23431C1.68426 5.38434 1.59998 5.58783 1.59998 5.8C1.59998 6.01217 1.68426 6.21566 1.83429 6.36569C1.98432 6.51571 2.1878 6.6 2.39998 6.6H21.6C21.8121 6.6 22.0156 6.51571 22.1657 6.36569C22.3157 6.21566 22.4 6.01217 22.4 5.8C22.4 5.58783 22.3157 5.38434 22.1657 5.23431C22.0156 5.08429 21.8121 5 21.6 5H2.39998ZM1.59998 12.2C1.59998 11.9878 1.68426 11.7843 1.83429 11.6343C1.98432 11.4843 2.1878 11.4 2.39998 11.4H21.6C21.8121 11.4 22.0156 11.4843 22.1657 11.6343C22.3157 11.7843 22.4 11.9878 22.4 12.2C22.4 12.4122 22.3157 12.6157 22.1657 12.7657C22.0156 12.9157 21.8121 13 21.6 13H2.39998C2.1878 13 1.98432 12.9157 1.83429 12.7657C1.68426 12.6157 1.59998 12.4122 1.59998 12.2ZM1.59998 18.6C1.59998 18.3878 1.68426 18.1843 1.83429 18.0343C1.98432 17.8843 2.1878 17.8 2.39998 17.8H21.6C21.8121 17.8 22.0156 17.8843 22.1657 18.0343C22.3157 18.1843 22.4 18.3878 22.4 18.6C22.4 18.8122 22.3157 19.0157 22.1657 19.1657C22.0156 19.3157 21.8121 19.4 21.6 19.4H2.39998C2.1878 19.4 1.98432 19.3157 1.83429 19.1657C1.68426 19.0157 1.59998 18.8122 1.59998 18.6Z"/><circle cx="6" cy="6" r="2"/><circle cx="17" cy="12" r="2"/><circle cx="11" cy="19" r="2"/></svg>'
+
+
+		if data.tiles
+			+e.categories
+				+e.tiles
+					- var attr = data.tiles.attr || {};
+					+tiles(data.tiles)&attributes(attr)
+
+
+		if data.products
+			+e.main
+				if data.text
+					+e.text
+						!=data.text
+
+				if data.filters
+					+e.filters#catalogFilters
+						+filter-group(data.filters)
+
+				if data.products
+					+e.entry-grid
+						+entry-grid(data.products).js-entry-grid
+
+
+		block
+	// end .catalog

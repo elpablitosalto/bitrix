@@ -1,0 +1,46 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О заводе \"Каменный Век\"", 
+		"/about/plant/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Философия", 
+		"/about/philosophy/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Качество", 
+		"/about/quality/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Инновации", 
+		"/about/innovation/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Преимущества", 
+		"/about/advantages/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/about/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

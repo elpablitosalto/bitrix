@@ -1,0 +1,54 @@
+mixin carousel-nav(data)
+	- var DIR = 'assets/blocks/carousel-nav/';
+	- var IMG_DIR = DIR + 'images/';
+	- attributes.class = attributes.class || '';
+	- attributes.class += ' js-carousel-nav';
+	- attributes.class = attributes.class.trim();
+	// begin .carousel-nav
+	+b.carousel-nav&attributes(attributes)
+		if data
+			if data.arrows
+				- var arrows = typeof data.arrows === 'boolean' ? {} : data.arrows;
+				- var arrowPrev = arrows.prev || {};
+				- var arrowNext = arrows.next || {};
+				- var labelPrev = arrowPrev.label || 'Previous Slide';
+				- var labelNext = arrowNext.label || 'Next Slide';
+
+				+e.control
+					+e.BUTTON.arrow._type_prev.js-carousel-nav-prev(type='button' aria-label=(arrowPrev.icon ? labelPrev : false))
+						if arrowPrev.icon
+							if arrowPrev.inlineIcon
+								!=arrowPrev.icon
+							else
+								+icon(arrowPrev.icon).icon
+						else
+							+e.SPAN.arrow-label
+								!=labelPrev
+
+			if data.pagination
+				+e.pagination.js-carousel-nav-pagination
+					+e.pagination-element.__current.js-carousel-nav-current
+						| 1
+					+e.pagination-element.__separator
+						| /
+					+e.pagination-element.__total.js-carousel-nav-total
+						| 1
+
+			if data.bullets
+				+e.pagination.js-carousel-nav-bullets
+					- var attr = data.bullets.attr || {};
+					+bullet-pagination(data.bullets)&attributes(attr)
+
+			if data.arrows
+				+e.control
+					+e.BUTTON.arrow._type_next.js-carousel-nav-next(type='button' aria-label=(arrowNext.icon ? labelNext : false))
+						if arrowNext.icon
+							if arrowNext.inlineIcon
+								!=arrowNext.icon
+							else
+								+icon(arrowNext.icon).icon
+						else
+							+e.SPAN.arrow-label
+								!=labelNext
+		block
+	// end .carousel-nav

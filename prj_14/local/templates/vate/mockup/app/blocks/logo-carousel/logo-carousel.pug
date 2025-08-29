@@ -1,0 +1,35 @@
+mixin logo-carousel(data)
+	- var DIR = 'assets/blocks/logo-carousel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .logo-carousel
+	+b.logo-carousel&attributes(attributes)
+		if data
+			+e.container(class='swiper js-logo-carousel')
+				+e.wrapper(class='swiper-wrapper')
+					if data.items
+						each item in data.items
+							+e.slide(class='swiper-slide')
+								- var attr = item.attr || {};
+
+								+e.illustration&attributes(attr)
+									+image(item.image, IMG_DIR)
+			+e.navigation
+				+e.arrows
+					+carousel-nav({
+						arrows: true,
+						buttonAttr: {
+							class: 'button_width_fit button_style_transparent',
+						}
+					})._position_sides(
+						data-nav-scope='.logo-carousel'
+						data-nav-target='.swiper'
+					)
+			if data.controls
+				+e.controls
+					each control in data.controls
+						- var controlAttr = control.attr || {};
+						+e.control
+							+button()&attributes(controlAttr)
+								!=control.text
+		block
+	// end .logo-carousel

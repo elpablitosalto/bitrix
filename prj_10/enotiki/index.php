@@ -1,0 +1,2 @@
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Оркестр Еноток");?><iframe src="https://multilandia-enotiki.indexis.ru/" style="display: block; padding: 0px; border: none; overflow: hidden; margin: 0px; height: 910px; width: 900px; object-fit: cover;"></iframe><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

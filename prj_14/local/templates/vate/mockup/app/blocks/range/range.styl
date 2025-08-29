@@ -1,0 +1,215 @@
+DIR = '../blocks/range/'
+IMG_DIR = DIR + 'images/'
+
+.range
+	display block
+
+
+	.range
+		&__fields
+			position relative
+			display flex
+			flex-wrap nowrap
+			justify-content space-between
+
+			&:last-child
+				margin-bottom 0
+
+
+
+		&__field
+			position relative
+			display block
+			padding 0
+			text-align left
+
+
+
+		&__label
+			position absolute
+			top 50%
+			left 10px
+			display block
+			margin 0 0 4px
+			color var(--color-gray)
+			font-size 14px
+			font-weight 600
+			line-height 1.286
+			transform translate(0, -50%)
+
+
+			+above(size-xxl)
+				color var(--color-light-gray)
+
+
+
+		&__rub
+			position absolute
+			top 50%
+			right 12px
+			color var(--color-gray)
+			font-weight 600
+			transform translate(50%, -50%)
+
+
+		&__input
+			display block
+			width 100%
+			height 40px
+			padding 0 20px 0 30px
+			color var(--color-gray)
+			font-size 14px
+			font-weight 400
+			line-height 38px
+			text-align right
+			background transparent
+			border 2px solid var(--color-gray)
+			outline none
+
+			+above(size-xxl)
+				color var(--color-white)
+				border 2px solid var(--color-light-gray)
+
+
+			&_type
+				&_to
+				&_from
+					display none
+
+				&_visual-from
+					border-right 1px solid var(--color-gray)
+					border-radius 10px 0 0 10px
+
+					+above(size-xxl)
+						border-right 1px solid var(--color-light-gray)
+
+				&_visual-to
+					border-left 1px solid var(--color-gray)
+					border-radius 0 10px 10px 0
+
+					+above(size-xxl)
+						border-right 1px solid var(--color-light-gray)
+
+
+
+		&__slider
+			position relative
+			height 4px
+			margin 25px 0 19px
+			padding 0 6px
+			background gray
+			border none
+			border-radius 2px
+			box-shadow none
+
+			.noUi
+				&-base
+					&::before
+
+					&::after
+						content ''
+						position absolute
+						top 50%
+						display block
+						box-sizing border-box
+						width 6px
+						height inherit
+
+					&::before
+						left 0
+						transform translate(-100%, -50%)
+
+					&::after
+						right 0
+						transform translate(100%, -50%)
+
+				&-connects
+					border none
+					border-radius 0
+					box-shadow none
+
+				&-touch-area
+					width 11px
+					height 11px
+
+				&-connect
+					position absolute
+					top 0
+					left 0
+					z-index 1
+					width 100%
+					height 6px
+					background var(--color-black)
+					border none
+					border-radius 0
+					box-shadow none
+					-ms-transform-origin 0 0
+					-webkit-transform-origin 0 0
+					transform-origin 0 0
+					will-change transform
+					-webkit-transform-style preserve-3d
+					transform-style flat
+
+					+above(size-xxl)
+						background var(--color-yellow)
+
+				&-handle
+					position absolute
+					top -3px !important // @stylint ignore
+					right -6px !important // @stylint ignore
+					width 12px
+					height 12px
+					cursor pointer
+					background var(--color-black)
+					border none
+					border-radius 50%
+					box-shadow none
+					def-trn transform
+
+					+above(size-xxl)
+						background var(--color-yellow)
+
+					&::before
+						top 50%
+						left 50%
+						box-sizing border-box
+						width 12px
+						height 12px
+						background var(--color-yellow)
+						border-radius 50%
+						transform translate(-50%, -50%)
+
+					&::after
+						display none
+
+				&-marker
+					display none
+
+				&-value
+					top 7px
+					color var(--color-black)
+					font-size 10px
+					line-height 13px
+					transform none
+
+					+above(size-xxl)
+						color var(--color-yellow)
+
+					&:last-child
+						transform translate(-100%, 0)
+
+				&-tooltip
+					position absolute
+					top 14px
+					bottom auto
+					padding 0
+					color var(--color-gray)
+					font-size 10px
+					font-weight 600
+					line-height 13px
+					white-space nowrap
+					background transparent
+					border none
+
+					+above(size-xxl)
+						color var(--color-white)

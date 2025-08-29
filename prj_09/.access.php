@@ -1,0 +1,11 @@
+<?
+$PERM["index-old.php"]["*"]="D";
+$PERM["simple-page"]["*"]="D";
+$PERM["/"]["18"]="W";
+$PERM["/"]["*"]="R";
+$PERM["video"]["*"]="R";
+$PERM["online"]["*"]="R";
+$PERM["desktop_app"]["*"]="R";
+$PERM["pub"]["5"]="T_8";
+$PERM["upload"]["5"]="T_8";
+?>

@@ -1,0 +1,29 @@
+DIR = '../blocks/product-grid/'
+IMG_DIR = DIR + 'images/'
+
+.product-grid
+	display grid
+	grid-template-columns repeat(2, minmax(155px, 1fr))
+	gap 30px 19px
+
+	+above(size-m)
+		grid-template-columns repeat(4, minmax(155px, 1fr))
+		gap 30px 24px
+
+
+	+above(size-xxl)
+		grid-template-columns repeat(3, minmax(155px, 1fr))
+		gap 30px 25px
+
+
+
+	&__item
+		+above(size-l)
+			padding 15px
+
+
+
+	&_layout
+		&_list
+			display flex
+			flex-direction column

@@ -1,0 +1,96 @@
+DIR = '../blocks/check-filter/'
+IMG_DIR = DIR + 'images/'
+
+.check-filter
+	position relative
+	z-index 1
+	display block
+
+
+
+	&__trigger
+		position relative
+		display block
+		width 100%
+		height 42px
+		padding 0 39px 0 19px
+		color var(--colo-dark)
+		font-size 16px
+		line-height 40px
+		text-align left
+		text-decoration none
+		user-select none
+		background transparent
+		border 1px solid var(--color-grey)
+		border-radius 0
+		outline none
+
+		&:after
+			content ''
+			position absolute
+			top 50%
+			right 27px
+			z-index 1
+			display block
+			width 1em
+			height 1em
+			font-size 10px
+			border-right 2px solid currentColor
+			border-bottom 2px solid currentColor
+			transform translate(50%, -75%) rotate(45deg) skew(-5deg, -5deg)
+
+			def-trn(transform)
+
+
+
+	&__dropdown
+		position absolute
+		top 100%
+		left 0
+		z-index 5
+		visibility hidden
+		width 100%
+		padding 15px 19px
+		pointer-events none
+		background var(--color-white)
+		border 1px solid var(--color-grey)
+		border-top none
+		opacity 0
+		transform translate(0, -1px)
+
+		def-trn(visibility, opacity)
+
+
+
+	&__list
+		display block
+		overflow hidden auto
+		max-height 200px
+		margin 0
+		padding 0
+
+
+
+	&__item
+		display block
+		margin 0 0 8px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	// Modifiers
+	&_state
+		&_open
+			z-index 10
+
+			.check-filter
+				&__trigger
+					&:after
+						transform translate(50%, -25%) rotate(-135deg) skew(-5deg, -5deg)
+
+				&__dropdown
+					visibility visible
+					pointer-events auto
+					opacity 1

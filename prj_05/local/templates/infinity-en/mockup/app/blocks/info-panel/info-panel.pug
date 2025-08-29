@@ -1,0 +1,29 @@
+mixin info-panel(data)
+	- var DIR = 'assets/blocks/info-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .info-panel
+	+b.info-panel&attributes(attributes)
+		+e.wrapper
+			+e.illustration
+				if data.image
+					+e.image(src=IMG_DIR + data.image alt='image')
+
+			+e.content
+				if data.title
+					+e.title
+						!=data.title
+
+				if data.text
+					+e.text
+						!=data.text
+					
+				if data.links
+					+e.link-group
+						+e('ul').links
+							each link in data.links
+								+e('li').link-item
+									- var attr = link.attr || {};
+									+link()&attributes(attr)
+										!=link.text
+		block
+	// end .info-panel

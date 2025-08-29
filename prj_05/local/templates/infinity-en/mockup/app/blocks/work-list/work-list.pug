@@ -1,0 +1,14 @@
+mixin work-list(data = {})
+	- var DIR = 'assets/blocks/work-list/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .work-list
+	+b.work-list&attributes(attributes)
+		if data.items
+			+e.OL.list
+				each item in data.items
+					+e.LI.item(class=item.class)
+						- var attr = item.attr || {};
+						+e.link&attributes(attr)
+							!=item.text
+		block
+	// end .work-list

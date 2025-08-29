@@ -1,0 +1,2 @@
+<p>Uncover the secrets to creating stunning looks with Concept products!</p>
+<p>The brand's library features recommendations on coloring, lightening, hair care, and special treatments that will help stylists become high-level colorists. In the free training videos, you will learn how to work with modern hairdressing products and how to properly address issues with problematic or damaged hair.</p>

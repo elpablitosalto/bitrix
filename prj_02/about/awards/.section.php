@@ -1,0 +1,5 @@
+<?
+$sSectionName = "Награды";
+$arDirProperties = Array(
+);
+?>

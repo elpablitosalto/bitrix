@@ -1,0 +1,284 @@
+DIR = '../blocks/entry-grid/'
+IMG_DIR = DIR + 'images/'
+
+.entry-grid
+	display block
+
+
+
+	&__filters
+		margin 0 0 26px
+
+		+above(size-l)
+			margin 0 0 64px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__list
+		display grid
+		grid-template-columns 1fr
+		grid-gap 43px 20px
+		margin 0 0 40px
+		list-style none
+
+		+above(size-s)
+			grid-template-columns repeat(2, 1fr)
+
+		+above(size-m)
+			grid-template-columns repeat(3, 1fr)
+			margin 0 0 45px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__item
+		position relative
+		display block
+		margin 0
+		padding 0
+
+		&:before
+			content ''
+			position absolute
+			top 0
+			left 100%
+			bottom 0
+			display block
+			width 1px
+			height 100%
+			background repeating-linear-gradient(var(--color-black) 0, var(--color-black) 10px, transparent 10px, transparent 20px)
+			opacity .1
+			transform translate(10px, 0)
+
+		&:after
+			content ''
+			position absolute
+			right 0
+			left 0
+			bottom 100%
+			display block
+			width 100%
+			height 1px
+			background repeating-linear-gradient(90deg, var(--color-black) 0, var(--color-black) 10px, transparent 10px, transparent 20px)
+			opacity .1
+			transform translate(0, -21px)
+
+
+	&__snippet
+		height 100%
+
+
+
+	&__controls
+		display block
+		margin 0 0 40px
+
+		+above(size-m)
+			display flex
+			flex-wrap nowrap
+			align-items flex-start
+			justify-content center
+
+		&:last-child
+			margin-bottom 0
+
+
+	&__control
+		display block
+		max-width 206px
+		height 100%
+		margin 0 auto 16px
+
+		+above(size-m)
+			flex 0 1 auto
+			max-width 100%
+			margin 0 24px 0 0
+
+
+		&:last-child
+			margin-bottom 0
+
+			+above(size-m)
+				margin 0
+
+
+
+	&__load-trigger-line
+		display flex
+		flex-wrap nowrap
+		align-items center
+		justify-content center
+
+
+
+	&__load-trigger-dot
+		display none
+		width 5px
+		height 5px
+		margin 40px 8px 0 0
+		font-size 0
+		background var(--color-black)
+		animation-name entry-grid-loading
+		animation-duration 2s
+		animation-timing-function linear
+		animation-iteration-count infinite
+
+		&:nth-child(1)
+			animation-delay 0
+
+		&:nth-child(2)
+			animation-delay .2s
+
+		&:nth-child(3)
+			animation-delay .4s
+
+		&:last-child
+			margin-bottom 0
+
+
+
+
+	// Modifiers
+	&:not([class*='entry-grid_size_'])
+		.entry-grid
+			&__item
+				&:before
+				&:after
+					display none
+
+					+above(size-s)
+						display block
+
+				&:nth-child(2n)
+					&:before
+						+above(size-s)
+							display none
+
+						+above(size-m)
+							display block
+
+				&:nth-child(3n)
+					&:before
+						+above(size-m)
+							display none
+
+				&:nth-child(1)
+				&:nth-child(2)
+					&:after
+						+above(size-s)
+							display none
+
+				&:nth-child(3)
+					&:after
+						+above(size-m)
+							display none
+
+	&_size
+		&_s
+			.entry-grid
+				&__list
+					grid-template-columns repeat(2, 1fr)
+					grid-gap 26px 20px
+
+					+above(size-m)
+						grid-template-columns repeat(4, 1fr)
+
+					+above(size-l)
+						grid-gap 43px 20px
+
+					&:last-child
+						margin-bottom 0
+
+				&__item
+					&:after
+						transform translate(0, -13px)
+
+						+above(size-l)
+							transform translate(0, -21px)
+
+					&:nth-child(2n)
+						&:before
+							display none
+
+							+above(size-m)
+								display block
+
+					&:nth-child(4n)
+						&:before
+							+above(size-m)
+								display none
+
+					&:nth-child(-n+2)
+						&:after
+							display none
+
+					&:nth-child(-n+4)
+						&:after
+							+above(size-m)
+								display none
+
+		&_mobile-s
+			.entry-grid
+				&__list
+					grid-template-columns repeat(2, 1fr)
+					grid-gap 26px 20px
+
+					+above(size-m)
+						grid-template-columns repeat(3, 1fr)
+
+					+above(size-l)
+						grid-gap 43px 20px
+
+					&:last-child
+						margin-bottom 0
+
+				&__item
+					&:after
+						transform translate(0, -13px)
+
+						+above(size-l)
+							transform translate(0, -21px)
+
+					&:nth-child(2n)
+						&:before
+							display none
+
+							+above(size-m)
+								display block
+
+					&:nth-child(3n)
+						&:before
+							+above(size-m)
+								display none
+
+					&:nth-child(-n+2)
+						&:after
+							display none
+
+					&:nth-child(-n+3)
+						&:after
+							+above(size-m)
+								display none
+
+	&_state
+		&_loading
+			.entry-grid
+				&__load-trigger-dot
+					display block
+
+
+
+@keyframes entry-grid-loading
+	0%
+		opacity 1
+
+	50%
+		opacity 0
+
+	100%
+		opacity 1

@@ -1,0 +1,11 @@
+mixin dev-credit()
+	- var DIR = 'assets/blocks/dev-credit/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .dev-credit
+	+b('a').dev-credit&attributes(attributes)
+		+e.label
+			| Разработка
+
+		+e('img').image(src=IMG_DIR+'logo.png' alt='WEB-AiM' title='WEB-AiM')
+		block
+	// end .dev-credit

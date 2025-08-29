@@ -1,0 +1,231 @@
+DIR = '../blocks/choice-group/'
+IMG_DIR = DIR + 'images/'
+
+.choice-group
+	position relative
+	display flex
+	flex-wrap nowrap
+	color var(--color-black)
+	font-size 14px
+	font-weight 700
+	line-height 1.5
+	user-select none
+
+
+
+	&__caption
+		display block
+		flex 0 0 auto
+		width auto
+		max-width 250px
+		margin 0 12px 0 0
+		font-weight 400
+
+		&:last-child
+			margin-right 0
+
+
+
+	&__list
+		display flex
+		flex 1 1 100%
+		width 100%
+		max-width 100%
+		margin -10px 0 0
+		padding 0
+		list-style none
+
+
+
+
+	&__item
+		display block
+		flex 0 1 auto
+		margin 10px 0 0 -10px
+		padding 0
+
+		&:last-child
+			margin-right 0
+
+
+
+	&__label
+		position relative
+		z-index 1
+		display block
+		margin 0
+		padding 0
+		font inherit
+		text-align center
+
+		// Modifiers
+		&_state
+			&_active
+				.choice-group
+					&__panel
+						color var(--color-white)
+						background-color var(--color-primary)
+
+		&:hover
+			.choice-group
+				&__tooltip
+					opacity 1
+
+
+
+	&__input
+		position absolute
+		top 50%
+		left 50%
+		z-index 1
+		display block
+		width 1px
+		height 1px
+		margin -1px 0 0 -1px
+		opacity .01
+		transform scale(.01)
+
+		& ~ .choice-group
+			&__panel
+				cursor pointer
+
+				&:hover
+					color var(--color-white)
+					background-color var(--color-primary)
+
+		&:checked
+			& ~ .choice-group
+				&__panel
+					color var(--color-white)
+					background-color var(--color-primary)
+
+
+
+	&__panel
+		position relative
+		display block
+		clip-path polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%)
+		padding 0 12px
+		background transparent
+
+
+
+	&__tooltip
+		position absolute
+		left 50%
+		bottom 100%
+		z-index 1
+		display none
+		width max-content
+		max-width 240px
+		padding 3px 7px
+		color var(--color-white)
+		font-size 12px
+		font-weight 700
+		line-height 1.223
+		pointer-events none
+		background var(--color-black)
+		border-radius 3px
+		opacity 0
+		transform translate(-50%, -5px)
+		def-trn opacity
+
+		+above(size-l)
+			display block
+
+		&:after
+			content ''
+			position absolute
+			top 100%
+			left 50%
+			display block
+			transform translate(-50%, 0)
+
+			triangle('bottom', var(--color-black), 10, 7)
+
+
+
+	// Modifiers
+	&_type
+		&_solid
+			clip-path polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%)
+			color #1f1e1e
+			font-size 12px
+			font-weight 400
+			line-height 2
+			background #f0f0f0
+
+			+above(size-l)
+				clip-path polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%)
+
+			+above(size-xl)
+				font-size 16px
+				line-height 2.125
+
+			&:before
+				content ''
+				position absolute
+				top 0
+				right 0
+				z-index 2
+				display block
+				width 100px
+				height 100%
+				pointer-events none
+				background linear-gradient(90deg, var(--color-milk-0), var(--color-milk))
+
+				+above(size-l)
+					display none
+
+			.choice-group
+				&__list
+					dual-overflow(auto, hidden)
+
+					flex-wrap nowrap
+					margin 0
+					padding 0 56px 0 4px
+
+					no-scrollbar()
+
+					+above(size-l)
+						padding 0 6px
+
+				&__item
+					flex 1 0 auto
+					margin 0 -4px 0 0
+					padding 4px 2px
+
+					+above(size-m)
+						margin 0 -9px 0 0
+						padding 6px 4px 5px
+
+					&:last-child
+						margin-right 0
+
+				&__label
+					&_state
+						&_active
+							.choice-group
+								&__panel
+									color var(--color-primary)
+									background var(--color-white)
+
+				&__input
+					& ~ .choice-group
+						&__panel
+							&:hover
+								color var(--color-primary)
+								background var(--color-white)
+
+					&:checked
+						& ~ .choice-group
+							&__panel
+								color var(--color-primary)
+								background var(--color-white)
+
+				&__panel
+					clip-path polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%)
+					padding 0 15px
+
+					+above(size-l)
+						clip-path polygon(15px 0, 100% 0, calc(100% - 15px) 100%, 0 100%)

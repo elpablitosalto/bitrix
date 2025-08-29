@@ -1,0 +1,118 @@
+DIR = '../blocks/card-detail-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.card-detail-carousel
+	position relative
+	display block
+
+	&:before
+		content ''
+		position absolute
+		top 53%
+		left 0
+		bottom 0
+		z-index -1
+		display block
+		width 120%
+		height 115px
+		background var(--color-primary)
+		transform translate(25px, -50%) skew(-23.6deg, 0)
+
+		+above(size-l)
+			top 0
+			bottom 0
+			width 292px
+			height 100%
+			transform translate(-25%, 0) skew(-23.6deg, 0)
+
+
+	.card-detail-carousel
+		&__container
+			overflow visible
+
+			+above(size-l)
+				background var(--color-primary)
+
+			&:not(.swiper-initialized)
+				.card-detail-carousel
+					&__wrapper
+						opacity 0
+
+
+
+		&__wrapper
+			display flex
+			flex-wrap nowrap
+
+
+
+
+		&__slide
+			position relative
+
+			+above(size-l)
+				height 329px
+				transition-property opacity
+
+
+
+	&__illustration
+		width 400px
+		max-width 100%
+		margin 0 auto
+
+		+above(size-l)
+			position absolute
+			top 50%
+			left 0
+			display block
+			width 397px
+			margin 0
+			pointer-events none
+			transform translate(11.25%, -60%)
+
+
+
+	&__image
+		display block
+		width 100%
+		max-width 300px
+		height 100%
+		max-height 314px
+		object-fit contain
+		filter drop-shadow(0 0 25px var(--color-black-25))
+
+		+above(size-l)
+			max-width 100%
+			max-height 500px
+
+
+
+	&__pagination
+		position absolute
+		left 0
+		bottom 47%
+		z-index 10
+		display block
+		padding 2px 0
+		transform translate(21px, 58px)
+
+		+above(size-l)
+			bottom 0
+			padding 14px 5px
+			transform translate(-100%, 0)
+
+
+
+	// Modifiers
+	&_state
+		&_inactive
+			.card-detail-carousel
+				&__container
+					&:not(.swiper-initialized)
+						.card-detail-carousel
+							&__wrapper
+								opacity 1
+
+				&__pagination
+					display none

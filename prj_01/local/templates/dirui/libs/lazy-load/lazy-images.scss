@@ -1,0 +1,76 @@
+[data-lazy-bg]:not(.lazyloaded) {
+	//position: relative;
+	
+	&:before {
+		content: ""!important;
+		width: 64px!important;
+		height: 64px!important;
+		max-width: 64px!important;
+		max-height: 64px!important;
+		min-width: 64px!important;
+		min-height: 64px!important;
+		background-image: url(../images/loader.svg)!important;
+		background-size: contain!important;
+		background-position: center!important;
+		background-repeat: no-repeat!important;
+		visibility: visible!important;
+		opacity: 1!important;
+		animation: rotation 2s linear infinite!important;
+		background-color: transparent!important;
+		display: block!important;
+		position: absolute!important;
+		top: 50%!important;
+		left: 50%!important;
+		margin-top: -25px!important;
+		margin-left: -25px!important;
+		transition: none!important;
+	}
+	
+	&:after {
+		display: none!important;
+	}
+}
+
+img[loading="lazy"][src*="loader.svg"],
+source[data-srcset][src*="loader.svg"] {
+	width: 64px!important;
+	height: 64px!important;
+	max-width: 64px!important;
+	max-height: 64px!important;
+	min-width: 64px!important;
+	min-height: 64px!important;
+	visibility: visible!important;
+	opacity: 1!important;
+	transition: none!important;
+	top: 50%!important;
+	left: 50%!important;
+	margin-top: -25px!important;
+	margin-left: -25px!important;
+	border: 0!important;
+	box-shadow: none!important;
+	outline: none!important;
+	animation: rotation 2s linear infinite!important;
+}
+
+
+[data-lazy-bg].lazyloaded,
+img[loading="lazy"]:not([src*="loader.svg"]),
+source[data-srcset]:not([src*="loader.svg"]) {
+	animation: fade-in 1s;
+}
+
+@mixin img-not-loaded {
+	&[loading="lazy"][src*="loader.svg"] {
+		@content;
+	}
+}
+@mixin bg-not-loaded {
+	&[data-lazy-bg]:not(.lazyloaded) {
+		@content;
+	}
+}
+@mixin source-not-loaded {
+	&[data-srcset][src*="loader.svg"] {
+		@content;
+	}
+}

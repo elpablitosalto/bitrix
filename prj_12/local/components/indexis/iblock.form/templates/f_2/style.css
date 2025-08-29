@@ -1,0 +1,6 @@
+label.error {
+    color: #dc3545;
+}
+.form-control.error {
+    background: #ffdfe2;
+}

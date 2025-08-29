@@ -1,0 +1,62 @@
+DIR = '../blocks/advantage-card/'
+IMG_DIR = DIR + 'images/'
+
+.advantage-card
+	display block
+	height 100%
+
+
+
+	&__wrapper
+		height 100%
+		padding 30px
+		background var(--color-black)
+		border-radius 30px
+		box-shadow var(--shadow-primary)
+
+
+	&__top
+		display flex
+		flex-direction column
+		gap 20px
+		align-items center
+		padding 30px 0
+		background var(--color-white)
+		border-radius 30px
+
+
+
+	&__title
+		color var(--color-black)
+		font-family Raleway
+		font-size 24px
+		font-weight 800
+		font-style normal
+		line-height 130%
+		text-align center
+
+
+
+	&__text
+		margin-top 30px
+		color var(--color-white)
+		font-family Raleway
+		font-size 16px
+		font-weight 300
+		font-style normal
+		line-height 150%
+		font-variant-numeric lining-nums
+
+
+
+	&__icon
+		display block
+
+
+
+
+	&__image
+		display block
+		max-height 75px
+		object-fit cover
+

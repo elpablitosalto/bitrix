@@ -1,0 +1,38 @@
+mixin tabs(data = {})
+	- var DIR = 'assets/blocks/tabs/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .tabs
+	+b.tabs&attributes(attributes)
+		if data.items
+			+e.UL.nav
+				each item in data.items
+					+e.LI.item
+						if item.text
+							- var attr = item.attr || { type: 'button' };
+							- var tag = item.tag || '';
+
+							+e(tag).label&attributes(attr)
+								if item.icon
+									- var attr = item.icon.attr || {};
+									+icon(item.icon.name).__icon&attributes(attr)
+
+								!=item.text
+
+		if data.panels
+			+e.content
+				each item in data.panels
+					- var attr = item.attr || {};
+					+e.panel&attributes(attr)
+						if item.title
+							+e.title
+								+title(item.title)
+
+						if item.videoGroup
+							- var attr = item.videoGroup.attr || {};
+
+							+e.video-group
+								+video-group(item.videoGroup)
+				block
+		else
+			block
+	// end .tabs

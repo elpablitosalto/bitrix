@@ -1,0 +1,6 @@
+$(".patternForm .input input").keyup(function(){var remainingArea=0;var substractArea=0;var $calculator=$(this).parents(".calculator");var $calc=$calculator.find(".calc-lfm");if($calc.length){doCalc($calc,1,0)}
+$calc=$calculator.find(".calc-feld");if($calc.length){doCalc($calc,0,0)}
+$calc=$calculator.find(".calc-qm");if($calc.length){doCalc($calc,0,1)}
+function doCalc($calcEl,substract=0,useSubstract=0){$calcEl.each(function(index){var $outputFields=$calcEl.find(".output");var inputValue=$(this).find(".input input").val();inputValue=inputValue.replace(/,/g,'.');var area=inputValue;if(useSubstract===1){area=inputValue-parseFloat(substractArea)}
+$outputFields.each(function(index){var calcresult=calcAnzahl($(this),area);if(substract===1){var flaeche=1.0*calcresult*$(this).attr("data-size");substractArea+=$(this).find(".result").attr("data-area")}})})}});function calcAnzahl($el,inputVal){var $resultField=$el.find(".result");var calcresult=parseFloat(inputVal)*parseFloat($el.attr("data-amount"));if(calcresult<0||isNaN(calcresult)){calcresult=0}
+$resultField.val(Math.ceil(calcresult));$resultField.attr("data-area",(calcresult*$el.attr("data-size")));return calcresult};

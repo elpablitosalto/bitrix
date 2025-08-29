@@ -1,0 +1,23 @@
+mixin icon-props(data = {})
+	- var DIR = 'assets/blocks/icon-props/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .icon-props
+	+b.icon-props&attributes(attributes)
+		if data.items
+			+e.UL.list
+				each item in data.items
+					+e.LI.item
+						+e.panel
+							if item.icon
+								!=item.icon
+
+							+e.main
+								if item.title
+									+e.title
+										!=item.title
+
+								if item.text
+									+e.text
+										!=item.text
+		block
+	// end .icon-props

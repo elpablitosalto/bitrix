@@ -1,0 +1,61 @@
+DIR = '../blocks/carousel-nav/'
+IMG_DIR = DIR + 'images/'
+
+.carousel-nav
+	display block
+
+
+	&_position
+		&_sides
+			position absolute
+			top 50%
+			left 0
+			display flex
+			justify-content space-between
+			width 100%
+			transform translate(0, -50%)
+
+
+
+	&_disabled
+		&_hide
+			padding 0 10px
+			color var(--color-gray)
+
+			.button
+				&:disabled
+					display none
+
+
+
+	&__pagination
+		display inline-block
+		vertical-align middle
+		padding 0 6px
+
+		&:first-child
+			padding-left 0
+
+		&:last-child
+			padding-right 0
+
+
+
+	&__pagination-element
+		display inline-block
+		vertical-align middle
+		color gray
+		font-size 20px
+		line-height 1.25
+
+
+
+	&__control
+		position relative
+		z-index 100
+
+
+	&_layout
+		&_horizontal
+			display flex
+			gap 12px

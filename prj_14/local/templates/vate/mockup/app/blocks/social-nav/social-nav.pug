@@ -1,0 +1,24 @@
+mixin social-nav(data)
+	- var DIR = 'assets/blocks/social-nav/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .social-nav
+	+b.social-nav&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list
+					each item in data.items
+						+e('li').item
+							- var attr = item.attr || {};
+							+e.link&attributes(attr)
+								if item.icon
+									+e.icon-wrapper
+										if data.type === 'image'
+											+e('img').image(src=IMG_DIR + item.icon + '.png' alt=attr.title)
+										else
+											!=item.icon
+
+								if item.text
+									+e('span').text
+										!=item.text
+		block
+	// end .social-nav

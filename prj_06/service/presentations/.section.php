@@ -1,0 +1,6 @@
+<?
+$sSectionName = 'Презентации';
+$arDirProperties = array(
+
+);
+?>

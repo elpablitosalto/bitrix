@@ -1,0 +1,83 @@
+Array
+(
+    [TITLE] => 
+    [NAME] => 123
+    [LAST_NAME] => 123
+    [SECOND_NAME] => 
+    [EMAIL] => email@email.cfdre
+    [LOGIN] => email@email.cfdre
+    [PERSONAL_PROFESSION] => 
+    [PERSONAL_WWW] => 
+    [PERSONAL_ICQ] => 
+    [PERSONAL_GENDER] => 
+    [PERSONAL_BIRTHDAY] => 
+    [PERSONAL_PHONE] => 
+    [PERSONAL_FAX] => 
+    [PERSONAL_MOBILE] => +7-123-123-12-31
+    [PERSONAL_PAGER] => 
+    [PERSONAL_STREET] => 
+    [PERSONAL_MAILBOX] => 
+    [PERSONAL_CITY] => 
+    [PERSONAL_STATE] => 
+    [PERSONAL_ZIP] => 
+    [PERSONAL_COUNTRY] => 
+    [PERSONAL_NOTES] => 
+    [WORK_COMPANY] => 123
+    [WORK_DEPARTMENT] => 
+    [WORK_POSITION] => 123
+    [WORK_WWW] => 
+    [WORK_PHONE] => 
+    [WORK_FAX] => 
+    [WORK_PAGER] => 
+    [WORK_STREET] => 
+    [WORK_MAILBOX] => 
+    [WORK_CITY] => 
+    [WORK_STATE] => 
+    [WORK_ZIP] => 
+    [WORK_COUNTRY] => 
+    [WORK_PROFILE] => 
+    [WORK_NOTES] => 
+    [AUTO_TIME_ZONE] => 
+    [XML_ID] => 
+    [PHONE_NUMBER] => 
+    [PASSWORD_EXPIRED] => N
+    [LID] => s1
+    [LANGUAGE_ID] => ru
+    [ACTIVE] => Y
+    [BLOCKED] => 
+    [GROUP_ID] => Array
+        (
+            [0] => Array
+                (
+                    [GROUP_ID] => 3
+                    [DATE_ACTIVE_FROM] => 
+                    [DATE_ACTIVE_TO] => 
+                )
+
+            [1] => Array
+                (
+                    [GROUP_ID] => 5
+                    [DATE_ACTIVE_FROM] => 
+                    [DATE_ACTIVE_TO] => 
+                )
+
+            [2] => Array
+                (
+                    [GROUP_ID] => 4
+                    [DATE_ACTIVE_FROM] => 
+                    [DATE_ACTIVE_TO] => 
+                )
+
+            [3] => Array
+                (
+                    [GROUP_ID] => 8
+                    [DATE_ACTIVE_FROM] => 
+                    [DATE_ACTIVE_TO] => 
+                )
+
+        )
+
+    [ADMIN_NOTES] => 
+    [UF_PARTNER] => Y
+    [ID] => 15
+)

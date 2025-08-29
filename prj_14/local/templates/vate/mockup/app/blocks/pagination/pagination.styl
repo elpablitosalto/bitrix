@@ -1,0 +1,147 @@
+DIR = '../blocks/pagination/'
+IMG_DIR = DIR + 'images/'
+
+.pagination
+	display inline-block
+	vertical-align middle
+
+
+
+	&__list
+		display flex
+		flex-wrap nowrap
+		gap 10px
+		align-items center
+		margin 0
+		padding 0
+		list-style none
+
+		+above(size-l)
+			gap 17px
+
+
+
+	&__item
+		display block
+		margin 0 8px 0 0
+		padding 0
+
+		&:last-child
+			margin-right 0
+
+		// Modifiers
+
+		&_type
+			&_prev
+			&_next
+				font-size 0
+
+				.pagination
+					&__link
+						position relative
+						display block
+						width 24px
+						height 24px
+						color var(--color-white)
+
+						&::before
+							content ''
+							position absolute
+							top 50%
+							left 50%
+							z-index 1
+							display block
+							width 7px
+							height 7px
+							border-top 2px solid currentColor
+							border-right 2px solid currentColor
+
+						&:hover
+							color var(--color-muted)
+
+						&:focus
+							color var(--color-muted)
+
+						&_state
+							&_inactive
+								color rgba(0, 0, 0, .2)
+
+			&_prev
+				margin 0 auto 0 0
+
+
+				+above(size-l)
+					padding 0 24px 0 0
+
+				.pagination
+					&__link
+						&::before
+							transform translate(-20%, -50%) rotate(-135deg)
+
+			&_next
+				order 1
+				margin 0 0 0 auto
+
+
+				+above(size-l)
+					padding 0 0 0 24px
+
+				.pagination
+					&__link
+						&::before
+							transform translate(-80%, -50%) rotate(45deg)
+
+
+
+	&__link
+		display block
+		color var(--color-white)
+		text-align center
+		text-decoration none
+		background transparent
+		border none
+		outline none
+		def-trn color, background-color
+
+		&:hover
+			color var(--color-muted)
+
+		&:focus
+			color var(--color-muted)
+
+		// Modifiers
+
+		&_state
+			&_inactive
+				color rgba(0, 0, 0, .2)
+				pointer-events none
+
+
+
+	&__label
+		position relative
+		display block
+		min-width 24px
+		height 24px
+		padding 0 2px
+		font-size 12px
+		font-weight 400
+		line-height 24px
+		text-align center
+		background transparent
+		border-radius 5px
+
+		+above(size-l)
+			min-width 39px
+			height 40px
+			font-size 17px
+			line-height 40px
+			border-radius 10px
+
+		// Modifiers
+
+		&_state
+			&_active
+				color var(--color-black)
+				background var(--color-secondary)
+				box-shadow var(--shadow-primary)

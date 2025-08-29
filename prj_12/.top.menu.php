@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"все услуги", 
+		"/#block-81", 
+		Array(), 
+		Array("BIG_MENU_SERVICES"=>"Y"), 
+		"" 
+	),
+	Array(
+		"акции", 
+		"/promos/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"о клинике", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"наши врачи", 
+		"/ourdoctors/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"отзывы", 
+		"/about/review/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"цены", 
+		"/prices/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

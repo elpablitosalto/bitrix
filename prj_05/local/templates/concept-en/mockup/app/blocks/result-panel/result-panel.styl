@@ -1,0 +1,81 @@
+DIR = '../blocks/result-panel/'
+IMG_DIR = DIR + 'images/'
+
+.result-panel
+	display block
+	text-align center
+
+
+
+	&__content
+		display block
+		max-width 400px
+		margin 0 auto
+
+
+
+	&__illustration
+		display block
+		flex 0 0 auto
+		width auto
+
+
+
+	&__image
+		display block
+		width 96px
+		height 96px
+		margin 0 auto
+		padding 0
+
+
+
+	&__title
+		display block
+		margin 0 0 24px
+		text-align center
+
+		+above(size-m)
+			text-align inherit
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__text
+		display block
+		margin 0 0 24px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__controls
+		display flex
+		flex-wrap nowrap
+		justify-content center
+		margin 0 0 24px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__control
+		display block
+		flex 1 1 auto
+		width auto
+		max-width 100%
+		margin 0 16px 0 0
+
+		+above(size-m)
+			flex 0 1 auto
+			width auto
+
+		&:last-child
+			margin-right 0
+
+		&:last-child
+			margin-bottom 0

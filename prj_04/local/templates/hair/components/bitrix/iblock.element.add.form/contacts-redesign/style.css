@@ -1,0 +1,17 @@
+.contacts .form-finally {
+    justify-content: flex-start;
+}
+
+.contacts .form-wrapper {
+    min-width: auto;
+    max-width: 100%;
+}
+
+.contacts .form-wrapper__item {
+    max-width: 100%;
+}
+
+.contacts .selectize-control.single {
+    width: 100%;
+    max-width: 100%;
+}

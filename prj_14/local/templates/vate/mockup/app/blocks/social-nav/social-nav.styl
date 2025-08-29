@@ -1,0 +1,63 @@
+DIR = '../blocks/social-nav/'
+IMG_DIR = DIR + 'images/'
+
+.social-nav
+	display block
+
+
+
+	&__list
+		display flex
+		flex-wrap nowrap
+		gap 8px
+		margin 0
+		padding 0
+		list-style none
+
+
+
+	&__item
+		display block
+		flex 0 1 auto
+		margin 0 12px 0 0
+
+		&:last-child
+			margin-right 0
+
+
+
+	&__link
+		display flex
+		flex-wrap nowrap
+		align-items center
+		color inherit
+		text-decoration none
+		border none
+		outline none
+		def-trn color, opacity
+
+		&:hover
+			text-decoration none
+
+		&:focus
+			text-decoration none
+			outline none
+
+			.social-nav
+				&__image
+					opacity .7
+
+
+
+	&__icon-wrapper
+		position relative
+
+
+
+	&__icon
+	&__image
+		display block
+
+
+
+	// Modifiers

@@ -1,0 +1,1 @@
+<?$_SERVER["DOCUMENT_ROOT"] = "/home/bitrix/ext_www/vrachbudushego.ru";?>

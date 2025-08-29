@@ -1,0 +1,54 @@
+mixin image(item, imgDir, classLess)
+
+	if item
+		- var picture = item || {};
+
+		if typeof picture === 'string'
+			- picture = { image: picture };
+
+		- var src = imgDir + picture.image;
+		- var attr = picture.attr || {};
+		- attr.alt = typeof attr.alt === 'undefined' ? 'image' : attr.alt;
+
+		- var pictureAttr = classLess ? {} : {class: 'picture'};
+		- var sourceAttr = classLess ? {} : {class: 'source'};
+
+		if !classLess
+			- attr.class = ['image', attr.class].filter(Boolean).join(' ');
+
+		if picture.useImg
+			+e('img')(src=src)&attributes(attr)
+		else
+			+e('picture')&attributes(pictureAttr)
+				if picture.sources
+					each src, type in picture.sources
+						- var source = typeof src === 'string' ? { src: src } : src;
+
+						if typeof source.media !== 'string'
+							- source.media = false;
+
+						if typeof source.type !== 'string'
+							- source.type = type;
+
+						- var srcset = [source.src];
+
+						if source.set
+							each setItem in source.set
+								- srcset.push(imgDir + source.src.replace(/\./, '@' + setItem + 'x.') + ' ' + setItem + 'x');
+
+							- source.src = srcset.join(', ');
+
+						- srcset = imgDir + srcset;
+
+						+e('source')(srcset=srcset type=source.type media=source.media)&attributes(sourceAttr)
+
+				if picture.set
+					- var srcset = [];
+					each setItem in picture.set
+						- srcset.push(imgDir + picture.image.replace(/\./, '@' + setItem + 'x.') + ' ' + setItem + 'x');
+
+					- srcset = srcset.join(', ');
+				else
+					- var srcset = false;
+
+				+e('img')(src=src srcset=srcset data-srcset=dataSrcset)&attributes(attr)

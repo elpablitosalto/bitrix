@@ -1,0 +1,2 @@
+                    <a href="https://vrachbudushego.ru/legal/5" target="_blank" style="color: inherit">
+                        <u style="font-weight: 500; color: rgb(0, 0, 0);">Подробные условия</u></a>

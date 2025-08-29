@@ -1,0 +1,2 @@
+<?
+$MESS['TUTORIAL_VIDEOS_CATEGORIES_ALL_SECTIONS'] = 'All sections';

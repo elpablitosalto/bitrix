@@ -1,0 +1,19 @@
+mixin props(data)
+	- var DIR = 'assets/blocks/props/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .props
+	+b.props&attributes(attributes)
+		if data
+			if data.items
+				each item in data.items
+					- var propClass = item.class || '';
+					+e.prop(class=propClass)
+						if item.label
+							+e.label
+								!=item.label
+
+						if item.value
+							+e.value
+								!=item.value
+		block
+	// end .props

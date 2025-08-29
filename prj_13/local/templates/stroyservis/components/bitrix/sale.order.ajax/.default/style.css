@@ -1,0 +1,59 @@
+.order__product-list img {
+    max-height: 100%;
+}
+.location-block-wrapper .dropdown-icon,
+.bx-sls .bx-ui-sls-clear,
+.bx-sls .dropdown-fade2white,
+.order__block-toggle {
+    display: none!important;
+}
+.bx-sls .bx-ui-sls-fake, .bx-sls .bx-ui-sls-route {
+    padding: 14px 30px 14px 16px!important;
+    font-family: "opensans", sans-serif;
+    height: 38px;
+}
+.bx-sls .dropdown-block {
+    border: 2px solid #EEEEEE;
+    padding: 0;
+    box-shadow: none;
+    margin-bottom: 30px;
+}
+.bx-sls .bx-ui-sls-container {
+    min-height: 38px;
+}
+.bx-sls .dropdown-block:focus, .bx-sls .dropdown-block:hover {
+    outline: none;
+    border: 2px solid #F35E19;
+}
+.location-block-wrapper .bx-sls .bx-ui-sls-fake {
+    margin-bottom: 30px;
+    width: 100%;
+    background: url("/local/templates/stroyservis/img/icons/search.svg") no-repeat top 9px right 11px!important;
+    background-size: 19px 19px!important;
+}
+.order__total-button[disabled] {
+    background: #ccc;
+    pointer-events: none;
+}
+.order__error {
+    text-align: center;
+    color: #FD0006;
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-bottom: 1em;
+    display: none;
+}
+.order-confirm {
+    margin-top: 20px;
+    text-align: center;
+}
+.sale_order_full_table {
+    width: 100%;
+}
+.order-confirm h2 {
+    margin-bottom: .5em;
+}
+.order-confirm a {
+    display: inline-block;
+}

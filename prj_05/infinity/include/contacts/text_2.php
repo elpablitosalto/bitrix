@@ -1,0 +1,1 @@
+Perfect styling, elastic, soft hold without stiffness, easy shaping and texturizing—these are the key benefits of Infinity styling products!

@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Ингредиенты";
+$arDirProperties = Array(
+
+);
+?>

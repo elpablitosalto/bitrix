@@ -1,0 +1,10 @@
+.ReferenceMetaPage .loadMoreBtn, .ReferenceCategoryPage .loadMoreBtn {
+	clear: both;
+	width: 100%;
+	text-align: center;
+	padding: 0.4em 1em;
+	border: 1px solid #efefef;
+	/*margin-bottom: 2em;*/
+	transition: 0.2s;
+	cursor: pointer;
+}

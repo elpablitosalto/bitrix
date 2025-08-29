@@ -1,0 +1,35 @@
+# игнорируем папки Битрикса
+/bitrix
+/bitrix/
+/bitrix/vendor/
+/bitrix.old/
+/upload/
+/upload
+#bitrix
+
+# логи крон скрипта
+/log/
+
+# исключаем специфичные для проекта папки и файлы
+
+# остальные файлы
+/.htaccess
+.idea
+/composer.lock
+/robots.txt
+/web.config
+/work/
+/work
+work
+/local/cron/*.txt
+/local/cron/*.json
+
+# файлы по типам
+/*.log
+/*.tar.gz
+/*.txt
+/__*.txt
+/--*.txt
+/*.xml
+/*.zip
+/*.gzip

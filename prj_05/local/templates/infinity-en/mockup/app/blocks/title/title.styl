@@ -1,0 +1,122 @@
+DIR = '../blocks/title/'
+IMG_DIR = DIR + 'images/'
+
+.title
+	display block
+	margin 20px 0
+	padding 0
+	color inherit
+	font-weight 700
+	line-height 1.22
+	text-transform uppercase
+
+	&:first-child
+		margin-top 0
+
+	&:last-child
+		margin-bottom 0
+
+
+
+	&__icon
+		display inline-block
+		vertical-align middle
+		width 1em
+		height 1em
+		fill currentColor
+
+		// Modifiers
+		&_type
+			&_infinity
+				vertical-align -.15em
+				width 1.25em
+				height .98em
+
+
+
+	// Modifiers
+	&_style
+		&_primary
+			color var(--color-primary)
+
+	&_font
+		&_secondary
+			font-family Montserrat, sans-serif
+			font-weight 600
+
+
+	&_size
+		&_h1
+			font-size 24px
+			line-height 1.21
+
+			+above(size-l)
+				font-size 40px
+				line-height 1.225
+
+		&_h2
+			font-size 21px
+			line-height 1.24
+
+			+above(size-l)
+				font-size 35px
+				line-height 1.223
+
+		&_h3
+			font-size 33px
+			line-height 1.21
+
+		&_h3-s
+			font-size 27px
+
+			+above(size-l)
+				font-size 32px
+
+		&_h4
+			font-size 24px
+			line-height 1.21
+
+			+above(size-l)
+				font-size 28px
+				line-height 1.14
+
+		&_h5
+			font-size 20px
+			line-height 1.2
+
+		&_h6
+			font-size 16px
+			line-height 1.5
+
+	&_align
+		&_left
+			text-align left
+
+		&_center
+			text-align center
+
+		&_right
+			text-align right
+
+	&_weight
+		&_light
+			font-weight 300
+
+		&_regular
+			font-weight 400
+
+		&_medium
+			font-weight 500
+
+		&_semibold
+			font-weight 600
+
+		&_bold
+			font-weight 700
+
+	&_case
+		&_normal
+			text-transform none
+
+		&_upper
+			text-transform uppercase

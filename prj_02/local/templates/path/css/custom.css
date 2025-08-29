@@ -1,0 +1,86 @@
+.rs__parents--page .rs__gallery .rs__gallery--item:hover {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+.rs__parents--page .rs__gallery .rs__gallery--item .rs__gallery--pic picture {
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
+	-o-transition: transform .3s;
+	transition: transform .3s;
+	transition: transform .3s, -webkit-transform .3s;
+}
+.rs__parents--page .rs__gallery .rs__gallery--item:hover .rs__gallery--pic picture {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.rs__subscribe .rs__form--checkbox-link {
+	color: #ffffff;
+	-webkit-animation: none;
+	animation: none;
+	-webkit-mask-image: none;
+	mask-image: none;
+}
+
+.rs__parents--page .rs__subscribe .rs__form--item .smart-captcha {
+	margin-left: -0.625rem;
+	margin-right: -0.625rem;
+}
+
+.rs__header--sticky .rs__header--logo .rs__header--logo-link:after {
+	-ms-flex-line-pack: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	align-content: center;
+	align-items: center;
+	border: .125rem solid #ff5400;
+	color: #ff5400;
+	content: "\e90c";
+	display: flex;
+	font-family: dorogakdomu;
+	font-size: 1.25rem;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto
+}
+.rs__header--sticky .rs__header--logo .rs__header--logo-link .rs__header--logo {
+	display: none
+}
+@media screen and (min-width: 1408px) {
+	.rs__header--sticky .rs__header--logo .rs__header--logo-link:after {
+		height: 3.75rem;
+		width: 3.75rem
+	}
+}
+@media screen and (min-width: 1024px) and (max-width: 1407px) {
+	.rs__header--sticky .rs__header--logo .rs__header--logo-link:after {
+		height: 3.125rem;
+		width: 3.125rem
+	}
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+	.rs__header--sticky .rs__header--logo .rs__header--logo-link:after {
+		height: 2.5rem;
+		width: 2.5rem
+	}
+}
+@media screen and (max-width: 768px) {
+	.rs__header--sticky .rs__header--logo .rs__header--logo-link:after {
+		height: 1.875rem;
+		width: 1.875rem
+	}
+}
+
+.rs__news--detail .news-detail-page .rs__news--detail-video .rs__gallery--item:hover {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}

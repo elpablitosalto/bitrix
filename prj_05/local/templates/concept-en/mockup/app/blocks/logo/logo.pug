@@ -1,0 +1,13 @@
+mixin logo(data = {})
+	- var DIR = 'assets/blocks/logo/';
+	- var IMG_DIR = DIR + 'images/';
+	- attributes.href = attributes.href || 'index.html';
+	// begin .logo
+	+b.logo&attributes(attributes)
+		if data.image
+			+e.image(src=IMG_DIR + data.image alt='SITE NAME')
+
+		if data.svg
+			!=data.svg
+		block
+	// end .logo

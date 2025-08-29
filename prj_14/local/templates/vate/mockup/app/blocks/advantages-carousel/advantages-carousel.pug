@@ -1,0 +1,20 @@
+mixin advantages-carousel(data)
+	- var DIR = 'assets/blocks/advantages-carousel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .advantages-carousel
+	+b.advantages-carousel&attributes(attributes)
+		if data
+			+e.container(class='swiper js-advantages-carousel')
+				+e.wrapper(class='swiper-wrapper')
+					if data.items
+						each item in data.items
+							+e.slide(class='swiper-slide')
+								- var attr = item.attr || {};
+
+								+e.item&attributes(attr)
+									+advantage-card(item)
+			+e.navigation
+				+e.pagination
+					+bullet-pagination()._role_advantages
+		block
+	// end .advantages-carousel

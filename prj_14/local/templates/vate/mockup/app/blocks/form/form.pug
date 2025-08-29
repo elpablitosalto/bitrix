@@ -1,0 +1,37 @@
+- componentScripts.push('assets/components/just-validate-3.10.0/just-validate.production.min.js');
+- componentScripts.push('assets/components/Inputmask/inputmask.min.js');
+//- - componentStyles.push('assets/components/vanillajs-datepicker-master/dist/css/datepicker.min.css');
+
+mixin form(tag, data = {})
+	- var DIR = 'assets/blocks/form/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .form
+	// Modifiers
+	// form_messages_shown - display the messages element. this will automatically display all the .form__message elements
+	+b(tag).form&attributes(attributes)
+		// messages can be placed before or after the form
+		+e.messages
+			// Modifiers
+			// form__message_style_error - red color
+			+e.message
+				| Сообщение формы
+
+		+e.main
+			if data.inputs
+				+e.inputs
+					each item in data.inputs
+						- var attr = item.blockAttr || {};
+						+e.line
+							+form-control(item)&attributes(attr)
+
+			if data.check
+				+e.confirmation-check
+					- var attr = data.check.blockAttr || {};
+
+					+check-elem(data.check)&attributes(attr)
+						!=data.check.text
+
+			if data.controls
+				+control-group(data.controls)
+			block
+	// end .form

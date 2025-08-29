@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+    Array(
+        "Ozon",
+        "https://www.ozon.ru/seller/stroyservis-su-102053/products/?miniapp=seller_102053",
+        Array(),
+        Array(),
+        ""
+    ),
+	Array(
+		"Wildberries",
+		"https://www.wildberries.ru/seller/142505",
+		Array(),
+		Array(),
+		""
+	),
+    Array(
+        "Яндекс Маркет",
+        "https://market.yandex.ru/business--stroyservis-su/952155",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "МегаМаркет",
+        "https://megamarket.ru/shop/stroyservissu/catalog/stroitelstvo-i-remont/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Leroymerlin",
+        "https://leroymerlin.ru/search/?q=mapei",
+        Array(),
+        Array(),
+        ""
+    )
+);
+?>

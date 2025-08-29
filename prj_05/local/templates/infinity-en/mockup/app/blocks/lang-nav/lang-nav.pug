@@ -1,0 +1,14 @@
+mixin lang-nav(data = {})
+	- var DIR = 'assets/blocks/lang-nav/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .lang-nav
+	+b.lang-nav&attributes(attributes)
+		if data.items
+			+e.UL.list
+				each item in data.items
+					+e.LI.item
+						- var attr = item.attr || {};
+						+e.label&attributes(attr)
+							!=item.text
+		block
+	// end .lang-nav

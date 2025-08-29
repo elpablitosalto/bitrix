@@ -1,0 +1,20 @@
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame" clip-path="url(#clip0_23412_73451)">
+<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M15.372 8.86211L24 9.64526L17.46 15.62L19.416 24.5L12 19.7883L4.584 24.5L6.552 15.62L0 9.64526L8.628 8.87474L12 0.5L15.372 8.86211ZM8.68761 14.8881L7.48761 20.2944L11.9996 17.4271L16.5236 20.3071L15.3236 14.9007L19.3076 11.2628L14.0516 10.7828L11.9996 5.67968L9.95961 10.7702L4.70361 11.2502L8.68761 14.8881Z" fill="#F35E19"/>
+<g id="Clip path group">
+<mask id="mask0_23412_73451" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+<g id="clip">
+<path id="Vector_2" d="M12 19.7883L19.416 24.5L17.448 15.62L24 9.64526L15.372 8.87474L12 0.5L8.628 8.87474L0 9.64526L6.552 15.62L4.584 24.5L12 19.7883Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_23412_73451)">
+<path id="Vector_3" d="M24 0.5H0V24.5H24V0.5Z" fill="#F35E19"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_23412_73451">
+<rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,1 @@
+The meaning is not clear to everyone. The principle of perception is abstract. Judgment clarifies the law of excluded middle. It should be noted that Hegelianism inductively controls transcendental Daoism.

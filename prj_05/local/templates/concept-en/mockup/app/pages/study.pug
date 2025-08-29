@@ -1,0 +1,757 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'Study | Hair Concept Professional';
+	- var pageDescription = ' Hair Concept Professional';
+	- var pageKeywords = 'hair, concept';
+
+	- var fileName = 'study.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.banner-carousel
+		+banner-carousel({
+			items: [
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				},
+				{
+					image: '1.png',
+					sources: [
+						{
+							src: '1-m.png',
+							media: '(max-width: 1024px)',
+							type: 'image/png'
+						}
+					]
+				}
+			]
+		})
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h1',
+					text: 'Training videos',
+					attr: {
+						class: '_size_h1 _case_normal'
+					}
+				}
+			}
+		})
+			+e.content
+				.page__container
+					+e.text._size_m._width_l
+						p Uncover the secrets to creating stunning looks with Concept products!
+						p The brand's library features recommendations on coloring, lightening, hair care, and special treatments that will help stylists become high-level colorists. In the free training videos, you will learn how to work with modern hairdressing products and how to properly address issues with problematic or damaged hair.
+
+					+e.tabs
+						+tabs({
+							items: [
+								{
+									text: 'All sections',
+									attr: {
+										class: 'js-tabs-trigger',
+										type: 'button'
+									}
+								},
+								{
+									text: 'Coloring',
+									attr: {
+										class: '_state_active js-tabs-trigger',
+										type: 'button'
+									}
+								},
+								{
+									text: 'Care',
+									attr: {
+										class: 'js-tabs-trigger',
+										type: 'button'
+									}
+								},
+								{
+									text: 'Bio perm',
+									attr: {
+										class: 'js-tabs-trigger',
+										type: 'button'
+									}
+								},
+								{
+									text: 'Therapy',
+									attr: {
+										class: 'js-tabs-trigger',
+										type: 'button'
+									}
+								},
+								{
+									text: 'Styling',
+									attr: {
+										class: 'js-tabs-trigger',
+										type: 'button'
+									}
+								},
+							],
+							panels: [
+								{
+									attr: {
+										class: 'js-tabs-panel'
+									},
+									title: {
+										tag: 'h2',
+										text: 'All sections',
+										attr: {
+											class: '_size_h2 _font_secondary _align_center _weight_bold'
+										}
+									},
+									videoGroup: {
+										items: [
+											{
+												image: '2.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Техника идеального Total Blond от Concept',
+												text: 'Хелатный шампунь незаменимый помощник мастера в салоне: если цвет после окрашивания получился слишком интенсивным, слишком ярким, затемнился, проявился нежелательный оттенок или цвет просел на пористых концах, то теперь необязательно использовать обесцвечивающий порошок. Достаточно вымыть волосы хелатным шампунем.',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '1.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Хелатный шампунь: убираем желтизну с волос от жесткой или ржавой воды',
+												text: 'Хелатный шампунь легко вымывает из волос ионы металлов и все нежелательные примеси. Мы рекомендуем его использовать перед обесцвечиванием или окрашиванием, т.к. накопленные в волосах металлы могут помешать качественному осветлению, и вы можете наблюдать картину с недотянутым фоном осветления',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '3.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Линия по уходу за сильно поврежденными волосами Vitality Force Infinity',
+												text: 'Vitality Force разработана специально для ухода за обесцвеченными, осветленными, сухими и ломкими волосами. В линию входит шампунь, кондиционер и липидная маска. Экстремально быстрое восстановление волос, при использовании продуктов линии Vitality Force происходит за счет совместного воздействия на структуру волос двух активов - масла авокадо и комплекса Keratin Infusion.',
+												links: [
+													{
+														text: 'шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'кондиционер',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'липидная маска Vitality Force Infinity',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '4.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Окрашивание красителем Profy Touch, Тонирование Fashion Look',
+												text: 'Оригинальное окрашивание с использование перманентного, стойкого красителя Profy Touch и пигментов прямого действия Fashion Look',
+												links: [
+													{
+														text: 'порошок Soft Blue',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'перманентный краситель Profy Touch',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пигменты прямого действия Fashion Look',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+										]
+									}
+								},
+								{
+									attr: {
+										class: '_state_active js-tabs-panel'
+									},
+									title: {
+										tag: 'h2',
+										text: 'Coloring',
+										attr: {
+											class: '_size_h2 _font_secondary _align_center _weight_bold'
+										}
+									},
+									videoGroup: {
+										items: [
+											{
+												image: '1.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Хелатный шампунь: убираем желтизну с волос от жесткой или ржавой воды',
+												text: 'Хелатный шампунь легко вымывает из волос ионы металлов и все нежелательные примеси. Мы рекомендуем его использовать перед обесцвечиванием или окрашиванием, т.к. накопленные в волосах металлы могут помешать качественному осветлению, и вы можете наблюдать картину с недотянутым фоном осветления',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '2.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Техника идеального Total Blond от Concept',
+												text: 'Хелатный шампунь незаменимый помощник мастера в салоне: если цвет после окрашивания получился слишком интенсивным, слишком ярким, затемнился, проявился нежелательный оттенок или цвет просел на пористых концах, то теперь необязательно использовать обесцвечивающий порошок. Достаточно вымыть волосы хелатным шампунем.',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '3.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Линия по уходу за сильно поврежденными волосами Vitality Force Infinity',
+												text: 'Vitality Force разработана специально для ухода за обесцвеченными, осветленными, сухими и ломкими волосами. В линию входит шампунь, кондиционер и липидная маска. Экстремально быстрое восстановление волос, при использовании продуктов линии Vitality Force происходит за счет совместного воздействия на структуру волос двух активов - масла авокадо и комплекса Keratin Infusion.',
+												links: [
+													{
+														text: 'шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'кондиционер',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'липидная маска Vitality Force Infinity',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '4.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Окрашивание красителем Profy Touch, Тонирование Fashion Look',
+												text: 'Оригинальное окрашивание с использование перманентного, стойкого красителя Profy Touch и пигментов прямого действия Fashion Look',
+												links: [
+													{
+														text: 'порошок Soft Blue',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'перманентный краситель Profy Touch',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пигменты прямого действия Fashion Look',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+										]
+									}
+								},
+								{
+									attr: {
+										class: 'js-tabs-panel'
+									},
+									title: {
+										tag: 'h2',
+										text: 'Care',
+										attr: {
+											class: '_size_h2 _font_secondary _align_center _weight_bold'
+										}
+									},
+									videoGroup: {
+										items: [
+											{
+												image: '2.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Техника идеального Total Blond от Concept',
+												text: 'Хелатный шампунь незаменимый помощник мастера в салоне: если цвет после окрашивания получился слишком интенсивным, слишком ярким, затемнился, проявился нежелательный оттенок или цвет просел на пористых концах, то теперь необязательно использовать обесцвечивающий порошок. Достаточно вымыть волосы хелатным шампунем.',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '3.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Линия по уходу за сильно поврежденными волосами Vitality Force Infinity',
+												text: 'Vitality Force разработана специально для ухода за обесцвеченными, осветленными, сухими и ломкими волосами. В линию входит шампунь, кондиционер и липидная маска. Экстремально быстрое восстановление волос, при использовании продуктов линии Vitality Force происходит за счет совместного воздействия на структуру волос двух активов - масла авокадо и комплекса Keratin Infusion.',
+												links: [
+													{
+														text: 'шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'кондиционер',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'липидная маска Vitality Force Infinity',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '4.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Окрашивание красителем Profy Touch, Тонирование Fashion Look',
+												text: 'Оригинальное окрашивание с использование перманентного, стойкого красителя Profy Touch и пигментов прямого действия Fashion Look',
+												links: [
+													{
+														text: 'порошок Soft Blue',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'перманентный краситель Profy Touch',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пигменты прямого действия Fashion Look',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+										]
+									}
+								},
+								{
+									attr: {
+										class: 'js-tabs-panel'
+									},
+									title: {
+										tag: 'h2',
+										text: 'Bio perm',
+										attr: {
+											class: '_size_h2 _font_secondary _align_center _weight_bold'
+										}
+									},
+									videoGroup: {
+										items: [
+											{
+												image: '1.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Хелатный шампунь: убираем желтизну с волос от жесткой или ржавой воды',
+												text: 'Хелатный шампунь легко вымывает из волос ионы металлов и все нежелательные примеси. Мы рекомендуем его использовать перед обесцвечиванием или окрашиванием, т.к. накопленные в волосах металлы могут помешать качественному осветлению, и вы можете наблюдать картину с недотянутым фоном осветления',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '3.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Линия по уходу за сильно поврежденными волосами Vitality Force Infinity',
+												text: 'Vitality Force разработана специально для ухода за обесцвеченными, осветленными, сухими и ломкими волосами. В линию входит шампунь, кондиционер и липидная маска. Экстремально быстрое восстановление волос, при использовании продуктов линии Vitality Force происходит за счет совместного воздействия на структуру волос двух активов - масла авокадо и комплекса Keratin Infusion.',
+												links: [
+													{
+														text: 'шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'кондиционер',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'липидная маска Vitality Force Infinity',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '4.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Окрашивание красителем Profy Touch, Тонирование Fashion Look',
+												text: 'Оригинальное окрашивание с использование перманентного, стойкого красителя Profy Touch и пигментов прямого действия Fashion Look',
+												links: [
+													{
+														text: 'порошок Soft Blue',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'перманентный краситель Profy Touch',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пигменты прямого действия Fashion Look',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+										]
+									}
+								},
+								{
+									attr: {
+										class: 'js-tabs-panel'
+									},
+									title: {
+										tag: 'h2',
+										text: 'Therapy',
+										attr: {
+											class: '_size_h2 _font_secondary _align_center _weight_bold'
+										}
+									},
+									videoGroup: {
+										items: [
+											{
+												image: '1.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Хелатный шампунь: убираем желтизну с волос от жесткой или ржавой воды',
+												text: 'Хелатный шампунь легко вымывает из волос ионы металлов и все нежелательные примеси. Мы рекомендуем его использовать перед обесцвечиванием или окрашиванием, т.к. накопленные в волосах металлы могут помешать качественному осветлению, и вы можете наблюдать картину с недотянутым фоном осветления',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '2.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Техника идеального Total Blond от Concept',
+												text: 'Хелатный шампунь незаменимый помощник мастера в салоне: если цвет после окрашивания получился слишком интенсивным, слишком ярким, затемнился, проявился нежелательный оттенок или цвет просел на пористых концах, то теперь необязательно использовать обесцвечивающий порошок. Достаточно вымыть волосы хелатным шампунем.',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+											{
+												image: '4.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Окрашивание красителем Profy Touch, Тонирование Fashion Look',
+												text: 'Оригинальное окрашивание с использование перманентного, стойкого красителя Profy Touch и пигментов прямого действия Fashion Look',
+												links: [
+													{
+														text: 'порошок Soft Blue',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'перманентный краситель Profy Touch',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пигменты прямого действия Fashion Look',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+										]
+									}
+								},
+								{
+									attr: {
+										class: 'js-tabs-panel'
+									},
+									title: {
+										tag: 'h2',
+										text: 'Styling',
+										attr: {
+											class: '_size_h2 _font_secondary _align_center _weight_bold'
+										}
+									},
+									videoGroup: {
+										items: [
+											{
+												image: '1.jpg',
+												link: {
+													attr: {
+														class: 'js-modal',
+														'data-type': 'iframe',
+														href: 'https://vk.com/video_ext.php?oid=-71029763&id=456240374&hd=2&autoplay=1'
+													}
+												},
+												title: 'Хелатный шампунь: убираем желтизну с волос от жесткой или ржавой воды',
+												text: 'Хелатный шампунь легко вымывает из волос ионы металлов и все нежелательные примеси. Мы рекомендуем его использовать перед обесцвечиванием или окрашиванием, т.к. накопленные в волосах металлы могут помешать качественному осветлению, и вы можете наблюдать картину с недотянутым фоном осветления',
+												links: [
+													{
+														text: 'хелатный шампунь',
+														attr: {
+															href: '#'
+														}
+													},
+													{
+														text: 'пептидная маска',
+														attr: {
+															href: '#'
+														}
+													},
+												]
+											},
+										]
+									}
+								},
+							]
+						})._no_mobile-title.js-tabs
+
+	+e.attention-panel
+		.page__container
+			+attention-panel({
+				control: {
+					text: 'Ask a question',
+					attr: {
+						href: '#askForm',
+						class: 'js-modal'
+					}
+				}
+			})
+				| You can always contact us with any questions you may have. To do so, simply fill out the form and submit it. Our specialists will respond to you within 24 hours.

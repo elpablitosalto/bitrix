@@ -1,0 +1,14 @@
+mixin icon-panel-group(data)
+	- var DIR = 'assets/blocks/icon-panel-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .icon-panel-group
+	+b.icon-panel-group&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list
+					each item in data.items
+						+e('li').item
+							- var attr = item.attr || {};
+							+icon-panel(item)&attributes(attr)
+		block
+	// end .icon-panel-group

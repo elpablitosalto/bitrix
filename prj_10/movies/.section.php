@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Мультфильмы";
+$arDirProperties = Array(
+
+);
+?>

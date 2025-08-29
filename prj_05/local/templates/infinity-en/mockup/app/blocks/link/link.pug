@@ -1,0 +1,10 @@
+mixin link(text)
+	- var DIR = 'assets/blocks/link/';
+	- var IMG_DIR = DIR + 'images/';
+	if (text)
+		- attributes['data-content'] = text;
+	// begin .link
+	+b.link&attributes(attributes)
+		!=text
+		block
+	// end .link

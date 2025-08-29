@@ -1,0 +1,16 @@
+mixin advantage(data = {})
+	- var DIR = 'assets/blocks/advantage/';
+	- var IMG_DIR = DIR + 'images/';
+	- var attr = data.attr || {};
+	// begin .advantage
+	+b.advantage&attributes(attr)&attributes(attributes)
+		if data.image
+			+e.illustration
+				+image(data.image, IMG_DIR)
+
+		if data.text
+			+e.main
+				+e.text
+					!=data.text
+		block
+	// end .advantage

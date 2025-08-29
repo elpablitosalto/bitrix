@@ -1,0 +1,14 @@
+mixin button(data = {})
+	- var DIR = 'assets/blocks/button/';
+	- var IMG_DIR = DIR + 'images/';
+	- var attr = data.attr || {};
+
+	// begin .button
+	+b.button&attributes(attr)&attributes(attributes)
+		+e.SPAN.holder
+			if data.text
+				!=data.text
+
+			block
+
+	// end .button

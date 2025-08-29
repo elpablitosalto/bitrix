@@ -1,0 +1,132 @@
+<?
+define('SUB_MENU_PAGE_TYPE', 2);
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
+$APPLICATION->SetTitle('Отзывы');
+$APPLICATION->SetPageProperty("PAGE_BODY_CLASS", 'SilverStripe\UserForms\Model\UserDefinedForm presentationsPage sect_or bigSlider');
+?>
+<? $APPLICATION->IncludeComponent(
+  "bitrix:news.detail",
+  "about",
+  array(
+    "DISPLAY_DATE" => "N",
+    "DISPLAY_NAME" => "N",
+    "DISPLAY_PICTURE" => "Y",
+    "DISPLAY_PREVIEW_TEXT" => "N",
+    "USE_SHARE" => "N",
+    "SHARE_HIDE" => "Y",
+    "SHARE_TEMPLATE" => "",
+    "SHARE_HANDLERS" => array("delicious"),
+    "SHARE_SHORTEN_URL_LOGIN" => "",
+    "SHARE_SHORTEN_URL_KEY" => "",
+    "AJAX_MODE" => "N",
+    "IBLOCK_TYPE" => 'about',
+    "IBLOCK_ID" => Indexis::getIblockId('reviews_intro', 'about'),
+    "ELEMENT_ID" => "",
+    "ELEMENT_CODE" => "reviews_intro",
+    "CHECK_DATES" => "Y",
+    "FIELD_CODE" => array("ID", 'NAME', 'DETAIL_PICTURE', 'DETAIL_TEXT'),
+    "PROPERTY_CODE" => array("H_2", 'IMAGES', 'TABLE_HEADER', 'TABLE', 'TABLE_AFTER_TEXT'),
+    "IBLOCK_URL" => "news.php?ID=#IBLOCK_ID#\"",
+    "DETAIL_URL" => "",
+    "SET_TITLE" => "Y",
+    "SET_CANONICAL_URL" => "Y",
+    "SET_BROWSER_TITLE" => "Y",
+    "BROWSER_TITLE" => "-",
+    "SET_META_KEYWORDS" => "Y",
+    "META_KEYWORDS" => "-",
+    "SET_META_DESCRIPTION" => "Y",
+    "META_DESCRIPTION" => "-",
+    "SET_STATUS_404" => "N",
+    "SET_LAST_MODIFIED" => "N",
+    "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+    "ADD_SECTIONS_CHAIN" => "N",
+    "ADD_ELEMENT_CHAIN" => "N",
+    "ACTIVE_DATE_FORMAT" => "d.m.Y",
+    "USE_PERMISSIONS" => "N",
+    "GROUP_PERMISSIONS" => array("1"),
+    "CACHE_TYPE" => "A",
+    "CACHE_TIME" => "3600",
+    "CACHE_GROUPS" => "Y",
+    "DISPLAY_TOP_PAGER" => "N",
+    "DISPLAY_BOTTOM_PAGER" => "N",
+    "PAGER_TITLE" => "Страница",
+    "PAGER_TEMPLATE" => "",
+    "PAGER_SHOW_ALL" => "N",
+    "PAGER_BASE_LINK_ENABLE" => "Y",
+    "SHOW_404" => "N",
+    "MESSAGE_404" => "",
+    "STRICT_SECTION_CHECK" => "Y",
+    "PAGER_BASE_LINK" => "",
+    "PAGER_PARAMS_NAME" => "arrPager",
+    "AJAX_OPTION_JUMP" => "N",
+    "AJAX_OPTION_STYLE" => "Y",
+    "AJAX_OPTION_HISTORY" => "N"
+  )
+); ?>
+
+<?
+//$GLOBALS['arrFilterPresentations']['PROPERTY']
+?>
+
+<? $APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"presentations",
+	array(
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"AJAX_MODE" => "N",
+		"IBLOCK_TYPE" => "about",
+		"IBLOCK_ID" => Indexis::getIblockId('reviews', 'about'),
+		"NEWS_COUNT" => "200",
+		"SORT_BY1" => "PROPERTY_SECTION",
+		"SORT_ORDER1" => "ASC",
+		"SORT_BY2" => "ACTIVE_FROM",
+		"SORT_ORDER2" => "DESC",
+		"FILTER_NAME" => "arrFilterPresentations",
+		"FIELD_CODE" => array("ID", 'NAME', 'PREVIEW_TEXT', 'PREVIEW_PICTURE'),
+		"PROPERTY_CODE" => array('FILE', 'IMAGE', 'SECTION'),
+		"CHECK_DATES" => "N",
+		"DETAIL_URL" => "",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"SET_TITLE" => "N",
+		"SET_BROWSER_TITLE" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "3600",
+		"CACHE_FILTER" => "Y",
+		"CACHE_GROUPS" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"PAGER_TITLE" => "Подразделы",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "Y",
+		"SET_STATUS_404" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => "",
+		"PAGER_BASE_LINK" => "",
+		"PAGER_PARAMS_NAME" => "arrPager",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => ""
+	)
+); ?>
+
+
+
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

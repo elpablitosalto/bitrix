@@ -1,0 +1,188 @@
+DIR = '../blocks/button/'
+IMG_DIR = DIR + 'images/'
+
+.button
+	position relative
+	display inline-block
+	vertical-align middle
+	height 40px
+	padding 0 15px
+	color var(--color-white)
+	font-family inherit
+	font-size 16px
+	font-weight 400
+	line-height 1
+	text-align center
+	text-decoration none
+	text-transform none
+	cursor pointer
+	user-select none
+	background var(--color-primary)
+	border 2px solid var(--color-primary)
+	outline none
+	box-shadow none
+	def-trn(color, background-color, border-color, opacity)
+
+	+above(size-l)
+		height 48px
+		font-size 20px
+
+	&:not(:disabled):not(.button_state_disabled)
+		&:hover
+			color var(--color-white)
+			text-decoration none
+			opacity $hover-opacity
+
+	&:disabled
+		color var(--color-white)
+		cursor not-allowed
+		background-color var(--color-grey)
+		border-color var(--color-grey)
+
+
+
+	&__holder
+		display flex
+		align-items center
+		justify-content center
+		width 100%
+		height 100%
+
+
+
+	&__icon
+		display block
+		width 1.25em
+		height .98em
+		margin 0 .55em
+		fill currentColor
+
+		&:first-child
+			margin-left 0
+
+		&:last-child
+			margin-right 0
+
+
+
+	// Modifiers
+	&_width
+		&_full
+			display block
+			width 100%
+
+	&_size
+		&_l
+			height 40px
+
+		&_xl
+			height 48px
+
+	&_weight
+		&_regular
+			font-weight 400
+
+		&_bold
+			font-weight 700
+
+	&_text
+		&_size
+			&-m
+				font-size 14px
+
+			&-l
+				font-size 20px
+
+		&_tall
+			text-transform uppercase
+
+	&_style
+		&_light
+			color var(--color-primary)
+			background-color var(--color-white)
+			border-color var(--color-white)
+
+			&:not(:disabled):not(.button_state_disabled)
+				&:hover
+					color var(--color-primary)
+
+				&:focus-visible
+					color var(--color-white)
+					background-color var(--color-black)
+					border-color var(--color-black)
+
+		&_outline
+			color var(--color-primary)
+			background-color transparent
+			border-color var(--color-primary)
+
+			&:not(:disabled):not(.button_state_disabled)
+				&:hover
+					color var(--color-primary)
+
+				&:focus-visible
+					color var(--color-white)
+					background-color var(--color-black)
+					border-color var(--color-black)
+
+		&_dashed-outline
+			color var(--color-primary)
+			background-color var(--color-white)
+			border-color transparent
+
+			dashed-border(1, 5, #BFBFBF)
+
+			&:not(:disabled):not(.button_state_disabled)
+				&:hover
+					color var(--color-primary)
+
+				&:focus-visible
+					color var(--color-white)
+					background-color var(--color-primary)
+					background-image none
+
+	&_state
+		&_disabled
+			color var(--color-white)
+			cursor not-allowed
+			pointer-events none
+			background-color var(--color-grey)
+			border-color var(--color-grey)
+
+		&_loading
+			&:after
+				content ''
+				position absolute
+				top 50%
+				left 50%
+				z-index 1
+				display block
+				box-sizing border-box
+				width 32px
+				height 32px
+				border 2px solid transparent
+				border-top-color currentColor
+				border-radius 50%
+				transform translate(-50%, -50%)
+				animation-name button-loader
+				animation-duration 2s
+				animation-timing-function linear
+				animation-iteration-count infinite
+
+			.button
+				&__holder
+					visibility hidden
+					opacity 0
+
+			&.button
+				&_style
+					&_outline
+						&:disabled
+							color var(--color-primary)
+
+@keyframes button-loader
+	0%
+		transform translate(-50%, -50%) rotate(0)
+
+	100%
+		transform translate(-50%, -50%) rotate(360deg)

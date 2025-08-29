@@ -1,0 +1,21 @@
+mixin properties(data)
+	- var DIR = 'assets/blocks/properties/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .properties
+	+b.properties&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list
+					each item in data.items
+						+e('li').item
+							if item.label
+								+e.label
+									+e.label-text
+										!=item.label
+
+							if item.value
+								+e.value
+									!=item.value
+
+		block
+	// end .properties

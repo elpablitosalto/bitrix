@@ -1,0 +1,102 @@
+mixin partnership-panel(data)
+	- var DIR = 'assets/blocks/partnership-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .partnership-panel
+	+b.partnership-panel&attributes(attributes)
+		if data
+			+e.container.page__container
+				+e.main
+					if data.title
+						+e.title
+							+title(data.title)
+					if data.subtitle
+						+e('p').subtitle
+							!=data.subtitle
+
+					if data.icons
+						+e.icons
+							each item in data.icons
+								+e.item
+									if item.icon
+										!=item.icon
+									if item.text
+										+e('span').text
+											!=item.text
+				+e.form
+					+form('form')#partnership._style_primary._width_full
+						+e.inputs
+							+e.line
+								+form-control({
+									type: 'text',
+									label: '',
+									attr: {
+										placeholder: 'Название компании',
+										required: true,
+										class: ''
+									}
+								})._width_full
+							+e.line
+								+form-control({
+									type: 'text',
+									label: '',
+									attr: {
+										placeholder: 'ИНН',
+										required: true,
+										class: ''
+									}
+								})._width_full
+							+e.lines
+								+e.line
+									+form-control({
+										type: 'text',
+										label: '',
+										attr: {
+											placeholder: 'Имя',
+											required: true,
+											class:' '
+										}
+									})
+								+e.line
+									+form-control({
+										type: 'tel',
+										label: '',
+										attr: {
+											placeholder: 'Телефон',
+											required: true,
+											class: 'js-phone-input'
+										}
+									})
+							+e.line
+								+form-control({
+									type: 'email',
+									label: '',
+									attr: {
+										placeholder: 'Email',
+										required: true,
+										class: 'js-email-input'
+									}
+								})._width_full
+						+e.confirmation-check
+							+check-elem({
+								attr: {
+									type: 'checkbox',
+									name: 'agreement',
+									checked: false,
+									required: true,
+									class: 'js-disabling-checkbox'
+								}
+							})
+								| Согласен с<a class="link" href="policy.html" target="_blank"> политикой конфиденциальности</a>
+
+						+control-group([
+							{
+								text: 'Отправить',
+								attr: {
+									type: 'submit',
+									class: '_style_dark _size_l _width_full _text-size_l'
+								}
+							}
+						])._style_primary
+
+		block
+	// end .partnership-panel

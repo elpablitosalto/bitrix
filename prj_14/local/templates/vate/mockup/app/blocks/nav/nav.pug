@@ -1,0 +1,18 @@
+mixin nav(data)
+	- var DIR = 'assets/blocks/nav/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .nav
+	+b('nav').nav&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list
+					each item in data.items
+						+e.item
+							- var attr = item.attr || {};
+							+e.link&attributes(attr)
+								if item.icon
+									!=item.icon
+
+								+e.text
+									!=item.text
+	// end .nav

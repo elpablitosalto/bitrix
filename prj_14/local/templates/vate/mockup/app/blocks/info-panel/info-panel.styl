@@ -1,0 +1,83 @@
+DIR = '../blocks/info-panel/'
+IMG_DIR = DIR + 'images/'
+
+.info-panel
+	display block
+
+
+
+	&__illustration
+		overflow hidden
+		flex 1 1 50%
+		width 100%
+		max-width 545px
+		border-radius 30px
+
+
+		+above(size-m)
+			margin-top -80 px
+
+		+above(size-xxl)
+			height 306px
+
+
+	&__main
+		display flex
+		flex-direction column-reverse
+		gap 30px
+		justify-content stretch
+
+
+		+above(size-m)
+			flex-direction row
+			gap 25px
+
+
+
+	&__picture
+		display block
+		height 100%
+
+
+
+	&__image
+		display block
+		width 100%
+		max-width 100%
+		height 100%
+		object-fit cover
+
+
+
+
+	&__title
+		margin-bottom 40px
+
+
+
+	&__text
+		display inline-block
+		flex 1 1 50%
+		width 100%
+		max-width 545px
+		color var(--color-white)
+		font-family Raleway
+		font-size 16px
+		font-weight 600
+		font-style normal
+		line-height 24px
+
+
+
+	&_direction
+		&_reverse
+			.info-panel
+				&__title
+					+above(size-m)
+						margin-left calc(50% + 7.5px)
+
+				&__main
+					flex-direction column-reverse
+
+					+above(size-m)
+						flex-direction row-reverse

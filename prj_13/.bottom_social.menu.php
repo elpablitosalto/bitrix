@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+    Array(
+        "VK",
+        "https://vk.com/stroyservissu",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "YouTube",
+        "https://www.youtube.com/@stroyservis6616",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "RuTube",
+        "https://rutube.ru/channel/25973961/",
+        Array(),
+        Array(),
+        ""
+    )
+);
+?>

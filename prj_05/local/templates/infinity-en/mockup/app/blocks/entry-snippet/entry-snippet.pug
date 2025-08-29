@@ -1,0 +1,38 @@
+mixin entry-snippet(data)
+	- var DIR = 'assets/blocks/entry-snippet/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .entry-snippet
+	+b.entry-snippet&attributes(attributes)
+		if data
+			if false && !data.noBackground
+				+e.background
+					+image({
+						image: 'bg.jpg',
+						lazyClass: ''
+					}, IMG_DIR)
+
+			if data.label
+				+e.label
+					!=data.label
+
+			- var attr = data.linkAttr || {};
+			- attr.href = typeof attr.href === 'string' ? attr.href : data.href;
+
+			if data.title
+				+e.title
+					+e.link&attributes(attr)
+						!=data.title
+
+			if data.image
+				+e.illustration&attributes(attr)
+					+image({
+						image: data.image,
+						lazyClass: ''
+					}, IMG_DIR)
+
+			if data.choices
+				+e.choice-group
+					+choice-group(data.choices)
+
+		block
+	// end .entry-snippet

@@ -1,0 +1,78 @@
+DIR = '../blocks/entry-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.entry-carousel
+	position relative
+	display block
+	overflow hidden
+	padding 5px 10px
+
+
+
+	&__container
+		position relative
+		overflow visible
+		padding 10px
+
+		+above(size-l)
+			overflow hidden
+
+
+
+	&__wrapper
+		display flex
+		flex-wrap nowrap
+
+
+
+	&__slide
+		flex-basis  220px
+		width 220px
+		height auto
+		margin 0 20px 0 0
+
+		+above(size-l)
+			flex-basis auto
+			width auto
+			margin 0
+
+		&:last-child
+			margin-right 0
+
+
+	&__snippet
+		height 100%
+
+
+
+	&__arrow
+		display none
+
+		+above(size-m)
+			position absolute
+			top 47%
+			z-index 100
+			display block
+			padding 5px
+			background transparent
+			border none
+			outline none
+			opacity 1
+			transform translate(0, -50%)
+			def-trn opacity
+
+		&:hover
+			opacity .5
+
+		// Modifiers
+		&_position
+			&_left
+				left 26px
+
+			&_right
+				right 26px
+
+
+
+	&__icon
+		fill var(--color-dark )

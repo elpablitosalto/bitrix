@@ -1,0 +1,23 @@
+mixin card-detail-carousel(data)
+	- var DIR = 'assets/blocks/card-detail-carousel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .card-detail-carousel
+	+b.card-detail-carousel&attributes(attributes)
+		if data
+			+e.container(class='swiper js-card-detail-carousel js-extend-right')
+				+e.wrapper(class='swiper-wrapper')
+					if data.items
+						each item in data.items
+							+e.slide(class='swiper-slide')
+								if item.image
+									+e.illustration
+										picture
+											if item.mobileImage
+												source(srcset=IMG_DIR + item.mobileImage type='image/jpeg' media='(max-width: 767px)')
+
+											+e.image(src=IMG_DIR + item.image alt='image')
+
+				+e.pagination
+					+bullet-pagination()
+		block
+	// end .card-detail-carousel

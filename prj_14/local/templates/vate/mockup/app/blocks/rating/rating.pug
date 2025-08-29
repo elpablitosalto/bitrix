@@ -1,0 +1,32 @@
+mixin rating(data)
+	- var DIR = 'assets/blocks/rating/';
+	- var ICON_DIR = DIR + 'icons/';
+	- var settings = data || {};
+	- var interactableClass = settings.interactable ? '_type_interactable' : '';
+	// begin .rating
+	+b.rating(class=interactableClass)&attributes(attributes)
+		+e.items
+			- var count = settings.items || 5;
+			- var items = new Array(count);
+
+			for item, i in items
+				- var itemTag = '';
+				- var itemClass = '';
+
+				if settings.interactable
+					- itemTag = 'button';
+					- itemClass += 'js-rating-trigger';
+
+				+e(itemTag).item(class=itemClass type=itemTag)
+					<svg class="rating__icon" width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3.06213 11.6924L4.03348 7.4932L4.04733 7.4964L4.02949 7.48094L0.771711 4.65653L5.07563 4.28292L5.07686 4.29711L5.08606 4.27534L6.75973 0.315312L8.4334 4.27534L8.42029 4.28088L8.44383 4.28292L12.7477 4.65653L9.48997 7.48094L9.48066 7.4702L9.48598 7.4932L10.4573 11.6924L6.76619 9.46579L6.77357 9.45354L6.75327 9.46579L3.06213 11.6924Z" fill="currentColor" stroke="currentColor" stroke-width="0.025"/>
+					</svg>
+
+
+		if settings.interactable && !settings.noInput
+			- var attr = settings.inputAttr || {type: 'hidden', name: 'rating'};
+
+			+e('input').input.js-rating-input&attributes(attr)
+
+		block
+	// end .rating

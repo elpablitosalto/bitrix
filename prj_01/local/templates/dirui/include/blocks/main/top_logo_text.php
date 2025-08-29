@@ -1,0 +1,1 @@
+<p class="animate__animated animate__slideInDown">Оборудование для лабораторной диагностики</p>

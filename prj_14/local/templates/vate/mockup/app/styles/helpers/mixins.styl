@@ -1,0 +1,145 @@
+// Clear the float on any element.
+clearfix()
+	&:after
+		display table
+		clear both
+		content ''
+
+// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
+fix-text-size-adjust()
+	background-image linear-gradient(transparent, transparent)
+
+// Set element size
+size($width, $height = $width)
+	width $width
+	height $height
+
+// Set margin on left & right
+margin-x($margin)
+	margin-left $margin
+	margin-right $margin
+
+// Set margin on top & bottom
+margin-y($margin)
+	margin-top $margin
+	margin-bottom $margin
+
+// Set pading on left & right
+padding-x($padding)
+	padding-left $padding
+	padding-right $padding
+
+// Set padding on top & bottom
+padding-y($padding)
+	padding-top $padding
+	padding-bottom $padding
+
+// Set one static retina image
+retinaBackground($image, $ext = 'png') {
+	background-image url('../images/' + $image + '.' + $ext)
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image url('../images/' + $image + '@2x.' + $ext)
+	}
+}
+
+placeholder($color, $fontSize)
+	&::-webkit-input-placeholder
+		color $color
+		font-size $fontSize
+
+	&:-moz-placeholder
+		color $color
+		font-size $fontSize
+
+	&:-ms-input-placeholder
+		color $color
+		font-size $fontSize
+
+	&::placeholder
+		color $color
+		font-size $fontSize
+		opacity 1
+
+ie-only()
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		{block}
+
+def-trn()
+	if length(arguments) == 1
+		transition arguments trn-speed trn-ease
+
+	else
+		transition all trn-speed trn-ease
+
+		if length(arguments) > 1
+			transition-property arguments
+
+triangle(pos = 'top', c = #a5f, s1 = 20, s2 = 20, s3 = false)
+	width 0
+	height 0
+	padding 0 !important
+	border-style solid
+
+	if pos == 'top'
+		if s3
+			border-width 0 (s2)px (s3)px (s1)px
+		else
+			border-width 0 (s1 / 2)px (s2)px (s1 / 2)px
+		border-color transparent transparent c transparent
+
+	else if pos == 'top-right'
+		border-width 0 (s1)px (s2)px 0
+		border-color transparent c transparent transparent
+
+	else if pos == 'right'
+		if s3
+			border-width (s2)px 0 (s3)px (s1)px
+		else
+			border-width (s2 / 2)px 0 (s2 / 2)px (s1)px
+		border-color transparent transparent transparent c
+
+	else if pos == 'bottom-right'
+		border-width 0 0 (s2)px (s1)px
+		border-color transparent transparent c transparent
+
+	else if pos == 'bottom'
+		if s3
+			border-width (s3)px (s2)px 0 (s1)px
+		else
+			border-width (s2)px (s1 / 2)px 0 (s1 / 2)px
+		border-color c transparent transparent transparent
+
+	else if pos == 'bottom-left'
+		border-width (s2)px 0 0 (s1)px
+		border-color transparent transparent transparent c
+
+	else if pos == 'left'
+		if s3
+			border-width (s2)px (s1)px (s3)px 0
+		else
+			border-width (s2 / 2)px (s1)px (s2 / 2)px 0
+		border-color transparent c transparent transparent
+
+	else if pos == 'top-left'
+		border-width (s2)px (s1)px 0 0
+		border-color c transparent transparent transparent
+
+text-background()
+	background-color currentColor
+	-webkit-background-clip text
+	-webkit-text-fill-color transparent
+
+no-scrollbar()
+	scrollbar-width none
+
+	&::-webkit-scrollbar
+		display none
+
+dual-overflow($x, $y = false)
+	if !$y
+		overflow $x
+	else
+		overflow $x $y
+		overflow-x $x
+		overflow-y $y

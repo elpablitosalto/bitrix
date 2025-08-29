@@ -1,0 +1,36 @@
+.modal-registration-soc .col-sm-6{
+    margin:0 auto !important;
+}
+.modal-registration-soc .c-error-form__text{
+    color:red;
+    margin-top:5px;
+    display: block;
+}
+.modal-registration-soc .result{
+    color:green;
+    margin-top:10px;
+    display: block;
+    text-align: center;
+}
+
+.dp-courses-item .row {
+    height: 100%;
+}
+
+table:not([class]) {
+    table-layout: fixed;
+    width: 100%;
+}
+table:not([class]) th,
+table:not([class]) td {
+    width: 100%;
+    padding: 15px;
+}
+table:not([class]) th:first-child,
+table:not([class]) td:first-child {
+    padding-left: 0;
+}
+table:not([class]) th:last-child,
+table:not([class]) td:last-child {
+    padding-right: 0;
+}

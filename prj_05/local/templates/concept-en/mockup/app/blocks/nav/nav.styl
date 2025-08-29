@@ -1,0 +1,147 @@
+DIR = '../blocks/nav/'
+IMG_DIR = DIR + 'images/'
+
+.nav
+	display block
+	font-size 16px
+	line-height 1.25
+
+
+
+	&__list
+		display block
+		margin 0
+		padding 0
+
+
+
+	&__item
+		position relative
+		display block
+		margin 0 0 12px
+		padding 0
+
+		&:last-child
+			margin-bottom 0
+
+		&:hover
+			& > .nav
+				&__sub
+					display block
+
+
+
+	&__link
+		display block
+		color inherit
+		text-decoration none
+		outline none
+
+		def-trn(color, background-color, opacity)
+
+		&:hover
+			color var(--color-primary)
+			text-decoration none
+			outline none
+
+
+
+	&__sub
+		display block
+		padding 12px 0 0 24px
+
+
+
+	// Modifiers
+	&_layout
+		&_horizontal
+			.nav
+				&__list
+					display flex
+					flex-wrap wrap
+					column-gap 30px
+
+				&__item
+					margin 0
+
+				&__link
+					padding 10px 0
+
+				&__sub
+					position absolute
+					top 100%
+					left 0
+					z-index 100
+					display none
+					width 200px
+					padding 0
+					color var(--color-dark)
+					text-transform none
+					background var(--color-white)
+					box-shadow 0 2px 5px 2px var(--shadow-dark)
+
+					.nav
+						&__list
+							display block
+							margin 0
+
+						&__link
+							padding 10px 13px
+
+						&__sub
+							top 0
+							right 100%
+							left auto
+
+							+above(size-xl)
+								right auto
+								left 100%
+
+	&_type
+		&_primary
+			color var(--color-white)
+			text-transform uppercase
+			background var(--color-primary)
+
+			.nav
+				&__list
+					flex-wrap nowrap
+					column-gap 0
+					margin 0 -13px
+
+				&__link
+					display block
+					flex 0 0 auto
+					padding 20px 13px
+					white-space nowrap
+
+					&:hover
+						color var(--color-white)
+						background-color var(--color-black-10)
+
+				&__burger
+					padding 18px 13px
+
+				&__sub
+					color var(--color-white)
+					text-transform none
+					background var(--color-primary)
+
+					.nav
+						&__link
+							padding 10px 13px
+							white-space normal
+
+	&_style
+		&_light
+			.nav
+				&__link
+					color var(--color-white)
+
+					&:hover
+						color var(--color-white)
+						opacity $hover-opacity
+
+	&_case
+		&_upper
+			text-transform uppercase

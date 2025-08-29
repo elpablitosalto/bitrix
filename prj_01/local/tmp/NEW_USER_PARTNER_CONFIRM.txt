@@ -1,0 +1,20 @@
+Array
+(
+<<<<<<< HEAD
+    [EMAIL] => Cebulya.Russia@yandex.ru
+    [USER_ID] => 23
+    [NAME] => Мария
+    [LAST_NAME] => иванова
+    [CHECKWORD] => p695edzf05kgglwanzk63qfmdxgzwetm
+    [LOGIN] => Cebulya.Russia@yandex.ru
+    [RES] => Y
+=======
+    [EMAIL] => email@email.aab
+    [USER_ID] => 16
+    [NAME] => Имя
+    [LAST_NAME] => Фамилия
+    [CHECKWORD] => 3ac3pu3uxznmnbyduzdg8og78o4sxpmo
+    [LOGIN] => email@email.aab
+    [RES] => F
+>>>>>>> f9a295e5a000133f70662fb4d7c54fc6546e2c5a
+)

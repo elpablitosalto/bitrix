@@ -1,0 +1,13 @@
+mixin filter-group(data = {})
+	- var DIR = 'assets/blocks/filter-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .filter-group
+	+b('form').filter-group&attributes(attributes)
+		if data.items
+			+e.main
+				+e.UL.list
+					each item in data.items
+						+e.LI.item
+							+check-filter(item)
+		block
+	// end .filter-group

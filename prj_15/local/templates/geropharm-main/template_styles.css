@@ -1,0 +1,52 @@
+.dp-filter-form__item a{
+    display: block;
+    cursor: pointer;
+    background-color: #F6F2FB;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 0 20px;
+    height: 41px;
+    line-height: 41px;
+    white-space: nowrap;
+    border-radius: 21px;
+    margin: 0;
+    -webkit-transition: background-color 0.24s, color 0.24s;
+    -o-transition: background-color 0.24s, color 0.24s;
+    transition: background-color 0.24s, color 0.24s;
+    will-change: background-color, color;
+}
+.dp-filter-form__item a:hover {
+    color: #FFFFFF;
+    background-color: #8F41EB;
+}
+.dp-filter-form__item a:hover {
+    color: #FFFFFF;
+    background-color: #8F41EB;
+}
+.dp-filter-form__item a.checked {
+    color: #FFFFFF;
+    background-color: #5F22A6;
+}
+.ajax-form .dp-form-field .error{
+    margin-top: 5px;
+    color:red;
+}
+.ajax-form .msg{
+    margin-top: 5px;
+}
+.auth-errors{
+    width:100%;
+    text-align:center;
+}
+#tr_PROPERTY_65,
+#tr_PROPERTY_68,
+#tr_PROPERTY_70,
+#tr_PROPERTY_71,
+#tr_PROPERTY_72,
+#tr_PROPERTY_73,
+#tr_PROPERTY_75,
+#tr_PROPERTY_76,
+#tr_PROPERTY_77 {
+    display: none;
+}

@@ -1,0 +1,51 @@
+{
+  "name": "mirvendinga-order",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@vuelidate/core": "^2.0.2",
+    "@vuelidate/validators": "^2.0.2",
+    "axios": "^1.2.1",
+    "core-js": "^3.6.5",
+    "maska": "^2.0.1",
+    "swiper": "^8.4.5",
+    "vue": "^3.0.0",
+    "vue-axios": "^3.5.2",
+    "vue-imask": "^6.5.0",
+    "vue-suggestion": "^2.1.0",
+    "vue-yandex-maps": "^1.0.9"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/recommended",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

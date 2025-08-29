@@ -1,0 +1,17 @@
+mixin modal(data)
+	- var DIR = 'assets/blocks/modal/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .modal
+	+b.modal&attributes(attributes)
+		if data
+			if data.title
+				+e.header
+					+e.title
+						+title('h2')._size_h2._style_bold
+							!=data.title
+
+					if data.text
+						+e.text
+							!=data.text
+		block
+	// end .modal

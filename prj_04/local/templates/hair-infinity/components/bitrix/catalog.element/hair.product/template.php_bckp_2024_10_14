@@ -1,0 +1,691 @@
+<?
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+use Hair\General;
+
+$arProductSections = [
+    "PRODUCT_TYPE" => "Тип",
+    "PRODUCT_FEATURE" => "Особенность",
+    "PRODUCT_PROPS" => "Свойства",
+    "PRODUCT_COMPOSITION" => "Состав",
+    "PRODUCT_UNIQUE" => "Уникальная технология",
+];
+?>
+<div class="page__breadcrumbs">
+    <div class="page__container">
+        <!-- begin .breadcrumbs-->
+        <? $APPLICATION->IncludeComponent(
+            "bitrix:breadcrumb",
+            "hair.crumbs",
+            array(
+                "START_FROM" => "0",
+                "PATH" => "",
+                "SITE_ID" => "s1"
+            )
+        ); ?>
+        <!-- end .breadcrumbs-->
+    </div>
+</div>
+<div class="page__section">
+    <!-- begin .section-->
+    <div class="section section_role_product-card">
+        <div class="section__content">
+            <div class="page__container">
+                <div class="section__product-card">
+                    <!-- begin .product-card-->
+                    <div class="product-card">
+                        <div class="product-card__main">
+                            <div class="product-card__info">
+                                <div class="product-card__title">
+                                    <!-- begin .title-->
+                                    <h1 class="title title_size_h1 title_weight_medium">
+                                        <?= htmlspecialchars_decode($arResult["PREVIEW_TEXT"]) ?>
+                                    </h1>
+                                    <!-- end .title-->
+                                </div>
+                                <div class="product-card__label"><?= $arResult["NAME"] ?></div>
+                                <? if (!empty($arResult["VARIANTS"]) && !empty($arResult["VARIANTS"]["PROPERTY_VALUES"])) : ?>
+                                    <div class="product-card__choice-group">
+                                        <!-- begin .choice-group-->
+                                        <div class="choice-group">
+                                            <div class="choice-group__caption"><?= $arResult["VARIANTS"]["PROPERTY_NAME"] ?>:</div>
+                                            <ul class="choice-group__list">
+                                                <?
+                                                $currentProduct = $arResult["VARIANTS"]["PRODUCT_VARIANTS"][0];
+                                                $currentProductProperty = $currentProduct["PROPERTY_" . $arResult["VARIANTS"]["PROPERTY_CODE"] . "_VALUE"];
+                                                ?>
+                                                <? foreach ($arResult["VARIANTS"]["PROPERTY_VALUES"] as $index => $propValue) : ?>
+                                                    <li class="choice-group__item">
+                                                        <label class="choice-group__label">
+                                                            <span class="choice-group__tooltip">
+                                                                <?= $arResult["VARIANTS"]["PROPERTY_NAME"] ?>
+                                                            </span>
+                                                            <input <?= ($currentProductProperty == $propValue["UF_XML_ID"] ? "checked" : "") ?> class="choice-group__input" type="radio" name="product-filter-<?= $arResult["VARIANTS"]["PROPERTY_CODE"] ?>" data-product-id="<?= $arResult["ID"] ?>" data-property-code="<?= $arResult["VARIANTS"]["PROPERTY_CODE"] ?>" data-property-value="<?= $propValue["UF_XML_ID"] ?>" />
+                                                            <span class="choice-group__panel"><?= $propValue["UF_NAME"] ?></span>
+                                                        </label>
+                                                    </li>
+                                                <? endforeach; ?>
+                                            </ul>
+                                        </div>
+                                        <!-- end .choice-group-->
+                                    </div>
+                                    <? if (!empty($currentProduct["COLOR"])) : ?>
+                                        <div class="product-card__select">
+                                            <!-- begin .choices-select-->
+                                            <?/*Множественные цвета (Антон сказал не нужны)
+                                                foreach ($arResult["VARIANTS"]["PRODUCT_VARIANTS"] as $productVariant):*/ ?><!--
+                                                <?/*if($productVariant["PROPERTY_".$arResult["VARIANTS"]["PROPERTY_CODE"]."_VALUE"] == $currentProductProperty):*/ ?>
+                                                    <option
+                                                        <?/*if($productVariant["COLOR"]["UF_XML_ID"] == $currentProduct["COLOR"]["UF_XML_ID"]):*/ ?>selected<?/*endif;*/ ?>
+                                                        value="<?/*=$productVariant["COLOR"]["UF_XML_ID"]*/ ?>" class="choices-select__option"
+                                                    >
+                                                        <?/*=$productVariant["COLOR"]["UF_NAME"]*/ ?>
+                                                    </option>
+                                                <?/*endif;*/ ?>
+                                            --><?/*endforeach;*/ ?>
+                                            <div class="choices-select">
+                                                <select class="choices-select__select js-select">
+                                                    <option class="choices-select__option">
+                                                        <?= $currentProduct["COLOR"]["UF_NAME"] ?>
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <!-- end .choices-select-->
+                                        </div>
+                                    <? endif; ?>
+                                <? endif; ?>
+                                <div class="product-card__controls">
+                                    <div class="product-card__control">
+                                        <!-- begin .button-->
+                                        <span id="buy-button-product" data-popup class="button button_width_full button_size_l button_js-modal" href="#whereBuy">
+                                            <span class="button__holder">Купить</span>
+                                        </span>
+                                        <!-- end .button-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__carousel">
+                                <!-- begin .product-card-carousel-->
+                                <? if (!empty($arResult["PRODUCT_GALLERY"])) : ?>
+                                    <div class="product-card-carousel">
+                                        <div class="product-card-carousel__container swiper js-product-card-carousel js-extend-right">
+                                            <div class="product-card-carousel__wrapper swiper-wrapper">
+                                                <? foreach ($arResult["PRODUCT_GALLERY"] as $arSlide) : ?>
+                                                    <div class="product-card-carousel__slide swiper-slide">
+                                                        <div class="product-card-carousel__illustration">
+                                                            <picture>
+                                                                <img src="<?= $arSlide["src"] ?>" alt="<?= $arSlide["ALT"] ?>" class="product-card-carousel__image" title="" />
+                                                            </picture>
+                                                        </div>
+                                                    </div>
+                                                <? endforeach; ?>
+                                            </div>
+                                            <div class="product-card-carousel__pagination">
+                                                <!-- begin .bullet-pagination-->
+                                                <div class="bullet-pagination"></div>
+                                                <!-- end .bullet-pagination-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                <? endif ?>
+                                <!-- end .product-card-carousel-->
+                            </div>
+                        </div>
+                        <div class="product-card__details">
+                            <div class="product-card__link-group">
+                                <h2 class="product-card__subtitle">Скачиваемые материалы</h2>
+                                <ul class="product-card__link-list">
+                                    <? if (!empty($arResult['PROPERTIES']['PALLETTE']['VALUE'])) : ?>
+                                        <? $fileSrc = CFile::GetPath($arResult['PROPERTIES']['PALLETTE']['VALUE']); ?>
+                                        <li class="product-card__link-item">
+                                            <!-- begin .icon-link-->
+                                            <div class="icon-link icon-link_icon-spacing_l">
+                                                <div class="icon-link__icon-wrapper">
+                                                    <svg class="icon-link__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M7.99996 10.6667C7.8633 10.6667 7.73263 10.6107 7.63863 10.512L4.13863 6.84537C3.8353 6.52804 4.06063 6.00004 4.49996 6.00004H6.3333V2.16671C6.3333 1.70737 6.7073 1.33337 7.16663 1.33337H8.8333C9.29263 1.33337 9.66663 1.70737 9.66663 2.16671V6.00004H11.5C11.9393 6.00004 12.1646 6.52804 11.8613 6.84537L8.3613 10.512C8.2673 10.6107 8.13663 10.6667 7.99996 10.6667Z" />
+                                                        <path d="M14.8333 14.6667H1.16667C0.523333 14.6667 0 14.1433 0 13.5V13.1667C0 12.5233 0.523333 12 1.16667 12H14.8333C15.4767 12 16 12.5233 16 13.1667V13.5C16 14.1433 15.4767 14.6667 14.8333 14.6667Z" />
+                                                    </svg>
+                                                </div>
+                                                <a href="<?= $fileSrc ?>" target="_blank">
+                                                    <div class="icon-link__text">Скачать палитру оттенков</div>
+                                                </a>
+                                            </div>
+                                            <!-- end .icon-link-->
+                                        </li>
+                                    <? endif; ?>
+                                    <? if (!empty($arResult['PROPERTIES']['INSTRUCTION']['VALUE'])) : ?>
+                                        <? foreach ($arResult['PROPERTIES']['INSTRUCTION']['VALUE'] as $item) : ?>
+                                            <?
+                                            $arItem = CIBlockElement::GetList(false, ['IBLOCK_ID' => MATERIALS, 'ID' => $item], false, false, ['ID', 'NAME', 'PROPERTY_FILE'])->GetNext();
+                                            ?>
+                                            <li class="product-card__link-item">
+                                                <!-- begin .icon-link-->
+                                                <div class="icon-link icon-link_icon-spacing_l">
+                                                    <div class="icon-link__icon-wrapper">
+                                                        <svg class="icon-link__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14.3125 4.53125H1.6875C0.912094 4.53125 0.28125 5.16209 0.28125 5.9375V11.5625C0.28125 12.3379 0.912094 12.9688 1.6875 12.9688H14.3125C15.0879 12.9688 15.7188 12.3379 15.7188 11.5625V5.9375C15.7188 5.16209 15.0879 4.53125 14.3125 4.53125ZM3.99191 9.47931C3.87206 9.47931 3.66731 9.48016 3.47566 9.48112V10.5623C3.47566 10.8212 3.26578 11.031 3.00691 11.031C2.74803 11.031 2.53816 10.8212 2.53816 10.5623L2.53125 7.0015C2.53084 6.87694 2.58006 6.75731 2.668 6.66906C2.75594 6.58081 2.87544 6.53125 3 6.53125H3.99191C4.81553 6.53125 5.48562 7.1925 5.48562 8.00528C5.48562 8.81806 4.81553 9.47931 3.99191 9.47931ZM8.01591 10.918C7.73672 10.9229 7.03838 10.9255 7.00878 10.9257C7.00819 10.9257 7.00759 10.9257 7.007 10.9257C6.88331 10.9257 6.76459 10.8768 6.67678 10.7896C6.58853 10.702 6.53872 10.5829 6.53825 10.4586C6.53822 10.4461 6.53125 7.00091 6.53125 7.00091C6.53103 6.87644 6.58028 6.75697 6.66822 6.66888C6.75616 6.58078 6.87553 6.53125 7 6.53125H7.97906C9.09444 6.53125 9.84381 7.41425 9.84381 8.72847C9.84381 9.97866 9.07506 10.8995 8.01591 10.918ZM12.8194 8.22969C13.0782 8.22969 13.2881 8.43956 13.2881 8.69844C13.2881 8.95731 13.0782 9.16719 12.8194 9.16719H11.9688V10.5C11.9688 10.7589 11.7589 10.9688 11.5 10.9688C11.2411 10.9688 11.0312 10.7589 11.0312 10.5V6.96381C11.0312 6.70494 11.2411 6.49506 11.5 6.49506H12.9332C13.1921 6.49506 13.402 6.70494 13.402 6.96381C13.402 7.22269 13.1921 7.43256 12.9332 7.43256H11.9688V8.22969H12.8194Z" />
+                                                            <path d="M7.97895 7.46875H7.46948C7.4702 7.89187 7.47276 9.57856 7.47408 9.98572C7.66914 9.98447 7.87801 9.98275 7.99942 9.98063C8.62582 9.96969 8.90622 9.34384 8.90622 8.72847C8.90619 8.43294 8.83935 7.46875 7.97895 7.46875Z" />
+                                                            <path d="M3.99196 7.46875H3.47021C3.47078 7.67734 3.47131 7.89925 3.47131 8.00528C3.47131 8.12919 3.47218 8.34409 3.47318 8.54366C3.66556 8.54269 3.87106 8.54181 3.992 8.54181C4.2935 8.54181 4.54822 8.29613 4.54822 8.00528C4.54822 7.71444 4.29347 7.46875 3.99196 7.46875Z" />
+                                                            <path d="M13.8267 3.59375C13.7181 3.29594 13.5493 3.02069 13.3259 2.785L11.3788 0.731219C10.9383 0.266531 10.3183 0 9.67797 0H3.4375C2.66209 0 2.03125 0.630844 2.03125 1.40625V3.59375H13.8267Z" />
+                                                            <path d="M2.03125 13.9062V14.5938C2.03125 15.3692 2.66209 16 3.4375 16H12.5625C13.3379 16 13.9688 15.3692 13.9688 14.5938V13.9062H2.03125Z" />
+                                                        </svg>
+                                                    </div>
+                                                    <a target="_blank" href="<?= CFile::GetPath($arItem['PROPERTY_FILE_VALUE']) ?>">
+                                                        <div class="icon-link__text"><?= $arItem["NAME"] ?></div>
+                                                    </a>
+                                                </div>
+                                                <!-- end .icon-link-->
+                                            </li>
+                                        <? endforeach; ?>
+                                    <? endif; ?>
+                                    <? if (!empty($arResult['PROPERTIES']['PROMOTIONAL_MATERIALS']['VALUE'])) : ?>
+                                        <? foreach ($arResult['PROPERTIES']['PROMOTIONAL_MATERIALS']['VALUE'] as $item) : ?>
+                                            <?
+                                            $arItem = CIBlockElement::GetList(false, ['IBLOCK_ID' => MATERIALS, 'ID' => $item], false, false, ['ID', 'NAME', 'PROPERTY_FILE'])->GetNext();
+                                            ?>
+                                            <li class="product-card__link-item">
+                                                <!-- begin .icon-link-->
+                                                <div class="icon-link icon-link_icon-spacing_l">
+                                                    <div class="icon-link__icon-wrapper">
+                                                        <svg class="icon-link__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14.3125 4.53125H1.6875C0.912094 4.53125 0.28125 5.16209 0.28125 5.9375V11.5625C0.28125 12.3379 0.912094 12.9688 1.6875 12.9688H14.3125C15.0879 12.9688 15.7188 12.3379 15.7188 11.5625V5.9375C15.7188 5.16209 15.0879 4.53125 14.3125 4.53125ZM3.99191 9.47931C3.87206 9.47931 3.66731 9.48016 3.47566 9.48112V10.5623C3.47566 10.8212 3.26578 11.031 3.00691 11.031C2.74803 11.031 2.53816 10.8212 2.53816 10.5623L2.53125 7.0015C2.53084 6.87694 2.58006 6.75731 2.668 6.66906C2.75594 6.58081 2.87544 6.53125 3 6.53125H3.99191C4.81553 6.53125 5.48562 7.1925 5.48562 8.00528C5.48562 8.81806 4.81553 9.47931 3.99191 9.47931ZM8.01591 10.918C7.73672 10.9229 7.03838 10.9255 7.00878 10.9257C7.00819 10.9257 7.00759 10.9257 7.007 10.9257C6.88331 10.9257 6.76459 10.8768 6.67678 10.7896C6.58853 10.702 6.53872 10.5829 6.53825 10.4586C6.53822 10.4461 6.53125 7.00091 6.53125 7.00091C6.53103 6.87644 6.58028 6.75697 6.66822 6.66888C6.75616 6.58078 6.87553 6.53125 7 6.53125H7.97906C9.09444 6.53125 9.84381 7.41425 9.84381 8.72847C9.84381 9.97866 9.07506 10.8995 8.01591 10.918ZM12.8194 8.22969C13.0782 8.22969 13.2881 8.43956 13.2881 8.69844C13.2881 8.95731 13.0782 9.16719 12.8194 9.16719H11.9688V10.5C11.9688 10.7589 11.7589 10.9688 11.5 10.9688C11.2411 10.9688 11.0312 10.7589 11.0312 10.5V6.96381C11.0312 6.70494 11.2411 6.49506 11.5 6.49506H12.9332C13.1921 6.49506 13.402 6.70494 13.402 6.96381C13.402 7.22269 13.1921 7.43256 12.9332 7.43256H11.9688V8.22969H12.8194Z" />
+                                                            <path d="M7.97895 7.46875H7.46948C7.4702 7.89187 7.47276 9.57856 7.47408 9.98572C7.66914 9.98447 7.87801 9.98275 7.99942 9.98063C8.62582 9.96969 8.90622 9.34384 8.90622 8.72847C8.90619 8.43294 8.83935 7.46875 7.97895 7.46875Z" />
+                                                            <path d="M3.99196 7.46875H3.47021C3.47078 7.67734 3.47131 7.89925 3.47131 8.00528C3.47131 8.12919 3.47218 8.34409 3.47318 8.54366C3.66556 8.54269 3.87106 8.54181 3.992 8.54181C4.2935 8.54181 4.54822 8.29613 4.54822 8.00528C4.54822 7.71444 4.29347 7.46875 3.99196 7.46875Z" />
+                                                            <path d="M13.8267 3.59375C13.7181 3.29594 13.5493 3.02069 13.3259 2.785L11.3788 0.731219C10.9383 0.266531 10.3183 0 9.67797 0H3.4375C2.66209 0 2.03125 0.630844 2.03125 1.40625V3.59375H13.8267Z" />
+                                                            <path d="M2.03125 13.9062V14.5938C2.03125 15.3692 2.66209 16 3.4375 16H12.5625C13.3379 16 13.9688 15.3692 13.9688 14.5938V13.9062H2.03125Z" />
+                                                        </svg>
+                                                    </div>
+                                                    <a target="_blank" href="<?= CFile::GetPath($arItem['PROPERTY_FILE_VALUE']) ?>">
+                                                        <div class="icon-link__text"><?= $arItem["NAME"] ?></div>
+                                                    </a>
+                                                </div>
+                                                <!-- end .icon-link-->
+                                            </li>
+                                        <? endforeach; ?>
+                                    <? endif; ?>
+                                    <?/*
+                                    <li class="product-card__link-item">
+                                        <!-- begin .icon-link-->
+                                        <div class="icon-link icon-link_icon-spacing_l">
+                                            <div class="icon-link__icon-wrapper">
+                                                <svg
+                                                        class="icon-link__icon"
+                                                        width="16"
+                                                        height="17"
+                                                        viewBox="0 0 16 17"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    <path
+                                                            d="M11.3333 4.24841C11.3333 5.95466 9.30278 8.99529 8.41111 10.2484C8.19722 10.5484 7.8 10.5484 7.58889 10.2484C6.69722 8.99529 4.66667 5.95466 4.66667 4.24841C4.66667 2.17654 6.15833 0.498413 8 0.498413C9.84167 0.498413 11.3333 2.17654 11.3333 4.24841ZM11.5556 6.76091C11.6528 6.54529 11.7417 6.32966 11.8222 6.11716C11.8361 6.07966 11.85 6.03904 11.8639 6.00154L15.0861 4.55154C15.525 4.35466 16 4.71716 16 5.24841V13.7109C16 14.0172 15.8333 14.2922 15.5806 14.4078L11.5556 16.2172V6.76091ZM3.82222 4.82029C3.88889 5.26091 4.02222 5.70466 4.17778 6.11716C4.25833 6.32966 4.34722 6.54529 4.44444 6.76091V14.6172L0.913889 16.2078C0.475 16.4047 0 16.0422 0 15.5109V7.04841C0 6.74216 0.166667 6.46716 0.419444 6.35154L3.825 4.82029H3.82222ZM9.10556 10.8734C9.49167 10.3297 10.0972 9.44529 10.6667 8.46716V16.2578L5.33333 14.5422V8.46716C5.90278 9.44529 6.50833 10.3297 6.89444 10.8734C7.46389 11.6734 8.53611 11.6734 9.10556 10.8734ZM8 5.24841C8.29469 5.24841 8.5773 5.11672 8.78567 4.8823C8.99405 4.64788 9.11111 4.32993 9.11111 3.99841C9.11111 3.66689 8.99405 3.34895 8.78567 3.11453C8.5773 2.88011 8.29469 2.74841 8 2.74841C7.70532 2.74841 7.4227 2.88011 7.21433 3.11453C7.00595 3.34895 6.88889 3.66689 6.88889 3.99841C6.88889 4.32993 7.00595 4.64788 7.21433 4.8823C7.4227 5.11672 7.70532 5.24841 8 5.24841Z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                            <a href="/find-salon/map/"><div class="icon-link__text">Найти рядом</div> </a>
+                                        </div>
+                                        <!-- end .icon-link-->
+                                    </li>
+                                    */ ?>
+                                </ul>
+                            </div>
+                            <div class="product-card__icon-panel-group">
+                                <!-- begin .icon-panel-group-->
+                                <div class="icon-panel-group icon-panel-group_size_s icon-panel-group_style_decorated">
+                                    <ul class="icon-panel-group__list">
+                                        <? foreach ($arProductSections as $productSectionCode => $productSectionName) {
+                                            if (!empty($arResult['PROPERTIES'][$productSectionCode]['VALUE'])) {
+                                                $arDisplayProp = CIBlockFormatProperties::GetDisplayValue($arResult, $arResult['PROPERTIES'][$productSectionCode]); ?>
+                                                <li class="icon-panel-group__item">
+                                                    <!-- begin .icon-panel-->
+                                                    <div class="icon-panel icon-panel_type_compact">
+                                                        <div class="icon-panel__wrapper">
+                                                            <div class="icon-panel__illustration">
+                                                                <?= file_get_contents($_SERVER["DOCUMENT_ROOT"] . General::getProductPropertycon($productSectionCode)); ?>
+                                                            </div>
+                                                            <div class="icon-panel__info">
+                                                                <div class="icon-panel__title">
+                                                                    <!-- begin .title-->
+                                                                    <div class="title title_size_h5 title_style_dependent">
+                                                                        <?= $productSectionName ?>
+                                                                    </div>
+                                                                    <!-- end .title-->
+                                                                </div>
+                                                                <? if (is_array($arDisplayProp['DISPLAY_VALUE'])) : ?>
+                                                                    <? foreach ($arDisplayProp['DISPLAY_VALUE'] as $val) : ?>
+                                                                        <div class="icon-panel__text"><?= $val ?></div>
+                                                                    <? endforeach; ?>
+                                                                <? else : ?>
+                                                                    <div class="icon-panel__text"><?= $arDisplayProp['DISPLAY_VALUE'] ?></div>
+                                                                <? endif; ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end .icon-panel-->
+                                                </li>
+                                        <?
+                                            }
+                                        } ?>
+                                    </ul>
+                                </div>
+                                <!-- end .icon-panel-group-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end .product-card-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end .section-->
+</div>
+<? if (!empty($arResult['DETAIL_TEXT'])) : ?>
+    <div class="page__section">
+        <!-- begin .section-->
+        <div class="section section_role_product-description">
+            <div class="section__header">
+                <div class="section__container page__container">
+                    <div class="section__title">
+                        <!-- begin .title-->
+                        <h2 class="title title_size_h3 title_weight_normal title_style_dependent">
+                            Описание продукта
+                        </h2>
+                        <!-- end .title-->
+                    </div>
+                </div>
+            </div>
+            <div class="section__content">
+                <div class="page__container">
+                    <div class="section__text">
+                        <? echo htmlspecialchars_decode($arResult['DETAIL_TEXT']); ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end .section-->
+    </div>
+<? endif; ?>
+<? if (isset($arResult['PROPERTIES']['HIDDEN_SEO_TEXT']) && !empty($arResult['PROPERTIES']['HIDDEN_SEO_TEXT']['VALUE']['TEXT'])) : ?>
+    <div class="visually-hidden"><?= $arResult['PROPERTIES']['HIDDEN_SEO_TEXT']['~VALUE']['TEXT'] ?></div>
+<? endif; ?>
+<? if (!empty($arResult['PROPERTIES']['PALLETTE_SLIDER']['VALUE'])) : ?>
+    <div class="page__section">
+        <!-- begin .section-->
+        <div class="section section_role_image-carousel">
+            <div class="section__content">
+                <div class="page__container">
+                    <div class="section__image-carousel">
+                        <!-- begin .image-carousel-->
+                        <div class="image-carousel image-carousel_type_simple">
+                            <div class="image-carousel__container swiper js-image-carousel">
+                                <div class="image-carousel__wrapper swiper-wrapper">
+                                    <? foreach ($arResult['PROPERTIES']['PALLETTE_SLIDER']['VALUE'] as $k => $file) : ?>
+                                        <? $pic = CFile::ResizeImageGet($file, array('width' => 1440, 'height' => 449), BX_RESIZE_IMAGE_PROPORTIONAL, true); ?>
+                                        <? if (!empty($arResult['PROPERTIES']['PALLETTE_SLIDER_MOBILE']['VALUE'])) {
+                                            if (!empty($arResult['PROPERTIES']['PALLETTE_SLIDER_MOBILE']['VALUE'][$k])) {
+                                                $picMobile = CFile::ResizeImageGet($arResult['PROPERTIES']['PALLETTE_SLIDER_MOBILE']['VALUE'][$k], array('width' => 320, 'height' => 168), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+                                            } else {
+                                                $picMobile = $pic;
+                                            }
+                                        } else {
+                                            $picMobile = $pic;
+                                        } ?>
+                                        <div class="image-carousel__slide swiper-slide">
+                                            <div class="image-carousel__illustration">
+                                                <picture>
+                                                    <img src="<?= $pic['src'] ?>" alt="image <?= $k ?>" class="image-carousel__image desktop" title="" />
+                                                    <img src="<?= $picMobile['src'] ?>" alt="image <?= $k ?>" class="image-carousel__image mobile" title="" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    <? endforeach; ?>
+                                </div>
+                                <div class="image-carousel__navigation">
+                                    <div class="page__container">
+                                        <div class="image-carousel__arrows">
+                                            <!-- begin .carousel-nav-->
+                                            <div class="carousel-nav carousel-nav_arrow-style_solid js-carousel-nav" data-nav-scope=".image-carousel" data-nav-target=".swiper">
+                                                <div class="carousel-nav__control">
+                                                    <button type="button" aria-label="Предыдущий слайд" class="carousel-nav__arrow carousel-nav__arrow_type_prev js-carousel-nav-prev">
+                                                        <svg class="carousel-nav__icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0466 21.4207C12.1921 21.2756 12.3075 21.1032 12.3863 20.9133C12.4651 20.7235 12.5056 20.52 12.5056 20.3145C12.5056 20.1089 12.4651 19.9054 12.3863 19.7156C12.3075 19.5258 12.1921 19.3534 12.0466 19.2082L3.7747 10.9395L12.0466 2.67072C12.34 2.37732 12.5048 1.97939 12.5048 1.56447C12.5048 1.14954 12.34 0.751614 12.0466 0.458218C11.7532 0.164822 11.3552 -3.86498e-06 10.9403 -3.88312e-06C10.5254 -3.90126e-06 10.1275 0.164822 9.83407 0.458218L0.459073 9.83322C0.313563 9.97836 0.198118 10.1508 0.119347 10.3406C0.0405774 10.5304 3.10048e-05 10.7339 3.09958e-05 10.9395C3.09868e-05 11.145 0.0405774 11.3485 0.119347 11.5383C0.198118 11.7282 0.313563 11.9006 0.459073 12.0457L9.83407 21.4207C9.97922 21.5662 10.1516 21.6817 10.3415 21.7604C10.5313 21.8392 10.7348 21.8798 10.9403 21.8798C11.1458 21.8798 11.3493 21.8392 11.5392 21.7604C11.729 21.6817 11.9014 21.5662 12.0466 21.4207Z" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M21.8777 10.9395C21.8777 10.5251 21.7131 10.1276 21.42 9.8346C21.127 9.54157 20.7296 9.37695 20.3152 9.37695L4.69019 9.37695C4.27579 9.37695 3.87836 9.54157 3.58533 9.8346C3.29231 10.1276 3.12769 10.5251 3.12769 10.9395C3.12769 11.3539 3.29231 11.7513 3.58533 12.0443C3.87836 12.3373 4.27579 12.502 4.69019 12.502L20.3152 12.502C20.7296 12.502 21.127 12.3373 21.42 12.0443C21.7131 11.7513 21.8777 11.3539 21.8777 10.9395Z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="carousel-nav__control">
+                                                    <button type="button" aria-label="Следующий слайд" class="carousel-nav__arrow carousel-nav__arrow_type_next js-carousel-nav-next">
+                                                        <svg class="carousel-nav__icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.83111 21.4207C9.6856 21.2756 9.57016 21.1032 9.49139 20.9133C9.41262 20.7235 9.37207 20.52 9.37207 20.3145C9.37207 20.1089 9.41262 19.9054 9.49139 19.7156C9.57016 19.5258 9.6856 19.3534 9.83111 19.2082L18.103 10.9395L9.83111 2.67072C9.53772 2.37732 9.37289 1.97939 9.37289 1.56447C9.37289 1.14954 9.53772 0.751614 9.83111 0.458218C10.1245 0.164822 10.5224 -3.86498e-06 10.9374 -3.88312e-06C11.3523 -3.90126e-06 11.7502 0.164822 12.0436 0.458218L21.4186 9.83322C21.5641 9.97836 21.6796 10.1508 21.7583 10.3406C21.8371 10.5304 21.8777 10.7339 21.8777 10.9395C21.8777 11.145 21.8371 11.3485 21.7583 11.5383C21.6796 11.7282 21.5641 11.9006 21.4186 12.0457L12.0436 21.4207C11.8985 21.5662 11.726 21.6817 11.5362 21.7604C11.3464 21.8392 11.1429 21.8798 10.9374 21.8798C10.7318 21.8798 10.5283 21.8392 10.3385 21.7604C10.1487 21.6817 9.97626 21.5662 9.83111 21.4207Z" />
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M-6.8299e-08 10.9395C-8.64131e-08 10.5251 0.16462 10.1276 0.457646 9.8346C0.750671 9.54157 1.1481 9.37695 1.5625 9.37695L17.1875 9.37695C17.6019 9.37695 17.9993 9.54157 18.2924 9.8346C18.5854 10.1276 18.75 10.5251 18.75 10.9395C18.75 11.3539 18.5854 11.7513 18.2924 12.0443C17.9993 12.3373 17.6019 12.502 17.1875 12.502L1.5625 12.502C1.1481 12.502 0.750672 12.3373 0.457646 12.0443C0.16462 11.7513 -5.0185e-08 11.3539 -6.8299e-08 10.9395Z" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <!-- end .carousel-nav-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end .image-carousel-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end .section-->
+    </div>
+<? endif; ?>
+<? if (!empty($arResult['PROPERTIES']['RELATED_PRODUCTS']['VALUE'])) : ?>
+    <? $GLOBALS["arRelatedProductsFilter"]['ID'] = $arResult['PROPERTIES']['RELATED_PRODUCTS']['VALUE']; ?>
+    <div class="page__section">
+        <!-- begin .section-->
+        <div class="section section_role_products section_style_full-gradient">
+            <div class="section__header">
+                <div class="section__container page__container">
+                    <div class="section__title">
+                        <!-- begin .title-->
+                        <h2 class="title title_size_h4 title_style_dependent">
+                            Другие продукты для <?= (!empty($arResult["ROOT_SECTION"]["UF_GENITIVE"]) ? mb_strtolower($arResult["ROOT_SECTION"]["UF_GENITIVE"]) : $arResult["ROOT_SECTION"]["NAME"]) ?>
+                        </h2>
+                        <!-- end .title-->
+                    </div>
+                </div>
+            </div>
+            <div class="section__content">
+                <div class="page__container">
+                    <div class="product-grid product-grid_size_s">
+                        <?
+                        $APPLICATION->IncludeComponent(
+                            "bitrix:news.list",
+                            "sectionPage.list",
+                            array(
+                                "IBLOCK_TYPE" => "-",
+                                "IBLOCK_ID" => $arParams["IBLOCK_ID"],
+                                "NEWS_COUNT" => 150,
+                                "SORT_BY1" => $arParams["SORT_BY1"],
+                                "SORT_ORDER1" => $arParams["SORT_ORDER1"],
+                                "SORT_BY2" => $arParams["SORT_BY2"],
+                                "SORT_ORDER2" => $arParams["SORT_ORDER2"],
+                                "FILTER_NAME" => "arRelatedProductsFilter",
+                                "FIELD_CODE" => array(
+                                    0 => "ID",
+                                    1 => "CODE",
+                                    2 => "PREVIEW_PICTURE",
+                                    3 => "DETAIL_PICTURE",
+                                    4 => "",
+                                ),
+                                "PROPERTY_CODE" => array(
+                                    0 => "",
+                                    1 => "PRODUCT_FEATURE",
+                                    2 => "PRODUCT_PROPS",
+                                    3 => "PRODUCT_COMPOSITION",
+                                    4 => "PRODUCT_TYPE",
+                                    5 => "",
+                                ),
+                                "CHECK_DATES" => "N",
+                                "STRICT_SECTION_CHECK" => "N",
+                                "IBLOCK_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["news"],
+                                "SECTION_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["section"],
+                                "DETAIL_URL" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["element"],
+                                "SEARCH_PAGE" => $arResult["FOLDER"] . $arResult["URL_TEMPLATES"]["search"],
+                                "CACHE_TYPE" => "A",
+                                "CACHE_TIME" => $arParams["CACHE_TIME"],
+                                "CACHE_FILTER" => "N",
+                                "CACHE_GROUPS" => "N",
+                                "PREVIEW_TRUNCATE_LEN" => $arParams["PREVIEW_TRUNCATE_LEN"],
+                                "ACTIVE_DATE_FORMAT" => $arParams["LIST_ACTIVE_DATE_FORMAT"],
+                                "SET_TITLE" => "N",
+                                "SET_BROWSER_TITLE" => "N",
+                                "SET_META_KEYWORDS" => "N",
+                                "SET_META_DESCRIPTION" => "N",
+                                "MESSAGE_404" => $arParams["MESSAGE_404"],
+                                "SET_STATUS_404" => "N",
+                                "SHOW_404" => "N",
+                                "FILE_404" => $arParams["FILE_404"],
+                                "SET_LAST_MODIFIED" => "N",
+                                "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+                                "ADD_SECTIONS_CHAIN" => "N",
+                                "HIDE_LINK_WHEN_NO_DETAIL" => "N",
+                                "PARENT_SECTION" => $arResult["VARIABLES"]["SECTION_ID"],
+                                "PARENT_SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
+                                "INCLUDE_SUBSECTIONS" => "Y",
+                                "DISPLAY_DATE" => $arParams["DISPLAY_DATE"],
+                                "DISPLAY_NAME" => "Y",
+                                "DISPLAY_PICTURE" => $arParams["DISPLAY_PICTURE"],
+                                "DISPLAY_PREVIEW_TEXT" => $arParams["DISPLAY_PREVIEW_TEXT"],
+                                "MEDIA_PROPERTY" => $arParams["MEDIA_PROPERTY"],
+                                "SLIDER_PROPERTY" => $arParams["SLIDER_PROPERTY"],
+                                "PAGER_TEMPLATE" => $arParams["PAGER_TEMPLATE"],
+                                "DISPLAY_TOP_PAGER" => "N",
+                                "DISPLAY_BOTTOM_PAGER" => "Y",
+                                "PAGER_TITLE" => $arParams["PAGER_TITLE"],
+                                "PAGER_SHOW_ALWAYS" => "N",
+                                "PAGER_DESC_NUMBERING" => "N",
+                                "PAGER_DESC_NUMBERING_CACHE_TIME" => $arParams["PAGER_DESC_NUMBERING_CACHE_TIME"],
+                                "PAGER_SHOW_ALL" => "N",
+                                "PAGER_BASE_LINK_ENABLE" => "N",
+                                "PAGER_BASE_LINK" => $arParams["PAGER_BASE_LINK"],
+                                "PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
+                                "USE_RATING" => $arParams["USE_RATING"],
+                                "DISPLAY_AS_RATING" => $arParams["DISPLAY_AS_RATING"],
+                                "MAX_VOTE" => $arParams["MAX_VOTE"],
+                                "VOTE_NAMES" => $arParams["VOTE_NAMES"],
+                                "USE_SHARE" => $arParams["LIST_USE_SHARE"],
+                                "SHARE_HIDE" => $arParams["SHARE_HIDE"],
+                                "SHARE_TEMPLATE" => $arParams["SHARE_TEMPLATE"],
+                                "SHARE_HANDLERS" => $arParams["SHARE_HANDLERS"],
+                                "SHARE_SHORTEN_URL_LOGIN" => $arParams["SHARE_SHORTEN_URL_LOGIN"],
+                                "SHARE_SHORTEN_URL_KEY" => $arParams["SHARE_SHORTEN_URL_KEY"],
+                                "TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"],
+                                "COMPONENT_TEMPLATE" => "sectionPage.list",
+                                "AJAX_MODE" => "N",
+                                "AJAX_OPTION_JUMP" => "N",
+                                "AJAX_OPTION_STYLE" => "Y",
+                                "AJAX_OPTION_HISTORY" => "N",
+                                "AJAX_OPTION_ADDITIONAL" => ""
+                            ),
+                            false
+                        );
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end .section-->
+    </div>
+<? endif ?>
+<div class="page__section">
+    <!-- begin .section-->
+    <div class="section section_role_banner">
+        <div class="section__content">
+            <div class="page__container">
+                <div class="section__banner">
+                    <!-- begin .banner-->
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:news.list",
+                        "slider_banner_product",
+                        array(
+                            "ACTIVE_DATE_FORMAT" => "d.m.Y",    // Формат показа даты
+                            "ADD_SECTIONS_CHAIN" => "N",    // Включать раздел в цепочку навигации
+                            "AJAX_MODE" => "N",    // Включить режим AJAX
+                            "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
+                            "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
+                            "AJAX_OPTION_JUMP" => "N",    // Включить прокрутку к началу компонента
+                            "AJAX_OPTION_STYLE" => "Y",    // Включить подгрузку стилей
+                            "CACHE_FILTER" => "N",    // Кешировать при установленном фильтре
+                            "CACHE_GROUPS" => "Y",    // Учитывать права доступа
+                            "CACHE_TIME" => "36000000",    // Время кеширования (сек.)
+                            "CACHE_TYPE" => "A",    // Тип кеширования
+                            "CHECK_DATES" => "Y",    // Показывать только активные на данный момент элементы
+                            "DETAIL_URL" => "",    // URL страницы детального просмотра (по умолчанию - из настроек инфоблока)
+                            "DISPLAY_BOTTOM_PAGER" => "Y",    // Выводить под списком
+                            "DISPLAY_DATE" => "Y",    // Выводить дату элемента
+                            "DISPLAY_NAME" => "Y",    // Выводить название элемента
+                            "DISPLAY_PICTURE" => "Y",    // Выводить изображение для анонса
+                            "DISPLAY_PREVIEW_TEXT" => "Y",    // Выводить текст анонса
+                            "DISPLAY_TOP_PAGER" => "N",    // Выводить над списком
+                            "FIELD_CODE" => array(    // Поля
+                                0 => "PREVIEW_PICTURE",
+                                1 => "DETAIL_PICTURE",
+                            ),
+                            "FILTER_NAME" => "",    // Фильтр
+                            "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
+                            "IBLOCK_ID" => INFINITY_PRODUCT_BANNERS_IB_ID,    // Код информационного блока
+                            "IBLOCK_TYPE" => "content",    // Тип информационного блока (используется только для проверки)
+                            "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
+                            "INCLUDE_SUBSECTIONS" => "Y",    // Показывать элементы подразделов раздела
+                            "MESSAGE_404" => "",    // Сообщение для показа (по умолчанию из компонента)
+                            "NEWS_COUNT" => "10",    // Количество новостей на странице
+                            "PAGER_BASE_LINK_ENABLE" => "N",    // Включить обработку ссылок
+                            "PAGER_DESC_NUMBERING" => "N",    // Использовать обратную навигацию
+                            "PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",    // Время кеширования страниц для обратной навигации
+                            "PAGER_SHOW_ALL" => "N",    // Показывать ссылку "Все"
+                            "PAGER_SHOW_ALWAYS" => "N",    // Выводить всегда
+                            "PAGER_TEMPLATE" => ".default",    // Шаблон постраничной навигации
+                            "PAGER_TITLE" => "Новости",    // Название категорий
+                            "PARENT_SECTION" => "",    // ID раздела
+                            "PARENT_SECTION_CODE" => "",    // Код раздела
+                            "PREVIEW_TRUNCATE_LEN" => "",    // Максимальная длина анонса для вывода (только для типа текст)
+                            "PROPERTY_CODE" => array(    // Свойства
+                                0 => "",
+                                1 => "",
+                            ),
+                            "SET_BROWSER_TITLE" => "N",    // Устанавливать заголовок окна браузера
+                            "SET_LAST_MODIFIED" => "N",    // Устанавливать в заголовках ответа время модификации страницы
+                            "SET_META_DESCRIPTION" => "N",    // Устанавливать описание страницы
+                            "SET_META_KEYWORDS" => "N",    // Устанавливать ключевые слова страницы
+                            "SET_STATUS_404" => "N",    // Устанавливать статус 404
+                            "SET_TITLE" => "N",    // Устанавливать заголовок страницы
+                            "SHOW_404" => "N",    // Показ специальной страницы
+                            "SORT_BY1" => "ACTIVE_FROM",    // Поле для первой сортировки новостей
+                            "SORT_BY2" => "SORT",    // Поле для второй сортировки новостей
+                            "SORT_ORDER1" => "DESC",    // Направление для первой сортировки новостей
+                            "SORT_ORDER2" => "ASC",    // Направление для второй сортировки новостей
+                            "STRICT_SECTION_CHECK" => "N",    // Строгая проверка раздела для показа списка
+                        ),
+                        false
+                    ); ?>
+                    <!-- end .banner-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end .section-->
+</div>
+<div class="page__section">
+    <!-- begin .section-->
+    <div class="section section_role_attention-panel">
+        <div class="section__content">
+            <div class="page__container">
+                <div class="section__banner">
+                    <!-- begin .attention-panel-->
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        array(
+                            "AREA_FILE_SHOW" => "file",
+                            "PATH" => SITE_TEMPLATE_PATH . "/include/bottom_form.php",
+                            "AREA_FILE_RECURSIVE" => "N",
+                            "EDIT_MODE" => "html",
+                        ),
+                        false
+                    );
+                    ?>
+                    <!-- end .attention-panel-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end .section-->
+</div>
+<? if (!empty($arResult["VARIANTS"]) && !empty($currentProduct)) : // Товар с ТП (выбрано первое попавшееся)
+?>
+    <div id="whereBuy" class="popup popup-buy popup-buy_width_big mfp-hide">
+        <div class="popup_content">
+            <h3 class="popup__title">Выберите магазин</h3>
+            <div class="links">
+                <div class="links__list">
+                    <? if (!empty($currentProduct["PROPERTY_LINK_VALUE"]) && !empty($arResult['MARKETPLACE_LINKS']["wildberries"])) : ?>
+                        <? $link = $arResult['MARKETPLACE_LINKS']["wildberries"]; ?>
+                        <a class="links__item" href="<?= $currentProduct["PROPERTY_LINK_VALUE"] ?>" target="_blank" id="marketplace-button-<?= $link['CODE'] ?>">
+                            <img class="links__img" src="<?= $link['LOGO']["src"] ?>" alt="<?= (!empty($link['NAME']) ? 'Купить на ' . $link['NAME'] : '') ?>">
+                        </a>
+                    <? endif; ?>
+                    <? if (!empty($currentProduct["PROPERTY_MARKETPLACE_OZON_VALUE"]) && !empty($arResult['MARKETPLACE_LINKS']["ozon"])) : ?>
+                        <? $link = $arResult['MARKETPLACE_LINKS']["ozon"]; ?>
+                        <a class="links__item" href="<?= $currentProduct["PROPERTY_MARKETPLACE_OZON_VALUE"] ?>" target="_blank" id="marketplace-button-<?= $link['CODE'] ?>">
+                            <img class="links__img" src="<?= $link['LOGO']["src"] ?>" alt="<?= (!empty($link['NAME']) ? 'Купить на ' . $link['NAME'] : '') ?>">
+                        </a>
+                    <? endif; ?>
+                    <? if (!empty($currentProduct["PROPERTY_MARKETPLACE_GOLDAPPLE_VALUE"]) && !empty($arResult['MARKETPLACE_LINKS']["gold-apple"])) : ?>
+                        <? $link = $arResult['MARKETPLACE_LINKS']["gold-apple"]; ?>
+                        <a class="links__item" href="<?= $currentProduct["PROPERTY_MARKETPLACE_GOLDAPPLE_VALUE"] ?>" target="_blank" id="marketplace-button-<?= $link['CODE'] ?>">
+                            <img class="links__img" src="<?= $link['LOGO']["src"] ?>" alt="<?= (!empty($link['NAME']) ? 'Купить на ' . $link['NAME'] : '') ?>">
+                        </a>
+                    <? endif; ?>
+                    <a class="links__item" href="/distributors/">
+                        <?
+                        $src = '';
+                        if (!empty($currentProduct['PROPERTY_DISTRIBUTORS_IMAGE_VALUE'])) {
+                            $distributorsImage = CFile::ResizeImageGet($currentProduct['PROPERTY_DISTRIBUTORS_IMAGE_VALUE'], array('width' => 212, 'height' => 100), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+                            $src = $distributorsImage['src'];
+                        } else {
+                            $src = '/upload/images/default_buy_from_a_distributor.jpg';
+                        }
+                        ?>
+                        <? if (!empty($src)) : ?>
+                            <img class="links__img" src="<?= $src ?>" alt="Купить у дистрибьютора">
+                        <? else : ?>
+                            Купить у дистрибьютора
+                        <? endif; ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<? else : // Товар без ТП
+?>
+    <div id="whereBuy" class="popup popup-buy popup-buy_width_big mfp-hide">
+        <div class="popup_content">
+            <h3 class="popup__title">Выберите магазин</h3>
+            <div class="links">
+                <div class="links__list">
+                    <? if (!empty($arResult["PROPERTIES"]["COMMON_LINK"]["VALUE"]) && !empty($arResult['MARKETPLACE_LINKS']["wildberries"])) : ?>
+                        <? $link = $arResult['MARKETPLACE_LINKS']["wildberries"]; ?>
+                        <a class="links__item" href="<?= $arResult["PROPERTIES"]["COMMON_LINK"]["VALUE"] ?>" target="_blank" id="marketplace-button-<?= $link['CODE'] ?>">
+                            <img class="links__img" src="<?= $link['LOGO']["src"] ?>" alt="<?= (!empty($link['NAME']) ? 'Купить на ' . $link['NAME'] : '') ?>">
+                        </a>
+                    <? endif; ?>
+                    <? if (!empty($arResult["PROPERTIES"]["MARKETPLACE_OZON"]["VALUE"]) && !empty($arResult['MARKETPLACE_LINKS']["ozon"])) : ?>
+                        <? $link = $arResult['MARKETPLACE_LINKS']["ozon"]; ?>
+                        <a class="links__item" href="<?= $arResult["PROPERTIES"]["MARKETPLACE_OZON"]["VALUE"] ?>" target="_blank" id="marketplace-button-<?= $link['CODE'] ?>">
+                            <img class="links__img" src="<?= $link['LOGO']["src"] ?>" alt="<?= (!empty($link['NAME']) ? 'Купить на ' . $link['NAME'] : '') ?>">
+                        </a>
+                    <? endif; ?>
+                    <? if (!empty($arResult["PROPERTIES"]["MARKETPLACE_GOLDAPPLE"]["VALUE"]) && !empty($arResult['MARKETPLACE_LINKS']["gold-apple"])) : ?>
+                        <? $link = $arResult['MARKETPLACE_LINKS']["gold-apple"]; ?>
+                        <a class="links__item" href="<?= $arResult["PROPERTIES"]["MARKETPLACE_GOLDAPPLE"]["VALUE"] ?>" target="_blank" id="marketplace-button-<?= $link['CODE'] ?>">
+                            <img class="links__img" src="<?= $link['LOGO']["src"] ?>" alt="<?= (!empty($link['NAME']) ? 'Купить на ' . $link['NAME'] : '') ?>">
+                        </a>
+                    <? endif; ?>
+                    <a class="links__item" href="/distributors/">
+                        <?
+                        $src = '';
+                        if (!empty($arResult['PROPERTIES']['DISTRIBUTORS_IMAGE']['VALUE'])) {
+                            $distributorsImage = CFile::ResizeImageGet($arResult['PROPERTIES']['DISTRIBUTORS_IMAGE']['VALUE'], array('width' => 212, 'height' => 100), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+                            $src = $distributorsImage['src'];
+                        } else {
+                            $src = '/upload/images/default_buy_from_a_distributor.jpg';
+                        }
+                        ?>
+                        <? if (!empty($src)) : ?>
+                            <img class="links__img" src="<?= $src ?>" alt="Купить у дистрибьютора">
+                        <? else : ?>
+                            Купить у дистрибьютора
+                        <? endif; ?>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<? endif; ?>

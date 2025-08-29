@@ -1,0 +1,16 @@
+mixin icon-controls(data)
+	- var DIR = 'assets/blocks/icon-controls/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .icon-controls
+	+b.icon-controls&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list
+					each item in data.items
+						- var wrapperClass = item.wrapperClass || '';
+						+e('li').item(class=wrapperClass)
+							- var attr = item.attr
+
+							+icon-control(item)&attributes(attr)
+		block
+	// end .icon-controls

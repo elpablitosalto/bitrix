@@ -1,0 +1,21 @@
+mixin brands-grid(data)
+	- var DIR = 'assets/blocks/brands-grid/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .brands-grid
+	+b.brands-grid&attributes(attributes)
+		if data
+			+e.grid
+				if data.items
+					each item in data.items
+						- var attr = item.attr || {}
+						+e.item&attributes(attr)
+							+brand(item)
+
+			if data.controls
+				+e.controls
+					each control in data.controls
+						+e.control
+							- var attr = control.attr || {}
+							+button(control)&attributes(attr)
+		block
+	// end .brands-grid

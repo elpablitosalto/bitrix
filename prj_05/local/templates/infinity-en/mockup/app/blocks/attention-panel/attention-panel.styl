@@ -1,0 +1,52 @@
+DIR = '../blocks/attention-panel/'
+IMG_DIR = DIR + 'images/'
+
+.attention-panel
+	display block
+	padding 28px 24px 31px
+	font-size 14px
+	line-height 1.22
+	border 1px solid var(--color-grey)
+
+	+above(size-l)
+		padding 39px 54px 40px 50px
+		font-size 16px
+
+
+
+	&__holder
+		display block
+
+		+above(size-l)
+			display flex
+			flex-wrap nowrap
+			align-items center
+			width 100%
+
+
+
+	&__text
+		display block
+		text-align center
+
+		+above(size-l)
+			flex-grow 1
+			flex-basis auto
+			padding 0 70px 0 0
+			text-align left
+
+
+
+	&__controls
+		max-width 194px
+		margin 12px auto 0
+
+		+above(size-m)
+			margin-top 20px
+
+		+above(size-l)
+			flex-shrink 0
+			flex-basis 226px
+			width 226px
+			max-width 100%
+			margin 0

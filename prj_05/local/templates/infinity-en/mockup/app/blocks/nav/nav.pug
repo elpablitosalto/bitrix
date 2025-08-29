@@ -1,0 +1,25 @@
+mixin nav(data = {})
+	- var DIR = 'assets/blocks/nav/';
+	- var IMG_DIR = DIR + 'images/';
+	- var items = data.items || []
+	// begin .nav
+	+b.NAV.nav&attributes(attributes)
+		if data.items
+			+nav-list-content(data)
+		block
+	// end .nav
+
+mixin nav-list-content(data)
+	+e.UL.list
+		each item in data.items
+			+e.LI.item
+				- var attr = item.attr || {};
+
+				// Active link modifier: nav__link_state_active
+				+e.link()&attributes(attr)
+					!=item.text
+
+				if item.sub
+					+e.sub
+						if item.sub.items
+							+nav-list-content(item.sub)

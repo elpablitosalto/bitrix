@@ -1,0 +1,29 @@
+mixin section(data = {})
+	- var DIR = 'assets/blocks/section/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .section
+	+b.section&attributes(attributes)
+		+e.main
+			if data.header
+				- var header = data.header;
+				- var attr = data.header.attr || {}
+				+e.header&attributes(attr)
+					+e.header-container
+						if header.title
+							+e.title
+								+title(header.title)
+
+						if data.header.carouselNav
+							+e.carousel-nav
+								- var nav = data.header.carouselNav;
+								- var attr = nav.attr || {};
+								+carousel-nav(nav)&attributes(attr)
+
+			if data.description
+				+e.content.page__container
+					+e('p').description
+						!= data.description.text
+
+			block
+
+	// end .section

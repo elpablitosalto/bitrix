@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Продукция", 
+		"/catalog/", 
+		Array(), 
+		Array("PARAM_1"=>"VALUE_1"), 
+		"" 
+	),
+	Array(
+		"Коллекции", 
+		"/collections/", 
+		Array(), 
+		Array("PARAM_1"=>"VALUE_1"), 
+		"" 
+	),
+	Array(
+		"Портфолио", 
+		"/portfolio/", 
+		Array(), 
+		Array("PARAM_1"=>"VALUE_1"), 
+		"" 
+	),
+	Array(
+		"Индивидуальный заказ", 
+		"/custom-order/", 
+		Array(), 
+		Array("PARAM_1"=>"VALUE_1"), 
+		"" 
+	),
+	Array(
+		"Материалы", 
+		"/materials/", 
+		Array(), 
+		Array("PARAM_1"=>"VALUE_1"), 
+		"" 
+	),
+);
+?>

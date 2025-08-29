@@ -1,0 +1,67 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Услуги",
+		"/services/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"О компании",
+		"/about/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Кейсы",
+		"/gazeta/cases",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Газета НФ",
+		"/gazeta/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Партнерам",
+		"/partnership/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Мероприятия",
+		"https://leads.noboring-finance.ru/events",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Контакты",
+		"/contacts/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
+		"Карьера",
+		"https://leads.noboring-finance.ru/career",
+		Array(),
+		Array("MORE"=>"Y"),
+		""
+	),
+	Array(
+		"Онлайн-курсы",
+		"/services?category_id=15",
+		Array(),
+		Array("MORE"=>"Y"),
+		""
+	)
+);
+?>

@@ -1,0 +1,21 @@
+mixin brand(data)
+	- var DIR = 'assets/blocks/brand/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .brand
+	+b.brand&attributes(attributes)
+		if data
+			+e.wrapper
+				if data.image
+					+e.illustration
+						+image(data.image, IMG_DIR)
+
+				if data.icon
+					+e.icon-holder
+						!=data.icon
+
+				if data.title
+					+e('span').title
+						!=data.title
+
+		block
+	// end .brand

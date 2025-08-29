@@ -1,0 +1,20 @@
+mixin info-panel(data)
+	- var DIR = 'assets/blocks/info-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .info-block
+	+b.info-panel&attributes(attributes)
+		if data
+			+e.content
+				if data.title
+					+e.title
+						+title(data.title)
+				+e.main
+					if data.text
+						+e.text
+							!=data.text
+
+					if data.image
+						+e.illustration
+							+image(data.image, IMG_DIR)
+		block
+	// end .info-block

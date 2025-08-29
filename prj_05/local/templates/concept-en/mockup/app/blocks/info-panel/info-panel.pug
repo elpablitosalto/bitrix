@@ -1,0 +1,31 @@
+mixin info-panel(data = {})
+	- var DIR = 'assets/blocks/info-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .info-panel
+	+b.info-panel&attributes(attributes)
+		+e.holder
+			if data.illustration
+				+e.illustration
+					+image(data.illustration.image, IMG_DIR)
+
+			+e.content
+				if data.title
+					+e.header
+						+e.H2.title
+							!=data.title
+
+				if data.text
+					+e.text
+						!=data.text
+
+
+				if data.control
+					- var control = data.control;
+					- var attr = control.attr || {};
+
+					+e.controls
+						+button&attributes(attr)&attributes(attributes)._width_full._size_l._text_size-m._text_tall.__control
+							!=control.text
+
+		block
+	// end .info-panel

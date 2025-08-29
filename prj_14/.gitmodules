@@ -1,0 +1,4 @@
+[submodule "local/templates/vate/mockup"]
+	path = local/templates/vate/mockup
+	url = https://gitlab.com/StXrom/vate-tire-mockup.git
+	branch = build

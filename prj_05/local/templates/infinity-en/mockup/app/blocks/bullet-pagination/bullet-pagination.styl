@@ -1,0 +1,52 @@
+DIR = '../blocks/bullet-pagination/'
+IMG_DIR = DIR + 'images/'
+
+.bullet-pagination
+	display flex
+	vertical-align middle
+	flex-wrap nowrap
+	align-items center
+	justify-content center
+	padding 1px
+	font-size 0
+
+
+
+	&__button
+		display inline-block
+		vertical-align middle
+		width 4px
+		height 4px
+		margin 0 4px 0 0
+		color var(--color-white)
+		font-size 0
+		text-decoration none
+		background transparent
+		border 1px solid currentColor
+		border-radius 8px
+		outline none
+		def-trn width, background
+
+		+above(size-l)
+			width 10px
+			height 10px
+			margin 0 10px 0 0
+			border-width 2px
+
+		&:hover
+			color var(--color-white)
+			text-decoration none
+			background currentColor
+			outline none
+
+		&:last-child
+			margin-right 0
+
+		// Modifiers
+		&_state
+			&_active
+				width 24px
+				background currentColor
+
+				+above(size-m)
+					width 55px

@@ -1,0 +1,1 @@
+$("#mauerCalc-form .print_button").click(function(){var extraCSS=$(this).data("style");$(this).parents(".contentSection").printThis({formValues:!0,importCSS:!1,loadCSS:extraCSS})});$("#laying-patterns .layingWrap .print_button").click(function(){var extraCSS=$(this).data("style");$(".mfp-content").printThis({formValues:!0,importCSS:!1,loadCSS:extraCSS})});

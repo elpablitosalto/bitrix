@@ -1,0 +1,86 @@
+.set-carousel {
+	position: relative;
+	display: block;
+}
+
+.set-carousel__slide {
+	padding: 15px;
+	border: 1px solid #3333cc;
+}
+
+@media only screen and (min-width: 768px) {
+	.set-carousel__slide {
+		padding: 10px;
+	}
+}
+
+.set-carousel h3:not([class]) {
+	display: block;
+	margin: 0 0 16px;
+	color: #3333cc;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.set-carousel h3:not([class]):last-child {
+	margin-bottom: 0;
+}
+
+.set-carousel h4:not([class]) {
+	display: block;
+	margin: 0 0 4px;
+	color: #282323;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.set-carousel h4:not([class]):last-child {
+	margin-bottom: 0;
+}
+
+.set-carousel h4:not([class]) strong:not([class]) {
+	font-weight: 600;
+}
+
+.set-carousel h4:not([class]) span:not([class]) {
+	color: #3333cc;
+}
+
+.set-carousel section:not([class]) {
+	margin: 0 0 12px;
+}
+
+@media only screen and (min-width: 768px) {
+	.set-carousel section:not([class]) {
+		margin: 0 0 16px;
+	}
+}
+
+.set-carousel section:not([class]):last-child {
+	margin-bottom: 0;
+}
+
+.set-carousel section:not([class]) p:not([class]) {
+	margin: 0 0 4px;
+}
+
+.set-carousel section:not([class]) p:not([class]):last-child {
+	margin-bottom: 0;
+}
+
+.set-carousel p:not([class]):last-child {
+	margin-bottom: 0;
+}
+
+.set-carousel__pagination {
+	position: static;
+	padding: 13px 0 15px;
+}
+
+@media only screen and (min-width: 768px) {
+	.set-carousel__pagination {
+		display: none !important;
+	}
+}

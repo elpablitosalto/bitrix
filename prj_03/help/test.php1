@@ -1,0 +1,28 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php"); ?>
+<?php
+$arCatalogID = array(34);
+$arFields['IBLOCK_ID'] = 34;
+$arFields['ID'] = 89627; //Галоши садовые ПВХ
+$arFields['ACCESSORIES_STRING'] = array('Стельки вкладные войлочные', 'Чулок-утеплитель, НТП, 34см.'); //id = 89516, 90051
+
+
+if (in_array($arFields['IBLOCK_ID'], $arCatalogID)) {
+    //Вытаскиваем ID аксессуаров по имени аксессуара
+    $res = CIBlockElement::GetList(false, array('IBLOCK_ID' => $arFields['IBLOCK_ID'], 'NAME' => $arFields['ACCESSORIES_STRING']), false, false, array('ID'));
+    if ($res) {
+        $arAccId = [];
+        while ($ob = $res->Fetch()) {
+            $arAccId[] = $ob['ID'];
+        }
+        //echo "<pre>";var_dump($arAccId);echo "</pre>";
+        if (!empty($arAccId)) {
+            CIBlockElement::SetPropertyValuesEx($arFields['ID'], false, array('ACCESSORIES' => $arAccId));
+        }
+    }
+
+
+}
+?>
+
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

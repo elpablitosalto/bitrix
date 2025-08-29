@@ -1,0 +1,32 @@
+label.error {
+    color: #dc3545;
+}
+.form-control.error {
+    background: #ffdfe2;
+}
+
+.nb-f20-form .nb-form__body, .nb-form__fields {
+    flex-direction: column;
+    gap: 20px;
+}
+.nb-f20-form .nb-form__fields,
+.nb-f20-form .nb-form__fields .nb-form-field {
+    max-width: 100% !important;
+}
+
+
+.nb-f20-form ::-webkit-input-placeholder { text-align:left !important; }
+.nb-f20-form input { text-align:left !important; }
+
+.nb-f20-form .field-file {
+    text-align: left;
+}
+
+.nb-f20-form .nb-form__actions {
+    text-align: center;
+    max-width: 100%;
+}
+
+.nb-f20-form .nb-form__submit {
+    width: auto;
+}

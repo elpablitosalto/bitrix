@@ -1,0 +1,90 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'VATE';
+	- var pageDescription = 'VATE';
+	- var pageKeywords = 'vate';
+
+	- var fileName = 'index.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.section
+		.page__container
+			+section({
+				header: {
+					title: {
+						text: 'Страницы',
+						attr: {
+							class: '_size_h3'
+						}
+					}
+				}
+			})
+				+e.content
+					+work-list({
+						items: [
+							{
+								text: 'Главная страница',
+								class: '',
+								attr: {
+									href: 'front-page.html'
+								}
+							},
+							{
+								text: 'О компании',
+								class: '',
+								attr: {
+									href: 'about.html'
+								}
+							},
+							{
+								text: 'Бренды',
+								class: '',
+								attr: {
+									href: 'brands.html'
+								}
+							},
+							{
+								text: 'Каталог',
+								class: '',
+								attr: {
+									href: 'catalog.html'
+								}
+							},
+						]
+					})
+
+	+e.section
+		.page__container
+			+section({
+				header: {
+					title: {
+						text: 'Dev Страницы',
+						attr: {
+							class: '_size_h3'
+						}
+					}
+				}
+			})
+				+e.content
+					+work-list({
+						items: [
+							{
+								text: 'UI',
+								class: '',
+								attr: {
+									href: 'ui.html'
+								}
+							},
+							{
+								text: 'Типографика',
+								class: '',
+								attr: {
+									href: 'typography.html'
+								}
+							},
+						]
+					})

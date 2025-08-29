@@ -1,0 +1,110 @@
+DIR = '../blocks/section/'
+IMG_DIR = DIR + 'images/'
+
+.section
+	position relative
+	z-index 20
+	display block
+	overflow hidden
+	padding 50px 0
+
+	+above(size-m)
+		padding 110px 0
+
+
+
+	&__header
+		display block
+		margin 0 auto 30px
+
+		&:last-child
+			margin-bottom 0
+
+		+above(size-xxl)
+			margin 0 auto 40px
+
+
+		&_align
+			&_center
+				.section
+					&__header-container
+						justify-content center
+
+
+
+	&__carousel-nav
+		display none
+
+		+above(size-xxl)
+			display block
+
+
+
+	&__description
+		margin 0 0 30px
+		font-weight 400
+
+		+above(size-xxl)
+			margin 0 0 40px
+
+
+
+	&__image
+		display block
+		width 100%
+
+
+
+	&__content
+		display block
+
+
+
+	&__header-container
+		display flex
+		justify-content space-between
+
+
+
+	&__info-panel
+		margin-bottom 66px
+
+		+above(size-m)
+			margin-bottom 47px
+
+		+above(size-xxl)
+			margin-bottom 45px
+
+
+
+	// Modifiers
+
+	&_overflow
+		&_visible
+			overflow visible
+
+
+	&_spacing
+		&_none
+			padding 0
+
+		&_top
+			&-none
+				padding-top 0
+
+		&_bottom
+			&-xs
+				padding-bottom 20px
+
+			&-none
+				padding-bottom 0
+
+
+	&_style
+		&_filled
+			.section
+				&__main
+					padding 60px 0
+					color var(--color-black)
+					background var(--color-primary)
+

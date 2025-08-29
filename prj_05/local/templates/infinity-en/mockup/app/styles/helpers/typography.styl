@@ -1,0 +1,366 @@
+:root
+	--color-primary $c-primary
+	--color-primary-dark $c-primary
+	--color-secondary $c-secondary
+	--color-alt $c-alt
+	--color-black $c-black
+	--color-black-10 rgba($c-black, .1)
+	--color-black-25 rgba($c-black, .25)
+	--color-darker $c-darker
+	--color-dark $c-dark
+	--color-grey $c-grey
+	--color-milk $c-milk
+	--color-milk-0  rgba($c-milk, 0)
+	--color-white $c-white
+	--color-error $c-error
+	--shadow-dark rgba($c-dark, .2)
+
+body
+	color var(--color-dark)
+	font-family Formular, Arial, sans-serif
+	font-variant no-common-ligatures
+	font-size 16px
+	font-weight 300
+	line-height 1.5
+
+
+
+h1:not([class])
+h2:not([class])
+h3:not([class])
+h4:not([class])
+h5:not([class])
+h6:not([class])
+	font-weight 700
+	line-height 1.4
+
+	&:first-child
+		margin-top 0
+
+	&:last-child
+		margin-bottom 0
+
+h1:not([class])
+	margin 40px 0
+	font-size 56px
+
+h2:not([class])
+	margin 32px 0
+	font-size 48px
+
+h3:not([class])
+	margin 28px 0
+	font-size 32px
+
+h4:not([class])
+	margin 20px 0
+	font-size 24px
+
+h5:not([class])
+	margin 15px 0
+	font-size 20px
+
+h6:not([class])
+	margin 10px 0
+	font-size 18px
+
+
+
+p:not([class])
+ul:not([class])
+ol:not([class])
+table:not([class])
+img:not([class])
+hr:not([class])
+fieldset:not([class])
+	margin 0 0 1.5em
+
+	&:last-child
+		margin-bottom 0
+
+
+
+img:not([class])
+	max-width 100%
+
+
+
+ul:not([class])
+	margin 0 0 1.5em
+	list-style none
+
+	& > li:not([class])
+		&:before
+			content ''
+			position absolute
+			top 0.5em
+			left 8px
+			width 5px
+			height 5px
+			background var(--color-dark)
+			border-radius 50%
+
+ol:not([class])
+	counter-reset ol
+
+	& > li:not([class])
+		position relative
+		padding 0 0 0 20px
+
+		&:before
+			content counter(ol)'.'
+			counter-increment ol
+			position absolute
+			top 0
+			left 0
+			z-index 1
+			display block
+			flex 0 0 auto
+			box-sizing border-box
+			width 20px
+			color inherit
+			font inherit
+			text-align left
+
+		&:nth-child(n+10)
+			padding 0 0 0 28px
+
+			&:before
+				min-width 28px
+
+		&:nth-child(n+100)
+			padding 0 0 0 36px
+
+			&:before
+				min-width 36px
+
+		&:nth-child(n+1000)
+			padding 0 0 0 44px
+
+			&:before
+				min-width 44px
+
+li:not([class])
+	position relative
+	margin 0 0 10px
+	padding 0 0 0 20px
+	list-style none
+
+	&:last-child
+		margin-bottom 0
+
+
+
+table:not([class])
+		display table
+		width 100%
+		margin 0 0 1.5em
+		border-spacing 1px
+		border-collapse collapse
+		border 1px solid #dedede
+
+caption:not([class])
+	display table-caption
+	padding 0 0 10px
+	font-size 1.1em
+	text-align center
+
+th:not([class])
+	vertical-align middle
+	padding 10px
+	font-weight 700
+	text-align center
+	background #f1f1f1
+	border 1px solid #dedede
+
+tbody:not([class])
+	th:not([class])
+		text-align left
+
+td:not([class])
+	padding 10px
+	border 1px solid #dedede
+
+tr:not([class]):nth-child(even)
+	th:not([class])
+	td:not([class])
+		background #e6e6e6
+
+thead:not([class])
+	color #888
+
+tfoot:not([class])
+	color #888
+	th:not([class])
+	td:not([class])
+		background #e6e6e6
+
+
+
+a:not([class])
+	color var(--color-primary)
+	text-decoration underline
+	def-trn(color)
+
+	&:hover
+		color var(--color-primary)
+		text-decoration none
+
+	&:focus-visible
+		color inherit
+		text-decoration underline
+
+sub:not([class])
+	bottom -.25em
+	vertical-align bottom
+	font-size .75em
+
+sup:not([class])
+	top -.5em
+	vertical-align top
+	font-size .75em
+
+i:not([class])
+em:not([class])
+dfn:not([class])
+	font-style italic
+
+b:not([class])
+strong:not([class])
+	font-weight 700
+
+s:not([class])
+strike:not([class])
+del:not([class])
+	text-decoration line-through
+
+ins:not([class])
+	text-decoration underline
+
+q:not([class])
+	display inline
+
+	&:before
+		content open-quote
+
+	&:after
+		content close-quote
+
+kbd:not([class])
+	font-family monospace, monospace
+
+mark:not([class])
+	background #f1f1f1
+
+abbr:not([class])
+	position relative
+	text-decoration none
+
+	&[title]:after
+		content ''
+		position absolute
+		top 100%
+		left 0
+		width 100%
+		height 1px
+		border-bottom 1px dotted #000
+
+blockquote:not([class])
+	margin 0 0 1.5em
+	padding 20px
+	background #f1f1f1
+	border 1px solid #b1b1b1
+
+dl:not([class])
+	margin 0 0 1.5em
+
+dd:not([class])
+	padding 0 0 0 50px
+
+hr:not([class])
+	width 100%
+	height 0
+	background none
+	border none
+	border-bottom 2px groove #dedede
+
+
+
+fieldset:not([class])
+	padding 20px
+	border 1px solid #dedede
+
+legend:not([class])
+	margin 0 0 0 2em
+	padding 0 .5em
+
+select:not([class])
+	width 200px
+	padding 10px
+	line-height 1.6
+	background #fff
+	border 1px solid var(--color-dark)
+
+input[type='text']:not([class]),
+input[type='password']:not([class]),
+input[type='email']:not([class]),
+input[type='url']:not([class]),
+input[type='number']:not([class]),
+input[type='datetime']:not([class]),
+input[type='datetime-local']:not([class]),
+input[type='search']:not([class]),
+input[type='tel']:not([class]),
+input[type='month']:not([class]),
+input[type='week']:not([class]),
+input[type='date']:not([class]),
+input[type='time']:not([class]),
+textarea:not([class])
+	box-sizing border-box
+	width 200px
+	margin 0 0 5px
+	padding 10px
+	color var(--color-dark)
+	font-size 1em
+	line-height 1.6
+	text-align left
+	background #fff
+	border 1px solid var(--color-dark)
+	outline none
+
+	placeholder(#ddd, 16px)
+
+textarea:not([class])
+	resize none
+
+input[type='radio']:not([class]),
+input[type='checkbox']:not([class])
+	margin 0 2px
+
+button:not([class]),
+input[type='button']:not([class]),
+input[type='reset']:not([class]),
+input[type='submit']:not([class])
+	padding 10px
+	font-size 1em
+	line-height 1.6
+	background #f5f5f5
+	border 1px solid #dedede
+	border-radius 0
+	outline none
+
+button:not([class]):hover,
+input[type='button']:not([class]):hover,
+input[type='reset']:not([class]):hover,
+input[type='submit']:not([class]):hover
+	background #bbb
+
+label:not([class])
+	font-weight 700
+
+
+
+[class|="bx"]
+	a:not([class])
+		-webkit-text-fill-color currentColor
+		background-color transparent
+		background-image none

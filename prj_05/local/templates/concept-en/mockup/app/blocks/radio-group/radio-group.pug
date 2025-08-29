@@ -1,0 +1,24 @@
+mixin radio-group(data = {})
+	- var DIR = 'assets/blocks/radio-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .radio-group
+	+b.radio-group&attributes(attributes)
+		if data.label
+			+e.label
+				!=data.label
+
+		if data.items
+			+e.UL.list
+				each item in data.items
+					+e.LI.item
+						- var labelClass = data.interactive === false && item.attr.checked ? '_state_active' : '';
+						+e.LABEL.label(class=labelClass)
+							if data.interactive !== false
+								- var attr = item.attr || {}
+
+								+e.INPUT.input&attributes(attr)
+
+							+e.panel
+								!=item.text
+		block
+	// end .radio-group

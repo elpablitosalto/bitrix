@@ -1,0 +1,71 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О нас",
+		"/about/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости",
+		"/news/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Отзывы",
+		"/reviews/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты",
+		"/contacts/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	/*
+	Array(
+		"Гарантия",
+		"/guarantee/",
+		Array(), 
+		Array(), 
+		"" 
+	),
+	*/
+    Array(
+        "Доставка",
+        "/delivery/",
+        Array(),
+        Array(),
+        ""
+    ),
+	Array(
+        "Оплата",
+        "/payment/",
+        Array(),
+        Array(),
+        ""
+    ),
+    Array(
+        "Вопросы и ответы",
+        "/qa/",
+        Array(),
+        Array(),
+        ""
+	),
+	/*
+    Array(
+        "Техническая документация",
+        "/techdoc/",
+        Array(),
+        Array(),
+        ""
+	),
+	*/
+);
+?>

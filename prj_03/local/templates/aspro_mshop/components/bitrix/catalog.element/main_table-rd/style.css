@@ -1,0 +1,40 @@
+.catalog_detail .sku_props .bx_item_detail_size ul li:hover .color_link{
+	color: white;
+}
+.size-table__row .size-table__cell-name{
+    white-space: pre-line;
+}
+.counter_block.counter_block_slim .text{
+    margin: 0px !important;
+}
+.size-group__error_message{
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0px;
+}
+.prices_block_prefix{
+	font-size: 14px;
+	font-weight: 700;
+}
+.prices_block.iblock.prices_block_type_flex{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	justify-content: flex-end;
+}
+.prices_block_mobile{
+	display: none !important; 
+}
+
+@media (max-width: 768px){
+	.prices_block_mobile{
+		display: block !important;
+	}
+	.prices_block.iblock.prices_block_type_flex{
+		justify-content: space-between;
+	}
+	.tabs_content .row{
+		flex-direction: column;
+	}
+}

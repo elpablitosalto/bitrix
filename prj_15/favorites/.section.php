@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Сохраненное";
+$arDirProperties = array(
+
+);
+?>

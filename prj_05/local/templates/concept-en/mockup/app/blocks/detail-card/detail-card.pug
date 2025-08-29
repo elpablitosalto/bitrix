@@ -1,0 +1,54 @@
+mixin detail-card(data = {})
+	- var DIR = 'assets/blocks/detail-card/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .detail-card
+	+b.detail-card&attributes(attributes)
+		+e.header
+			if data.title
+				+e.title
+					+title({
+						tag: 'h2',
+						text: data.title,
+						attr: {
+							class: '_size_h6 _font_secondary'
+						}
+					})
+
+			if data.note
+				+e.note
+					!=data.note
+
+		if data.image
+			+e.showcase
+				+e.illustration
+					+image(data.image, IMG_DIR)
+
+		+e.main
+			if data.radioFilters
+				+e.filters
+					each item in data.radioFilters
+						+e.radio-group
+							+radio-group(item)
+
+			if data.links
+				+e.links
+					each item in data.links
+						+e.link-item
+							- var attr = item.attr || {};
+							+e.link&attributes(attr)
+								!=item.text
+
+			if data.iconProps
+				+e.icon-props
+					+icon-props(data.iconProps)
+
+
+		if data.iconLink
+			+e.footer
+				+e.icon-links
+					+e.icon-link
+						- var attr = data.iconLink.attr || {}
+						+icon-link(data.iconLink)&attributes(attr)
+
+		block
+	// end .detail-card

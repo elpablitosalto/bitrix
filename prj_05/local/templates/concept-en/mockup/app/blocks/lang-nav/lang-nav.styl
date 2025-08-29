@@ -1,0 +1,47 @@
+DIR = '../blocks/lang-nav/'
+IMG_DIR = DIR + 'images/'
+
+.lang-nav
+	display block
+	color var(--color-black)
+	font-size 14px
+	font-weight 700
+	line-height 1.214
+
+
+
+	&__list
+		display flex
+		flex-wrap nowrap
+		align-items stretch
+
+
+
+	&__item
+		display block
+		flex 0 0 auto
+		width auto
+
+
+
+	&__label
+		display block
+		padding 2px 5px
+		color inherit
+		text-decoration none
+		background transparent
+		border none
+		outline none
+
+		&:hover
+			color var(--color-primary)
+			text-decoration none
+
+		// Modifiers
+		&_state
+			&_active
+				color var(--color-white)
+				background-color var(--color-primary)
+
+				&:hover
+					color var(--color-white)

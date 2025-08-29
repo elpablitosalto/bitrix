@@ -1,0 +1,23 @@
+mixin product-grid(data)
+	- var DIR = 'assets/blocks/product-grid/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .product-grid
+	+b.product-grid&attributes(attributes)
+		if data
+			if data.items
+				each item in data.items
+					+e.item
+						- var attr = item.attr || {};
+						- attr.class = attr.class || '';
+						- attr.class = attr.class.trim();
+						+product-snippet(item)&attributes(attr)
+
+			if data.controls
+				+e.controls
+					each control in data.controls
+						- var controlAttr = control.attr || {};
+						+e.control
+							+button()&attributes(controlAttr)
+								!=control.text
+		block
+	// end .product-grid

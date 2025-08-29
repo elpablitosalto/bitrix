@@ -1,0 +1,14 @@
+<svg width="100" height="101" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle opacity="0.3" cx="48.2502" cy="21.0745" r="7.77518" fill="#5F22A6"/>
+    <circle opacity="0.3" cx="48.2498" cy="82.8139" r="3.88759" fill="#5F22A6"/>
+    <circle opacity="0.3" cx="17.8808" cy="52.4438" r="2.33256" transform="rotate(-90 17.8808 52.4438)" fill="#5F22A6"/>
+    <circle opacity="0.3" cx="78.6204" cy="52.444" r="5.83139" transform="rotate(-90 78.6204 52.444)" fill="#5F22A6"/>
+    <circle opacity="0.3" cx="26.7755" cy="30.9697" r="1.9438" transform="rotate(-45 26.7755 30.9697)" fill="#5F22A6"/>
+    <circle opacity="0.3" cx="69.7243" cy="73.9185" r="4.66511" transform="rotate(-45 69.7243 73.9185)" fill="#5F22A6"/>
+    <circle opacity="0.3" cx="26.7756" cy="73.9186" r="3.11007" transform="rotate(-135 26.7756 73.9186)" fill="#5F22A6"/>
+    <circle opacity="0.3" cx="69.724" cy="30.9695" r="6.22015" transform="rotate(-135 69.724 30.9695)" fill="#5F22A6"/>
+    <g opacity="0.3">
+        <path d="M48.0396 38.5L48.0396 54.7763" stroke="#5F22A6" stroke-width="3.71826" stroke-linecap="round"/>
+        <path d="M48.0396 54.7764H56.0259" stroke="#5F22A6" stroke-width="3.71826" stroke-linecap="round"/>
+    </g>
+</svg>

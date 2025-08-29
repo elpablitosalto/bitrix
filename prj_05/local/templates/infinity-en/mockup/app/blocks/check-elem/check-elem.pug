@@ -1,0 +1,27 @@
+mixin check-elem(data = 'label')
+	- var DIR = 'assets/blocks/check-elem/';
+	- var IMG_DIR = DIR + 'images/';
+	- data = typeof data === 'string' ? {tag: data} : data;
+	- var tag = data.tag || 'label';
+	- var attr = data.attr || {};
+	// begin .check-elem
+	+b(tag).check-elem&attributes(attr)&attributes(attributes)
+		- var attr = data.inputAttr || {};
+		- attr.type = attr.type || 'checkbox';
+
+		+e('input').input&attributes(attr)
+
+		if !data.visualAfter
+			+e.visual
+				| &nbsp;
+
+		+e.label
+			if data.text
+				!=data.text
+
+			block
+
+		if data.visualAfter
+			+e.visual
+				| &nbsp;
+	// end .ckeck-elem

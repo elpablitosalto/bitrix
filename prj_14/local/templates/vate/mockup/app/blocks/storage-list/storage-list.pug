@@ -1,0 +1,37 @@
+mixin storage-list(data)
+	- var DIR = 'assets/blocks/storage-list/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .storage-list
+	+b.storage-list&attributes(attributes)
+		if data.items
+			+e('ul').list
+				each item in data.items
+					+e('li').item
+						- var attr = item.attr || {}
+						if !data.form
+							if item.city
+								+e('span').city
+									!=item.city
+							if item.address
+								+e('span').address
+									!=item.address
+						else
+							+check-elem({
+								attr: {
+									type: 'checkbox',
+									name: item.city,
+									checked: item.checked,
+									class: 'storage-list__checkbox'
+								}
+							})&attributes(attr)
+								if item.city
+									+e('span').city
+										!=item.city
+								if item.address
+									+e('span').address
+										!=item.address
+
+
+
+		block
+	// end .storage-list

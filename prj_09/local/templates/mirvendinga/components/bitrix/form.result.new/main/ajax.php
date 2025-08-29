@@ -1,0 +1,38 @@
+<?php
+require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php';
+use \Bitrix\Main\Web\Json;
+
+// Подключаем модуль веб-форм
+CModule::IncludeModule("form");
+
+// Проверка валидности отправки формы
+if (check_bitrix_sessid()) {
+
+	if(\Mirvendinga\General::recaptchaCheck()) {
+		$request = \Bitrix\Main\Application::getInstance()->getContext()->getRequest();
+		$formErrors = CForm::Check($_POST['WEB_FORM_ID'], $_REQUEST, false, "Y", 'Y');
+
+		// Если не все обязательные поля заполнены
+		if (count($formErrors)) {
+			echo Json::encode(['success' => false, 'errors' => $formErrors]);
+		} elseif ($RESULT_ID = CFormResult::Add($_POST['WEB_FORM_ID'], $_REQUEST)) {
+
+			CFormCRM::onResultAdded($_POST['WEB_FORM_ID'], $RESULT_ID);
+			CFormResult::SetEvent($RESULT_ID);
+			CFormResult::Mail($RESULT_ID);
+
+			echo Json::encode(['success' => true, 'errors' => []]);
+		} else {
+			echo Json::encode(['success' => false, 'errors' => $GLOBALS["strError"]]);
+		}
+	} else {
+		echo Json::encode(['success' => false, 'errors' => ['Не пройдена проверка reCAPTCHA']]);
+	}
+
+} else {
+    // Предотвратили CSRF атаку
+    echo Json::encode(['success' => false, 'errors' => ['Не верная сессия. Попробуйте обновить страницу']]);
+}
+
+// Файл ниже подключать обязательно, там закрытие соединения с базой данных
+require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_after.php';

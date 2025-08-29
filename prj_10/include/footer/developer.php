@@ -1,0 +1,1 @@
+<a class="ml-footer-development d-none d-xl-inline-block" href="https://indexis.ru/" target="_blank">Разработано в Indexis</a>

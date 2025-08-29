@@ -1,0 +1,29 @@
+mixin entry-grid(data)
+	- var DIR = 'assets/blocks/entry-grid/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .entry-grid
+	+b.entry-grid&attributes(attributes)
+		if data
+			if data.filters
+				+e.filters
+					+choice-group(data.filters)._type_solid
+
+			if data.items
+				+e.UL.list
+					each item in data.items
+						+e.LI.item
+							+entry-snippet(item).__snippet
+
+				+e.load-trigger-line.js-entry-grid-trigger-line
+					+e.load-trigger-dot
+						| &nbsp;
+					+e.load-trigger-dot
+						| &nbsp;
+					+e.load-trigger-dot
+						| &nbsp;
+
+			if data.controls
+				+control-group(data.controls)
+
+		block
+	// end .entry-grid

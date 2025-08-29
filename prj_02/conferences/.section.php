@@ -1,0 +1,5 @@
+<?
+$sSectionName = "Конференции";
+$arDirProperties = Array(
+);
+?>

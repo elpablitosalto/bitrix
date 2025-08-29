@@ -1,0 +1,8 @@
+.search-form.inner{
+    margin-bottom: 20px;
+}
+@media only screen and (min-width: 1025px) {
+    .search-form.inner .search__field {
+      display: block;
+    }
+}

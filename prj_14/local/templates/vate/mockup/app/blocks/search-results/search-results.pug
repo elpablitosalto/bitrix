@@ -1,0 +1,43 @@
+mixin search-results()
+	- var DIR = 'assets/blocks/search-results/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .search-results
+	+b.search-results&attributes(attributes)
+		+e.message
+			| Нет совпадений
+
+		+e.matches
+			+e('ul').list
+				+e('li').item
+					+e('a').link(href='#')
+						+e.image
+							+image('1.png', IMG_DIR)
+						+e.wrapper
+							+e('span').name
+								| <b>Крупногабаритная шина Advance</b> E-4J E-4 (58pr) TL
+							+e.price
+								| 100 500 ₽
+				+e('li').item
+					+e('a').link(href='#')
+						+e.image
+							+image('2.png', IMG_DIR)
+						+e.wrapper
+							+e('span').name
+								| <b>Крупногабаритная шина Advance</b> E-4J E-4 (58pr) TL
+							+e.price
+								| 85 000 ₽
+				+e('li').item
+					+e('a').link(href='#')
+						+e.image
+							+image('3.png', IMG_DIR)
+						+e.wrapper
+							+e('span').name
+								| <b>Крупногабаритная шина Advance</b> E-4J E-4 (58pr) TL
+							+e.price
+								| 60 000 ₽
+
+		+e.control
+			+button()._style_dark._width_full(type='button')
+				| Все результаты
+		block
+	// end .search-results

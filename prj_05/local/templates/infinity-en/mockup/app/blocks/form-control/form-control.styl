@@ -1,0 +1,367 @@
+DIR = '../blocks/form-control/'
+IMG_DIR = DIR + 'images/'
+
+.form-control
+	display block
+	line-height 1.255
+
+
+
+	&__holder
+		position relative
+		display block
+
+
+
+	&__label
+		display block
+		margin 0 0 8px
+		font-size 14px
+		font-weight 300
+		line-height 1.429
+		text-align left
+
+		&:last-child
+			+above(size-l)
+				margin-bottom 0
+
+
+
+	&__field
+	&__check-group
+		position relative
+		display block
+
+
+
+	&__input
+	&__textarea
+	&__select
+	.choices__inner
+		display block
+		width 100%
+		height 44px
+		padding 0 25px
+		color var(--color-primary)
+		font-family  Formular, Arial, sans-serif
+		font-size 14px
+		font-weight 300
+		line-height 34px
+		background transparent
+		border 1px solid var(--color-grey)
+		border-radius 0
+		outline none
+		def-trn(border-color)
+
+	&__input
+	&__textarea
+	&__select
+		placeholder( var(--color-grey), 14px)
+
+		&:focus
+			border-color var(--color-primary)
+
+		&:disabled
+			pointer-events none
+			background-color #ededed
+
+		// Modifiers
+		&_state
+			&_invalid
+				border-color var(--color-error)
+
+				&:focus
+					border-color var(--color-error)
+
+	&__input
+		&[type='number']
+			appearance textfield
+
+			&::-webkit-outer-spin-button // @stylint ignore
+			&::-webkit-inner-spin-button // @stylint ignore
+				margin 0
+				appearance none
+
+
+
+	&__textarea
+		resize none
+		height 164px
+		min-height 46px
+		max-height 180px
+		padding-top 11px
+		padding-bottom 11px
+		line-height 1.429
+
+		&::-webkit-scrollbar-track
+			background-color transparent
+
+		&::-webkit-scrollbar
+			width 8px
+			height 8px
+			background-color transparent
+			background-clip padding-box
+			border 2px solid transparent
+			border-radius 4px
+
+		&::-webkit-scrollbar-thumb
+			background-color var(--color-primary)
+			background-clip padding-box
+			border 2px solid transparent
+			border-radius 4px
+
+
+
+	&__check-group
+		display block
+		padding 7px 0 0
+
+		+above(size-l)
+			padding 3px 0 0
+
+
+
+	&__check-item
+		display block
+		margin 0 0 10px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__switch-group
+		display flex
+		flex-wrap wrap
+		margin -10px 0 0
+
+
+
+	&__switch-item
+		display block
+		flex 0 1 auto
+		width auto
+		max-width 100%
+		margin 0 33px 0 0
+		padding 10px 0 0
+
+		+above(size-l)
+			margin 0 53px 0 0
+
+		&:last-child
+			margin-right 0
+
+
+
+	&__links
+		display block
+		padding 16px 0 0
+		font-size 14px
+		line-height 1.286
+		text-align left
+
+		+above(size-m)
+			text-align right
+
+
+
+	&__message
+		overflow hidden
+		width 100%
+		padding 4px 0 0
+		color inherit
+		font-size 12px
+		line-height 1
+		text-align left
+		white-space nowrap
+		text-overflow ellipsis
+
+		// Modifiers
+		&_style
+			&_error
+				color var(--color-error)
+
+
+
+	&__decoration
+		position absolute
+		top 50%
+		left 12px
+		z-index 1
+		transform translate(0, -50%)
+
+
+
+	&__icon
+		display block
+		width 16px
+		height 16px
+		fill var(--color-primary)
+
+
+
+	&__trigger
+		position absolute
+		top 50%
+		right 20px
+		width 24px
+		height 24px
+		font-size 0
+		text-decoration none
+		background transparent
+		background-image url("IMG_DIR + 'hidden.svg'")
+		background-position 50% 50%
+		background-size contain
+		border none
+		outline none
+		transform translate(0, -50%)
+
+		// Modifiers
+		&_state
+			&_active
+				&.form-control
+					&__trigger
+						&_type
+							&_password
+								background-image url("IMG_DIR + 'visible.svg'")
+
+
+
+	.form-control__field
+		.choices
+			&[data-type*='select-one']
+				&:after
+					top 50%
+					right 29px
+					width 10px
+					height 10px
+					margin 0
+					border none
+					border-right 1px solid var(--color-dark)
+					border-bottom 1px solid var(--color-dark)
+					transform translate(50%, -75%) rotate(45deg)
+
+
+				.choices
+					&__inner
+						min-height auto
+						padding 7px 11px
+						line-height 22px
+
+					&__list
+						padding 0
+
+						&--dropdown
+							overflow hidden
+							margin 2px 0 0
+							border none
+							border-radius 8px
+
+					&__item
+						&--choice
+							padding 12px
+							color var(--color-dark)
+							font-size 16px
+							line-height 1.375
+
+							&.is-selected
+								background var(--color-milk)
+
+							&.is-highlighted
+								color #fff
+								background var(--color-primary)
+
+							&.choices__placeholder
+								display none
+
+					&__placeholder
+						color var(--color-grey)
+						opacity 1
+
+				&.is-focused
+					.choices
+						&__inner
+							border-color var(--color-primary)
+
+				&.is-open
+					&:after
+						transform translate(50%, -25%) rotate(-135deg)
+
+					.choices
+						&__list
+							&--dropdown
+								border 1px solid rgba(50, 43, 41, .16)
+
+
+
+	&__highlight
+		color var(--color-dark)
+		font-size 12px
+
+		+above(size-m)
+			font-size inherit
+
+
+
+	&__result
+		position absolute
+		top 100%
+		left 0
+		z-index 100
+		display none
+		width 100%
+
+		// Modifiers
+		&_state
+			&_shown
+				display block
+
+			&_hidden
+				display none
+
+
+
+	// Modifiers
+	&_align
+		&_center
+			text-align center
+
+			.form-control
+				&__label
+				&__input
+				&__textarea
+					text-align center
+
+	&_state
+		&_invalid
+			.form-control
+				&__input
+				&__textarea
+					border-color var(--color-error)
+
+			.choices__inner
+				border-color var(--color-error)
+
+	&_type
+		&_captcha
+			.form-control
+				&__holder
+					display flex
+					flex-wrap wrap
+
+				&__label
+					display block
+					flex 1 1 100%
+					width 100%
+					max-width 100%
+
+				&__captcha
+					flex 0 0 auto
+					margin 0 4px 4px 0
+
+				&__captcha-image
+					width auto
+					height 48px
+
+				&__field
+					flex 1 1 auto

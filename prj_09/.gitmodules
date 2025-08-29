@@ -1,0 +1,4 @@
+[submodule "local/templates/mirvendinga/mockup"]
+	path = local/templates/mirvendinga/mockup
+	url = git@gitlab.com:StXrom/mirvendinga-mockup.git
+	branch = main

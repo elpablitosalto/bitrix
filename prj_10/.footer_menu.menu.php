@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Программа", 
+		"/guide/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Мультфильмы", 
+		"/movies/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Конкурсы", 
+		"/contests/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

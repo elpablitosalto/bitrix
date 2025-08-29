@@ -1,0 +1,20 @@
+<?
+define('SWP_PRICE', 50);
+define('SWP_PRODUCT_ID', 155985);
+define('BASE_PRICE_ID', 5);
+define('RECAPTCHA_3_USE', 'Y');
+define('RECAPTCHA_3_SITE_KEY', '6LeIMyIqAAAAAN7xlIT1wYEIAam5PeNeNS8SpOvC');
+define('RECAPTCHA_3_PRIVATE_KEY', '6LeIMyIqAAAAAJRMEBpfsAb3BZCxrDk40tqpXrwK');
+define('WEB_FORM_ID_BECOME_OUR_PARTNER', 9);
+define('WEB_FORM_BECOME_OUR_PARTNER_EMAIL_INPUT_NAME', 'form_email_46');
+define('DEFAULT_SUBSCRIBE_RUBRIC_ID', 1);
+
+define('IBLOCK_ID_CATALOG', 34);
+
+const STORES_AVAILABLE = array(
+    113, 117
+);
+
+const STORES_ORDER = array(
+    120, 121, 190, 191, 124, 118, 192, 119, 125, 112, 122, 187, 123,
+);

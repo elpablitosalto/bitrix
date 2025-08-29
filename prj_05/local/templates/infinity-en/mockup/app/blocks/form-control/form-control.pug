@@ -1,0 +1,127 @@
+mixin form-control(data)
+	- var DIR = 'assets/blocks/form-control/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .form-control
+	+b.form-control&attributes(attributes)
+		if data
+			- var holderTag = data.type === 'checkbox' || data.type === 'radio' ? '' : data.holderTag || 'label';
+			+e(holderTag).holder
+				if data.label
+					+e.label
+						!=data.label
+
+				- var attr = data.attr || {};
+				if data.type === 'checkbox' || data.type === 'radio'
+					+e.check-group
+						if data.items
+							each item in data.items
+								+e.check-item
+									- item.attr = item.attr || {};
+									- item.attr.type = item.attr.type || data.type;
+									- var itemClass = item.class || '';
+									+check-elem(item)(class=itemClass)
+										!=item.label
+
+				else if data.type === 'switch'
+					+e.switch-group
+						if data.items
+							each item in data.items
+								+e.switch-item
+									- var itemClass = item.class || '';
+
+									+switch(item)(class=itemClass)
+
+				else if data.type === 'radio-panels'
+					+e.radio-panels
+						+radio-panels({items: data.items})
+
+				else if data.type === 'file-panel'
+					+e.field
+						+e.file
+							+file-input({
+								text: data.text,
+								inputAttr: attr
+							})
+
+				else if data.type === 'select'
+					+e.field
+						+e.SELECT.select&attributes(attr)
+							if data.items
+								if data.placeholder
+									+e.OPTION.option(value='' selected disabled hidden)
+										!=data.placeholder
+
+								each item in data.items
+									+e.OPTION.option(value=item.value)
+										!=item.text
+
+				else if data.type === 'choices-select'
+					+e.field
+						+e.SELECT.select.js-select&attributes(attr)
+							if data.items
+								if data.placeholder
+									+e.OPTION.option(value='' selected disabled hidden)
+										!=data.placeholder
+
+								each item in data.items
+									+e.OPTION.option(value=item.value)
+										!=item.text
+
+				else if data.type === 'textarea'
+					+e.field
+						if data.iconPrev
+							+e.decoration
+								+icon(data.iconPrev).icon
+
+						- var value = attr.value || '';
+						- attr.value = false;
+
+						// Modifiers
+						// form-control__textarea_state_invalid - red border, one of the two options to show invalid field
+						+e.TEXTAREA.textarea&attributes(attr)
+							!=value
+
+				else
+					- var type = data.type || 'text';
+					+e.field
+						if data.iconPrev
+							+e.decoration
+								+icon(data.iconPrev).icon
+
+						// Modifiers
+						// form-control__input_state_invalid - red border, one of the two options to show invalid field
+						+e.INPUT.input(type=type)&attributes(attr)
+
+						if data.showPasswordTrigger
+							+e.BUTTON.trigger._type_password.js-show-password(type='button')
+								| Показать / скрыть пароль
+
+						if data.searchResult
+							// form-control__result - is hidden
+							// form-control__result_state_shown to show
+							// form-control__result_state_hidden to hide, priority over _state_show
+							+e.result._state_shown
+								// search-results - no matches message shown
+								// search-results_state_filled - search results shown
+								// search-results_state_no-results - no matches message shown, priority over _state_filled
+								+search-results(data.searchResult)._state_filled
+
+				if data.link
+					+e.links
+						- var linkAttr = data.link.attr || {};
+						+link()&attributes(linkAttr)
+							!=data.link.text
+
+				+e.messages
+					if data.code
+						+e.message
+							| Запросить код повторно можно через 30 сек.
+					else
+						+e.message._style_error(style="display: none;")
+							if data.message
+								!=data.message
+							else
+								| Ошибка поля
+
+				block
+	// end .form-control

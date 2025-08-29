@@ -1,0 +1,266 @@
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+$asset = \Bitrix\Main\Page\Asset::getInstance();
+global $USER, $APPLICATION;
+
+// Определение главной страницы -->
+global $isHomePage;
+$isHomePage = ($APPLICATION->GetCurPage(false) === SITE_DIR);
+// <--
+?>
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="imagetoolbar" content="no" />
+    <meta name="msthemecompatible" content="no" />
+    <meta name="cleartype" content="on" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="google" value="notranslate" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link sizes="57x57" href="apple-touch-icon-57x57.png" rel="apple-touch-icon" />
+    <link sizes="114x114" href="apple-touch-icon-114x114.png" rel="apple-touch-icon" />
+    <link sizes="72x72" href="apple-touch-icon-72x72.png" rel="apple-touch-icon" />
+    <link sizes="144x144" href="apple-touch-icon-144x144.png" rel="apple-touch-icon" />
+    <link sizes="60x60" href="apple-touch-icon-60x60.png" rel="apple-touch-icon" />
+    <link sizes="120x120" href="apple-touch-icon-120x120.png" rel="apple-touch-icon" />
+    <link sizes="76x76" href="apple-touch-icon-76x76.png" rel="apple-touch-icon" />
+    <link sizes="152x152" href="apple-touch-icon-152x152.png" rel="apple-touch-icon" />
+    <link sizes="180x180" href="apple-touch-icon-180x180.png" rel="apple-touch-icon" />
+    <link sizes="192x192" href="favicon-192x192.png" rel="icon" type="image/png" />
+    <link sizes="160x160" href="favicon-160x160.png" rel="icon" type="image/png" />
+    <link sizes="96x96" href="favicon-96x96.png" rel="icon" type="image/png" />
+    <link sizes="16x16" href="favicon-16x16.png" rel="icon" type="image/png" />
+    <link sizes="32x32" href="favicon-32x32.png" rel="icon" type="image/png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="application-name" content="" />
+    <meta name="msapplication-tooltip" content="" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="mstile-large.png" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="msapplication-square70x70logo" content="mstile-small.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-medium.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-wide.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-large.png" />
+
+    <? $APPLICATION->ShowHead(); ?>
+    <title><? $APPLICATION->ShowTitle(); ?></title>
+    <?
+    // Strings -->
+    $asset->addString('<link rel="preconnect" href="https://fonts.googleapis.com" />', true);
+    $asset->addString('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />', true);
+    $asset->addString('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&amp;display=swap" rel="stylesheet" />', true);
+    // <--
+
+    // CSS -->
+    $asset->addCss(SITE_TEMPLATE_PATH . "/mockup/dist/assets/components/swiper-7.2.0/css/swiper-bundle.min.css");
+    $asset->addCss(SITE_TEMPLATE_PATH . "/mockup/dist/assets/components/fancybox-4.0.7/fancybox.css");
+    $asset->addCss(SITE_TEMPLATE_PATH . "/mockup/dist/assets/styles/app.css?1727686845688");
+    $asset->addCss(SITE_TEMPLATE_PATH . "/mockup/dist/assets/styles/custom.css?1727686845688");
+    // <--
+
+    // JS -->
+    $asset->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.7.1.min.js");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/components/swiper-7.2.0/js/swiper-bundle.min.js?1730278755420");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/components/fancybox-4.0.7/fancybox.umd.js?1730278755420");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/components/Inputmask/inputmask.min.js?1731506641147");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/components/just-validate-3.10.0/just-validate.production.min.js?1731506641147");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/scripts/helpers.js?1727686845688");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/scripts/common.js?1727686845688");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/scripts/validate.js?1731506641147");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/scripts/form-validation-demo.js?1731506641147");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/mockup/dist/assets/scripts/components-init.js?1727686845688");
+    $asset->addJs("/local/js/lib/jquery.serializejson/jquery.serializejson.min.js");
+    $asset->addJs(SITE_TEMPLATE_PATH . "/js/custom.js");
+    $asset->addJs("/local/js/custom.js");
+    // <--
+    ?>
+</head>
+
+
+
+<body class="page__body">
+    <? $APPLICATION->ShowPanel(); ?>
+
+    <div class="page__header js_page_header">
+        <!-- begin .header-->
+        <div class="header page__header-wrapper">
+            <div class="header__top">
+                <div class="header__container page__container">
+                    <div class="header__lang-nav">
+                        <!-- begin .lang-nav-->
+                        <div class="lang-nav">
+                            <ul class="lang-nav__list">
+                                <li class="lang-nav__item"><a class="lang-nav__label" href="https://hair.ru">RU</a>
+                                </li>
+                                <li class="lang-nav__item">
+                                    <div class="lang-nav__label lang-nav__label_state_active">EN
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end .lang-nav-->
+                    </div>
+                    <div class="header__simple-nav">
+                        <!-- begin .nav-->
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "top",
+                            array(
+                                "ROOT_MENU_TYPE" => "top_sections",
+                                "MAX_LEVEL" => "2",
+                                "CHILD_MENU_TYPE" => "left",
+                                "USE_EXT" => "Y",
+                                "DELAY" => "N",
+                                "ALLOW_MULTI_SELECT" => "Y",
+                                "MENU_CACHE_TYPE" => "A",
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "MENU_CACHE_GET_VARS" => ""
+                            )
+                        ); ?>
+                        <!-- end .nav-->
+                    </div>
+                </div>
+            </div>
+            <div class="header__main">
+                <div class="header__container page__container">
+                    <div class="header__burger">
+                        <!-- begin .burger-->
+                        <button class="burger js-toggle" type="button" data-toggle-scope=".page__body, .header, .burger" data-toggle-class="page__body_menu_open, header_menu_open, burger_state_closed">
+                            <div class="burger__bars">Открыть / закрыть меню
+                            </div>
+                        </button>
+                        <!-- end .burger-->
+                    </div>
+                    <div class="header__logo">
+                        <!-- begin .logo-->
+                        <? if (!$isHomePage) { ?>
+                            <a class="logo" href="<?= SITE_DIR ?>">
+                            <? } ?>
+                            <svg class="logo__figure" width="300" height="87" viewBox="0 0 300 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M146.766 53.829C138.063 53.829 133.007 49.2252 133.007 41.0801C133.007 32.9349 138.063 28.3311 146.766 28.3311C153.704 28.3311 158.173 31.1642 159.82 36.3582L165.7 36.0041C163.818 27.9769 157.115 23.4912 146.766 23.4912C134.418 23.4912 127.244 29.8657 127.244 41.0801C127.244 52.1764 134.418 58.6689 146.766 58.6689C157.35 58.6689 164.053 53.9471 165.817 45.6839L160.055 45.3297C158.526 50.7598 153.822 53.829 146.766 53.829Z" />
+                                <path d="M232.615 23.4912C226.499 23.4912 221.795 25.3799 218.738 28.9213V24.0814H213.328V70.0014H218.738V53.2388C221.678 56.6621 226.382 58.5509 232.615 58.5509C244.963 58.5509 251.548 52.1764 251.548 40.962C251.431 29.8657 244.963 23.4912 232.615 23.4912ZM232.027 53.829C223.324 53.829 218.267 49.2252 218.267 41.0801C218.267 32.9349 223.324 28.3311 232.027 28.3311C240.729 28.3311 245.786 32.9349 245.786 41.0801C245.786 49.1072 240.729 53.829 232.027 53.829Z" />
+                                <path d="M105.018 23.4912C98.9024 23.4912 94.0807 25.7341 90.9055 29.3935V24.0814H85.4958V58.0787H90.9055V47.2185V45.4478C90.9055 44.3853 90.9055 43.0868 90.9055 42.1425C90.9055 34.7056 96.7855 28.6852 105.018 28.6852C113.25 28.6852 117.719 33.6431 117.719 41.0801C117.719 42.9688 117.719 58.1967 117.719 58.1967H123.481C123.481 58.1967 123.481 42.9688 123.481 41.0801C123.363 30.5739 116.66 23.4912 105.018 23.4912Z" />
+                                <path d="M206.742 49.3433L200.51 48.8711C198.275 52.0583 194.277 53.829 188.867 53.829C180.87 53.829 176.049 49.9335 175.225 43.2049H205.214H208.271C208.389 42.4966 208.389 41.7883 208.389 41.0801C208.389 29.9837 201.215 23.4912 188.867 23.4912C176.519 23.4912 169.345 29.8657 169.345 41.0801C169.345 52.1764 176.519 58.6689 188.867 58.6689C197.687 58.5509 203.92 55.2456 206.742 49.3433ZM188.867 28.213C196.511 28.213 201.333 31.8725 202.391 38.247H175.225C176.284 31.8725 181.105 28.213 188.867 28.213Z" />
+                                <path d="M188.867 17.5889C191.454 17.5889 193.101 16.0543 193.101 13.8114C193.101 11.5685 191.337 10.0339 188.867 10.0339C186.398 10.0339 184.633 11.5685 184.633 13.8114C184.633 16.0543 186.28 17.5889 188.867 17.5889Z" />
+                                <path d="M61.6229 23.4912C49.2748 23.4912 42.1011 29.8657 42.1011 41.0801C42.1011 52.1764 49.2748 58.6689 61.6229 58.6689C73.971 58.6689 81.1446 52.2944 81.1446 41.0801C81.1446 29.8657 73.971 23.4912 61.6229 23.4912ZM61.6229 53.829C52.9204 53.829 47.8636 49.2252 47.8636 41.0801C47.8636 32.9349 52.9204 28.3311 61.6229 28.3311C70.3254 28.3311 75.3822 32.9349 75.3822 41.0801C75.3822 49.1072 70.3254 53.829 61.6229 53.829Z" />
+                                <path d="M282.125 29.2754V24.3175H261.427C261.427 16.8806 261.427 11.4505 261.427 11.4505H256.017C256.017 11.4505 256.017 37.4206 256.017 40.962C256.017 52.0583 263.191 58.5509 275.539 58.5509C277.891 58.5509 280.125 58.3148 282.125 57.8426V52.6486C280.243 53.3568 278.009 53.829 275.539 53.829C266.837 53.829 261.427 49.2252 261.427 41.0801C261.427 39.7815 261.427 34.8236 261.427 29.2754H282.125Z" />
+                                <path d="M38.5731 45.5658L32.8107 45.2117C31.2818 50.6418 26.6954 53.711 19.5218 53.711C10.8193 53.711 5.76245 49.1072 5.76245 40.962C5.76245 32.8168 10.8193 28.213 19.5218 28.213C26.4602 28.213 30.929 31.0461 32.5755 36.2402L38.4555 35.886C36.5739 27.8589 29.8706 23.3731 19.5218 23.3731C7.17366 23.4912 0 29.8657 0 41.0801C0 52.1764 7.17366 58.6689 19.5218 58.6689C30.1058 58.5509 36.8091 53.9471 38.5731 45.5658Z" />
+                                <path d="M75.4998 77.3202C71.8542 77.3202 69.855 79.0909 69.855 82.1601C69.855 85.2293 71.9718 87 75.4998 87C79.1454 87 81.1447 85.2293 81.1447 82.1601C81.1447 79.0909 79.0278 77.3202 75.4998 77.3202ZM75.4998 84.7571C73.6182 84.7571 72.5598 83.8128 72.5598 82.1601C72.5598 80.5075 73.6182 79.5631 75.4998 79.5631C77.3814 79.5631 78.4398 80.5075 78.4398 82.1601C78.4398 83.8128 77.3814 84.7571 75.4998 84.7571Z" />
+                                <path d="M187.221 77.3202C183.575 77.3202 181.576 79.0909 181.576 82.1601C181.576 85.2293 183.693 87 187.221 87C190.866 87 192.866 85.2293 192.866 82.1601C192.866 79.0909 190.749 77.3202 187.221 77.3202ZM187.221 84.7571C185.339 84.7571 184.281 83.8128 184.281 82.1601C184.281 80.5075 185.339 79.5631 187.221 79.5631C189.102 79.5631 190.161 80.5075 190.161 82.1601C190.161 83.8128 189.102 84.7571 187.221 84.7571Z" />
+                                <path d="M209.8 84.1669L204.861 77.5563H203.567H201.686H200.98V86.7639H203.567V80.0353L208.506 86.7639H209.8H211.682H212.387V77.5563H209.8V84.1669Z" />
+                                <path d="M172.168 77.5563H169.581V86.7639H172.168V77.5563Z" />
+                                <path d="M91.7287 77.5563H90.6703V86.7639H93.2575V83.8128H98.6672V81.806H93.2575V79.6811H99.608V77.5563H93.2575H91.7287Z" />
+                                <path d="M113.485 83.1045H119.718V81.0977H113.485V79.6811H120.423V77.5563H113.485H111.956H110.898V86.7639H111.956H113.485H120.659V84.521H113.485V83.1045Z" />
+                                <path d="M242.258 77.5563H239.671V84.521V86.7639H242.258H248.373V84.521H242.258V77.5563Z" />
+                                <path d="M40.3371 77.5563H34.8099H33.7515V86.7639H36.3387V83.8128H40.3371C42.3363 83.8128 43.5123 82.7503 43.5123 80.6255C43.5123 78.6187 42.3363 77.5563 40.3371 77.5563ZM39.7491 81.806H36.3387V79.7992H39.7491C40.3371 79.7992 40.8075 80.2714 40.8075 80.8616C40.8075 81.3338 40.3371 81.806 39.7491 81.806Z" />
+                                <path d="M61.6229 80.6255C61.6229 78.6187 60.5645 77.4383 58.4477 77.4383H52.9204H51.862V86.6459H54.4492V83.8128H56.0956L58.4477 86.7639H61.7405L59.0357 83.8128C60.6821 83.5767 61.6229 82.5143 61.6229 80.6255ZM54.4492 79.6811H57.8597C58.4477 79.6811 58.9181 80.1533 58.9181 80.7436C58.9181 81.3338 58.4477 81.806 57.8597 81.806H54.4492V79.6811Z" />
+                                <path d="M226.617 77.5563H225.088H224.03L219.796 86.7639H222.383L223.207 84.8752H228.381L229.204 86.7639H231.791L227.675 77.5563H226.617ZM224.265 82.7503L225.911 79.0909L227.558 82.7503H224.265Z" />
+                                <path d="M137.711 81.0977L134.3 80.8616C133.712 80.8616 133.477 80.6255 133.477 80.2714C133.477 79.6811 134.771 79.445 135.829 79.445C137.005 79.445 137.946 79.6811 138.064 80.0353L140.651 79.9172C140.533 78.6187 139.475 77.2022 135.829 77.2022C133.359 77.2022 130.772 77.9104 130.772 80.2714C130.772 81.806 132.066 82.6323 133.947 82.8684L137.358 83.1045C138.064 83.2225 138.416 83.3406 138.416 83.8128C138.416 84.403 137.476 84.6391 136.064 84.6391C134.653 84.6391 133.595 84.2849 133.477 83.5767L130.655 83.6947C130.89 85.3474 132.066 86.7639 136.064 86.7639C139.122 86.7639 141.121 85.8195 141.121 83.6947C141.004 82.1601 139.828 81.3338 137.711 81.0977Z" />
+                                <path d="M156.997 81.0977L153.587 80.8616C152.999 80.8616 152.764 80.6255 152.764 80.2714C152.764 79.6811 154.057 79.445 155.116 79.445C156.292 79.445 157.232 79.6811 157.35 80.0353L159.937 79.9172C159.82 78.6187 158.761 77.2022 155.116 77.2022C152.646 77.2022 150.059 77.9104 150.059 80.2714C150.059 81.806 151.352 82.6323 153.234 82.8684L156.644 83.1045C157.35 83.2225 157.703 83.3406 157.703 83.8128C157.703 84.403 156.762 84.6391 155.351 84.6391C153.94 84.6391 152.881 84.2849 152.764 83.5767L149.941 83.6947C150.176 85.3474 151.352 86.7639 155.351 86.7639C158.408 86.7639 160.408 85.8195 160.408 83.6947C160.408 82.1601 159.114 81.3338 156.997 81.0977Z" />
+                                <path d="M290.239 2.95115H293.65C294.473 2.95115 295.061 3.18725 295.531 3.54138C296.002 3.89552 296.237 4.48575 296.237 5.19403C296.237 6.1384 295.884 6.84668 295.061 7.20081L296.237 10.7422H295.178L294.002 7.43691C293.767 7.43691 293.65 7.43691 293.414 7.43691H291.18V10.6242H290.239V2.95115ZM291.298 6.61058H293.532C294.708 6.61058 295.178 6.1384 295.178 5.19403C295.178 4.72185 295.061 4.36771 294.826 4.13161C294.59 3.89552 294.12 3.77748 293.532 3.77748H291.298V6.61058Z" />
+                                <path d="M293.297 13.5753C289.533 13.5753 286.593 10.5061 286.593 6.84668C286.593 3.18725 289.651 0.118046 293.297 0.118046C297.06 0.118046 300 3.18725 300 6.84668C300 10.5061 296.942 13.5753 293.297 13.5753ZM293.297 0.944369C290.122 0.944369 287.417 3.54138 287.417 6.84668C287.417 10.152 290.004 12.749 293.297 12.749C296.472 12.749 299.177 10.152 299.177 6.84668C299.177 3.54138 296.472 0.944369 293.297 0.944369Z" />
+                            </svg>
+                            <? if (!$isHomePage) { ?>
+                            </a>
+                        <? } ?>
+                        <!-- end .logo-->
+                    </div>
+                    <div class="header__contacts">
+                        <div class="header__links">
+                            <div class="header__link">
+                                <!-- begin .icon-link-->
+                                <? $APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    "",
+                                    array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "PATH" => SITE_DIR . "/include/template/header_email.php",
+                                        "AREA_FILE_RECURSIVE" => "N",
+                                        "EDIT_MODE" => "html",
+                                    ),
+                                    false,
+                                ); ?>
+                                <!-- end .icon-link-->
+                            </div>
+                        </div>
+                        <div class="header__social-nav">
+                            <!-- begin .social-nav-->
+                            <? $APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                "",
+                                array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "PATH" => SITE_DIR . "/include/template/header_social.php",
+                                    "AREA_FILE_RECURSIVE" => "N",
+                                    "EDIT_MODE" => "html",
+                                ),
+                                false,
+                            ); ?>
+                            <!-- end .social-nav-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__panel">
+                <div class="header__container page__container">
+                    <div class="header__nav">
+                        <!-- begin .nav-->
+                        <? $APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"top_ib", 
+	array(
+		"ROOT_MENU_TYPE" => "top_catalog",
+		"MAX_LEVEL" => "2",
+		"CHILD_MENU_TYPE" => "left_catalog",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "Y",
+		"MENU_CACHE_TYPE" => "A",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "top_ib"
+	),
+	false
+); ?>
+                        <!-- end .nav-->
+                    </div>
+                    <div class="header__referrer">
+                        <!-- begin .logo-->
+                        <a class="logo header__referrer-logo" href="/infinity/">
+                            <svg class="logo__figure" width="98" height="31" viewBox="0 0 98 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.816 1.152H5.584V24H0.816V1.152ZM24.311 24H19.831V14.688C19.831 13.536 19.5537 12.6507 18.999 12.032C18.4657 11.4133 17.6763 11.104 16.631 11.104C15.543 11.104 14.6577 11.5093 13.975 12.32C13.3137 13.1307 12.983 14.112 12.983 15.264V24H8.503V7.552H12.823V9.056H13.655C14.6577 7.776 16.183 7.136 18.231 7.136C20.2577 7.136 21.7723 7.72267 22.775 8.896C23.799 10.0693 24.311 11.7333 24.311 13.888V24ZM35.9835 11.296H31.8555V24H27.3755V11.296H24.9755V7.552H27.3755V6.368C27.3755 4.42667 27.9622 3.008 29.1355 2.112C30.3088 1.19467 31.8875 0.735998 33.8715 0.735998H35.9835V4.48H33.9355C32.5488 4.48 31.8555 5.184 31.8555 6.592V7.552H35.9835V11.296ZM43.5675 4.736H39.0235V0.735998H43.5675V4.736ZM43.5355 7.552V24H39.0555V7.552H43.5355ZM61.8622 24H57.3822V14.688C57.3822 13.536 57.1049 12.6507 56.5502 12.032C56.0169 11.4133 55.2276 11.104 54.1822 11.104C53.0942 11.104 52.2089 11.5093 51.5262 12.32C50.8649 13.1307 50.5342 14.112 50.5342 15.264V24H46.0542V7.552H50.3742V9.056H51.2062C52.2089 7.776 53.7342 7.136 55.7822 7.136C57.8089 7.136 59.3236 7.72267 60.3263 8.896C61.3502 10.0693 61.8622 11.7333 61.8622 13.888V24ZM68.6708 4.736H64.1268V0.735998H68.6708V4.736ZM68.6388 7.552V24H64.1588V7.552H68.6388ZM76.448 7.552H80.064V11.296H76.448V18.368C76.448 19.584 77.152 20.192 78.56 20.192H80.064V24H78.496C76.4267 24 74.816 23.6267 73.664 22.88C72.5333 22.112 71.968 20.7893 71.968 18.912V11.296H69.568V7.552H71.968V2.944H76.448V7.552ZM88.0727 30.4H83.5927L87.0807 22.304L80.1047 7.552H84.7767L88.8727 16.32H89.7047L93.4807 7.552H97.9927L88.0727 30.4Z" />
+                            </svg>
+                        </a>
+                        <!-- end .logo-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end .header-->
+    </div>
+    <div class="page__content">
+
+        <? $APPLICATION->ShowViewContent('TOP_BIG_SLIDER'); ?>
+
+        <? if (!$isHomePage) { ?>
+            <? $APPLICATION->IncludeComponent(
+                "bitrix:breadcrumb",
+                "concept_en",
+                array(
+                    "START_FROM" => "0",
+                    "PATH" => "",
+                    "SITE_ID" => "s1"
+                )
+            ); ?>
+        <? } ?>

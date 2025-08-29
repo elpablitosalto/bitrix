@@ -1,0 +1,18 @@
+mixin check-filter(data = {})
+	- var DIR = 'assets/blocks/check-filter/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .check-filter
+	+b.check-filter&attributes(attributes)
+		+e.trigger.js-filter-trigger(type='button')
+			!=data.label
+
+		if data.items
+			+e.dropdown
+				+e.UL.list
+					each item in data.items
+						+e.LI.item
+							+check-elem(item)
+
+
+		block
+	// end .check-filter

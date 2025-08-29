@@ -1,0 +1,6 @@
+[submodule "/home/bitrix/www/local/templates/concept-en/mockup"]
+	path = /home/bitrix/www/local/templates/concept-en/mockup
+	url = https://gitlab.com/StXrom/hair-eng-mockup.git
+[submodule "local/templates/infinity-en/mockup"]
+	path = local/templates/infinity-en/mockup
+	url = https://gitlab.com/StXrom/hair-infinity-eng-mockup.git

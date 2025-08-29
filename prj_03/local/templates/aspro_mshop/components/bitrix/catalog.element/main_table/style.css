@@ -1,0 +1,15 @@
+.catalog_detail .sku_props .bx_item_detail_size ul li:hover .color_link{
+	color: white;
+}
+.size-table__row .size-table__cell-name{
+    white-space: pre-line;
+}
+.counter_block.counter_block_slim .text{
+    margin: 0px !important;
+}
+.size-group__error_message{
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0px;
+} 

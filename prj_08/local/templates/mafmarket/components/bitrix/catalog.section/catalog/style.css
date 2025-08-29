@@ -1,0 +1,19 @@
+.dp-modal-series__item input[type="radio"]{
+    display:none;
+}
+.dp-modal-series input[type=radio]:checked + .dp-series-hexagon-item {
+    background-color: #ffffff;
+}
+.dp-modal-series input[type=radio]:checked + .dp-series-hexagon-item:before {
+    content: "";
+    position: absolute;
+    right: 24px;
+    width: 7px;
+    top: 50%;
+    margin-top: -7px;
+    height: 16px;
+    background-image: url(/local/templates/mafmarket/img/icons/drop-right.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

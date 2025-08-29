@@ -1,0 +1,54 @@
+DIR = '../blocks/partners-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.partners-carousel
+	position relative
+
+
+
+	&__container
+		+above(size-m)
+			padding 0 28px 0 30px
+
+
+
+
+	&__wrapper
+		align-items center
+
+
+
+	&__arrows
+		z-index 100
+		display none
+
+		+above(size-xxl)
+			display block
+
+	&__image
+		max-width 100%
+
+
+
+	&__navigation
+		position absolute
+		top 50%
+		left 0
+		z-index 10
+		width 100%
+
+
+
+	&__pagination
+		position absolute
+		left 50%
+		bottom -80px
+		width 100%
+		transform translate(-50%, 0)
+
+
+		+above(size-m)
+			bottom -100px
+
+		+above(size-xxl)
+			display none

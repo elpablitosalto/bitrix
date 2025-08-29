@@ -1,0 +1,126 @@
+DIR = '../blocks/form/'
+IMG_DIR = DIR + 'images/'
+
+.form
+	display block
+
+
+
+	&__main
+		display block
+
+
+
+	&__inputs
+		margin 0 0 25px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__line
+		position relative
+		display block
+		margin 0 0 25px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__message-wrapper
+		display block
+		flex 1 1 100%
+		width 100%
+		max-width 100%
+
+
+
+	&__confirmation-check
+		margin 0 0 24px
+
+		+above(size-l)
+			margin 0 0 52px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__captcha
+		display block
+		margin 0 0 16px
+
+		+above(size-l)
+			margin 0 0 24px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__controls
+		display block
+
+
+
+	&__control
+		display inline-block
+		vertical-align middle
+		min-width 151px
+		margin 0 0 16px
+
+		+above(size-m)
+			margin 0 24px 0 0
+
+		&:last-child
+			margin 0
+
+
+
+	&__messages
+		display none
+		padding 24px 0
+
+		&:first-child
+			padding-top 0
+
+		&:last-child
+			padding-bottom 0
+
+
+
+	&__message
+		margin 0 0 12px
+
+		&:last-child
+			margin-bottom 0
+
+		// Modifiers
+		&_style
+			&_error
+				color var(--color-error)
+
+
+
+	&__final
+		display none
+
+
+
+	// Modifiers
+	&_messages
+		&_shown
+			.form
+				&__messages
+					display block
+
+	&_state
+		&_sent
+			.form
+				&__main
+					display none
+
+				&__final
+					display block

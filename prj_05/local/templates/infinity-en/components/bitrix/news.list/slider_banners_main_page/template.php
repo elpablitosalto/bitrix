@@ -1,0 +1,47 @@
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die(); ?>
+<? if (!empty($arResult['ITEMS'])) { ?>
+    <div class="page__banner-carousel">
+        <!-- begin .banner-carousel-->
+        <div class="banner-carousel">
+            <div class="banner-carousel__container swiper js-banner-carousel">
+                <div class="banner-carousel__wrapper swiper-wrapper">
+                    <? foreach ($arResult['ITEMS'] as $k => $arItem) { ?>
+                        <?
+                        $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+                        $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+                        ?>
+                        <div class="banner-carousel__slide swiper-slide" id="<?= $this->GetEditAreaId($arItem['ID']); ?>">
+                            <!-- begin .banner-->
+                            <div class="banner banner_type_a banner-carousel__banner">
+                                <picture class="banner__picture">
+                                    <source srcset="<?= $arItem['PREVIEW_PICTURE_SLIDER']['SRC']; ?>" type="image/png" media="(max-width: 1024px)" class="banner__source" />
+                                    <img src="<?= $arItem['DETAIL_PICTURE_SLIDER']['SRC']; ?>" alt="<?= $arItem['DETAIL_PICTURE_SLIDER']["ALT"] ?>" title="<?= $arItem['DETAIL_PICTURE_SLIDER']["TITLE"] ?>" class="banner__image" />
+                                </picture>
+                            </div>
+                            <!-- end .banner-->
+                        </div>
+                    <? } ?>
+                </div>
+                <button class="banner-carousel__arrow banner-carousel__arrow_position_left js-banner-carousel-prev" type="button">
+                    <svg class="banner-carousel__icon" width="9" height="18" viewbox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.66964 17.6224C8.77436 17.503 8.85744 17.3611 8.91413 17.2049C8.97082 17.0488 9 16.8813 9 16.7123C9 16.5432 8.97082 16.3758 8.91413 16.2196C8.85744 16.0634 8.77436 15.9216 8.66964 15.8022L2.71655 8.99966L8.66964 2.19715C8.88079 1.95577 8.99941 1.62841 8.99941 1.28706C8.99941 0.945709 8.88079 0.61834 8.66964 0.37697C8.45849 0.135599 8.17211 -4.01056e-08 7.87349 -5.45712e-08C7.57488 -6.90369e-08 7.2885 0.135599 7.07735 0.37697L0.330364 8.08957C0.225643 8.20898 0.142559 8.35083 0.0858702 8.507C0.0291809 8.66317 3.61661e-07 8.83058 3.54992e-07 8.99966C3.48323e-07 9.16874 0.0291809 9.33616 0.0858701 9.49233C0.142559 9.6485 0.225643 9.79034 0.330364 9.90975L7.07735 17.6224C7.1818 17.7421 7.3059 17.837 7.44251 17.9018C7.57913 17.9666 7.72558 18 7.87349 18C8.0214 18 8.16786 17.9666 8.30448 17.9018C8.44109 17.837 8.56518 17.7421 8.66964 17.6224Z">
+                        </path>
+                    </svg>
+                </button>
+                <button class="banner-carousel__arrow banner-carousel__arrow_position_right js-banner-carousel-next" type="button">
+                    <svg class="banner-carousel__icon" width="9" height="18" viewbox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.330363 17.6224C0.225642 17.503 0.142558 17.3611 0.0858685 17.2049C0.0291793 17.0488 -4.4122e-08 16.8813 -5.07909e-08 16.7123C-5.74597e-08 16.5432 0.0291793 16.3758 0.0858684 16.2196C0.142558 16.0634 0.225642 15.9216 0.330363 15.8022L6.28345 8.99966L0.330362 2.19715C0.119212 1.95577 0.000588102 1.62841 0.000588091 1.28706C0.00058808 0.945709 0.119211 0.61834 0.330362 0.37697C0.541513 0.135599 0.827895 -4.01055e-08 1.12651 -5.45711e-08C1.42512 -6.90367e-08 1.7115 0.135599 1.92265 0.37697L8.66964 8.08957C8.77436 8.20898 8.85744 8.35083 8.91413 8.507C8.97082 8.66317 9 8.83058 9 8.99966C9 9.16874 8.97082 9.33616 8.91413 9.49233C8.85744 9.6485 8.77436 9.79034 8.66964 9.90975L1.92265 17.6224C1.8182 17.7421 1.6941 17.837 1.55749 17.9018C1.42087 17.9666 1.27442 18 1.12651 18C0.978597 18 0.832139 17.9666 0.695524 17.9018C0.558908 17.837 0.434819 17.7421 0.330363 17.6224Z">
+                        </path>
+                    </svg>
+                </button>
+                <div class="banner-carousel__pagination">
+                    <!-- begin .bullet-pagination-->
+                    <div class="bullet-pagination">
+                    </div>
+                    <!-- end .bullet-pagination-->
+                </div>
+            </div>
+        </div>
+        <!-- end .banner-carousel-->
+    </div>
+<? } ?>

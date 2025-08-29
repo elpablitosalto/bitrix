@@ -1,0 +1,19 @@
+{
+    "name": "\u0411\u0435\u043b\u044b\u0439 \u043a\u0440\u043e\u043b\u0438\u043a",
+    "short_name": "\u0411\u0435\u043b\u044b\u0439 \u043a\u0440\u043e\u043b\u0438\u043a",
+    "icons": [
+        {
+            "src": "/local/templates/nebolno/img/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/local/templates/nebolno/img/favicons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#112236",
+    "background_color": "#112236",
+    "display": "standalone"
+}

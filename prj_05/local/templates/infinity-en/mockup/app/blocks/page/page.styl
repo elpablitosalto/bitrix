@@ -1,0 +1,142 @@
+DIR = '../blocks/page/'
+IMG_DIR = DIR + 'images/'
+
+.page
+	position relative
+	display block
+	margin 0
+	padding 0
+	background var(--color-white)
+
+
+
+	&__body
+		display flex
+		flex-direction column
+		flex-wrap nowrap
+		min-height 100vh
+
+		// Modifiers
+		&_menu
+			&_open
+				overflow hidden
+
+				+above(size-l)
+					overflow visible
+
+				.page
+					&__slide-menu
+						transform translate(0, 0)
+
+
+
+	&__header
+		position relative
+		top 0
+		left 0
+		z-index 500
+		display block
+		flex 0 0 auto
+		width 100%
+
+		&_position
+			&_absolute
+				position absolute
+				pointer-events none
+
+			&_fixed
+				pointer-events auto
+
+				.page
+					&__header-wrapper
+						position fixed
+
+
+
+	&__header-wrapper
+		position relative
+		top 0
+		left 0
+		z-index inherit
+		display block
+		width 100%
+
+
+
+	&__content
+		position relative
+		display block
+		overflow hidden
+		flex 1 1 100%
+		width 100%
+
+
+
+	&__container
+		width 100%
+		max-width containers.default.maxWidth
+		margin 0 auto
+		padding '0 %s' % containers.default.gutter
+
+		// Modifiers
+		&_width
+			&_full
+				max-width 100%
+
+		&_gutter
+			&_none
+				max-width containers.noGutter.maxWidth
+				padding '0 %s' % containers.noGutter.gutter
+
+
+
+	&__footer
+		display block
+		flex 0 0 auto
+		width 100%
+
+
+
+	&__slide-menu
+		position fixed
+		top 0
+		left 0
+		bottom 0
+		z-index 700
+		width 100%
+		height auto
+		transform translate(-110%, 0)
+
+		def-trn(transform)
+
+
+
+	&__breadcrumbs
+		padding 18px 0 42px
+
+		+above(size-l)
+			padding 40px 0
+
+
+
+	&__banner
+		padding 96px 0 30px
+
+		+above(size-l)
+			padding 131px 0 79px
+
+
+
+	&__attention-panel
+		padding 28px 0 58px
+
+		+above(size-l)
+			padding 50px 0 129px
+
+
+
+	&__contacts
+		padding 0 0 70px
+
+		+above(size-l)
+			padding 0 0 155px

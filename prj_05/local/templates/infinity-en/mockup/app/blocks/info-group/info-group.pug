@@ -1,0 +1,14 @@
+mixin info-group(data)
+	- var DIR = 'assets/blocks/info-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .info-group
+	+b.info-group&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list
+					each item in data.items
+						- var attr = item.attr || {};
+						+e('li').item
+							+info-panel(item)&attributes(attr)
+		block
+	// end .info-group

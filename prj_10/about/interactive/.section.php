@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Интерактивность";
+$arDirProperties = Array(
+
+);
+?>

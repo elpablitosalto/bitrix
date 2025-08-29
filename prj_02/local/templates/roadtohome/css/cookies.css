@@ -1,0 +1,42 @@
+.agree_cookie {
+    border-top: 1px solid #ececec;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    font-size: 14px;
+    display:none;
+}
+
+.agree_cookie .agree_cookie_text {
+    color: #999;
+}
+.agree_cookie .agree_cookie_button {
+    background-color: #ff5400;
+    border-color: #ff5400;
+    border: 1px solid #ff5400;
+    color: #fff;
+    padding: 5px 20px;
+    cursor:pointer;
+}
+.agree_cookie .agree_cookie_button:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #ff5400;
+    border: 1px solid #ff5400;
+    background: transparent;
+}
+.agree_cookie .agree_cookie_container {
+    background-color:white;
+    display: flex;
+    padding: 20px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    width: 100%;
+}
+.agree_cookie_text {
+    margin: 0 20px;
+    line-height: 1.4;
+}

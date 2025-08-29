@@ -1,0 +1,1 @@
+<a class="underline-link" href="/registration/partner/">Зарегистрируйтесь,</a> чтобы открыть все возможности сайта

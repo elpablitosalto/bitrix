@@ -1,0 +1,209 @@
+DIR = '../blocks/card-detail/'
+IMG_DIR = DIR + 'images/'
+
+.card-detail
+	display block
+
+
+
+	&__main
+		display flex
+		flex-direction column
+		flex-wrap nowrap
+		margin 0 0 42px
+
+		+above(size-l)
+			flex-direction row
+			justify-content space-between
+			margin 0 0 151px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__info
+		display block
+		flex 0 0 auto
+		width 100%
+
+		+above(size-l)
+			display flex
+			flex 0 1 46.5%
+			flex-direction column
+			flex-wrap nowrap
+			align-items flex-start
+			width 46.5%
+			max-width 495px
+
+
+
+	&__carousel
+		display block
+		flex 0 0 auto
+		order -1
+		width 100%
+		margin 0 0 16px
+
+		+above(size-l)
+			flex 0 1 53.5%
+			order 0
+			width 53.5%
+			max-width 53.5%
+			margin 0
+
+
+
+	&__title
+	&__label
+	&__choice-group
+	&__select
+	&__controls
+		position relative
+		z-index 5
+		flex 0 0 auto
+
+
+
+	&__title
+		display block
+		margin 0 0 20px
+
+		+above(size-l)
+			margin 0 0 35px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__label
+		display block
+		margin 0 0 20px
+		color var(--color-grey)
+		font-size 17px
+		font-weight 300
+		line-height 1.223
+
+		+above(size-l)
+			margin 0 0 56px
+			font-size 19px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__choice-group
+		display block
+		margin 0 0 36px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__select
+		z-index 6
+		display block
+		width 100%
+		max-width 284px
+		margin 0 0 35px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__controls
+		display block
+		font-size 0
+
+
+
+	&__control
+		display inline-block
+		vertical-align middle
+		min-width 147px
+		margin 0 24px 0 0
+
+		&:last-child
+			margin 0
+
+
+
+	&__details
+		display flex
+		flex-direction column
+		flex-wrap nowrap
+
+		+above(size-l)
+			flex-direction row
+
+
+
+	&__link-group
+		display block
+		flex 0 0 auto
+		width 100%
+		margin 40px 0 0
+
+		+above(size-l)
+			flex 0 1 34%
+			width 34%
+			max-width 34%
+			margin 0
+			padding 0 20px 0 0
+
+		&:last-child
+			margin-top 0
+
+
+
+	&__subtitle
+		display block
+		margin 0 0 31px
+		color var(--color-dark)
+		font-size 19px
+		font-weight 500
+		line-height 1.223
+
+		+above(size-l)
+			font-size 21px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__link-list
+		display block
+		margin 0
+		padding 0
+		list-style none
+
+
+
+
+	&__link-item
+		display block
+		margin 0 0 23px
+		padding 0
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__icon-panel-group
+		display block
+		flex 0 0 auto
+		order -1
+		width 100%
+
+		+above(size-l)
+			flex 0 1 66%
+			order 0
+			width 66%
+			max-width 66%
+			padding 23px 0 0

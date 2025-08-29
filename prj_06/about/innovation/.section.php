@@ -1,0 +1,6 @@
+<?
+$sSectionName = 'Инновации';
+$arDirProperties = array(
+
+);
+?>

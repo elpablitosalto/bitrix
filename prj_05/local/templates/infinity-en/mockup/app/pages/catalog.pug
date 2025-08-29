@@ -1,0 +1,573 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'Catalog | Hair Infinity';
+	- var pageDescription = ' Hair Infinity';
+	- var pageKeywords = 'hair, infinity';
+
+	- var fileName = 'catalog.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.breadcrumbs
+		+e.container
+			+breadcrumbs({
+				items: [
+					{
+						text: 'Home',
+						href: '/',
+					},
+					{
+						text: 'Catalog',
+					},
+				]
+			})
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h1',
+					text: 'Infinity product catalog',
+					attr: {
+						class: '_size_h3-s _style_primary _case_normal'
+					}
+				},
+				text: 'The entire range of products from the Russian professional haircare brand.'
+			}
+		})._role_info-panels._spacing_top-none
+			+e.content
+				.page__container
+					+e.info-group
+						+info-group({
+							items: [
+								{
+									title: 'Coloring',
+									text: 'Синергия стойкого гибридного красителя, активаторов и технических продуктов для получения ожидаемого результата окрашивания',
+									image: '1.jpg',
+									attr: {
+										class: ''
+									},
+									links: [
+										{
+											text: 'Стойкий краситель для волос Infinity',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+										{
+											text: 'Активаторы Infinity',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+										{
+											text: 'Сервисные продукты Infinity',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+									]
+								},
+								{
+									title: 'Blonde',
+									text: 'Порошки для безопасного обесцвечивания волос любого качества (натуральные, тонкие, хрупкие, ранее осветленные)',
+									image: '2.jpg',
+									attr: {
+										class: '_layout_reversed _links_long'
+									},
+									links: [
+										{
+											text: 'Порошок для осветления волос Perfect Blue Lightening Powder',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+										{
+											text: 'Порошок для осветления волос Super White Lightening Powder',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+									]
+								},
+								{
+									title: 'Care',
+									text: 'В капсуле Infinity Care 4 опции – 4 комплексных процедуры ухода. Синергия тщательно подобранных компонентов эффективно решает задачи восстановления здоровья волос в каждой линии средств',
+									image: '3.jpg',
+									attr: {
+										class: ''
+									},
+									links: [
+										{
+											text: 'Салонный уход Expert Care',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+										{
+											text: 'Защита цвета Color Lock',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+										{
+											text: 'Увлажнение Aqua Boost',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+										{
+											text: 'Восстановление Vitality Force',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+									]
+								},
+								{
+									title: 'Styling',
+									text: 'Капсульный ассортимент Infinity Performance обеспечивает ключевые потребности мастера в укладке. Он представлен профессиональным лаком для волос в оптимальном для мастера объеме 500 мл и тремя степенями фиксации',
+									image: '4.jpg',
+									attr: {
+										class: '_layout_reversed'
+									},
+									links: [
+										{
+											text: 'Фиксация',
+											attr: {
+												href: '#',
+												class: ''
+											}
+										},
+									]
+								},
+							]
+						})
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h2',
+					text: 'All Infinity products',
+					attr: {
+						class: '_size_h3-s _case_upper _style_primary'
+					}
+				}
+			}
+		})._role_products._style_full-gradient
+			+e.content
+				.page__container
+					+e.entry-grid
+						+entry-grid({
+							filters: {
+								items: [
+									{
+										text: 'All products',
+										attr: {
+											type: 'radio',
+											name: 'product-categories',
+											checked: true
+										}
+									},
+									{
+										text: 'Shampoo',
+										attr: {
+											type: 'radio',
+											name: 'product-categories'
+										}
+									},
+									{
+										text: 'Conditioner',
+										attr: {
+											type: 'radio',
+											name: 'product-categories'
+										}
+									},
+									{
+										text: 'Activators',
+										attr: {
+											type: 'radio',
+											name: 'product-categories'
+										}
+									},
+									{
+										text: 'Mask',
+										attr: {
+											type: 'radio',
+											name: 'product-categories'
+										}
+									},
+									{
+										text: 'Сolorant',
+										attr: {
+											type: 'radio',
+											name: 'product-categories'
+										}
+									},
+									{
+										text: 'Technical products',
+										attr: {
+											type: 'radio',
+											name: 'product-categories'
+										}
+									},
+									{
+										text: 'Styling',
+										attr: {
+											type: 'radio',
+											name: 'product-categories'
+										}
+									},
+								]
+							},
+							items: [
+								{
+									label: 'Excellence Acivators',
+									title: 'Активатор Infinity Exellence Activator',
+									image: '1.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+									choices: {
+										tooltip: 'Процент активного вещества',
+										items: [
+											{
+												text: '1,5%',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-1'
+												}
+											},
+											{
+												text: '3%',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-1'
+												}
+											},
+											{
+												text: '6%',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-1'
+												}
+											},
+											{
+												text: '9%',
+												attr: {
+													type: 'radio',
+													checked: true,
+													name: 'product-filter-1'
+												}
+											},
+											{
+												text: '12%',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-1'
+												}
+											},
+										]
+									}
+								},
+								{
+									label: 'Shampoo Deep Cleaning',
+									title: 'Шампунь глубокой очистки Infinity Service Pro Shampoo Deep Cleaning',
+									image: '2.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+								},
+								{
+									label: 'Plasma Stabilizer Color',
+									title: 'Плазма стабилизатор Infinity Service Pro Plasma Stabilizer Color',
+									image: '3.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+								},
+								{
+									label: 'Color Lock Keratin+',
+									title: 'Infinity Color Lock Keratin+ Шампунь',
+									image: '4.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+									choices: {
+										tooltip: 'Объем упаковки',
+										items: [
+											{
+												text: '100 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-4'
+												}
+											},
+											{
+												text: '500 мл',
+												attr: {
+													type: 'radio',
+													checked: true,
+													name: 'product-filter-4'
+												}
+											},
+											{
+												text: '1000 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-4'
+												}
+											},
+										]
+									}
+								},
+								{
+									label: 'Color Lock Keratin+',
+									title: 'Infinity Color Lock Keratin+ Кондиционер',
+									image: '5.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+									choices: {
+										tooltip: 'Объем упаковки',
+										items: [
+											{
+												text: '100 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-5'
+												}
+											},
+											{
+												text: '500 мл',
+												attr: {
+													type: 'radio',
+													checked: true,
+													name: 'product-filter-5'
+												}
+											},
+											{
+												text: '1000 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-5'
+												}
+											},
+										]
+									}
+								},
+								{
+									label: 'Color Lock Keratin+',
+									title: 'Infinity Color Lock Keratin+ Маска',
+									image: '6.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+								},
+								{
+									label: 'Vitality Force Keratin+',
+									title: 'Infinity Vitality Force Keratin+ Шампунь',
+									image: '7.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+									choices: {
+										tooltip: 'Объем упаковки',
+										items: [
+											{
+												text: '100 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-7'
+												}
+											},
+											{
+												text: '500 мл',
+												attr: {
+													type: 'radio',
+													checked: true,
+													name: 'product-filter-7'
+												}
+											},
+											{
+												text: '1000 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-7'
+												}
+											},
+										]
+									}
+								},
+								{
+									label: 'Vitality Force Keratin+',
+									title: 'Infinity Vitality Force Keratin+ Кондиционер',
+									image: '8.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+									choices: {
+										tooltip: 'Объем упаковки',
+										items: [
+											{
+												text: '100 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-8'
+												}
+											},
+											{
+												text: '500 мл',
+												attr: {
+													type: 'radio',
+													checked: true,
+													name: 'product-filter-8'
+												}
+											},
+											{
+												text: '1000 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-8'
+												}
+											},
+										]
+									}
+								},
+								{
+									label: 'Vitality Force Keratin+',
+									title: 'Infinity Vitality Force Keratin+ Маска',
+									image: '9.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+								},
+								{
+									label: 'Infinity Performance',
+									title: 'Лак Для Волос Infinity Performance',
+									image: '10.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+									choices: {
+										tooltip: 'Сила фиксации',
+										items: [
+											{
+												text: '2',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-10'
+												}
+											},
+											{
+												text: '3',
+												attr: {
+													type: 'radio',
+													checked: true,
+													name: 'product-filter-10'
+												}
+											},
+											{
+												text: '4',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-10'
+												}
+											},
+										]
+									}
+								},
+								{
+									label: 'Color Lock Keratin+',
+									title: 'Infinity Aqua Boost Keratin+ Шампунь',
+									image: '11.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+								},
+								{
+									label: 'Aqua Boost Keratin+',
+									title: 'Infinity Aqua Boost Кондиционер',
+									image: '12.png',
+									href: '#',
+									attr: {
+										class: ''
+									},
+									choices: {
+										tooltip: 'Объем упаковки',
+										items: [
+											{
+												text: '100 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-12'
+												}
+											},
+											{
+												text: '500 мл',
+												attr: {
+													type: 'radio',
+													checked: true,
+													name: 'product-filter-12'
+												}
+											},
+											{
+												text: '1000 мл',
+												attr: {
+													type: 'radio',
+													name: 'product-filter-12'
+												}
+											},
+										]
+									}
+								},
+							]
+						})._size_mobile-s.js-entry-grid
+
+	+e.banner
+		.page__container
+			+banner({
+				image: '1.jpg',
+				attr: {
+					href: '#'
+				}
+			})
+
+	+e.attention-panel
+		.page__container
+			+attention-panel({
+				controls: [
+					{
+						text: 'Ask a question',
+						attr: {
+							href: '#askForm',
+							class: '_width_full js-modal'
+						}
+					}
+				]
+			})
+				| You can always contact us with any questions you may have. To do so, simply fill out the form and submit it. Our specialists will respond to you within 24 hours.

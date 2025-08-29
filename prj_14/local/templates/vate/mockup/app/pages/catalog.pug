@@ -1,0 +1,517 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'О компании | VATE';
+	- var pageDescription = 'Vate';
+	- var pageKeywords = 'vate';
+
+block content
+
+	+e.breadcrumbs
+		+breadcrumbs({
+			items: [
+				{
+					text: 'Главная',
+					href: 'index.html'
+				},
+				{
+					text: 'Каталог'
+				},
+			]
+		})._style_transparent
+
+
+	+e.section
+		+e.container
+			+section({
+			})._overflow_visible
+				+e.content
+					+e.catalog
+						+catalog({
+							pagination: true,
+							quantityFilter:{
+								label: 'Показать',
+								items:[
+									{
+										text: '10',
+										attr:{
+											class: '_state_active'
+										}
+									},
+									{
+										text: '25',
+										attr:{
+											class: ''
+										}
+									},
+									{
+										text: '50',
+										attr:{
+											class: ''
+										}
+									},
+								]
+							},
+							fastFilter:{
+								label: 'Быстрые фильтры: ',
+								attr:{
+									class: '_weight_thin'
+								},
+								items:[
+									{
+										text: 'Все шины',
+										attr:{
+											class: '_state_active'
+										}
+									},
+									{
+										text: 'SuperSale',
+										attr:{
+											class: '_decor_dashed'
+										}
+									},
+								]
+							},
+							items: [
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171B (22pr) E-2 TL T',
+									image: {
+										image: '1.png'
+									},
+									href: '#',
+									availability: {
+										value: 72,
+									},
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_5'
+										}
+									},
+									reviews: 5,
+									labels: [
+										{
+											text: 'SuperSale',
+											attr: {
+												class: '_style_primary'
+											}
+										}
+									],
+									priceGroup: {
+										old: '105 500',
+										price: '100 500',
+									},
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171G (22pr) E-2 TL T',
+									image: {
+										image: '2.png'
+									},
+									href: '#',
+									added: true,
+									availability: {
+										value: 72,
+									},
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_4'
+										}
+									},
+									reviews: 5,
+									priceGroup: {
+										price: '89 990',
+									},
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171G (22pr) E-2 TL T',
+									image: {
+										image: '2.png'
+									},
+									attr:{
+										class: '_status_unavailable'
+									},
+									href: '#',
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									priceGroup: {
+										price: '89 990',
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_5'
+										}
+									},
+									reviews: 5,
+									labels: [
+										{
+											text: 'SuperSale',
+											attr: {
+												class: '_style_primary'
+											}
+										}
+									]
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171B (22pr) E-2 TL T',
+									image: {
+										image: '1.png'
+									},
+									href: '#',
+									availability: {
+										value: 72,
+									},
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_5'
+										}
+									},
+									reviews: 5,
+									labels: [
+										{
+											text: 'SuperSale',
+											attr: {
+												class: '_style_primary'
+											}
+										}
+									],
+									priceGroup: {
+										price: '100 500',
+									},
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171G (22pr) E-2 TL T',
+									image: {
+										image: '2.png'
+									},
+									href: '#',
+									added: true,
+									availability: {
+										value: 72,
+									},
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_4'
+										}
+									},
+									reviews: 5,
+									priceGroup: {
+										price: '89 990',
+									},
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171G (22pr) E-2 TL T',
+									image: {
+										image: '2.png'
+									},
+									attr:{
+										class: '_status_unavailable'
+									},
+									href: '#',
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									priceGroup: {
+										price: '89 990',
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_5'
+										}
+									},
+									reviews: 5,
+									labels: [
+										{
+											text: 'SuperSale',
+											attr: {
+												class: '_style_primary'
+											}
+										}
+									]
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171B (22pr) E-2 TL T',
+									image: {
+										image: '1.png'
+									},
+									href: '#',
+									availability: {
+										value: 72,
+									},
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_5'
+										}
+									},
+									reviews: 5,
+									labels: [
+										{
+											text: 'SuperSale',
+											attr: {
+												class: '_style_primary'
+											}
+										}
+									],
+									priceGroup: {
+										price: '100 500',
+									},
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171G (22pr) E-2 TL T',
+									image: {
+										image: '2.png'
+									},
+									href: '#',
+									added: true,
+									availability: {
+										value: 72,
+									},
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_4'
+										}
+									},
+									reviews: 5,
+									priceGroup: {
+										price: '89 990',
+									},
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171G (22pr) E-2 TL T',
+									image: {
+										image: '2.png'
+									},
+									attr:{
+										class: '_status_unavailable'
+									},
+									href: '#',
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									priceGroup: {
+										price: '89 990',
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_5'
+										}
+									},
+									reviews: 5,
+									labels: [
+										{
+											text: 'SuperSale',
+											attr: {
+												class: '_style_primary'
+											}
+										}
+									]
+								},
+								{
+									title: 'Автошина 16.00R20 Miteras MT811 174/171G (22pr) E-2 TL T',
+									image: {
+										image: '2.png'
+									},
+									attr:{
+										class: '_status_unavailable'
+									},
+									href: '#',
+									props: {
+										items: [
+											{
+												class: '_size_full',
+												type: 'size',
+												label: 'Размер:',
+												value: ' 33.00-51'
+											},
+											{
+												label: 'Индекс нагрузки, кг:',
+												value: ' 232 / 35 500'
+											},
+											{
+												label: 'Прочность:',
+												value: '58pr'
+											},
+										]
+									},
+									priceGroup: {
+										price: '89 990',
+									},
+									rating: {
+										interactable: false,
+										attr: {
+											class: '_marks_5'
+										}
+									},
+									reviews: 5,
+									labels: [
+										{
+											text: 'SuperSale',
+											attr: {
+												class: '_style_primary'
+											}
+										}
+									]
+								},
+							]
+						})

@@ -1,0 +1,206 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'UI kit | VATE';
+	- var pageDescription = 'VATE';
+	- var pageKeywords = 'vate';
+
+	- var fileName = 'ui.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h2',
+					text: 'Заголовки',
+					attr: {
+						class: '_size_h2-s _font_secondary'
+					}
+				}
+			}
+		})
+			+e.content
+				.page__container
+					+title('h3')._size_h1
+						| H1 title
+					+title('h3')._size_h2
+						| H2 title
+					+title('h3')._size_h3
+						| H3 title
+					+title('h3')._size_h4
+						| H4 title
+					+title('h3')._size_h5
+						| H5 title
+					//- +title('h3')._size_h3._weight_light
+					//- 	| H3 Light
+					//- +title('h3')._size_h3._weight_regular
+					//- 	| H3 Regular
+					//- +title('h3')._size_h3._weight_medium
+					//- 	| H3 Medium
+					//- +title('h3')._size_h3._weight_bold
+					//- 	| H3 Bold
+					hr
+					+title('h3')._size_h3._align_left
+						| H3 left
+					+title('h3')._size_h3._align_center
+						| H3 center
+					+title('h3')._size_h3._align_right
+						| H3 right
+
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h2',
+					text: 'Кнопки',
+					attr: {
+						class: '_size_h2-s _font_secondary'
+					}
+				}
+			}
+		})
+			+e.content
+				.page__container
+					+button()._width_full(type='button')
+						| Full
+					br
+					br
+					+button()(type='button')
+						| Default
+					+button()._style_dark(type='button')
+						| Dark
+					+button()._style_outline(type='button')
+						| Outline
+					+button()._state_loading(type='button')
+						| Outline
+
+					br
+					br
+					br
+					+button()(type='button' disabled)
+						| Disabled
+					+button()._style_light(type='button' disabled)
+						| button
+					+button()._style_outline(type='button' disabled)
+						| tag
+					br
+					br
+					br
+					+button()._size_s(type='button')
+						| Поиск
+					+button()(type='button')
+						| Заказать звонок
+					+button()._size_l(type='button')
+						| Отправить
+					+button()._size_xl(type='button')
+						| Перейти в каталог
+					br
+					br
+					br
+					+button()._size_m(type='button')
+						<svg class="button__icon" width="23" height="15" viewBox="0 0 23 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.622505 13.95C-0.178307 13.1892 -0.210767 11.9233 0.550005 11.1225L9.32501 1.88565C10.5078 0.640651 12.4922 0.640653 13.675 1.88565L22.45 11.1225C23.2108 11.9233 23.1783 13.1892 22.3775 13.95C21.5767 14.7108 20.3108 14.6783 19.55 13.8775L11.5 5.40381L3.45 13.8775C2.68923 14.6783 1.42332 14.7108 0.622505 13.95Z" fill="currentColor"/>
+						</svg>
+					+button()._style_transparent._size_m(type='button')
+						<svg class="button__icon" width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.550005 0.622505C1.31078 -0.178307 2.57669 -0.210766 3.3775 0.550005L12.6143 9.32501C13.8593 10.5078 13.8593 12.4923 12.6143 13.675L3.3775 22.45C2.57669 23.2108 1.31078 23.1783 0.550005 22.3775C-0.210766 21.5767 -0.178307 20.3108 0.622505 19.55L9.09619 11.5L0.622505 3.45C-0.178307 2.68923 -0.210766 1.42332 0.550005 0.622505Z" fill="#575757"/>
+						</svg>
+					br
+					br
+					br
+					h3
+						| Строка поиска с результатами
+					+search-panel({
+						input: {
+							attr: {
+								class: 'js-search-with-results',
+								placeholder: 'Например: крупногабаритная шина'
+							}
+						},
+						submit: {
+							icon: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.1862 14.4713H15.9762L20.2162 18.7313C20.6262 19.1413 20.6262 19.8113 20.2162 20.2213C19.8062 20.6313 19.1362 20.6313 18.7262 20.2213L14.4762 15.9713V15.1813L14.2062 14.9013C12.8062 16.1013 10.8962 16.7213 8.86621 16.3813C6.08621 15.9113 3.86621 13.5913 3.52621 10.7913C3.00621 6.56133 6.56621 3.00133 10.7962 3.52133C13.5962 3.86133 15.9162 6.08133 16.3862 8.86133C16.7262 10.8913 16.1062 12.8013 14.9062 14.2013L15.1862 14.4713ZM5.47621 9.97133C5.47621 12.4613 7.48621 14.4713 9.97621 14.4713C12.4662 14.4713 14.4762 12.4613 14.4762 9.97133C14.4762 7.48133 12.4662 5.47133 9.97621 5.47133C7.48621 5.47133 5.47621 7.48133 5.47621 9.97133Z" fill="#D9D9D9"/></svg>'
+						},
+						results: true
+					})
+					br
+					br
+					br
+					h3
+						| INPUT (types)
+					+e.form
+						+form('form')
+							+e.inputs
+								+e.line
+									+form-control({
+										type: 'text',
+										label: '',
+										attr: {
+											placeholder: 'Normal',
+										}
+									})
+								+e.line
+									+form-control({
+										type: 'text',
+										label: '',
+										attr: {
+											placeholder: 'Error',
+											class:'form-control__input_state_invalid'
+										}
+									})
+								+e.line
+									+form-control({
+										type: 'text',
+										label: '',
+										attr: {
+											placeholder: 'Success	',
+											value: 'Валидное значение',
+											class:'just-validate-success-field'
+										}
+									})
+								+e.line
+									+form-control({
+										type: 'text',
+										label: '',
+										attr: {
+											placeholder: 'Disable',
+											disabled: 'true',
+										}
+									})
+								//- +e.line
+								//- 	+form-control({
+								//- 		type: 'password',
+								//- 		label: '',
+								//- 		attr: {
+								//- 			placeholder: 'Password',
+								//- 		}
+								//- 	})
+								+e.line
+									+form-control({
+										type: 'text',
+										label: '',
+										attr: {
+											placeholder: 'Прозрачное поле',
+											class:'form-control__input_style_transparent'
+										}
+									})
+
+								+e.line
+									+form-control({
+										type: 'text',
+										label: '',
+										attr: {
+											placeholder: 'Прозрачное поле',
+											class:'form-control__input_state_invalid form-control__input_style_transparent'
+										}
+									})
+					br
+					br
+					br
+
+
+

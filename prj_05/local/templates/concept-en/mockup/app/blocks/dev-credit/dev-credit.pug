@@ -1,0 +1,10 @@
+mixin dev-credit(data = {})
+	- var DIR = 'assets/blocks/dev-credit/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .dev-credit
+	+b.dev-credit&attributes(attributes)
+		if data.image
+			+e.illustration
+				+image(data.image, IMG_DIR)
+		block
+	// end .dev-credit

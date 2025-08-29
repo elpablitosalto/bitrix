@@ -1,0 +1,114 @@
+DIR = '../blocks/entry-snippet/'
+IMG_DIR = DIR + 'images/'
+
+.entry-snippet
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	padding 15px
+	font-size 12px
+	line-height 1.45
+	box-shadow 0 0 10px 0 #1b1a1826
+	def-trn box-shadow
+
+	+above(size-l)
+		padding 15px 15px 45px
+		font-size 14px
+
+	&:hover
+		box-shadow 0 0 10px 0 rgba(51, 51, 204, .25)
+
+
+
+	&__illustration
+		position relative
+		display block
+		overflow hidden
+		flex 0 0 auto
+		width 100%
+		margin 0 0 10px
+
+		+above(size-l)
+			margin 0 0 8px
+
+		&:last-child
+			margin-bottom 0
+
+		&:before
+			content ''
+			display block
+			width 100%
+			height auto
+			padding 92.3% 0 0
+
+			+above(size-m)
+				padding 91.755% 0 0
+
+
+
+	&__image
+		position absolute
+		top 50%
+		left 50%
+		width 100%
+		height 100%
+		object-fit contain
+		transform translate(-50%, -50%)
+
+
+
+	&__content
+		display flex
+		flex 1 1 auto
+		flex-direction column
+		flex-wrap nowrap
+		width 100%
+		padding 0 5px
+
+
+
+	&__title
+		display block
+		flex 0 0 auto
+		width 100%
+		margin 0 0 2px
+		color var(--color-dark)
+		font-size 12px
+		font-weight 300
+
+		+above(size-l)
+			margin 0 0 7px
+			font-size 14px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__text
+		display block
+		flex 0 0 auto
+		width 100%
+		margin 0 0 10px
+		color var(--color-grey)
+
+		&:last-child
+			margin-bottom 0
+
+		p:not([class])
+			margin 0 0 10px
+
+			&:last-child
+				margin-bottom 0
+
+
+
+	&__price
+		display block
+		flex 0 0 auto
+		width 100%
+		margin auto 0 10px
+		padding 16px 0 0
+
+		&:last-child
+			margin-bottom 0

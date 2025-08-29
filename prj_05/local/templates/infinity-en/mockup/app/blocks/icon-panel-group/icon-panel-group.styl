@@ -1,0 +1,94 @@
+DIR = '../blocks/icon-panel-group/'
+IMG_DIR = DIR + 'images/'
+
+.icon-panel-group
+	position relative
+	display block
+	overflow hidden
+
+
+
+	&__list
+		display block
+		margin 0
+		padding 0
+		list-style none
+
+		+above(size-m)
+			display flex
+			flex-wrap wrap
+			justify-content center
+			margin -43px -15px
+
+
+
+	&__item
+		display block
+		margin 0 0 83px
+		padding 0
+
+		+above(size-m)
+			flex 0 1 50%
+			width 50%
+			max-width 50%
+			margin 0
+			padding 43px 15px
+
+		+above(size-l)
+			flex-basis 33.3333%
+			width 33.3333%
+			max-width 33.3333%
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	// Modifiers
+	&_size
+		&_s
+			.icon-panel-group
+				&__list
+					+above(size-m)
+						justify-content flex-start
+						margin -20px -10px
+
+				&__item
+					margin 0 0 40px
+
+					+above(size-m)
+						flex 0 1 50%
+						width 50%
+						max-width 50%
+						margin 0
+						padding 20px 10px
+
+					&:last-child
+						margin-bottom 0
+
+		&_m
+			.icon-panel-group
+				&__item
+					margin 0 0 56px
+
+					+above(size-m)
+						margin 0
+
+					&:last-child
+						margin-bottom 0
+
+					.icon-panel
+						+below(size-m - 1)
+							padding 0
+
+	&_style
+		&_decorated
+			padding 30px 0 47px
+			background-image repeating-linear-gradient(90deg, var(--color-black-10) 0, var(--color-black-10) 10px, transparent 10px, transparent 20px),
+				repeating-linear-gradient(90deg, var(--color-black-10) 0, var(--color-black-10) 10px, transparent 10px, transparent 20px)
+			background-repeat no-repeat
+			background-position 0 0, 0 100%
+			background-size auto 1px
+
+			+above(size-l)
+				padding 30px 0 40px

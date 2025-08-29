@@ -1,0 +1,26 @@
+mixin entry-snippet(data = {})
+	- var DIR = 'assets/blocks/entry-snippet/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .entry-snippet
+	+b.entry-snippet&attributes(attributes)
+		if data.image
+			- var attr = data.linkAttr || {}
+			+e.illustration(href=data.href)&attributes(attr)
+				+image(data.image, IMG_DIR)
+
+		+e.content
+			if data.title
+				+e.title
+					!=data.title
+
+			if data.text
+				+e.text
+					!=data.text
+
+			if data.price
+				+e.price
+					- var attr = data.price.attr || {};
+
+					+price(data.price)&attributes(attr)
+		block
+	// end .entry-snippet

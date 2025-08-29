@@ -1,0 +1,1 @@
+&copy; 2001 - <?echo date('Y');?> BIG LLC

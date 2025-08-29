@@ -1,0 +1,8 @@
+mixin burger()
+	- var DIR = 'assets/blocks/burger/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .burger
+	+b('button').burger&attributes(attributes)
+		+e.bars
+			block
+	// end .burger

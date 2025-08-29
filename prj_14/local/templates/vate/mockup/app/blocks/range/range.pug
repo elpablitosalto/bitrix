@@ -1,0 +1,24 @@
+- componentStyles.push('assets/components/noUiSlider-master/nouislider.min.css')
+
+mixin range(start, stop)
+	- var DIR = 'assets/blocks/range/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .range
+	+b.range&attributes(attributes).js-range
+		+e.fields
+			+e('label').field
+				+e('span').label
+					| От
+				+e('input').input._type_from(type="text" value=start + '')
+				+e('input').input._type_visual-from(type="text" value=start + '')
+				+e.rub
+					| ₽
+			+e('label').field
+				+e('span').label
+					| До
+				+e('input').input._type_to(type="text" value=stop + '')
+				+e('input').input._type_visual-to(type="text" value=stop + '')
+				+e.rub
+					| ₽
+		+e.slider
+	// end .range

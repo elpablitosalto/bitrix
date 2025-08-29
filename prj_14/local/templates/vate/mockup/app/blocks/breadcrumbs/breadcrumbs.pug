@@ -1,0 +1,20 @@
+mixin breadcrumbs(data)
+	- var DIR = 'assets/blocks/breadcrumbs/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .breadcrumbs
+	+b.breadcrumbs&attributes(attributes)
+		if data
+			if data.items
+				+e('ul').list(itemscope itemtype='https://schema.org/BreadcrumbList').page__container
+					each item, i in data.items
+						+e('li').item(itemprop='itemListElement' itemscope itemtype='https://schema.org/ListItem')
+							if item.href
+								+e.link(href=item.href itemprop='name')
+									!=item.text
+								meta(itemprop='position' content=(1 + i))
+							else
+								+e('span').label(itemprop='name')
+									!=item.text
+								meta(itemprop='position' content=(1 + i))
+		block
+	// end .breadcrumbs

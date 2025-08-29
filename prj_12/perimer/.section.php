@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Пеример";
+$arDirProperties = Array(
+
+);
+?>

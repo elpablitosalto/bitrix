@@ -1,0 +1,22 @@
+mixin quantity-input(data)
+	- var DIR = 'assets/blocks/quantity-input/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .quantity-input
+	+b.quantity-input&attributes(attributes)
+		+e.wrapper.js-quantity-container
+			- var cur = data.cur || 0;
+			- var min = data.min || 0;
+			- var max = data.max || 100;
+
+			+e.control
+				+e('button').button._type_decrease.js-quantity-decrease(type='button' disabled=min)
+					| Убавить
+
+			+e.field
+				+e('input').input.js-quantity-input(type='number' value=cur min=min max=max data-min=min data-max=max )
+
+			+e.control
+				+e('button').button._type_increase.js-quantity-increase(type='button' disabled=max)
+					| Добавить
+		block
+	// end .quantity-input

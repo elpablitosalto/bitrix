@@ -1,0 +1,25 @@
+DIR = '../blocks/banner-carousel/'
+IMG_DIR = DIR + 'images/'
+
+.banner-carousel
+	position relative
+	display block
+
+
+
+	&__container
+		overflow visible
+
+
+
+	&__navigation
+		position absolute
+		left 50%
+		bottom 0
+		z-index 10
+		transform translate(-50%, 0)
+
+		+above(size-xxl)
+			display none
+
+

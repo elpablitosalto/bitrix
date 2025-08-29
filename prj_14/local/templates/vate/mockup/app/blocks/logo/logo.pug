@@ -1,0 +1,10 @@
+mixin logo(data)
+	- var DIR = 'assets/blocks/logo/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .logo
+	+b.A(href='index.html').logo&attributes(attributes)
+		if data
+			+image(data.image, IMG_DIR)
+
+		block
+	// end .logo

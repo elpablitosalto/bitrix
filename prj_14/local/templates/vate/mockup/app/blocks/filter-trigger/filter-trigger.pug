@@ -1,0 +1,15 @@
+mixin filter-trigger(data)
+	- var DIR = 'assets/blocks/filter-trigger/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .filter-trigger
+	+b.filter-trigger&attributes(attributes)
+		if data.text
+			+e('span').text
+				!=data.text
+
+		if data.count
+			+e('span').count
+				!=data.count
+
+			block
+	// end .filter-trigger

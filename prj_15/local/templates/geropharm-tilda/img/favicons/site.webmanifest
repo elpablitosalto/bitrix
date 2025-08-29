@@ -1,0 +1,19 @@
+{
+    "name": "\u0412\u0440\u0430\u0447 \u0431\u0443\u0434\u0443\u0449\u0435\u0433\u043e",
+    "short_name": "\u0412\u0440\u0430\u0447 \u0431\u0443\u0434\u0443\u0449\u0435\u0433\u043e",
+    "icons": [
+        {
+            "src": "/img/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#e7e7ff",
+    "background_color": "#e7e7ff",
+    "display": "standalone"
+}

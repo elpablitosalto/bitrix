@@ -1,0 +1,21 @@
+mixin link-filter(data)
+	- var DIR = 'assets/blocks/link-filter/';
+	- var IMG_DIR = DIR + 'images/';
+	- attributes.class += ' js-link-filter';
+	- attributes.class = attributes.class.trim();
+	// begin .link-filter
+	+b.link-filter&attributes(attributes)
+		if data
+			if data.label
+				+e('span').label
+					!=data.label
+
+			if data.items
+				+e('ul').list
+					each item in data.items
+						+e('li').item
+							- var attr = item.attr || {};
+							+e('a').link&attributes(attr)
+								!=item.text
+		block
+	// end .link-filter

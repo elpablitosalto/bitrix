@@ -1,0 +1,837 @@
+<?php
+get_header();
+
+?>
+<div class="home-page">
+    <div class="block-main-slider">
+        <div id="container1" class="twentytwenty-container">
+            <div class="twentytwenty_img_wrap twentytwenty_img_wrap__before">
+                <div class="twentytwenty_img_wrap__overlay"></div>
+                <img data-src="<?php bloginfo('template_url'); ?>/img/pages-style/gold/bg.webp" alt="image" />
+            </div>
+            <div class="twentytwenty_img_wrap twentytwenty_img_wrap__after">
+                <div class="twentytwenty_img_wrap__overlay"></div>
+                <img data-src="<?php bloginfo('template_url'); ?>/img/pages-style/black/bg.webp" alt="image" />
+            </div>
+        </div>
+        <div class="main_slider__content">
+            <h1 style="display: none;">Студия дизайна интерьера</h1>
+            
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "2500"
+    },
+    "description": "Заказать авторский дизайн интерьера от лучших дизайнеров. Дизайн-проекты дома, квартиры или офиса под ключ в Москве. Студия Лашина Сергея VPROEKTE. ☎️ Телефон: +7 (905) 707-33-08.",
+    "name": "Дизайн-проект квартиры",
+    "image": "https://vproekte.com/wp-content/themes/vproekte/img/pages-style/gold/bg.jpg",
+    "brand": "Студия «VPROEKTE»",
+    "offers": {
+        "@type": "Offer",
+        "availability": "http://schema.org/InStock",
+        "url": "https://vproekte.com/index.php",
+        "price": "8000",
+        "priceCurrency": "RUB"
+    }
+}
+</script>           
+            
+            <div class="main_slider__big-title">
+                <img class="big-title" data-src="<? echo get_template_directory_uri(); ?>/img/home-title.svg" alt="Заглавное изображение">
+                <!--                <p class="main_slider__content_pretitle">НОВЫЙ УРОВЕНЬ ЖИЗНИ, А НЕ ПРОСТО</p>-->
+                <!--                <p class="main_slider__content_title">дизаин интерьера-->
+                <!--                    <span class="yiy"><svg viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+                <!--                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99998 17V33C6.99998 33 6.867 33.1234 6.99998 33C8.72621 31.397 21 16 21 16L6.99998 17Z" fill="white"/>-->
+                <!--                        </svg></span>-->
+                <!--                </p>-->
+                <!--                <p class="main_slider__content_subtitle">ПРОЕКТИРУЕМ <span>|</span> СОПРОВОЖДАЕМ <span>|</span> РЕАЛИЗУЕМ</p>-->
+            </div>
+            <div class="main-slider__bottom">
+                <h3 class="main-slider__test">
+                    <!-- ВАШ ИДЕАЛЬНЫЙ ИНТЕРЬЕР В <span class="gold">3Х ПРЕЗЕНТАЦИЯХ</span> РЕАЛИЗОВАННЫХ РАБОТ СТУДИИ -->
+					Пройдите тест <span class="gold">за 1 минуту</span> и получите комплексный разбор дизайна Вашего интерьера
+                </h3>
+                <div class="style_buttons home-style-buttons">
+                    <div class="style_buttons__item">
+                        <div class="btn_wrap">
+                            <div class="main-button gold_theme modal-open__questions">
+                                <!--<span>Получить презентацию</span>-->
+                                <span>ПРОЙТИ ТЕСТ</span>
+                                <div class="rect_waves">
+                                    <div class="rect_waves-inner">
+                                        <div class="rect1"></div>
+                                        <div class="rect2"></div>
+                                        <div class="rect3"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__content_footer">
+                    <h2 style="display:none;">Достижения компании</h2>
+                    <div class="main_slider__content_footer_item">
+                        <div class="image">
+                            <img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/1.webp" alt="Идеальный ремонт">
+                        </div>
+                        <h3>Архитекторы передачи
+                            Первого канала
+                            «Идеальный ремонт»</h3>
+                    </div>
+                    <div class="main_slider__content_footer_item">
+                        <div class="image">
+                            <img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/2.webp" alt="Salon Interior">
+                        </div>
+                        <h3>Публикации в
+                            журнале об архитектуре и дизайне
+                            Salon Interior</h3>
+                    </div>
+                    <div class="main_slider__content_footer_item">
+                        <div class="image">
+                            <img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/3.webp" alt="Клиентский сервис">
+                        </div>
+                        <h3>Получили награду Best
+                            of Houzz 2018-2022 в категории
+                            «Клиентский сервис»</h3>
+                    </div>
+                    <div class="main_slider__content_footer_item">
+                        <div class="image">
+                            <img data-src="/wp-content/themes/vproekte/img/winner-2020.webp" class="fix-img" alt="International Property Awards">
+                        </div>
+                        <h3>Победители международной премии International Property Awards</h3>
+                    </div>
+                    <div class="main_slider__content_footer_item">
+                        <div class="image">
+                            <img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/5.webp" alt="Публикации">
+                        </div>
+                        <h3>Публикации в журнале
+                            о дизайне интерьера
+                            Elle Decoration</h3>
+                    </div>
+                    <div class="main_slider__content_footer_item">
+                        <div class="image">
+                            <img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/6.webp" alt="120 проверенных
+                            отзывов">
+                        </div>
+                        <h3>>120 проверенных
+                            отзывов на сайтах
+                            profi.ru и houzz.com</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-container">
+        <div class="bg-container-dark">
+            <div class="block-under-main-slider">
+                <div class="block-catalog block-single-catalog" data-action="<? echo admin_url('admin-ajax.php'); ?>">
+                    <div class="pillow parallax-block">
+                        <img class="parallax-img" data-src="<?php bloginfo('template_url'); ?>/img/portfolio-image/pillow.webp" alt="Подушка" data-parallax="14">
+                    </div>
+
+                    <div class="flower parallax-block">
+                        <img class="parallax-img" data-src="<?php bloginfo('template_url'); ?>/img/portfolio-image/flower.webp" alt="Цветок" data-parallax="22">
+                    </div>
+                    <div class="pineapple parallax-block">
+                        <img class="parallax-img" data-src="<?php bloginfo('template_url'); ?>/img/portfolio-image/pineapple.webp" alt="Ананас" data-parallax="12">
+                    </div>
+                    <h2 style="display:none;">Наше портфолио</h2>
+                    <div id="home-category-items-container" data-posttype="portfolio">
+                        <? $args = array(
+                            'orderby' => 'menu_order',
+                            'order' => 'ASC',
+                            'post_type' => 'portfolio',
+                            'post_status' => 'publish',
+                            'posts_per_page' => 9,
+                        );
+                        $query = new WP_Query($args);
+                        ?>
+                        <?php if ($query->have_posts()) : ?>
+                            <div class="catalog__items">
+
+                                <?php
+                                while ($query->have_posts()) {
+                                    $query->the_post(); ?>
+                                    <?php
+                                    $post_id = get_the_ID();
+                                    $video_id = get_field('portfolio_youtube_id');
+                                    $category = wp_get_post_terms($post_id, 'category', 'id');
+                                    $cat = '';
+                                    foreach ($category as $cat) {
+                                        if ($cat->term_id == 9) {
+                                            $cat = '<img data-src="/wp-content/themes/vproekte/img/pages-style/gold.webp" alt="золото">';
+                                        } elseif ($cat->term_id == 10) {
+                                            $cat = '<img data-src="/wp-content/themes/vproekte/img/pages-style/chrome.webp" alt="хром">';
+                                        } elseif ($cat->term_id == 11) {
+                                            $cat = '<img data-src="/wp-content/themes/vproekte/img/pages-style/black.webp" alt="черный">';
+                                        } elseif ($cat->term_id == 12) {
+                                            $cat = '<img data-src="/wp-content/themes/vproekte/img/pages-style/white.webp" alt="белый">';
+                                        } else {
+                                            $cat = '';
+                                        }
+                                    }
+                                    ?>
+                                    <?php if ($video_id) { ?>
+                                        <?php
+                                        $thumbnail_image = 'https://i.ytimg.com/vi/' . $video_id . '/maxresdefault.jpg';
+                                        if (wpcf_is_404($thumbnail_image)) {
+                                            $thumbnail_image = 'https://i.ytimg.com/vi/' . $video_id . '/sddefault.jpg';
+                                        }
+                                        if (wpcf_is_404($thumbnail_image)) {
+                                            $thumbnail_image = 'https://i.ytimg.com/vi/' . $video_id . '/hqdefault.jpg';
+                                        }
+                                        if (wpcf_is_404($thumbnail_image)) {
+                                            $thumbnail_image = get_the_post_thumbnail_url(null, 'medium');
+                                        }
+                                        ?>
+                                        <div class="black-portfolio-list__item">
+                                            <a class="black-portfolio-list__link fancybox-youtube" href="https://www.youtube.com/watch?v=<?php echo $video_id; ?>" style="background-image: url('<?php echo $thumbnail_image; ?>');">
+                                                <span class="black-portfolio-list__wrap"></span>
+                                                <div class="black-portfolio-list__cat"><? echo $cat; ?></div>
+                                                <h4 class="black-portfolio-list__title"><?php the_title(); ?>
+                                        </div>
+                                        <span class="prev-portfolio-list__link"></span>
+                                        <span class="youtube-play"></span>
+                                        </a>
+                            </div>
+                        <?php } else { ?>
+                            <?
+                                            $img = str_replace("jpg", "webp", get_the_post_thumbnail_url($post->ID, 'large'));
+                                            $img = str_replace("https://vproekte.com/","",$img);
+                                            if(file_exists($img)){
+                                                $backImg = "https://vproekte.com/".$img;
+                                            }else{
+                                                $backImg = get_the_post_thumbnail_url($post->ID, 'large');
+                                            }
+                                        
+                            ?>
+                            <div class="black-portfolio-list__item">
+                                <a class="black-portfolio-list__link" href="<?php echo get_permalink(); ?>" style="background-image: url('<?php echo $backImg; ?>');">
+                                    <span class="black-portfolio-list__wrap"></span>
+                                    <div class="black-portfolio-list__cat"><? echo $cat; ?></div>
+                                    <h4 class="black-portfolio-list__title"><?php the_title(); ?></h4>
+                                    <span class="prev-portfolio-list__link"></span>
+                                </a>
+                            </div>
+                        <? } ?>
+                    <? }
+                    ?>
+                    </div>
+                <?php else :
+                            get_template_part('template-parts/content', 'none');
+                        endif;
+                        wp_reset_query();
+                ?>
+                <!-- <div class="home-catalog-button-wrap">
+                    <a href="/category/portfolio/" class="main-button light_theme home-catalog-button">Посмотреть больше выполненных работ</a>
+                </div> -->
+                        
+                <div class="portfolio-nav-list">
+            
+                    <div class="portfolio-nav-list__item" style="margin-right: 0px !important;">
+                        <a href="/category/portfolio/" class="main-button category-select">Посмотреть все работы</a>
+                    </div>  
+          
+                    <div class="portfolio-nav-list__item">
+                        <a href="/portfolio/style/neoklassika/" class="main-button category-select <? if ($term_id === 95) : ?> included<? endif; ?>">Классические интерьеры</a>
+                    </div>
+                    <div class="portfolio-nav-list__item">
+                        <a href="/portfolio/style/sovremennyj/" class="main-button category-select <? if ($term_id === 94) : ?> included<? endif; ?>">Современные интерьеры</a>
+                    </div>
+                    <div class="portfolio-nav-list__item">
+                        <a href="/portfolio/object/ofisy/" class="main-button category-select <? if ($term_id === 79) : ?> included<? endif; ?>">Офисы</a>
+                    </div>
+                    <div class="portfolio-nav-list__item">
+                        <a href="/portfolio/object/vip/" class="main-button category-select <? if ($term_id === 100) : ?> included<? endif; ?>">VIP</a>
+                    </div>
+                </div>      
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="list" class="about-us">
+        <div class="about_us__overlay"></div>
+        <div class="parallax-block left" style="top: 50%">
+            <img class="parallax-img" data-src="<?php bloginfo('template_url'); ?>/img/parallax-image1.webp" alt="asd" data-parallax="10">
+        </div>
+        <div class="parallax-block right" style="top: 60%">
+            <img class="parallax-img" data-src="<?php bloginfo('template_url'); ?>/img/parallax-image2.webp" alt="asd" data-parallax="13">
+        </div>
+        <div class="fix">
+            <div class="block-center">
+                <div class="block-with-corners">
+                    <span class="top-corner animate"></span>
+                    <h2 class="title">
+                        О нас
+                    </h2>
+                    <p> В нашей команде архитекторы, дизайнеры, декораторы, инженеры и строители со стажем работы более 10
+                        лет<br>
+                        Студия “VPROEKTE” основана <a href="/about/#elm">Лашиным Сергеем</a> в 2015 году. В <a href="/category/portfolio/#works">портфолио</a> представлено более 50 выполненных жилых и
+                        коммерческих проектов. Также посмотрите <a href="/reviews/#elm">отзывы клиентов</a> на
+                        нашем и внешних сайтах <br>(<a rel="nofollow" href="https://profi.ru/profile/LashSA/" target="_blank">profi.ru</a>
+                        и <a rel="nofollow" href="https://www.houzz.ru/pro/sergeylash/" target="_blank">houzz.com</a>)</p>
+                    <span class="bottom-corner animate"></span>
+                </div>
+            </div>
+            <div class="block-slider-video">
+                <a rel="nofollow" href="https://propertyawards.net/region/international/?fwp_winner_year=2020-winners&fwp_winner_type=interior-design" target="_blank" class="winner_link">
+                    <img data-src="<?php bloginfo('template_url'); ?>/img/winner-2020.webp" alt="">
+                </a>
+                <div class="ie"></div>
+                <div class="inner-block-slider">
+                    <div class="slider slider-for">
+						<a href="" class="wrap-slide" data-id="ByYpDOJ8iX4" style="background-image: url('https://i.ytimg.com/vi/ByYpDOJ8iX4/maxresdefault.jpg');">
+                            <span class="youtube-play"></span>
+                        </a>
+                        <a href="" class="wrap-slide" data-id="b-fRzYiJVcE" style="background-image: url('https://i.ytimg.com/vi/b-fRzYiJVcE/maxresdefault.jpg');">
+                            <span class="youtube-play"></span>
+                        </a>
+                        <a href="" class="wrap-slide" data-id="Duptkh42lWo" style="background-image: url('https://i.ytimg.com/vi/Duptkh42lWo/maxresdefault.jpg');">
+                            <span class="youtube-play"></span>
+                        </a>
+                        <a href="" class="wrap-slide" data-id="ylVXKhWjgi0" style="background-image: url('https://i.ytimg.com/vi/ylVXKhWjgi0/maxresdefault.jpg');">
+                            <span class="youtube-play"></span>
+                        </a>
+                        <a href="" class="wrap-slide" data-id="lqIccEQgLHk" style="background-image: url('https://i.ytimg.com/vi/lqIccEQgLHk/maxresdefault.jpg');">
+                            <span class="youtube-play"></span>
+                        </a>
+
+                        <a href="" class="wrap-slide" data-id="ipHY3LyvbvU" style="background-image: url('https://i.ytimg.com/vi/ipHY3LyvbvU/maxresdefault.jpg');">
+                            <span class="youtube-play"></span>
+                        </a>
+                        <a href="" class="wrap-slide" data-id="i4CeqysjRkM" style="background-image: url('https://i.ytimg.com/vi/i4CeqysjRkM/maxresdefault.jpg');">
+                            <span class="youtube-play"></span>
+                        </a>
+                    </div>
+                    <div class="slider slider-nav">
+						<div class="tumb-item"><img data-src="https://i.ytimg.com/vi/ByYpDOJ8iX4/maxresdefault.jpg" alt="дизайн интерьера">
+                            <div class="time-code">
+                                <p>
+                                    4:08
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tumb-item"><img data-src="https://i.ytimg.com/vi/b-fRzYiJVcE/maxresdefault.jpg" alt="дизайн интерьера">
+                            <div class="time-code">
+                                <p>
+                                    2:04
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tumb-item"><img data-src="https://i.ytimg.com/vi/Duptkh42lWo/maxresdefault.jpg" alt="распаковка дизайн-проекта">
+                            <div class="time-code">
+                                <p>
+                                    7:40
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tumb-item"><img data-src="https://i.ytimg.com/vi/ylVXKhWjgi0/maxresdefault.jpg" alt="квартира 125 м2">
+                            <div class="time-code">
+                                <p>
+                                    1:18
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tumb-item"><img data-src="https://i.ytimg.com/vi/lqIccEQgLHk/maxresdefault.jpg" alt="квартира 170 м2">
+                            <div class="time-code">
+                                <p>
+                                    1:16
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tumb-item"><img data-src="https://i.ytimg.com/vi/ipHY3LyvbvU/maxresdefault.jpg" alt="asd">
+                            <div class="time-code">
+                                <p>
+                                    22:46
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tumb-item">
+                            <img data-src="https://i.ytimg.com/vi/i4CeqysjRkM/maxresdefault.jpg" alt="архитектор Сергей Лашин">
+                            <div class="time-code">
+                                <p>
+                                    0:44
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-name">
+                    <div class="name">
+                        <h3 class="title">
+                            Сергей Лашин
+                            <a rel="nofollow" href="https://www.instagram.com/vproekte/" target="_blank" class="inst_link"></a>
+                        </h3>
+                        <p>
+                            Руководитель студии, <br>
+                            архитектор, дизайнер.
+                        </p>
+                    </div>
+                    <button class="main-button gold_theme modal-open__request-consult">
+                        Заказать консультацию
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="gradient_overlay">
+            <div class="center_block">
+                <div class="block_with_icons block_with_icons-home">
+                    <h2 class="title">Наши преимущества</h2>
+                    <div class="fix">
+                        <div class="item">
+                            <a href="#" class="image"><img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/Layer1.webp" alt="12 лет опыта"></a>
+                            <h3>
+                                Более 12 лет опыта,<br>
+                                архитектурный<br>
+                                поэтапный подход
+                            </h3>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="image"><img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/Layer2.webp" alt="под ключ"></a>
+                            <h3>
+                                Работаем от<br> проектирования до<br> ремонта и меблировки
+                            </h3>
+                        </div>
+                        <div class="item">
+                            <a href="#" class="image"><img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/Layer3.webp" alt="проверенные строители"></a>
+                            <h3>
+                                Возможность посещения объектов,<br> надежные строители
+                            </h3>
+                        </div>
+
+                        <div class="item">
+                            <div class="image"><img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/Layer4.webp" alt="российские фабрики"></div>
+                            <h3>
+                                Работа с российскими<br> фабриками<br> (экономия до 70%)
+                            </h3>
+                        </div>
+                        <div class="item">
+                            <div class="image"><img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/Layer5.webp" alt="четкие сроки"></div>
+                            <h3>
+                                Соблюдение сроков, <br> подкрепленных договором
+                            </h3>
+                        </div>
+                        <div class="item">
+                            <div class="image"><img data-src="<?php bloginfo('template_url'); ?>/img/new_head_block/Layer6.webp" alt="скидки"></div>
+                            <h3>
+                                Сокращение затрат<br> на закупки до 50% за<br> счет личных
+                                скидок
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="bg-container-light">
+        <div class="block-styles">
+            <h2 style="display:none;">3D-визуализация интерьера и декора квартиры</h2>
+            <?php echo do_shortcode('[home_styles]'); ?>
+        </div>
+        <div class="testone">
+            <? get_template_part('template-parts/particles/testone', 'nature'); ?>
+        </div>
+
+
+        <?php echo do_shortcode('[reviews]'); ?>
+        <div class="block-map">
+            <div class="form-on-map">
+                <div id="map">
+                    <div class="map-form">
+                        <div class="left-block">
+                            <div class="border-block"></div>
+                            <div class="map-branch">
+                                <img data-src="<?php bloginfo('template_url'); ?>/img/map-branch.webp" alt="расположение на карте">
+                            </div>
+                        </div>
+                        <div class="right-block">
+                            <div class="inner-right-block">
+                                <div class="block-center">
+                                    <div class="block-with-corners">
+                                        <span class="top-corner animate"></span>
+                                        <h2 class="title">
+                                            Как нас<br>
+                                            найти
+                                        </h2>
+                                        <span class="bottom-corner animate"></span>
+                                    </div>
+                                </div>
+
+                                <div class="contacts">
+                                    <p class="number">
+                                        +7 (905) 707-33-08
+                                    </p>
+                                    <p class="email">
+                                        hello@vproekte.com
+                                    </p>
+                                    <p class="adress">
+                                        г. Москва, Малый Конюшковский пер., д.2 (3&nbsp;этаж)
+                                    </p>
+                                </div>
+
+                                <div class="icons">
+                                    <a rel="nofollow" href="whatsapp://send?phone=79629595622"><img data-src="<?php bloginfo('template_url'); ?>/img/icon1.webp" alt="asd"></a>
+                                    <a rel="nofollow" href="tg://resolve?domain=slashin"><img data-src="<?php bloginfo('template_url'); ?>/img/icon2.webp" alt="asd"></a>
+                                    <a rel="nofollow" href="viber://chat?number=79629595622"><img data-src="<?php bloginfo('template_url'); ?>/img/icon3.webp" alt="asd"></a>
+                                </div>
+                                <div class="contact-button">
+                                    <button class="main-button light_theme modal-open__request-call">
+                                        Заказать звонок
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="plant-bg">
+                                <img data-src="<?php bloginfo('template_url'); ?>/img/plant-5.webp" alt="asd">
+                            </div>
+                            <div class="parallax-image parallax-block">
+                                <img class="parallax-img" data-src="<?php bloginfo('template_url'); ?>/img/646.webp" alt="asd" data-parallax="13">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.map-form -->
+                </div>
+
+            </div>
+        </div>
+        <script src="https://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU"></script>
+        <script>
+            ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+            var myMap; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
+            function init() { // функция - собиралка карты и фигни
+                myMap = new ymaps.Map("map", { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"
+                    center: [55.758240, 37.580193], // ну тут центр
+                    behaviors: ['default', 'scrollZoom'], // скроллинг колесом
+                    zoom: 17 // тут масштаб
+                });
+                myMap.behaviors.disable('scrollZoom'); // — это отключает зум колёсиком мышки, всё ок.
+                myMap.behaviors.disable('multiTouch'); // — это отключает зум щипком, не очень нужно.
+                myMap.behaviors.disable('drag'); //
+
+                var position = myMap.getGlobalPixelCenter();
+                var w = jQuery(window).width();
+                if (w > 2000) {
+                    myMap.setGlobalPixelCenter([position[0] - 400, position[1]]);
+                }
+
+                if (w <= 2000) {
+                    myMap.setGlobalPixelCenter([position[0] - 100, position[1]]);
+                }
+                if (w <= 1024) {
+                    myMap.setGlobalPixelCenter([position[0] - 0, position[1]]);
+                }
+
+
+                myPlacemark0 = new ymaps.Placemark([55.758240, 37.580193], { // Создаем метку с такими координатами и суем в переменную
+                    balloonContent: '' // сдесь содержимое балуна в формате html, все стили в css
+                }, {
+                    iconImageHref: '/wp-content/themes/vproekte/img/645.png', // картинка иконки
+                    iconImageSize: [67, 80], // размер иконки
+                    iconImageOffset: [-40, -80], // позиция иконки
+                    balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
+                    balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная
+                    // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
+                    balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
+                    balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
+                    balloonShadow: false,
+                    balloonAutoPan: false // для фикса  выравнивания
+                });
+                /* тоже самое для других меток */
+                /* Добавляем */
+                myMap.geoObjects
+                    .add(myPlacemark0);
+
+                /* Фикс выравнивания кастомных балунов */
+                myMap.geoObjects.events.add([
+                    'balloonopen'
+                ], function(e) {
+                    var geoObject = e.get('target');
+                    myMap.panTo(geoObject.geometry.getCoordinates(), {
+                        delay: 0
+                    });
+                });
+            }
+        </script>
+
+        <div class="block-under-map">
+            <div class="parallax-block left back books">
+                <img class="parallax-img" data-src="<?php bloginfo('template_url'); ?>/img/parallax-image5.webp" alt="asd" data-parallax="23">
+            </div>
+            <div class="parallax-block right back leaves ">
+                <img class="parallax-img" data-src="<?php bloginfo('template_url'); ?>/img/parallax-image6.webp" alt="asd" data-parallax="30">
+            </div>
+
+            <div class="fix">
+                <?php echo do_shortcode('[form_design_example]'); ?>
+            </div>
+
+
+            <?php echo do_shortcode('[our_clients]'); ?>
+            <!-- /.block-clients -->
+
+            <div class="add-services-block">
+                <div class="interior__fix">
+                    <div class="block-center">
+                        <div class="block-with-corners minimal"><span class="top-corner animate"></span>
+                            <p class="title">Дополнительные услуги</p>
+                            <span class="bottom-corner animate"></span>
+                        </div>
+                    </div>
+                    <div class="block-with-card">
+                        <div class="services-card">
+                            <div class="plant-list parallax-block"><img class="parallax-img" data-src="/wp-content/themes/vproekte/img/interior-design/plant-list.webp" alt="лист" data-parallax="44"></div>
+                            <div class="sculpt-eye parallax-block"><img class="parallax-img" data-src="/wp-content/themes/vproekte/img/interior-design/sculpt-eye.webp" alt="глаз" data-parallax="24"></div>
+                            <div class="card-image"><img data-src="/wp-content/themes/vproekte/img/interior-design/services-icon1.webp" alt="иконка"></div>
+                            <div class="top-section">
+                                <p class="title">Авторский надзор</p>
+                                <p>Поможет правильно реализовать задуманные проектом решения по плану. Руководитель работы консультирует исполнителей и всех остальных подрядчиков, закрывая массу вопросов во время ремонта и освобождая ваше время на важные детали.</p>
+                            </div>
+                            <div class="bot-section">
+                                <div class="title">Что входит:</div>
+                                <ul>
+                                    <li>Рекомендации по дизайн-проекту.</li>
+                                    <li>4 раза в месяц мы приезжаем на объект и проверяем, чтобы рабочие и прочие участники проекта четко следовали плану и чертежам.</li>
+                                </ul>
+                                <a class="main-button gold_theme" href="/dizajn-kvartir/avtorskij-nadzor/"> ПОДРОБНЕЕ ОБ АВТОРСКОМ ПРОЕКТЕ</a>
+                            </div>
+                        </div>
+                        <div class="services-card">
+                            <div class="card-image"><img data-src="/wp-content/themes/vproekte/img/interior-design/services-icon2.webp" alt="иконка"></div>
+                            <div class="top-section">
+                                <p class="title">Комплектация</p>
+                                <p>Освободит время и силы от поиска поставщиков, организации поставок отделочных материалов, расстановки мебели в комнатах и сантехники и прочих проблем, с которыми можно регулярно сталкиваться без опыта.</p>
+                            </div>
+                            <div class="bot-section big card2 ">
+                                <div class="title">Что входит:</div>
+                                <ul>
+                                    <li>Общение с поставщиками.</li>
+                                    <li>Поиск подрядчика и поставщика.</li>
+                                    <li>Доставка образцов материалов для отделки.</li>
+                                    <li>Согласование сроков доставки.</li>
+                                    <li>Помощь с приемом товаров.</li>
+                                    <li>Расстановка мебели по плану комнаты.</li>
+                                    <li>Обсуждение замены при браке.</li>
+                                    <li>Подбор необходимых аналогов на сходные по качеству материалы.</li>
+                                </ul>
+                                <a class="main-button gold_theme" href="/dizajn-kvartir/komplektacziya/"> ПОДРОБНЕЕ О КОМПЛЕКТАЦИИ</a>
+                            </div>
+                        </div>
+                        <div class="services-card">
+                            <div class="plant-list2 parallax-block"><img class="parallax-img" data-src="/wp-content/themes/vproekte/img/interior-design/plant-list2.webp" alt="лист" data-parallax="44"></div>
+                            <div class="card-image"><img data-src="/wp-content/themes/vproekte/img/interior-design/services-icon3.webp" alt="иконка"></div>
+                            <div class="top-section">
+                                <p class="title">Управление строительством</p>
+                                <p>Мы грамотно организуем строительный процесс по дизайн-проекту и освобождаем ваше время. Вы получаете проект "под ключ" и все проблемы ремонта квартиры вас не касаются.</p>
+                            </div>
+                            <div class="bot-section big">
+                                <div class="title">Что входит:</div>
+                                <ul>
+                                    <li>Выступаем в роли представителя заказчика и консультанта по всем вопросам.</li>
+                                    <li>Мы координируем и организовываем бригады мастеров. Вместо регулярных посещений объекта вы будете заниматься своими делами — всю ответственность за ведение стройки, ремонта и прочей дейтельности мы берём на себя. Вам останется лишь принять работу.</li>
+                                </ul>
+                                <a class="main-button gold_theme" href="/dizajn-kvartir/upravlenie-stroitelstvom/"> ПОДРОБНЕЕ ОБ УПРАВЛЕНИИ </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.interior__fix -->
+                
+                <div class="block__test-drive">
+                    <div class="block-center">
+                        <div class="sub-corners-text">
+                            <p>
+                                &nbsp;
+                            </p>
+                        </div>
+    
+                        <div class="test-drive__price">
+                            <div class="price__left price__block">
+                                <div class="price__block-wrapper">
+                                    <div class="price__title">
+                                        <p>
+                                        Консультация+
+                                        </p>
+                                        <img data-src="/wp-content/themes/vproekte/img/pages-style/3.webp" alt="">
+                                    </div>
+                                    <div class="video_btn_container">
+                                        <button class="play-button open_video_popup">
+                                            <img data-src="/wp-content/themes/vproekte/img/pages-style/white/play-icon.webp" alt="">
+                                            <span class="button-rounds">
+                                                <span class="rounds-inner">
+                                                    <span class="circle1"></span >
+                                                    <span class="circle2"></span >
+                                                    <span class="circle3"></span >
+                                                </span >
+                                            </span >
+                                            <!-- /.rounds -->
+                                        </button>
+                                    </div>
+
+
+                                    <div class="cost-block">
+                                    <div class="cost__wrapper">
+                                        <div class="cost__item1">
+                                        <p class="cost__title">Бесплатно</p>
+                                        <p class="descr">С дизайнером или
+                                        менеджером</p>
+
+                                        </div>
+                                        <div class="cost__item2">
+                                        <p class="cost__title">5 000 руб.</p>
+                                        <p class="descr">С арт-директором или ведущим дизайнером</p>
+
+                                        </div>
+                                        <div class="cost__item3">
+
+                                        *входит в стоимость дизайн-проекта
+
+                                        </div>
+                                    </div>
+                                    <!-- /.cost__wrapper -->
+
+                                    </div>
+                                    <!-- /.cost-block -->
+                                    <div class="price__description">
+                                    <p class="test">Для наших клиентов мы предлагаем не только общее консультирование, а также осуществляем анкетирование.
+                                    За 3 часа специалист поможет подобрать стиль, определит<span class="dots">...</span> <span class="hidden-part">ваши пожелания по индивидуальному наполнению комнат, ознакомится с техническими особенностями помещений и даст массу                                     полезных рекомендаций по заданиям, выбору и выгодным покупкам материалов. </span></p>
+
+                                    <div class="show-more"><a class="show-hidden-part" href="#"> <span>Развернуть</span> описание </a></div>
+                                    </div>
+                                    <!-- /.price_description -->
+
+                                    </div>
+                                    <!-- /.price__block-wrapper -->
+                                    <div class="block-result">
+                                    <div class="result-wrapper">
+                                    <p class="result__title">Результат: <img data-src="/wp-content/themes/vproekte/img/pages-style/book-icon.webp" alt="книга"></p>
+
+                                    <div class="result__description">
+                                    <p class="marker-item">Общее представление по проектным, инженерным и строительным работам.</p>
+                                    <p class="marker-item">Мини-альбом с рекомендациями, который поможет воплотить ваше видение интерьера.</p>
+
+                                    </div>
+                                    <div class="price__button"><button class="main-button gold_theme modal-open__request-consult"> Заказать</button></div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <!-- /.price__left price__block -->
+                                    <div class="price__right price__block">
+                                    <div class="price__block-wrapper">
+                                    <div class="price__title">
+                                    <p>
+                                    День с дизайнером
+                                    </p>
+                                    <img data-src="/wp-content/themes/vproekte/img/pages-style/6.webp" alt="">
+
+                                    </div>
+                                    <div class="cost-block">
+                                    <div class="cost__wrapper">
+                                    <div class="cost__item1">
+                                    <p class="cost__title">10 000 руб.</p>
+                                    <p class="descr">С дизайнером</p>
+
+                                    </div>
+                                    <div class="cost__item2">
+                                    <p class="cost__title">20 000 руб.</p>
+                                    <p class="descr">С арт-директором или ведущим специалистом</p>
+
+                                    </div>
+                                    <div class="cost__item3">
+
+                                    *входит в стоимость дизайн-проекта
+
+                                    </div>
+                                    </div>
+                                    <!-- /.cost__wrapper -->
+
+                                    </div>
+                                    <!-- /.cost-block -->
+                                    <div class="price__description">
+                                    <p class="test">Данная услуга - это отличная возможность за 1-2% от общей стоимости (средняя стоимость для квартиры площадью 100 м²: - 350 000 рублей) всего проекта увидеть дизайнера в действии и лучше представить процесс.<span class="dots">...                                    </span> <span class="hidden-part">
+                                    Определим ваши пожелания по индивидуальному наполнению комнат, ознакомимся с техническими особенностями помещений и дадим массу полезных рекомендаций по реализации интерьера, выбору и выгодным покупкам материалов. </span></p>
+
+                                    <div class="show-more"><a class="show-hidden-part" href="#"> <span>Развернуть</span> описание </a></div>
+                                    </div>
+                                    <!-- /.price_description -->
+
+                                    </div>
+                                    <!-- /.price__block-wrapper -->
+                                    <div class="block-result">
+                                    <div class="result-wrapper">
+                                    <p class="result__title">Результат: <img data-src="/wp-content/themes/vproekte/img/pages-style/book-icon.webp" alt="иконка книги"> <img data-src="/wp-content/themes/vproekte/img/pages-style/message-icon.webp" alt="иконка сообщения"> <img data-src="/wp-content/themes/vproekte/img/pages-style/sketch-icon.webp" alt="скетч-иконка"></p>
+
+                                    <div class="result__description">
+                                    <p class="marker-item">Выезд на объект (до 50 км от МКАД).</p>
+                                    <p class="marker-item">Эскизы (от руки) планировочных решений.</p>
+                                    <p class="marker-item">Общее представление по проектным, инженерным и строительным работам.</p>
+                                    <p class="marker-item">Мини-альбом с личными рекомендациями, который поможет просто распределить бюджет на строительные работы и воплотить задумки.</p>
+
+                                    </div>
+                                    <div class="price__button"><button class="main-button gold_theme modal-open__request-day-with-disigner">Заказать</button></div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <!-- /.price__right price__block -->
+                                    <div class="price-image"><img data-src="/wp-content/themes/vproekte/img/pages-style/gold/5999.webp" alt=""></div>
+                                    <div class="chair parallax-block"><img class="parallax-img" data-src="/wp-content/themes/vproekte/img/pages-style/gold/chair.webp" alt="кресло" data-parallax="15"></div>
+                                    </div>
+                                    <!-- /.test-drive__price -->
+
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+
+        
+            <div class="seo_blocks gradient">
+                <div class="fix fix1300">
+                    <div class="seo_blocks__item__wrap">
+                        <div class="seo_blocks__item">
+                            <h2 class="seo_blocks__item_title">Заказать дизайн-проект интерьера в авторских стилях</h2>
+                            <div class="seo_blocks__item_text">
+                                <p>
+                                    Стиль Nature разработала студия дизайна интерьера VPROEKTE. Главный акцент в нем сделан на преобладание натуральных фактур и природных материалов, контраст черного и белого. Решение мы разделили на два направления.
+                                    <a href="/style/nature-white/">White Nature</a> подойдет тем, кто любит скандинавский стиль, легкость форм планировки, теплый оттенок белого и функциональные аксессуары. Он простой и практичный. <a href="/style/nature-black/">Black Nature</a>
+                                    — это черно-серые оттенки с яркими акцентами, кирпич, бетон и металл, эстетика лофта. Его удобно выбрать, если вам нравится модный дизайн интерьеров, контрастные фактуры и «дыхание большого города».
+                                </p>
+                                <p>
+                                    Дизайн-отделка Accent — это неоклассика: душевная, легкая и аристократичная Gold и яркая, динамичная, вдохновляющая Chrome.. <a href="/style/accent-gold/">Gold Accent</a> объединяет плавные, мягкие линии, округлые формы, теплую, солнечную палитру и сдержанные геометрические орнаменты.
+                                    Акценты — металлическая фурнитура цвета золота, меди, латуни. Если же вам нравится эклектика ардеко и симметричный вид помещения, <a href="/style/accent-chrome/">Chrome Accent</a> подойдет вам как нельзя лучше. Его строгую геометрию пространства комнат и графичные орнаменты дополняют строгие акценты: сталь, глянцевый керамогранит, лакированное дерево.
+                                </p>
+                            </div>
+                            <!-- /.seo_blocks__item_text -->
+                        </div>
+                        <!-- /.seo_blocks__item -->
+                    </div>
+                    <!-- /.seo_blocks__item__wrap -->
+                </div>
+                <!-- /.fix fix1300 -->
+            </div>
+            
+    
+            <!-- /.seo_blocks -->
+        </div>
+        
+    
+<? echo do_shortcode('[stats title="Статьи из нашего блога"]'); ?>      
+        
+    </div>
+</div>
+</div>
+<?php echo do_shortcode('[form_estimate]'); ?>
+<?php echo do_shortcode('[form_design_project]'); ?>
+<?php echo do_shortcode('[form_consultation]'); ?>
+<?php echo do_shortcode('[form_day_with_designer]'); ?>
+<?php get_footer();

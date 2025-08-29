@@ -1,0 +1,56 @@
+@media screen and (max-width: 768px) {
+    .desktop
+    {
+        display: none;
+    }
+}
+@media screen and (min-width: 769px) {
+    .mobile
+    {
+        display: none;
+    }
+}
+.nb-stocks .row
+{
+    margin-top: 15px;
+}
+#tr_PROPERTY_31,
+#tr_PROPERTY_28,
+#tr_PROPERTY_32,
+#tr_PROPERTY_29,
+#tr_PROPERTY_207,
+#tr_PROPERTY_211,
+#tr_PROPERTY_212,
+#tr_PROPERTY_396,
+#tr_PROPERTY_397 {
+    display: none;
+}
+.nb-comparison-advantage__form label.error
+{
+    display:block;
+}
+/*.nb-dropdown-specializations input[type=radio] + label.disabled {*/
+/*    cursor: default;*/
+/*    opacity: .6;*/
+/*    pointer-events: none;*/
+/*}*/
+.nb-affiliated--text a {
+    color: inherit;
+    text-decoration: underline;
+}
+.nb-affiliated--text a:hover {
+    text-decoration: none;
+}
+
+.content-block-border {
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid #E9EEF7;
+    -webkit-box-shadow: 2px 2px 8px rgba(102, 136, 183, 0.129);
+    box-shadow: 2px 2px 8px rgba(102, 136, 183, 0.129);
+}
+
+.content-table-border td {
+    border: 1px solid #E9EEF7!important;
+    padding: 12px!important;
+}

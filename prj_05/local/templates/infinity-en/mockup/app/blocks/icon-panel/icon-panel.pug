@@ -1,0 +1,34 @@
+mixin icon-panel(data)
+	- var DIR = 'assets/blocks/icon-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .icon-panel
+	+b.icon-panel&attributes(attributes)
+		if data
+			+e.wrapper
+				if data.icon
+					+e.illustration
+						if data.inlineIcon
+							!=data.icon
+
+						else
+							+image({
+								lazyClass: '',
+								image: data.icon
+							}, IMG_DIR)
+
+				+e.info
+					if data.title
+						+e.title
+							if data.simpleTitle
+								!=data.title
+
+							else
+								+title('div')._size_h5._case_normal
+									!=data.title
+
+					if data.text
+						+e.text
+							!=data.text
+
+		block
+	// end .icon-panel

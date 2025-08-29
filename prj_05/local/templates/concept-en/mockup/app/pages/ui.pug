@@ -1,0 +1,113 @@
+extends /layouts/default/default.pug
+
+block head
+	- var pageTitle = 'UI kit | Базовый проект';
+	- var pageDescription = 'Базовый проект для быстрого старта верстки проектов';
+	- var pageKeywords = 'hair, concept';
+
+	- var fileName = 'ui.html';
+	- var bodyClass = '';
+	- var headerClass = '';
+	- var headerWrapperClass = '__header-wrapper';
+
+block content
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h2',
+					text: 'Заголовки',
+					attr: {
+						class: '_size_h2-s _font_secondary'
+					}
+				}
+			}
+		})
+			+e.content
+				.page__container
+					+title('h3')._size_h1._weight_medium._font_secondary
+						| H1 Medium (alternative)
+					+title('h3')._size_h2
+						| H2
+					+title('h3')._size_h2-s._font_secondary
+						| H2 (smaller, alternative)
+					+title('h3')._size_h3._weight_regular
+						| H3 Regular
+					+title('h3')._size_h4._weight_medium
+						| H4 Medium
+					+title('h3')._size_h4._font_secondary
+						| H4 (alternative)
+					+title('h3')._size_h5._weight_regular
+						| H5 Regular
+					+title('h3')._size_h6._font_secondary
+						| H6 (alternative)
+					+title('h3')._size_h6
+						| H6
+					hr
+					+title('h3')._size_h3._weight_light
+						| H3 Light
+					+title('h3')._size_h3._weight_regular
+						| H3 Regular
+					+title('h3')._size_h3._weight_medium
+						| H3 Medium
+					+title('h3')._size_h3._weight_bold
+						| H3 Bold
+					hr
+					+title('h3')._size_h3._weight_medium._font_secondary
+						| H3 Medium (alternative)
+					+title('h3')._size_h3._weight_semibold._font_secondary
+						| H3 Semibold (alternative)
+					hr
+					+title('h3')._size_h3._case_normal
+						| H3 (normal case)
+					hr
+					+title('h3')._size_h3._style_primary
+						| H3 (primary)
+					hr
+					+title('h3')._size_h3._align_left
+						| H3 left
+					+title('h3')._size_h3._align_center
+						| H3 center
+					+title('h3')._size_h3._align_right
+						| H3 right
+
+
+	+e.section
+		+section({
+			header: {
+				title: {
+					tag: 'h2',
+					text: 'Кнопки',
+					attr: {
+						class: '_size_h2-s _font_secondary'
+					}
+				}
+			}
+		})
+			+e.content
+				.page__container
+					+button()._width_full(type='button')
+						| Full
+					br
+					+button()(type='button')
+						| Default
+					+button()._style_light(type='button')
+						| Light
+					+button()._style_outline(type='button')
+						| Outline
+					br
+					br
+					+button()(type='button' disabled)
+						| Disabled
+					+button()._style_light(type='button' disabled)
+						| button
+					+button()._style_outline(type='button' disabled)
+						| tag
+					br
+					br
+					+button()._state_disabled(href='#')
+						| Disabled
+					+button()._style_light._state_disabled(href='#')
+						| a
+					+button()._style_outline._state_disabled(href='#')
+						| tag

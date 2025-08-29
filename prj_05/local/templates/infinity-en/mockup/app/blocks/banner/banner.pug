@@ -1,0 +1,12 @@
+mixin banner(data = {})
+	- var DIR = 'assets/blocks/banner/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .banner
+	+b.banner&attributes(attributes)
+		if data.image
+			+image({
+				image: data.image,
+				sources: data.sources
+			}, IMG_DIR)
+		block
+	// end .banner

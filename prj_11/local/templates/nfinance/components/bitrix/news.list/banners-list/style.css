@@ -1,0 +1,12 @@
+.banner-list {
+	width: 100%;
+}
+
+.banner-list__item:first-child {
+	height: 580px;
+}
+
+.banner-list__item {
+	position: relative;
+	margin: 0 0 40px;
+}

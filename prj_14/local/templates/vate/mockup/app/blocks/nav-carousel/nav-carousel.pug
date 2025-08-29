@@ -1,0 +1,30 @@
+mixin nav-carousel(data)
+	- var DIR = 'assets/blocks/nav-carousel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .nav-carousel
+	+b.nav-carousel&attributes(attributes)
+		if data
+			+e.container(class='swiper js-nav-carousel page__container')
+				+e.wrapper(class='swiper-wrapper')
+					if data.items
+						each item in data.items
+							+e.slide(class='swiper-slide')
+								- var attr = item.attr || {};
+
+								+button&attributes(attr)
+									!=item.title
+
+			+e.navigation
+				+e.arrows
+					+carousel-nav({
+						arrows: true,
+						buttonAttr:{
+							class: 'button_width_fit button_style_transparent'
+						}
+					})._position_sides._disabled_hide(
+						data-nav-scope='.nav-carousel'
+						data-nav-target='.swiper'
+					)
+
+		block
+	// end .nav-carousel

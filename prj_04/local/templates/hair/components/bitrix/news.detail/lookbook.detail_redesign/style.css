@@ -1,0 +1,114 @@
+.content.lookbook-detail .full-page-banner {
+    margin: 0;
+}
+
+.content-section {
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .content-section {
+        padding: 40px 0;
+    }
+}
+
+.content-section__download-link {
+    margin: 0;
+    padding: 0;
+}
+
+.content-header {
+    display: block;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .content-header {
+        margin: 0 0 24px;
+    }
+}
+
+.content-header:last-child {
+    margin-bottom: 0;
+}
+
+.content.lookbook-detail .content-header .content-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    text-align: inherit;
+}
+
+@media only screen and (min-width: 768px) {
+    .content.lookbook-detail .content-header .content-title {
+        font-size: 30px;
+        line-height: 37px;
+    }
+}
+
+.content-section p:not([class]) {
+    margin: 0 0 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .content-section p:not([class]) {
+        margin: 0 0 20px;
+    }
+}
+
+.content-section p:not([class]):last-child {
+    margin-bottom: 0;
+}
+
+.content-section img:not([class]) {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.content.lookbook-detail .videos-container {
+    margin: 0;
+}
+
+.content .videos-container .videos-container__item {
+    max-width: none;
+    margin: 0 0 20px;
+}
+
+.content .videos-container .videos-container__item:last-child {
+    margin-bottom: 0;
+}
+
+.content .videos-container .videos-container__item-image {
+    min-height: auto;
+}
+
+.content .videos-container .videos-container__item-image:before {
+    position: relative;
+    display: block;
+    height: auto;
+    padding: 48.33% 0 0;
+}
+
+.photo-slider__slide {
+    max-width: 220px;
+}
+
+@media only screen and (min-width: 768px) {
+    .photo-slider__slide {
+        max-width: none;
+    }
+}
+
+.content.lookbook-detail .ask-question {
+    margin-top: 20px !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .content.lookbook-detail .ask-question {
+        margin-top: 40px !important;
+    }
+}

@@ -1,0 +1,6 @@
+.catalog_detail .sku_props .bx_item_detail_size ul li:hover .color_link{
+	color: white;
+}
+.catalog_detail .prices_block .item-stock{
+    display: block !important;
+}

@@ -1,0 +1,133 @@
+DIR = '../blocks/check-elem/'
+IMG_DIR = DIR + 'images/'
+
+.check-elem
+	position relative
+	display flex
+	flex-wrap nowrap
+	color var(--color-grey)
+	font-size 14px
+	font-weight 300
+	line-height 1.43
+	text-align left
+
+
+
+	&__input
+		position absolute
+		overflow hidden
+		clip rect(0 0 0 0)
+		width 1px
+		height 1px
+		margin -1px
+		padding 0
+		border none
+		opacity .01
+		transform scale(.001)
+
+		&[type='radio']
+			& ~ .check-elem
+				&__visual
+					border-radius 50%
+
+					&:before
+						width .5em
+						height .5em
+						background currentColor
+						border none
+						border-radius 50%
+						transform translate(-50%, -50%)
+
+		&:checked
+			& ~ .check-elem
+				&__visual
+					&:before
+						opacity 1
+
+		&:disabled
+			pointer-events none
+
+			& ~ .check-elem
+				&__visual
+				&__label
+					pointer-events none
+					opacity .5
+
+		& + .check-elem
+			&__visual
+				margin-left 0
+
+		// Modifiers
+		&_state
+			&_error
+				& ~ .check-elem
+					&__visual
+					&__label
+						color var(--color-error)
+
+
+
+	&__visual
+		position relative
+		display block
+		overflow hidden
+		flex 0 0 1em
+		width 1em
+		max-width 1em
+		height 1em
+		margin 0 .5em
+		color var(--color-grey)
+		font-size 20px
+		line-height 0
+		cursor pointer
+		user-select none
+		background transparent
+		border .05em solid currentColor
+		border-radius 0
+		def-trn(color, background-color)
+
+		&:last-child
+			margin-right 0
+
+		&:before
+			content ''
+			position absolute
+			top 50%
+			left 50%
+			z-index 1
+			display block
+			box-sizing border-box
+			width .25em
+			height .55em
+			color var(--color-primary)
+			border-right .075em solid currentColor
+			border-bottom .075em solid currentColor
+			opacity 0
+			transform translate(-50%, -60%) rotate(45deg) skew(5deg)
+			def-trn(opacity)
+
+
+
+	&__label
+		position relative
+		display block
+		align-self center
+		margin 0
+		padding 0
+		font inherit
+		line-height inherit
+		cursor pointer
+
+
+
+	// Modifiers
+	&_state
+		&_checked
+			.check-elem
+				&__visual
+					&:before
+						opacity 1
+
+	&_color
+		&_neutral
+			color var(--color-black)

@@ -1,0 +1,75 @@
+DIR = '../blocks/breadcrumbs/'
+IMG_DIR = DIR + 'images/'
+
+.breadcrumbs
+	display block
+
+
+
+	&__list
+		display block
+		margin 0
+		padding 0
+		list-style none
+		font-size 0
+		line-height 20px
+
+
+
+	&__item
+		position relative
+		display inline-block
+		vertical-align middle
+		overflow hidden
+		padding 0 31px 0 0
+		font-size 12px
+		line-height 1.25
+
+		+above(size-m)
+			padding 0 33px 0 0
+			font-size 16px
+
+		&:last-child
+			padding-right 0
+
+			&:before
+				display none
+
+		&:before
+			content ''
+			position absolute
+			top 50%
+			right 16px
+			z-index 1
+			display block
+			box-sizing border-box
+			width 16px
+			height 16px
+			color currentColor
+			background-image 'url(%s)' % (IMG_DIR + 'arrow.svg')
+			background-repeat no-repeat
+			background-position 50% 50%
+			background-size contain
+			transform translate(50%, -50%)
+
+
+
+	&__link
+		color var(--color-black)
+		font-weight 400
+		text-decoration none
+		outline none
+		def-trn(color)
+
+		&:hover
+		&:focus
+		&:active
+			color var(--color-primary)
+			text-decoration none
+			outline none
+
+
+
+
+	&__label
+		color var(--color-primary)

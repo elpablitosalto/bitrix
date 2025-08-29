@@ -1,0 +1,12 @@
+mixin bullet-pagination(item)
+	- var DIR = 'assets/blocks/bullet-pagination/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .bullet-pagination
+	+b.bullet-pagination&attributes(attributes)
+		if item
+			if item.items
+				each button in item.items
+					+e('button').button(type='button')
+						!=button.text
+		block
+	// end .bullet-pagination

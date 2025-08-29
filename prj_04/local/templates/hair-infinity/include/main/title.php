@@ -1,0 +1,1 @@
+<b><span style="color: #8d0e57; font-size:28px;">INFINITY: ВДОХНОВЕНИЕ, ГЛУБИНА, МНОГОГРАННОСТЬ, СОВЕРШЕНСТВО, ЦВЕТ</span></b>

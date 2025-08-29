@@ -1,0 +1,38 @@
+mixin search-panel(data)
+	- var DIR = 'assets/blocks/search-panel/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .search-panel
+	+b('form').search-panel&attributes(attributes)
+		if data
+			- var input = data.input || {};
+			- var attr = input.attr || {};
+			+e.field
+				+form-control({
+					type: 'text',
+					label: '',
+					attr: {
+						placeholder: input.attr.placeholder,
+						class:'form-control__input_style_transparent form-control__input_size_s search-panel__input' + ' ' + attr.class
+					}
+				})
+
+				if data.results
+					+e.clear-control
+						+e('button').clear.js-search-clear(type='button'
+						data-toggle-scope='.page__header'
+						data-toggle-class='header_search_open')
+
+				if data.submit
+					+e.control
+						- var submitAttr = data.submit.attr || {};
+						+button()._size_s._width_full._rounded_m._style_muted(type='submit')&attributes(submitAttr)
+							| Поиск
+
+
+
+			if data.results
+				+e.results
+					+search-results()
+
+		block
+	// end .search-form

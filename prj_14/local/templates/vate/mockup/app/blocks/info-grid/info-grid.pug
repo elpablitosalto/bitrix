@@ -1,0 +1,32 @@
+mixin info-grid(data)
+	- var DIR = 'assets/blocks/info-grid/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .info-grid
+	+b.info-grid&attributes(attributes)
+		if data
+			+e.container
+				if data.items
+					each item in data.items
+						- var attr = item.attr || {};
+						+e.item&attributes(attr)
+							+e.content
+								if item.value
+									+e.value
+										!=item.value
+								if item.unit
+									+e.unit
+										!=item.unit
+
+								if item.image
+									+image(item.image, IMG_DIR)
+
+							if item.text
+								+e.text
+									!=item.text
+
+							if item.gallery
+								+partners-carousel({
+									items: item.gallery.items
+								})
+		block
+	// end .info-grid

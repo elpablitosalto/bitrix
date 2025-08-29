@@ -1,0 +1,55 @@
+DIR = '../blocks/storage-list/'
+IMG_DIR = DIR + 'images/'
+
+.storage-list
+	display block
+
+	&__item
+		display flex
+		flex-direction column
+		gap 10px
+		margin-bottom 25px
+
+		&:last-child
+			margin-bottom 0
+
+
+
+	&__city
+		color var(--color-white)
+		font-family Raleway
+		font-size 16px
+		font-weight 800
+		font-style normal
+		line-height 25px
+
+
+	&_style
+		&_light
+			color var(--color-white)
+
+
+
+	// Modifiers
+
+	&_m
+		&_row
+			.storage-list
+				&__list
+					display flex
+					flex-wrap wrap
+					margin -19px
+
+					+above(size-l)
+						display block
+						margin 0
+
+				&__item
+					width 50%
+					margin 0
+					padding 19px
+
+					+above(size-l)
+						width initial
+						margin-bottom 25px
+						padding 0

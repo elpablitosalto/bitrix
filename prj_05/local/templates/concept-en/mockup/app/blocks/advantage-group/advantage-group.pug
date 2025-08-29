@@ -1,0 +1,18 @@
+mixin advantage-group(data = {})
+	- var DIR = 'assets/blocks/advantage-group/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .advantage-group
+	+b.advantage-group&attributes(attributes)
+		if data.title
+			+e.header
+				+e.title
+					+title(data.title)
+
+		if data.items
+			+e.main
+				+e.UL.list
+					each item in data.items
+						+e.LI.item
+							+advantage(item)
+		block
+	// end .advantage-group

@@ -1,0 +1,160 @@
+
+
+<aside id="ProductFilter" class=" typography">
+	<div id="ProductFilterOverlay">
+		<div id="ProductFilterWrapper" class="">
+			<div id="ProductFilterContent" class="sectionContent">
+				<div id="ProductFilterGroups"><div class="productFilterGroup" id="pfg-8" data-id="8" data-relimg="1">
+					<div class="groupTitle">Zielgruppe</div>
+					<div class="productFilterItems"><div class="productFilterItem" data-id="70" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-70" /><label for="pfi-70">Garten + Haus</label>
+					</div><div class="productFilterItem" data-id="71" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-71" /><label for="pfi-71">Öffentlicher Raum</label>
+					</div></div>
+				</div><div class="productFilterGroup" id="pfg-9" data-id="9" data-relimg="0">
+					<div class="groupTitle">Steintyp</div>
+					<div class="productFilterItems"><div class="productFilterItem" data-id="72" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-72" /><label for="pfi-72">Platte</label>
+					</div><div class="productFilterItem" data-id="73" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-73" /><label for="pfi-73">Stufe</label>
+					</div><div class="productFilterItem" data-id="74" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-74" /><label for="pfi-74">Pflasterstein</label>
+					</div><div class="productFilterItem" data-id="75" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-75" /><label for="pfi-75">Stele</label>
+					</div><div class="productFilterItem" data-id="76" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-76" /><label for="pfi-76">Palisade</label>
+					</div><div class="productFilterItem" data-id="77" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-77" /><label for="pfi-77">Podest</label>
+					</div><div class="productFilterItem" data-id="78" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-78" /><label for="pfi-78">Stufenplatte</label>
+					</div><div class="productFilterItem" data-id="79" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-79" /><label for="pfi-79">Ökopflaster</label>
+					</div><div class="productFilterItem" data-id="80" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-80" /><label for="pfi-80">Mauer</label>
+					</div></div>
+				</div><div class="productFilterGroup" id="pfg-3" data-id="3" data-relimg="0">
+					<div class="groupTitle">Material</div>
+					<div class="productFilterItems"><div class="productFilterItem" data-id="13" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-13" /><label for="pfi-13">Betonstein</label>
+					</div><div class="productFilterItem" data-id="14" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-14" /><label for="pfi-14">Naturstein</label>
+					</div></div>
+				</div><div class="productFilterGroup" id="pfg-1" data-id="1" data-relimg="1">
+					<div class="groupTitle">Verwendung</div>
+					<div class="productFilterItems"><div class="productFilterItem" data-id="1" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-1" /><label for="pfi-1">Terrasse</label>
+					</div><div class="productFilterItem" data-id="15" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-15" /><label for="pfi-15">Balkon/Dachterrasse</label>
+					</div><div class="productFilterItem" data-id="16" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-16" /><label for="pfi-16">Einfahrt</label>
+					</div><div class="productFilterItem" data-id="17" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-17" /><label for="pfi-17">Hauszugang/Gartenwege</label>
+					</div><div class="productFilterItem" data-id="18" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-18" /><label for="pfi-18">Treppen</label>
+					</div><div class="productFilterItem" data-id="19" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-19" /><label for="pfi-19">Mauern</label>
+					</div><div class="productFilterItem" data-id="20" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-20" /><label for="pfi-20">Palisaden/Einfassungen</label>
+					</div><div class="productFilterItem" data-id="22" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-22" /><label for="pfi-22">Sichtschutz</label>
+					</div><div class="productFilterItem" data-id="23" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-23" /><label for="pfi-23">Kochen im Garten</label>
+					</div><div class="productFilterItem" data-id="24" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-24" /><label for="pfi-24">Licht im Garten</label>
+					</div><div class="productFilterItem" data-id="25" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-25" /><label for="pfi-25">Kunst im Garten</label>
+					</div><div class="productFilterItem" data-id="26" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-26" /><label for="pfi-26">Wasserspiele/Brunnen</label>
+					</div></div>
+				</div><div class="productFilterGroup" id="pfg-4" data-id="4" data-relimg="1">
+					<div class="groupTitle">Farben</div>
+					<div class="productFilterItems"><div class="productFilterItem" data-id="27" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-27" /><label for="pfi-27">Hellgrau</label>
+					</div><div class="productFilterItem" data-id="28" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-28" /><label for="pfi-28">Mittelgrau</label>
+					</div><div class="productFilterItem" data-id="29" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-29" /><label for="pfi-29">Dunkelgrau/Anthrazit</label>
+					</div><div class="productFilterItem" data-id="30" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-30" /><label for="pfi-30">Braun/Terracotta</label>
+					</div><div class="productFilterItem" data-id="31" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-31" /><label for="pfi-31">Beige/Sand</label>
+					</div><div class="productFilterItem" data-id="32" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-32" /><label for="pfi-32">Weiß</label>
+					</div><div class="productFilterItem" data-id="33" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-33" /><label for="pfi-33">Braungrau</label>
+					</div><div class="productFilterItem" data-id="34" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-34" /><label for="pfi-34">Schwarz</label>
+					</div></div>
+				</div><div class="productFilterGroup" id="pfg-5" data-id="5" data-relimg="0">
+					<div class="groupTitle">Oberflächen</div>
+					<div class="productFilterItems"><div class="productFilterItem" data-id="35" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-35" /><label for="pfi-35">Feinstrukturiert</label>
+					</div><div class="productFilterItem" data-id="36" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-36" /><label for="pfi-36">Natürlich strukturiert</label>
+					</div><div class="productFilterItem" data-id="37" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-37" /><label for="pfi-37">Geschliffen</label>
+					</div><div class="productFilterItem" data-id="38" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-38" /><label for="pfi-38">Feingestrahlt</label>
+					</div><div class="productFilterItem" data-id="39" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-39" /><label for="pfi-39">Gemasert</label>
+					</div><div class="productFilterItem" data-id="40" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-40" /><label for="pfi-40">Samtiert</label>
+					</div><div class="productFilterItem" data-id="41" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-41" /><label for="pfi-41">Schalungsglatt</label>
+					</div><div class="productFilterItem" data-id="42" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-42" /><label for="pfi-42">Geflammt</label>
+					</div><div class="productFilterItem" data-id="43" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-43" /><label for="pfi-43">Gespalten</label>
+					</div><div class="productFilterItem" data-id="44" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-44" /><label for="pfi-44">Gestockt</label>
+					</div></div>
+				</div><div class="productFilterGroup" id="pfg-2" data-id="2" data-relimg="0">
+					<div class="groupTitle">Größe und Form</div>
+					<div class="productFilterItems"><div class="productFilterItem" data-id="7" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-7" /><label for="pfi-7">XXL-Großformat</label>
+					</div><div class="productFilterItem" data-id="2" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-2" /><label for="pfi-2">10-25 cm</label>
+					</div><div class="productFilterItem" data-id="3" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-3" /><label for="pfi-3">25-50 cm</label>
+					</div><div class="productFilterItem" data-id="4" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-4" /><label for="pfi-4">50-100 cm</label>
+					</div><div class="productFilterItem" data-id="6" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-6" /><label for="pfi-6">100-150 cm</label>
+					</div><div class="productFilterItem" data-id="8" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-8" /><label for="pfi-8">Quadratisch</label>
+					</div><div class="productFilterItem" data-id="9" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-9" /><label for="pfi-9">Rechteckig</label>
+					</div><div class="productFilterItem" data-id="10" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-10" /><label for="pfi-10">Länglich/Parkett</label>
+					</div><div class="productFilterItem" data-id="11" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-11" /><label for="pfi-11">Polygonal</label>
+					</div><div class="productFilterItem" data-id="12" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-12" /><label for="pfi-12">Kreissteinsatz</label>
+					</div></div>
+				</div><div class="productFilterGroup" id="pfg-6" data-id="6" data-relimg="0">
+					<div class="groupTitle">Eigenschaften</div>
+					<div class="productFilterItems"><div class="productFilterItem" data-id="45" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-45" /><label for="pfi-45">Wasserdurchlässig</label>
+					</div><div class="productFilterItem" data-id="46" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-46" /><label for="pfi-46">Befahrbar</label>
+					</div><div class="productFilterItem" data-id="47" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-47" /><label for="pfi-47">CleanTop®-geschützt</label>
+					</div><div class="productFilterItem" data-id="48" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-48" /><label for="pfi-48">Frostbeständig</label>
+					</div><div class="productFilterItem" data-id="49" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-49" /><label for="pfi-49">Trittsicher</label>
+					</div><div class="productFilterItem" data-id="50" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-50" /><label for="pfi-50">Klimaneutrale Produktion</label>
+					</div><div class="productFilterItem" data-id="51" data-relimg="0">
+						<input class="checkbox" type="checkbox" id="pfi-51" /><label for="pfi-51">Tausalzbeständig</label>
+					</div></div>
+				</div></div>
+
+				<div id="ProductFilterAction"><div id="ProductFilterButton" class="filterButton" data-href="/produkte/"><span class="buttonDesc">Produkte anzeigen</span></div></div>
+				<div id="ProductFilterResults"></div>
+				<div id="ProductFilterClose" class="filterButton"><span class="buttonDesc">Produktfilter schließen</span></div>
+			</div>
+		</div>
+	</div>
+</aside>
+

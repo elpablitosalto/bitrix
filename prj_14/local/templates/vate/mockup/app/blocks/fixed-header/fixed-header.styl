@@ -1,0 +1,106 @@
+DIR = '../blocks/fixed-header/'
+IMG_DIR = DIR + 'images/'
+
+.fixed-header
+	position fixed
+	top 0
+	left 0
+	z-index 1000
+	display block
+	width 100%
+	background rgba(0,0,0,.8)
+	transform translate(0, -100%)
+	backdrop-filter blur(4px)
+	def-trn(transform)
+
+	&_state
+		&_active
+			transform translate(0,0)
+
+
+	&__main
+		position relative
+		z-index 1
+
+		+above(size-l)
+			display block
+
+
+
+	&__navigations
+		+above(size-m)
+			display flex
+			flex-direction row-reverse
+			gap 33.45px
+			align-items center
+
+
+
+	&__nav
+		margin-bottom 14px
+
+
+
+	&__main-wrapper
+		position relative
+		display flex
+		flex-wrap nowrap
+		align-items center
+		padding 20px 0
+
+
+
+	&__burger
+		display block
+		flex 0 0 40px
+
+		+above(size-xxl)
+			display none
+
+
+
+	&__logo
+		display block
+		flex-basis 131px
+		width 131px
+		max-width 131px
+		margin-right auto
+
+
+
+
+	&__search
+		display none
+		flex 1 1 auto
+		width auto
+
+		+above(size-m)
+			display block
+			min-width 250px
+
+		+above(size-l)
+			min-width 400px
+
+
+
+	// Modifiers
+
+	&_state
+		&_fixed
+			position fixed
+			top 0
+			left 0
+			width 100%
+			box-shadow 0 4px 12px rgba(60, 60, 59, .12)
+
+			.header
+				&__top
+					display none
+
+				&__icon-controls
+					+above(size-l)
+						padding 0 15px
+
+				&__fixed-auth
+					+above(size-l)
+						display block

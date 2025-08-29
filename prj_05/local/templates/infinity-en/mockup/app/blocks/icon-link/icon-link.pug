@@ -1,0 +1,15 @@
+mixin icon-link(data = {})
+	- var DIR = 'assets/blocks/icon-link/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .icon-link
+	+b.icon-link&attributes(attributes)
+		if data.icon
+			+e.icon-wrapper
+				!=data.icon
+
+		+e.text
+			if data.text
+				!=data.text
+
+			block
+	// end .icon-link

@@ -1,0 +1,12 @@
+.catalog-small-selected{
+    background: #E61865;
+}
+.catalog-small-links__item a{
+    color: black;
+}
+.catalog-small-selected, .catalog-small-selected a, .catalog-small-selected label{
+    color: #FFF !important;
+}
+.innovation__certificate-list a{
+    cursor: default;
+}

@@ -1,0 +1,378 @@
+DIR = '../blocks/product-snippet/'
+IMG_DIR = DIR + 'images/'
+
+.product-snippet
+	position relative
+	display grid
+	height 100%
+
+	&__image
+		display block
+		max-width 100%
+
+
+
+	&__illustration
+		position relative
+		overflow hidden
+		background var(--color-black)
+		border-radius 30px
+		box-shadow var(--shadow-primary)
+
+		+above(size-m)
+			max-height 230px
+
+
+
+	&__labels
+		position absolute
+		bottom 0
+		display flex
+		justify-content flex-end
+		width 100%
+
+
+
+	&__text
+		display none
+
+
+
+	&__actions
+		position absolute
+		top 0
+		right 0
+		display flex
+		flex-direction column
+		padding 10px
+		color var(--color-light-gray)
+
+		+above(size-l)
+			padding 15px
+
+
+
+	&__title
+		margin-top 15px
+
+
+
+	&__link
+		color var(--color-white)
+		font-family Raleway
+		font-size 13px
+		font-weight 800
+		font-style normal
+		line-height 130%
+		text-decoration none
+		font-variant-numeric lining-nums
+
+		+above(size-l)
+			font-size 19px
+
+
+
+	&__checkbox-container
+		position absolute
+		top 0
+		right 0
+		z-index 10
+		display none
+
+
+
+	&__quantity-input
+		overflow hidden
+		border-radius 10px
+
+	&__props
+		margin-top 8px
+
+
+
+	&__price-field
+		display flex
+		gap 10px
+		align-items center
+		justify-content space-between
+		margin-top 15px
+
+
+
+
+	&__button
+		margin-top 7px
+
+		+above(size-l)
+			margin-top 10px
+
+
+
+	&__availability
+		display flex
+		gap 5px
+		align-items center
+		margin-top 7px
+		color #ccc
+		font-family Raleway
+		font-size 14px
+		font-weight 600
+		font-style normal
+		line-height 20px
+
+
+		&_status
+			&_unavailable
+				color red
+
+
+		+above(size-l)
+			margin-top 10px
+
+
+
+	&__cart
+		display none
+
+
+
+	&__params
+		display flex
+		gap 10px
+		align-items center
+
+
+	&__reviews
+		display flex
+		gap 2px
+		align-items center
+
+
+
+	&__props
+		display none
+
+
+
+	&__prop
+		display flex
+		gap 3px
+		margin-top 8px
+		color var(--color-light-gray)
+		font-family Raleway
+		font-size 16px
+		font-weight 600
+		font-style normal
+		line-height 150%
+
+
+	&__value
+		font-variant-numeric lining-nums
+
+
+
+
+
+	&_layout
+		&_list-item
+			display grid
+			grid-template-rows repeat(6, 31.2px)
+			grid-template-columns 25px 25px 25px 25px repeat(2, 1fr)
+			gap 7px 12px
+
+			+above(size-xs)
+				grid-template-rows repeat(5, 31.2px)
+
+			+above(size-m)
+				grid-template-rows repeat(4, 32.75px)
+				grid-template-columns 150px 1fr 1fr 246px 50px
+				gap 7px 15px
+
+
+			.product-snippet
+				padding 15px
+
+				&__prop
+					display none
+
+
+				&__params
+					display flex
+					gap 9px
+
+					+above(size-xs)
+						margin-left -22px
+
+					+above(size-m)
+						margin 0
+
+					+above(size-xxl)
+						gap 20px
+
+
+				&__compare
+				&__favorite
+					color var(--color-gray)
+
+
+				&__checkbox-container
+					top 0
+					left 0
+					display block
+					padding 12px
+
+
+				&__quantity-input
+					overflow hidden
+					border-radius 6px
+
+				&__availability-text
+					overflow hidden
+					max-width 80px
+					white-space nowrap
+					text-overflow ellipsis
+
+					+above(size-l)
+						max-width none
+
+				&__cart
+					position absolute
+					right 3px
+					bottom 3px
+					display block
+					color var(--color-light-gray)
+
+					+above(size-m)
+						position static
+						right 0
+						bottom 0
+						color var()
+
+				&__button
+					display none
+
+				&__illustration
+					grid-area 1 / 1 / 5 / 4
+					max-height 100px
+
+					+above(size-m)
+						grid-area 1 / 1 / 5 / 2
+						max-width 125px
+						max-height none
+
+					+above(size-l)
+						max-width 150px
+
+				&__availability
+					gap 2px
+
+					+above(size-m)
+						gap 5px
+
+				&__availability-icon
+					width 16px
+
+					+above(size-m)
+						width initial
+
+				&__actions
+					position static
+					flex-direction row
+					grid-area 4 / 1 / 5 / 4
+					gap 18px
+					align-items center
+					justify-content center
+					padding 0
+
+					+above(size-m)
+						position relative
+						flex-direction column
+						grid-area 1 / 5 / 5 / 6
+						justify-content flex-start
+
+				&__title
+					display inline-block
+					overflow hidden
+					grid-area 1 / 4 / 2 / 8
+					margin 0
+					line-height 1
+					text-overflow ellipsis
+					-webkit-line-clamp 3
+
+					+above(size-m)
+						grid-area 1 / 2 / 2 / 5
+						line-height normal
+
+				&__button
+					grid-area 2 / 4 / 5 / 5
+
+
+				&__availability
+					grid-area 5 / 4 / 6 / 8
+					margin 0
+					font-size 11px
+
+					+above(size-xs)
+						grid-area 4 / 4 / 5 / 6
+
+					+above(size-m)
+						grid-area 4 / 2 / 5 / 3
+						font-size 14px
+
+
+				&__props
+					display block
+					grid-area 2 / 4 / 4 / 8
+					margin 0
+
+					+above(size-m)
+						grid-area 2 / 2 / 4 / 4
+
+				&__params
+					grid-area 4 / 4 / 5 / 8
+
+					+above(size-xs)
+						grid-area 4 / 6 / 5 / 8
+
+					+above(size-m)
+						grid-area 4 / 3 / 5 / 4
+
+				&__price-field
+					grid-area 6 / 1 / 7 / 8
+					gap 10px
+					justify-self flex-start
+					height 24px
+					margin 0 60px 0 0
+					padding 5px
+					color var(--color-black)
+					background var(--color-secondary)
+					border-radius 10px
+
+					+above(size-xs)
+						grid-area 5 / 4 / 6 / 8
+
+
+					+above(size-s)
+						grid-area 5 / 4 / 6 / 6
+						max-width fit-content
+						margin 0
+
+					+above(size-m)
+						grid-area 4 / 4 / 5 / 5
+						justify-content flex-end
+						min-width 246px
+						height 50px
+						margin-top -13.5px
+						justify-self flex-end
+
+			&.product-snippet_status
+				&_unavailable
+					.product-snippet
+						&__quantity-input
+							display none
+
+						&__price-field
+							width fit-content
+							min-width initial
+							padding 12px 20px
+

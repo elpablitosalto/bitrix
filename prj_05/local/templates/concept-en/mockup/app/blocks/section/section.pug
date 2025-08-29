@@ -1,0 +1,22 @@
+mixin section(data = {})
+	- var DIR = 'assets/blocks/section/';
+	- var IMG_DIR = DIR + 'images/';
+	// begin .section
+	+b.section&attributes(attributes)
+		+e.main
+			if data.header
+				- var header = data.header;
+
+				+e.header
+					+e.header-container.page__container
+						if header.title
+							+e.title
+								+title(header.title)
+
+			block
+
+		if data.aside
+			+e.aside
+				!=data.aside
+
+	// end .section

@@ -1,0 +1,114 @@
+DIR = '../blocks/title/'
+IMG_DIR = DIR + 'images/'
+
+.title
+	display block
+	margin 20px 0
+	padding 0
+	color inherit
+	font-weight 700
+	line-height 1.22
+	// text-transform uppercase
+
+	&:first-child
+		margin-top 0
+
+	&:last-child
+		margin-bottom 0
+
+
+
+	// Modifiers
+
+	&_style
+		&_primary
+			color var(--color-primary)
+
+
+	&_size
+		&_h1
+			font-size 30px
+
+			+above(size-l)
+				font-size 40px
+				line-height 1.225
+
+		&_h1-l
+			font-size 30px
+			line-height 35.22px
+
+			+above(size-m)
+				font-size 35px
+				line-height 41.09px
+
+			+above(size-l)
+				font-size 45px
+
+			+above(size-xxl)
+				font-size 55px
+				line-height 64.57px
+
+
+		&_h2
+			font-size 25px
+
+			+above(size-l)
+				font-size 30px
+
+
+		&_h3
+			font-size 18px
+
+			+above(size-l)
+				font-size 24px
+				line-height 1.21
+
+		&_h4
+			font-size 20px
+			line-height 1.2
+
+
+	&_height
+		&_fit
+			line-height 1
+
+
+	&_align
+		&_left
+			text-align left
+
+		&_center
+			text-align center
+
+		&_right
+			text-align right
+
+	&_weight
+		&_light
+			font-weight 300
+
+		&_regular
+			font-weight 400
+
+		&_medium
+			font-weight 500
+
+		&_semibold
+			font-weight 800
+
+		&_bold
+			font-weight 900
+
+	&_case
+		&_normal
+			text-transform none
+
+		&_upper
+			text-transform uppercase
+
+
+	&_style
+		&_gradient
+			background var(--color-secondary)
+			-webkit-background-clip text
+			-webkit-text-fill-color transparent
